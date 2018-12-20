@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/checkoff.png</file>
+        <file>Images/checkon.png</file>
+        <file>Images/mortgageoff.png</file>
+        <file>Images/mortgageon.png</file>
+        <file>Images/selectoff.png</file>
+        <file>Images/selecton.png</file>
+        <file>Images/background.png</file>
+        <file>Images/background.bmp</file>
+        <file>Images/background.jpg</file>
+    </qresource>
+</RCC>

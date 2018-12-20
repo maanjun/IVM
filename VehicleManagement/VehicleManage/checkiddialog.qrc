@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/scanningid.png</file>
+        <file>Images/sfzzmdw.png</file>
+        <file>Images/homepageon.png</file>
+        <file>Images/nextoff.png</file>
+        <file>Images/loading.gif</file>
+        <file>Images/loadingbackground.png</file>
+    </qresource>
+</RCC>
