@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -27,13 +28,14 @@ public:
     QPushButton *pBtnSelect;
     QPushButton *pBtnCheck;
     QPushButton *pBtnMortgage;
+    QLabel *labelTitle;
 
     void setupUi(QMainWindow *VehicleManageClass)
     {
         if (VehicleManageClass->objectName().isEmpty())
             VehicleManageClass->setObjectName(QStringLiteral("VehicleManageClass"));
         VehicleManageClass->resize(1024, 768);
-        VehicleManageClass->setStyleSheet(QLatin1String("border-image: url(:/Images/background.bmp);\n"
+        VehicleManageClass->setStyleSheet(QLatin1String("border-image: url(:/Resources/Images/background.png);\n"
 ""));
         centralWidget = new QWidget(VehicleManageClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -44,19 +46,27 @@ public:
         font.setPointSize(22);
         pBtnSelect->setFont(font);
         pBtnSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/selecton.png);"));
+"border-image: url(:/Resources/Images/selecton.png);"));
         pBtnCheck = new QPushButton(centralWidget);
         pBtnCheck->setObjectName(QStringLiteral("pBtnCheck"));
         pBtnCheck->setGeometry(QRect(80, 500, 200, 100));
         pBtnCheck->setFont(font);
         pBtnCheck->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/checkon.png);"));
+"border-image: url(:/Resources/Images/checkon.png);"));
         pBtnMortgage = new QPushButton(centralWidget);
         pBtnMortgage->setObjectName(QStringLiteral("pBtnMortgage"));
         pBtnMortgage->setGeometry(QRect(740, 500, 200, 100));
         pBtnMortgage->setFont(font);
         pBtnMortgage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/mortgageon.png);"));
+"border-image: url(:/Resources/Images/mortgageon.png);"));
+        labelTitle = new QLabel(centralWidget);
+        labelTitle->setObjectName(QStringLiteral("labelTitle"));
+        labelTitle->setGeometry(QRect(250, 60, 481, 141));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
+        font1.setPointSize(42);
+        labelTitle->setFont(font1);
+        labelTitle->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
         VehicleManageClass->setCentralWidget(centralWidget);
 
         retranslateUi(VehicleManageClass);
@@ -70,6 +80,7 @@ public:
         pBtnSelect->setText(QString());
         pBtnCheck->setText(QString());
         pBtnMortgage->setText(QString());
+        labelTitle->setText(QApplication::translate("VehicleManageClass", "\350\277\234\347\250\213\346\231\272\350\203\275\350\275\246\346\243\200\347\263\273\347\273\237", 0));
     } // retranslateUi
 
 };

@@ -120,6 +120,18 @@
     <QtRcc Include="basedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+    <QtRcc Include="checkreceiptdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputdonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="selectlicensedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="vehicleinfodialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonDefine.h">

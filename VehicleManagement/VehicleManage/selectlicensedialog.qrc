@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Resources/Images/confirmoff.png</file>
+    <file>Resources/Images/confirmon.png</file>
+    <file>Resources/Images/homepageoff.png</file>
+    <file>Resources/Images/homepageon.png</file>
+    <file>Resources/Images/loading.gif</file>
+    <file>Resources/Images/nextoff.png</file>
+    <file>Resources/Images/nexton.png</file>
+  </qresource>
+</RCC>

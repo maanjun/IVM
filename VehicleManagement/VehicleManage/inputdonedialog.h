@@ -15,6 +15,8 @@ public:
     explicit InputDoneDialog(QWidget *parent = 0);
     ~InputDoneDialog();
 
+	void startTimer(int nMillisecond = 60000);
+
 private slots:
     void on_pBtnHomepage_clicked();
 
@@ -25,6 +27,10 @@ private slots:
 
 private:
     Ui::InputDoneDialog *ui;
+
+	QString m_qstrSumaryTemplateHtml;
+
+	QString m_qstrDetailTemplateHtml;
 };
 
 #endif // INPUTDONEDIALOG_H

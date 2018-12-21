@@ -19,6 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -143,6 +144,10 @@
     <QtRcc Include="checkiddialog.qrc">
       <SubType>Designer</SubType>
     </QtRcc>
+    <QtRcc Include="checkreceiptdialog.qrc" />
+    <QtRcc Include="inputdonedialog.qrc" />
+    <QtRcc Include="selectlicensedialog.qrc" />
+    <QtRcc Include="vehicleinfodialog.qrc" />
     <QtRcc Include="vehiclemanage.qrc" />
   </ItemGroup>
   <ItemGroup>

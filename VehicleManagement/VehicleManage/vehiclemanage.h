@@ -47,12 +47,12 @@ private:
 
 	QSqlDatabase m_db;
 
-	CheckIDDialog m_checkIDDialogCheck;
-	VehicleInfoDialog m_vehicleInfoDialog;
-	CheckReceiptDialog m_checkReceiptDialog;
-	InputDoneDialog m_inputDoneDialog;
-	CheckIDDialog m_checkIDDialogSelect;
-	SelectLicenseDialog m_SelectLicenseDialog;
+	CheckIDDialog *m_pCheckIDDialogCheck;
+	VehicleInfoDialog *m_pVehicleInfoDialog;
+	CheckReceiptDialog *m_pCheckReceiptDialog;
+	InputDoneDialog *m_pInputDoneDialog;
+	CheckIDDialog *m_pCheckIDDialogSelect;
+	SelectLicenseDialog *m_pSelectLicenseDialog;
 
 public:
 	void init();

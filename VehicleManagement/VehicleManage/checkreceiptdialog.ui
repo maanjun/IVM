@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>CheckReceiptDialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#CheckReceiptDialog{border-image: url(:/Resources/Images/background.png);}</string>
+  </property>
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">
     <rect>
@@ -29,7 +32,8 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/homepageon.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -50,14 +54,113 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/nextoff.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="labelReceipt">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>290</y>
+     <width>150</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>发票号：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTax">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>420</y>
+     <width>150</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>车船税号：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditReceipt">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>290</y>
+     <width>360</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditTax">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>420</y>
+     <width>360</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTitle">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>481</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>42</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>远程智能车检系统</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="checkreceiptdialog.qrc"/>
+ </resources>
  <connections/>
 </ui>

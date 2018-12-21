@@ -45,7 +45,7 @@ public:
         font.setPointSize(22);
         pBtnHomepage->setFont(font);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/homepageon.png);"));
+"border-image: url(:/Resources/Images/homepageon.png);"));
         pBtnNext = new QPushButton(CheckIDDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
         pBtnNext->setGeometry(QRect(590, 570, 200, 100));
@@ -54,24 +54,24 @@ public:
         font1.setPointSize(22);
         pBtnNext->setFont(font1);
         pBtnNext->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/nextoff.png);"));
+"border-image: url(:/Resources/Images/nextoff.png);"));
         textBrowser = new QTextBrowser(CheckIDDialog);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
         textBrowser->setGeometry(QRect(530, 250, 420, 280));
         textBrowser->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:20px;padding:2px 4px;\n"
-"border-image: url(:/Images/sfzzmdw.png);"));
+"border-image: url(:/Resources/Images/sfzzmdw.png);"));
         label = new QLabel(CheckIDDialog);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(70, 260, 371, 251));
         label->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Images/scanningid.png);"));
+"border-image: url(:/Resources/Images/scanningid.png);"));
         labelHead = new QLabel(CheckIDDialog);
         labelHead->setObjectName(QStringLiteral("labelHead"));
         labelHead->setGeometry(QRect(830, 300, 100, 140));
         labelLoading = new QLabel(CheckIDDialog);
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
         labelLoading->setGeometry(QRect(688, 328, 124, 124));
-        labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Images/loading.gif);"));
+        labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/loading.gif);"));
 
         retranslateUi(CheckIDDialog);
 

@@ -28,7 +28,8 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/confirmoff.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -50,14 +51,497 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/homepageon.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>320</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>240</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>ASDFG</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>480</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>400</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>320</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>400</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>480</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>320</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>400</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_11">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>480</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_12">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>240</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_13">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>320</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_14">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>400</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_15">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>480</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_16">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>240</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_17">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>320</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_18">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>400</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_19">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>480</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_20">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>240</y>
+     <width>160</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+border:2px groove gray;border-radius:10px;padding:2px 2px;
+background-color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>12345</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="selectlicensedialog.qrc"/>
+ </resources>
  <connections/>
 </ui>

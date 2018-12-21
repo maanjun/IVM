@@ -32,8 +32,6 @@ private:
 
 	unsigned int m_caller;
 
-	unsigned int m_seconds;
-
 	QString m_qstrIDTemplateHtml;
 };
 

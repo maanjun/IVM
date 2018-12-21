@@ -15,6 +15,8 @@ public:
     explicit VehicleInfoDialog(QWidget *parent = 0);
     ~VehicleInfoDialog();
 
+	void startTimer(int nMillisecond = 60000);
+
 private slots:
     void on_pBtnHomepage_clicked();
 
@@ -25,6 +27,8 @@ private slots:
 
 private:
     Ui::VehicleInfoDialog *ui;
+
+	QString m_qstrVehicleInfoTemplateHtml;
 };
 
 #endif // VEHICLEINFODIALOG_H
