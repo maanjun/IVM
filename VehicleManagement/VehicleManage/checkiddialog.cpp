@@ -1,6 +1,5 @@
 ﻿#include "checkiddialog.h"
 #include "ui_checkiddialog.h"
-#include "common.h"
 #include <QMessageBox>
 #include <QLabel>
 #include <QImage>
@@ -8,16 +7,37 @@
 #include <QMovie>
 #include <QDebug>
 
-CheckIDDialog::CheckIDDialog(QWidget *parent) :
+CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
+	m_caller(caller),
     BaseDialog(parent),
     ui(new Ui::CheckIDDialog)
 {
     ui->setupUi(this);
 
-	// 默认远程验车
-	m_caller = CHECKVEHICLE;
+	// 身份信息初始化
+	m_idInfo = { 0 };
 
-	QMovie *movie = new QMovie("./Resources/Images/loading.gif");
+	// 默认远程验车
+	if (CHECKVEHICLE == m_caller)
+	{
+		ui->pBtnScanIdSelect->setVisible(true);
+		ui->pBtnScanVehicle->setVisible(true);
+		ui->pBtnReceipt->setVisible(true);
+		ui->pBtnDone->setVisible(true);
+		ui->pBtnScanIdSelect->setVisible(false);
+		ui->pBtnSelect->setVisible(false);
+	}
+	else 
+	{
+		ui->pBtnScanIdSelect->setVisible(false);
+		ui->pBtnScanVehicle->setVisible(false);
+		ui->pBtnReceipt->setVisible(false);
+		ui->pBtnDone->setVisible(false);
+		ui->pBtnScanIdSelect->setVisible(true);
+		ui->pBtnSelect->setVisible(true);
+	}
+
+	QMovie *movie = new QMovie("./Resources/Images/loading.gif", "gif", this);
 	ui->labelLoading->setMovie(movie);
 	movie->start();
 
@@ -33,6 +53,7 @@ CheckIDDialog::~CheckIDDialog()
 
 void CheckIDDialog::startTimer(int nMillisecond)
 {
+	m_idInfo = { 0 };
 	ui->textBrowser->setHtml("");
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
 	ui->pBtnNext->setEnabled(false);
@@ -49,6 +70,15 @@ void CheckIDDialog::startTimer(int nMillisecond)
 		{
 			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 			// 读取成功
+			m_idInfo.nGender = 1;
+			strcpy_s(m_idInfo.szAddress, "重庆市江北区石马河社区");
+			strcpy_s(m_idInfo.szAuthority, "重庆市江北区");
+			strcpy_s(m_idInfo.szBirthday, "2018-10-13");
+			strcpy_s(m_idInfo.szHeadimage, "");
+			strcpy_s(m_idInfo.szNation, "汉");
+			strcpy_s(m_idInfo.szNumber, "500105198811112222");
+			strcpy_s(m_idInfo.szUsername, "马军");
+			strcpy_s(m_idInfo.szValidSection, "2018-10-13~2028-10-13");
 			if (150 == nCount) {
 				ui->labelLoading->setVisible(false);
 				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
@@ -70,6 +100,8 @@ void CheckIDDialog::startTimer(int nMillisecond)
 				ui->labelHead->setPixmap(QPixmap("./Resources/Images/head.png"));
 				ui->labelHead->setScaledContents(true);
 				ui->labelHead->setVisible(true);
+				// 查询用户当前到哪一步
+				getUserinfo(m_idInfo.szNumber);
 				break;
 			}
 			// 每50ms读取一次身份证信息
@@ -96,11 +128,67 @@ void CheckIDDialog::on_pBtnNext_clicked()
 {
     // 下一步
 	m_pTimer->stop();
-	emit idCheckedSignal(m_caller);
-	//this->close();
+	// 存入数据库()
+	m_operateMysql.init();
+	m_operateMysql.begin();
+	QString qstrSql = QString("INSERT INTO USER(USERNAME, GENDER, NATION, BIRTHDAY, ADDRESS, NUMBER, AUTHORITY, VALIDSECTION, STAGE, ISVALID, HEADIMAGE) VALUES('%1', %2, '%3', '%4', '%5', '%6', '%7', '%8', %9, %10, '%11')")
+		.arg(QString::fromLocal8Bit(m_idInfo.szUsername))
+		.arg(m_idInfo.nGender)
+		.arg(QString::fromLocal8Bit(m_idInfo.szNation))
+		.arg(m_idInfo.szBirthday)
+		.arg(QString::fromLocal8Bit(m_idInfo.szAddress))
+		.arg(m_idInfo.szNumber)
+		.arg(QString::fromLocal8Bit(m_idInfo.szAuthority))
+		.arg(QString::fromLocal8Bit(m_idInfo.szValidSection))
+		.arg(1)
+		.arg(1)
+		.arg(QString::fromLocal8Bit(m_idInfo.szHeadimage));
+	qDebug() << qstrSql << endl;
+	if (m_operateMysql.queryExe(qstrSql))
+	{
+		m_operateMysql.commit();
+	}
+	else 
+	{
+		m_operateMysql.rollback();
+		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+	}
+	m_operateMysql.close();
+	emit idCheckedSignal(m_caller, m_idInfo.szNumber);
 }
 
-void CheckIDDialog::setCaller(unsigned int type)
+void CheckIDDialog::getUserinfo(QString qstrId)
 {
-	m_caller = type;
+	if (m_operateMysql.init())
+	{
+		int nStage = 1;
+		QString qsqlSelect = QString("SELECT * FROM USER WHERE NUMBER='%1';").arg(qstrId);
+		if (m_operateMysql.queryExe(qsqlSelect))
+		{
+			if (m_operateMysql.m_pQuery->next())
+			{
+				int nStage = m_operateMysql.m_pQuery->value("STAGE").toInt();
+				QString qstrOwnerId = m_operateMysql.m_pQuery->value("NUMBER").toString();
+				switch (nStage)
+				{
+				case CHECKID:
+				case VEHICLEINCO:
+				case CHECKRECEIPT:
+				case INPUTDONE:
+				case CHECKIDSELECT:
+				case SELECTED:
+					m_pTimer->stop();
+					emit idScannedSignal(nStage, qstrOwnerId);
+					break;
+				default:
+					break;
+				}
+			}
+		}
+		m_operateMysql.close();
+	}
+	else 
+	{
+		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("网络异常！"));
+	}
 }

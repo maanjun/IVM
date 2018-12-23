@@ -9,10 +9,7 @@
 #include <afxwin.h>         // MFC 核心组件和标准组件
 #include <afxext.h>         // MFC 扩展
 
-
 #include <afxdisp.h>        // MFC 自动化类
-
-
 
 #ifndef _AFX_NO_OLE_SUPPORT
 #include <afxdtctl.h>           // MFC 对 Internet Explorer 4 公共控件的支持
@@ -40,11 +37,66 @@
 
 using namespace CommonFuncs;
 
-typedef enum _Type
+typedef enum _Caller
 {
 	CHECKVEHICLE = 0,
 	SELECTLICENSE
-}Type, *PType;
+}Caller, *PCaller;
+
+typedef enum _Stage
+{
+	HOMEPAGE = 0,
+	CHECKID,
+	VEHICLEINCO,
+	CHECKRECEIPT,
+	INPUTDONE,
+	CHECKIDSELECT,
+	SELECTED
+}Stage, *PStage;
+
+//身份信息结构体
+typedef struct _tagIdInfo
+{
+	int nId;
+	char szUsername[80];
+	int nGender;
+	char szNation[40];
+	char szBirthday[20];
+	char szAddress[256];
+	char szNumber[20];
+	char szAuthority[256];
+	char szValidSection[32];
+	int nStage;
+	int nIsvalid;
+	char szHeadimage[256];
+}IdInfo, *PIdInfo;
+
+//车辆信息结构体（待定）
+typedef struct _tagVehicleInfo
+{
+	int nId;
+	char szVehicleId[20];
+	char szManufactureDate[16];
+	char szManufacturer[80];
+	char szManufactureAddress[256];
+	char szColor[20];
+	char szModel[20];
+	char szBrand[40];
+	int nUserid;
+	char szOwnerId[20]; //身份证号
+	int nIsvalid;
+}VehicleInfo, *PVehicleInfo;
+
+//税费信息结构体（待定）
+typedef struct _tagTaxation
+{
+	int nId;
+	char szReceiptNo[20];
+	char szTaxcode[20];
+	int nUserid;
+	char szOwnerId[20]; //身份证号
+	int nIsvalid;
+}Taxation, *PTaxation;
 
 bool uploadFile(QString qstrLocalPath);
 

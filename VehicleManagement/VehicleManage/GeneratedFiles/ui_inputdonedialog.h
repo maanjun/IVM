@@ -26,6 +26,10 @@ public:
     QPushButton *pBtnHomepage;
     QPushButton *pBtnDone;
     QTextBrowser *textBrowser;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
 
     void setupUi(QDialog *InputDoneDialog)
     {
@@ -34,7 +38,7 @@ public:
         InputDoneDialog->resize(1024, 768);
         pBtnHomepage = new QPushButton(InputDoneDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(190, 570, 200, 100));
+        pBtnHomepage->setGeometry(QRect(190, 612, 200, 100));
         QFont font;
         font.setFamily(QStringLiteral("Algerian"));
         font.setPointSize(22);
@@ -43,7 +47,7 @@ public:
 "border-image: url(:/Resources/Images/homepageon.png);"));
         pBtnDone = new QPushButton(InputDoneDialog);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
-        pBtnDone->setGeometry(QRect(590, 570, 200, 100));
+        pBtnDone->setGeometry(QRect(590, 612, 200, 100));
         QFont font1;
         font1.setPointSize(22);
         pBtnDone->setFont(font1);
@@ -51,9 +55,40 @@ public:
 "border-image: url(:/Resources/Images/finishon.png);"));
         textBrowser = new QTextBrowser(InputDoneDialog);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(60, 250, 901, 300));
+        textBrowser->setGeometry(QRect(50, 300, 911, 300));
         textBrowser->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 2px;\n"
 "background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
+        pushButton_2 = new QPushButton(InputDoneDialog);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(275, 230, 233, 50));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
+        font2.setPointSize(20);
+        pushButton_2->setFont(font2);
+        pushButton_2->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(166, 205, 251);"));
+        pushButton = new QPushButton(InputDoneDialog);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(40, 230, 233, 50));
+        pushButton->setFont(font2);
+        pushButton->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(166, 205, 251);"));
+        pushButton_3 = new QPushButton(InputDoneDialog);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(510, 230, 233, 50));
+        pushButton_3->setFont(font2);
+        pushButton_3->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(166, 205, 251);"));
+        pushButton_4 = new QPushButton(InputDoneDialog);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setGeometry(QRect(745, 230, 229, 50));
+        pushButton_4->setFont(font2);
+        pushButton_4->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(65, 147, 252);"));
 
         retranslateUi(InputDoneDialog);
 
@@ -83,6 +118,10 @@ public:
 "<p style=\" margin-top:4px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">\350\275\246\350\276\206\345\236\213\345\217\267\357\274\232</span></p>\n"
 "<p style=\" margin-top:20px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; font-weight:600;\">\347\250\216\350\264\271\344\277\241\346\201\257</span></p>\n"
 "<p style=\" margin-top:4px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">\345\217\221\347\245\250\345\217\267\357\274\232                         \350\275\246\350\210\271\347\250\216\345\217\267\357\274\232</span></p></body></html>", 0));
+        pushButton_2->setText(QApplication::translate("InputDoneDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));
+        pushButton->setText(QApplication::translate("InputDoneDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
+        pushButton_3->setText(QApplication::translate("InputDoneDialog", "\350\276\223\345\205\245\347\250\216\350\264\271\345\217\267", 0));
+        pushButton_4->setText(QApplication::translate("InputDoneDialog", "\345\256\214\346\210\220", 0));
     } // retranslateUi
 
 };

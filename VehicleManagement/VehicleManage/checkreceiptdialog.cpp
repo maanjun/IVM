@@ -1,6 +1,5 @@
 #include "checkreceiptdialog.h"
 #include "ui_checkreceiptdialog.h"
-#include "common.h"
 
 CheckReceiptDialog::CheckReceiptDialog(QWidget *parent) :
 	QDialog(parent),
@@ -102,4 +101,9 @@ void CheckReceiptDialog::onTaxEdited(const QString &text)
 void CheckReceiptDialog::onTimecoutSlot()
 {
 	emit goHomeSignal();
+}
+
+void CheckReceiptDialog::setOwnerId(QString qstrOwnerId)
+{
+	m_qstrOwnerId = qstrOwnerId;
 }

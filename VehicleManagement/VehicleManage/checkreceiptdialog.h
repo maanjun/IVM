@@ -1,6 +1,7 @@
 #ifndef CHECKRECEIPTDIALOG_H
 #define CHECKRECEIPTDIALOG_H
 
+#include "common.h"
 #include "basedialog.h"
 
 namespace Ui {
@@ -17,6 +18,12 @@ public:
 
 	void startTimer(int nMillisecond = 60000);
 
+	void setOwnerId(QString qstrOwnerId);
+
+	QTimer *m_pTimer;
+	//对话框之间传递身份证号
+	QString m_qstrOwnerId;
+
 private slots:
     void on_pBtnHomepage_clicked();
 
@@ -26,19 +33,15 @@ private slots:
 
 	void onTaxEdited(const QString &text);
 
-private:
-    Ui::CheckReceiptDialog *ui;
+	void onTimecoutSlot();
 
 signals:
 	void goHomeSignal();
 signals:
 	void receiptCheckedSingal();
 
-private slots:
-	void onTimecoutSlot();
-
-public:
-	QTimer *m_pTimer;
+private:
+    Ui::CheckReceiptDialog *ui;
 };
 
 #endif // CHECKRECEIPTDIALOG_H

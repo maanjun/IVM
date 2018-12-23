@@ -63,6 +63,9 @@
     <ClCompile Include="common.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="operateMysql.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -145,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="operateMysql.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

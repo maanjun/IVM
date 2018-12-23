@@ -2,7 +2,6 @@
 #include "QMessageBox"
 #include <QSettings>
 #include <exception>
-#include "common.h"
 
 VehicleManage::VehicleManage(QWidget *parent)
 	: QMainWindow(parent)
@@ -19,7 +18,6 @@ VehicleManage::~VehicleManage()
 
 void VehicleManage::init() 
 {
-	initDatabase();
 	initFrame();
 }
 
@@ -52,37 +50,6 @@ void VehicleManage::finit()
 	}
 }
 
-bool VehicleManage::initDatabase()
-{
-	// 读取数据库配置文件，并建立连接
-	try
-	{
-		QSettings *configIniRead = new QSettings("database.ini", QSettings::IniFormat);
-		//将读取到的ini文件保存在QString中，先取值，然后通过toString()函数转换成QString类型
-		QString strHostName = configIniRead->value("/database/host").toString();
-		QString strDbName = configIniRead->value("/database/database").toString();
-		QString strPort = configIniRead->value("/database/port").toString();
-		QString strUserName = configIniRead->value("/database/username").toString();
-		QString strPassword = configIniRead->value("/database/password").toString();
-		delete configIniRead;
-		m_db = QSqlDatabase::addDatabase("QMYSQL");
-		m_db.setHostName(strHostName);
-		m_db.setDatabaseName(strDbName);       //这里输入你的数据库名
-		m_db.setPort(strPort.toInt());
-		m_db.setUserName(strUserName);
-		m_db.setPassword(strPassword);
-		if (!m_db.open()) {
-			QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
-		}
-		return true;
-	}
-	catch (std::exception &e)
-	{
-		QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
-	}
-	return false;
-}
-
 bool VehicleManage::initFrame()
 {
 	//设置系统名称
@@ -90,18 +57,21 @@ bool VehicleManage::initFrame()
 	ui.labelTitle->setAttribute(Qt::WA_TranslucentBackground);
 	ui.labelTitle->setStyleSheet("background:transparent");
 
-	m_pCheckIDDialogCheck = new CheckIDDialog();
-	m_pCheckIDDialogSelect = new CheckIDDialog();
+	m_pCheckIDDialogCheck = new CheckIDDialog(CHECKVEHICLE);
+	m_pCheckIDDialogSelect = new CheckIDDialog(SELECTLICENSE);
 	m_pVehicleInfoDialog = new VehicleInfoDialog();
 	m_pSelectLicenseDialog = new SelectLicenseDialog();
 	m_pCheckReceiptDialog = new CheckReceiptDialog();
 	m_pInputDoneDialog = new InputDoneDialog();
 
-	connect(m_pCheckIDDialogCheck, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
-	connect(m_pCheckIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
-	connect(m_pVehicleInfoDialog, SIGNAL(vehicleInfoDoneSingal()), this, SLOT(onVehicleInfoDoneSlot()));
+	connect(m_pCheckIDDialogCheck, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
+	connect(m_pCheckIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
+	//身份证扫描完成信号
+	connect(m_pCheckIDDialogCheck, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
+	connect(m_pCheckIDDialogSelect, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
+	connect(m_pVehicleInfoDialog, SIGNAL(vehicleInfoDoneSingal(QString)), this, SLOT(onVehicleInfoDoneSlot(QString)));
 	connect(m_pSelectLicenseDialog, SIGNAL(selectDoneSingal()), this, SLOT(onSelectDoneSlot()));
-	connect(m_pCheckReceiptDialog, SIGNAL(receiptCheckedSingal()), this, SLOT(onReceiptCheckedSlot()));
+	connect(m_pCheckReceiptDialog, SIGNAL(receiptCheckedSingal(QString)), this, SLOT(onReceiptCheckedSlot(QString)));
 	connect(m_pInputDoneDialog, SIGNAL(inputDoneSingal()), this, SLOT(onInputDoneSlot()));
 
 	connect(m_pCheckIDDialogCheck, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
@@ -129,11 +99,7 @@ void VehicleManage::on_pBtnCheck_clicked()
 	// 跳转至远程验车第一步
 	this->hide();
 	m_pCheckIDDialogCheck->show();
-	m_pCheckIDDialogCheck->setCaller(CHECKVEHICLE);
 	m_pCheckIDDialogCheck->startTimer(20000);
-	//connect(&m_checkIDDialogCheck, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
-	//m_checkIDDialogCheck.exec();
-	//this->show();
 }
 
 void VehicleManage::on_pBtnSelect_clicked()
@@ -141,73 +107,89 @@ void VehicleManage::on_pBtnSelect_clicked()
 	// 跳转至自主选牌第一步
 	this->hide();
 	m_pCheckIDDialogSelect->show();
-	m_pCheckIDDialogSelect->setCaller(SELECTLICENSE);
 	m_pCheckIDDialogSelect->startTimer(20000);
-	//connect(&m_checkIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
-	//m_checkIDDialogSelect.exec();
-	//this->show();
 }
 
-void VehicleManage::onIdCheckedSlot(unsigned int type)
+void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 {
-	//this->hide();
-	if (type == CHECKVEHICLE)
+	if (nCaller == CHECKVEHICLE)
 	{
-		//disconnect(&m_checkIDDialogCheck, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
 		m_pCheckIDDialogCheck->hide();
 		m_pVehicleInfoDialog->show();
+		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
 		m_pVehicleInfoDialog->startTimer(20000);
-		//connect(&m_vehicleInfoDialog, SIGNAL(vehicleInfoDoneSingal()), this, SLOT(onVehicleInfoDoneSlot()));
-		//m_vehicleInfoDialog.exec();
 	}
 	else
 	{
-		//disconnect(&m_checkIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int)), this, SLOT(onIdCheckedSlot(unsigned int)));
 		m_pCheckIDDialogSelect->hide();
 		m_pSelectLicenseDialog->show();
-		m_pSelectLicenseDialog->startTimer(20000);
-		//connect(&m_SelectLicenseDialog, SIGNAL(selectDoneSingal()), this, SLOT(onSelectDoneSlot()));
-		//m_SelectLicenseDialog.exec();
+		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
+		m_pSelectLicenseDialog->startTimer(120000);
 	}
-	//this->show();
 }
 
-void VehicleManage::onVehicleInfoDoneSlot()
+void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 {
-	//this->hide();
-	//disconnect(&m_vehicleInfoDialog, SIGNAL(vehicleInfoDoneSingal()), this, SLOT(onVehicleInfoDoneSlot()));
+	m_pCheckIDDialogCheck->hide();
+	m_pVehicleInfoDialog->hide();
+	m_pCheckReceiptDialog->hide();
+	m_pInputDoneDialog->hide();
+	m_pCheckIDDialogSelect->hide();
+	m_pSelectLicenseDialog->hide();
+	switch (nStage)
+	{
+	case CHECKID:
+		m_pVehicleInfoDialog->show();
+		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
+		m_pVehicleInfoDialog->startTimer(20000);
+		break;
+	case VEHICLEINCO:
+		m_pCheckReceiptDialog->show();
+		m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
+		m_pCheckReceiptDialog->startTimer(20000);
+		break;
+	case CHECKRECEIPT:
+		m_pInputDoneDialog->show();
+		m_pInputDoneDialog->setOwnerId(qstrOwnerId);
+		m_pInputDoneDialog->startTimer(20000);
+		break;
+	case INPUTDONE:
+		break;
+	case CHECKIDSELECT:
+		m_pSelectLicenseDialog->show();
+		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
+		m_pSelectLicenseDialog->startTimer(120000);
+	case SELECTED:
+		break;
+	default:
+		break;
+	}
+}
+
+void VehicleManage::onVehicleInfoDoneSlot(QString qstrOwnerId)
+{
 	m_pVehicleInfoDialog->hide();
 	m_pCheckReceiptDialog->show();
-	m_pCheckReceiptDialog->startTimer(120000);
-	//connect(&m_checkReceiptDialog, SIGNAL(receiptCheckedSingal()), this, SLOT(onReceiptCheckedSlot()));
-	//m_checkReceiptDialog.exec();
-	//this->show();
+	m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
+	m_pCheckReceiptDialog->startTimer(20000);
 }
 
-void VehicleManage::onReceiptCheckedSlot()
+void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
 {
-	//this->hide();
-	//disconnect(&m_checkReceiptDialog, SIGNAL(receiptCheckedSingal()), this, SLOT(onReceiptCheckedSlot()));
 	m_pCheckReceiptDialog->hide();
 	m_pInputDoneDialog->show();
+	m_pInputDoneDialog->setOwnerId(qstrOwnerId);
 	m_pInputDoneDialog->startTimer(20000);
-	//connect(&m_inputDoneDialog, SIGNAL(inputDoneSingal()), this, SLOT(onInputDoneSlot()));
-	//m_inputDoneDialog.exec();
-	//this->show();
 }
 
 void VehicleManage::onInputDoneSlot()
 {
-	//this->hide();
-	//disconnect(&m_inputDoneDialog, SIGNAL(inputDoneSingal()), this, SLOT(onInputDoneSlot()));
 	m_pInputDoneDialog->hide();
 	this->show();
 }
 
 void VehicleManage::onSelectDoneSlot()
 {
-	//this->hide();
-	//disconnect(&m_SelectLicenseDialog, SIGNAL(selectDoneSingal()), this, SLOT(onSelectDoneSlot()));
 	m_pSelectLicenseDialog->hide();
 	this->show();
 }

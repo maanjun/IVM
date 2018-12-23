@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common.h"
 #include <QtWidgets/QMainWindow>
 #include "ui_vehiclemanage.h"
 #include "checkiddialog.h"
@@ -8,9 +9,7 @@
 #include "inputdonedialog.h"
 #include "selectlicensedialog.h"
 
-#include <QSqlQuery>
-#include <QSqlTableModel>
-#include <QSqlError>
+#include "operateMysql.h"
 
 #include <QString>
 #include <QDebug>
@@ -32,11 +31,13 @@ private slots:
 
 	void onGoHomeSlot();
 
-	void onIdCheckedSlot(unsigned int type);
+	void onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId);
 
-	void onVehicleInfoDoneSlot();
+	void onIdScannedSlot(unsigned int nStage, QString qstrOwnerId);
 
-	void onReceiptCheckedSlot();
+	void onVehicleInfoDoneSlot(QString qstrOwnerId);
+
+	void onReceiptCheckedSlot(QString qstrOwnerId);
 
 	void onInputDoneSlot();
 
@@ -44,8 +45,6 @@ private slots:
 
 private:
 	Ui::VehicleManageClass ui;
-
-	QSqlDatabase m_db;
 
 	CheckIDDialog *m_pCheckIDDialogCheck;
 	VehicleInfoDialog *m_pVehicleInfoDialog;
@@ -56,7 +55,6 @@ private:
 
 public:
 	void init();
-	bool initDatabase();
 	bool initFrame();
 	void finit();
 };

@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>590</x>
-     <y>570</y>
+     <y>612</y>
      <width>200</width>
      <height>100</height>
     </rect>
@@ -39,7 +39,7 @@ border-image: url(:/Resources/Images/nextoff.png);</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>570</y>
+     <y>612</y>
      <width>200</width>
      <height>100</height>
     </rect>
@@ -62,20 +62,20 @@ border-image: url(:/Resources/Images/homepageon.png);</string>
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>280</y>
+     <y>340</y>
      <width>200</width>
      <height>200</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>240</y>
+     <y>300</y>
      <width>650</width>
      <height>290</height>
     </rect>
@@ -96,7 +96,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>600</x>
-     <y>320</y>
+     <y>380</y>
      <width>124</width>
      <height>124</height>
     </rect>
@@ -105,7 +105,103 @@ p, li { white-space: pre-wrap; }
     <string notr="true">border-image: url(:/Resources/Images/loading.gif);</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>275</x>
+     <y>230</y>
+     <width>233</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+color: rgb(255, 255, 255);
+background-color: rgb(65, 147, 252);</string>
+   </property>
+   <property name="text">
+    <string>扫描车辆信息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>230</y>
+     <width>233</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+color: rgb(255, 255, 255);
+background-color: rgb(166, 205, 251);</string>
+   </property>
+   <property name="text">
+    <string>扫描身份证</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>230</y>
+     <width>233</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+color: rgb(255, 255, 255);
+background-color: rgb(166, 205, 251);</string>
+   </property>
+   <property name="text">
+    <string>输入税费号</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>745</x>
+     <y>230</y>
+     <width>229</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+color: rgb(255, 255, 255);
+background-color: rgb(166, 205, 251);</string>
+   </property>
+   <property name="text">
+    <string>完成</string>
    </property>
   </widget>
  </widget>

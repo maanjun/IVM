@@ -1,6 +1,7 @@
 #ifndef INPUTDONEDIALOG_H
 #define INPUTDONEDIALOG_H
 
+#include "common.h"
 #include "basedialog.h"
 
 namespace Ui {

@@ -16,16 +16,29 @@ public:
     explicit BaseDialog(QWidget *parent = 0);
     ~BaseDialog();
 
+public:
+	QTimer *m_pTimer;
+
+	bool m_bInterrupted;
+	//对话框之间传递身份证号
+	QString m_qstrOwnerId;
+
 	virtual void startTimer(int nMillisecond = 60000);
+
+	virtual void stopTimer();
+
+	void setOwnerId(QString qstrOwnerId);
 
 signals:
 	void goHomeSignal();
 signals:
-	void idCheckedSignal(unsigned int type);
+	void idCheckedSignal(unsigned int nCaller, QString qstrOwnerId);
 signals:
-	void receiptCheckedSingal();
+	void idScannedSignal(unsigned int nStage, QString qstrOwnerId);
 signals:
-	void vehicleInfoDoneSingal();
+	void receiptCheckedSingal(QString qstrOwnerId);
+signals:
+	void vehicleInfoDoneSingal(QString qstrOwnerId);
 signals:
 	void inputDoneSingal();
 signals:
@@ -36,11 +49,6 @@ private slots:
 
 private:
     Ui::BaseDialog *ui;
-
-public:
-    QTimer *m_pTimer;
-
-	bool m_bInterrupted;
 };
 
 #endif // BASEDIALOG_H

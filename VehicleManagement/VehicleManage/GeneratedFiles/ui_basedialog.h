@@ -34,7 +34,7 @@ public:
         labelTitle->setObjectName(QStringLiteral("labelTitle"));
         labelTitle->setGeometry(QRect(250, 60, 481, 141));
         QFont font;
-        font.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
+        font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font.setPointSize(42);
         labelTitle->setFont(font);
         labelTitle->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));

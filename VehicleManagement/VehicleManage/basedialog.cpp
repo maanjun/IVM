@@ -43,3 +43,13 @@ void BaseDialog::onTimecoutSlot()
 {
 	emit goHomeSignal();
 }
+
+void BaseDialog::stopTimer()
+{
+	m_pTimer->stop();
+}
+
+void BaseDialog::setOwnerId(QString qstrOwnerId)
+{
+	m_qstrOwnerId = qstrOwnerId;
+}

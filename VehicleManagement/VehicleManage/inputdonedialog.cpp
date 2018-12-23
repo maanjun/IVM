@@ -1,6 +1,5 @@
 #include "inputdonedialog.h"
 #include "ui_inputdonedialog.h"
-#include "common.h"
 
 InputDoneDialog::InputDoneDialog(QWidget *parent) :
 	BaseDialog(parent),

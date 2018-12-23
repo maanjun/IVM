@@ -3,7 +3,6 @@
 #include <QMessageBox>
 #include <QMovie>
 #include <QDebug>
-#include "common.h"
 
 VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	BaseDialog(parent),
@@ -11,17 +10,20 @@ VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
+	//初始化数据
+	m_vehicleInfo = { 0 };
+
 	ui->pBtnNext->setEnabled(false);
 	// 读取
 	m_qstrVehicleInfoTemplateHtml = "";
 	readFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Resources\\Html\\vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
 
-	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif");
+	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif", "gif", this);
 	ui->label->setMovie(movieScanning);
 	ui->label->setScaledContents(true);
 	movieScanning->start();
 
-	QMovie *movieLoading = new QMovie("./Resources/Images/loading.gif");
+	QMovie *movieLoading = new QMovie("./Resources/Images/loading.gif", "gif", this);
 	ui->labelLoading->setMovie(movieLoading);
 	movieLoading->start();
 }
@@ -43,7 +45,32 @@ void VehicleInfoDialog::on_pBtnNext_clicked()
 {
     // 下一步
 	m_pTimer->stop();
-	emit vehicleInfoDoneSingal();
+	// 将数据存入数据库
+	m_operateMysql.init();
+	m_operateMysql.begin();
+	QString qstrInsertSql = QString("INSERT INTO VEHICLE(VEHICLEID, MANUFACTUREDATE, MANUFACTUREADDRESS, MANUFACTURER, COLOR, MODEL, BRAND, USERID, OWNERNO, ISVALID) VALUES('%1', '%2', '%3', '%4', '%5', '%6', '%7', %8, '%9', %10)")
+		.arg(m_vehicleInfo.szVehicleId)
+		.arg(m_vehicleInfo.szManufactureDate)
+		.arg(QString::fromLocal8Bit(m_vehicleInfo.szManufactureAddress))
+		.arg(QString::fromLocal8Bit(m_vehicleInfo.szManufacturer))
+		.arg(QString::fromLocal8Bit(m_vehicleInfo.szColor))
+		.arg(QString::fromLocal8Bit(m_vehicleInfo.szModel))
+		.arg(QString::fromLocal8Bit(m_vehicleInfo.szBrand))
+		.arg(m_vehicleInfo.nUserid)
+		.arg(m_vehicleInfo.szOwnerId)
+		.arg(1);
+	QString qstrUpdateSql = QString("UPDATE USER SET STAGE=2 WHERE NUMBER='%1'").arg(m_vehicleInfo.szOwnerId);
+	if (m_operateMysql.queryExe(qstrInsertSql) && m_operateMysql.queryExe(qstrUpdateSql))
+	{
+		m_operateMysql.commit();
+	}
+	else
+	{
+		m_operateMysql.rollback();
+		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+	}
+	m_operateMysql.close();
+	emit vehicleInfoDoneSingal(m_qstrOwnerId);
 	//this->close();
 }
 
@@ -64,6 +91,14 @@ void VehicleInfoDialog::startTimer(int nMillisecond)
 		{
 			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 			// 读取成功
+			strcpy_s(m_vehicleInfo.szBrand, "雪佛兰");
+			strcpy_s(m_vehicleInfo.szColor, "红色");
+			strcpy_s(m_vehicleInfo.szManufactureAddress, "重庆");
+			strcpy_s(m_vehicleInfo.szManufactureDate, "2018-12-12");
+			strcpy_s(m_vehicleInfo.szManufacturer, "上汽通用");
+			strcpy_s(m_vehicleInfo.szModel, "科沃兹");
+			strcpy_s(m_vehicleInfo.szOwnerId, m_qstrOwnerId.toStdString().c_str());
+			strcpy_s(m_vehicleInfo.szVehicleId, "45678GHJK567");
 			if (150 == nCount) {
 				ui->labelLoading->setVisible(false);
 				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_BaseDialog_t {
-    QByteArrayData data[10];
-    char stringdata0[137];
+    QByteArrayData data[13];
+    char stringdata0[175];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,16 +33,20 @@ QT_MOC_LITERAL(0, 0, 10), // "BaseDialog"
 QT_MOC_LITERAL(1, 11, 12), // "goHomeSignal"
 QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 15), // "idCheckedSignal"
-QT_MOC_LITERAL(4, 41, 4), // "type"
-QT_MOC_LITERAL(5, 46, 20), // "receiptCheckedSingal"
-QT_MOC_LITERAL(6, 67, 21), // "vehicleInfoDoneSingal"
-QT_MOC_LITERAL(7, 89, 15), // "inputDoneSingal"
-QT_MOC_LITERAL(8, 105, 16), // "selectDoneSingal"
-QT_MOC_LITERAL(9, 122, 14) // "onTimecoutSlot"
+QT_MOC_LITERAL(4, 41, 7), // "nCaller"
+QT_MOC_LITERAL(5, 49, 11), // "qstrOwnerId"
+QT_MOC_LITERAL(6, 61, 15), // "idScannedSignal"
+QT_MOC_LITERAL(7, 77, 6), // "nStage"
+QT_MOC_LITERAL(8, 84, 20), // "receiptCheckedSingal"
+QT_MOC_LITERAL(9, 105, 21), // "vehicleInfoDoneSingal"
+QT_MOC_LITERAL(10, 127, 15), // "inputDoneSingal"
+QT_MOC_LITERAL(11, 143, 16), // "selectDoneSingal"
+QT_MOC_LITERAL(12, 160, 14) // "onTimecoutSlot"
 
     },
     "BaseDialog\0goHomeSignal\0\0idCheckedSignal\0"
-    "type\0receiptCheckedSingal\0"
+    "nCaller\0qstrOwnerId\0idScannedSignal\0"
+    "nStage\0receiptCheckedSingal\0"
     "vehicleInfoDoneSingal\0inputDoneSingal\0"
     "selectDoneSingal\0onTimecoutSlot"
 };
@@ -54,29 +58,31 @@ static const uint qt_meta_data_BaseDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       6,       // signalCount
+       7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   49,    2, 0x06 /* Public */,
-       3,    1,   50,    2, 0x06 /* Public */,
-       5,    0,   53,    2, 0x06 /* Public */,
-       6,    0,   54,    2, 0x06 /* Public */,
-       7,    0,   55,    2, 0x06 /* Public */,
-       8,    0,   56,    2, 0x06 /* Public */,
+       1,    0,   54,    2, 0x06 /* Public */,
+       3,    2,   55,    2, 0x06 /* Public */,
+       6,    2,   60,    2, 0x06 /* Public */,
+       8,    1,   65,    2, 0x06 /* Public */,
+       9,    1,   68,    2, 0x06 /* Public */,
+      10,    0,   71,    2, 0x06 /* Public */,
+      11,    0,   72,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       9,    0,   57,    2, 0x08 /* Private */,
+      12,    0,   73,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::UInt,    4,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::UInt, QMetaType::QString,    4,    5,
+    QMetaType::Void, QMetaType::UInt, QMetaType::QString,    7,    5,
+    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -93,12 +99,13 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->goHomeSignal(); break;
-        case 1: _t->idCheckedSignal((*reinterpret_cast< uint(*)>(_a[1]))); break;
-        case 2: _t->receiptCheckedSingal(); break;
-        case 3: _t->vehicleInfoDoneSingal(); break;
-        case 4: _t->inputDoneSingal(); break;
-        case 5: _t->selectDoneSingal(); break;
-        case 6: _t->onTimecoutSlot(); break;
+        case 1: _t->idCheckedSignal((*reinterpret_cast< uint(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 2: _t->idScannedSignal((*reinterpret_cast< uint(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 3: _t->receiptCheckedSingal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 4: _t->vehicleInfoDoneSingal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: _t->inputDoneSingal(); break;
+        case 6: _t->selectDoneSingal(); break;
+        case 7: _t->onTimecoutSlot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -112,37 +119,44 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             }
         }
         {
-            typedef void (BaseDialog::*_t)(unsigned int );
+            typedef void (BaseDialog::*_t)(unsigned int , QString );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::idCheckedSignal)) {
                 *result = 1;
                 return;
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::receiptCheckedSingal)) {
+            typedef void (BaseDialog::*_t)(unsigned int , QString );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::idScannedSignal)) {
                 *result = 2;
                 return;
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::vehicleInfoDoneSingal)) {
+            typedef void (BaseDialog::*_t)(QString );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::receiptCheckedSingal)) {
                 *result = 3;
                 return;
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::inputDoneSingal)) {
+            typedef void (BaseDialog::*_t)(QString );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::vehicleInfoDoneSingal)) {
                 *result = 4;
                 return;
             }
         }
         {
             typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::selectDoneSingal)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::inputDoneSingal)) {
                 *result = 5;
+                return;
+            }
+        }
+        {
+            typedef void (BaseDialog::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::selectDoneSingal)) {
+                *result = 6;
                 return;
             }
         }
@@ -174,13 +188,13 @@ int BaseDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }
@@ -192,33 +206,42 @@ void BaseDialog::goHomeSignal()
 }
 
 // SIGNAL 1
-void BaseDialog::idCheckedSignal(unsigned int _t1)
+void BaseDialog::idCheckedSignal(unsigned int _t1, QString _t2)
 {
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void BaseDialog::receiptCheckedSingal()
+void BaseDialog::idScannedSignal(unsigned int _t1, QString _t2)
 {
-    QMetaObject::activate(this, &staticMetaObject, 2, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void BaseDialog::vehicleInfoDoneSingal()
+void BaseDialog::receiptCheckedSingal(QString _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 3, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
 // SIGNAL 4
-void BaseDialog::inputDoneSingal()
+void BaseDialog::vehicleInfoDoneSingal(QString _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 4, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
 
 // SIGNAL 5
-void BaseDialog::selectDoneSingal()
+void BaseDialog::inputDoneSingal()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, Q_NULLPTR);
+}
+
+// SIGNAL 6
+void BaseDialog::selectDoneSingal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE
