@@ -3,6 +3,7 @@
 
 #include "common.h"
 #include "basedialog.h"
+#include "operateMysql.h"
 
 namespace Ui {
 class InputDoneDialog;
@@ -18,20 +19,20 @@ public:
 
 	void startTimer(int nMillisecond = 60000);
 
+private:
+	OperateMysql m_operateMysql;
+
+	QString m_qstrSumaryTemplateHtml;
+
+	QString m_qstrDetailTemplateHtml;
+
 private slots:
     void on_pBtnHomepage_clicked();
 
     void on_pBtnDone_clicked();
 
-//signals:
-//	void inputDoneSingal();
-
 private:
     Ui::InputDoneDialog *ui;
-
-	QString m_qstrSumaryTemplateHtml;
-
-	QString m_qstrDetailTemplateHtml;
 };
 
 #endif // INPUTDONEDIALOG_H

@@ -52,11 +52,11 @@ void CheckReceiptDialog::on_pBtnNext_clicked()
 		.arg(ui->lineEditReceipt->text())
 		.arg(ui->lineEditTax->text())
 		.arg(m_taxaction.nUserid)
-		.arg(m_qstrIdNumber)
+		.arg(m_qstrOwnerId)
 		.arg(qstrReceiptImage)
 		.arg(qstrTaxImage)
 		.arg(1);
-	QString qstrUpdateSql = QString("UPDATE USER SET STAGE=3 WHERE NUMBER='%1'").arg(m_qstrIdNumber);
+	QString qstrUpdateSql = QString("UPDATE USER SET STAGE=3 WHERE NUMBER='%1'").arg(m_qstrOwnerId);
 	if (m_operateMysql.queryExe(qstrInsertSql) && m_operateMysql.queryExe(qstrUpdateSql))
 	{
 		m_operateMysql.commit();
@@ -67,6 +67,24 @@ void CheckReceiptDialog::on_pBtnNext_clicked()
 		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
+}
+
+void CheckReceiptDialog::startTimer(int nMillisecond)
+{
+	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
+	ui->pBtnNext->setEnabled(false);
+	ui->lineEditReceipt->setText("");
+	ui->lineEditTax->setText("");
+	// 定时关闭
+	if (nMillisecond > 0)
+	{
+		m_pTimer->start(nMillisecond);
+	}
+	else
+	{
+		// 默认60秒自动关闭
+		m_pTimer->start(60000);
+	}
 }
 
 void CheckReceiptDialog::onReceiptEdited(const QString &text)

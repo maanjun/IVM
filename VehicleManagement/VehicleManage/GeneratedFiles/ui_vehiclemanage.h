@@ -17,7 +17,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,7 +29,6 @@ public:
     QPushButton *pBtnCheck;
     QPushButton *pBtnMortgage;
     QLabel *labelTitle;
-    QToolButton *toolButton;
 
     void setupUi(QMainWindow *VehicleManageClass)
     {
@@ -68,24 +66,6 @@ public:
         font1.setPointSize(42);
         labelTitle->setFont(font1);
         labelTitle->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
-        toolButton = new QToolButton(centralWidget);
-        toolButton->setObjectName(QStringLiteral("toolButton"));
-        toolButton->setGeometry(QRect(70, 220, 221, 251));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
-        font2.setPointSize(32);
-        font2.setBold(true);
-        font2.setWeight(75);
-        toolButton->setFont(font2);
-        toolButton->setLayoutDirection(Qt::LeftToRight);
-        toolButton->setAutoFillBackground(false);
-        toolButton->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(18, 150, 219);\n"
-"background-color: rgb(175, 201, 255);"));
-        QIcon icon;
-        icon.addFile(QStringLiteral(":/Resources/Images/jiandujianyansuooashejiyongcheshenqing.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton->setIcon(icon);
-        toolButton->setIconSize(QSize(128, 128));
         VehicleManageClass->setCentralWidget(centralWidget);
 
         retranslateUi(VehicleManageClass);
@@ -100,8 +80,6 @@ public:
         pBtnCheck->setText(QString());
         pBtnMortgage->setText(QString());
         labelTitle->setText(QApplication::translate("VehicleManageClass", "\350\277\234\347\250\213\346\231\272\350\203\275\350\275\246\346\243\200\347\263\273\347\273\237", 0));
-        toolButton->setText(QApplication::translate("VehicleManageClass", "\350\277\234\347\250\213\351\252\214\350\275\246", 0));
-        toolButton->setShortcut(QApplication::translate("VehicleManageClass", "Ctrl+S", 0));
     } // retranslateUi
 
 };

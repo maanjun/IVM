@@ -56,7 +56,6 @@ bool VehicleManage::initFrame()
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 	ui.labelTitle->setAttribute(Qt::WA_TranslucentBackground);
 	ui.labelTitle->setStyleSheet("background:transparent");
-	ui.toolButton->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
 	m_pCheckIDDialogCheck = new CheckIDDialog(CHECKVEHICLE);
 	m_pCheckIDDialogSelect = new CheckIDDialog(SELECTLICENSE);
@@ -155,12 +154,14 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 		m_pInputDoneDialog->startTimer(20000);
 		break;
 	case INPUTDONE:
+		this->show();
 		break;
 	case CHECKIDSELECT:
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
 		m_pSelectLicenseDialog->startTimer(20000);
 	case SELECTED:
+		this->show();
 		break;
 	default:
 		break;

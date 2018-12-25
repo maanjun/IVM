@@ -31,9 +31,9 @@ public:
     explicit CheckReceiptDialog(QWidget *parent = 0);
     ~CheckReceiptDialog();
 
-private:
-	QString m_qstrIdNumber;
+	void startTimer(int nMillisecond = 60000);
 
+private:
 	OperateMysql m_operateMysql;
 
 	Taxation m_taxaction;

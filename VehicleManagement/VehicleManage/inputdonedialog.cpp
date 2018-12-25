@@ -1,5 +1,6 @@
 #include "inputdonedialog.h"
 #include "ui_inputdonedialog.h"
+#include <QMessageBox>
 
 InputDoneDialog::InputDoneDialog(QWidget *parent) :
 	BaseDialog(parent),
@@ -35,9 +36,12 @@ void InputDoneDialog::startTimer(int nMillisecond)
 		m_pTimer->start(60000);
 	}
 	// 从数据库读取
-	if (true)
+	m_operateMysql.init();
+	QString qstrSelect = QString("SELECT * FROM USER U LEFT JOIN VEHICLE V ON V.OWNERNO = U.NUMBER LEFT JOIN TAXATION T ON T.OWNERNO = U.NUMBER WHERE U.NUMBER = '1%'").arg(m_qstrOwnerId);
+	if (m_operateMysql.queryExe(qstrSelect))
 	{
-		//读取的数据保存至本地以备打印,
+		m_qstrDetailTemplateHtml.arg("").arg("");
+		//读取的数据保存至本地以备打印 (如果打印文件而不是直接打印内容）
 		//保存的文件以身份证号命名
 		QString qstrPrintContent = m_qstrDetailTemplateHtml;
 		writeFile("", qstrPrintContent);
@@ -52,11 +56,11 @@ void InputDoneDialog::startTimer(int nMillisecond)
 		ui->pBtnDone->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/finishoff.png)");
 		ui->pBtnDone->setEnabled(false);
 	}
+	m_operateMysql.close();
 }
 
 void InputDoneDialog::on_pBtnHomepage_clicked()
 {
-	//this->close();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
@@ -65,8 +69,22 @@ void InputDoneDialog::on_pBtnDone_clicked()
 {
 	m_pTimer->stop();
 	emit inputDoneSingal();
+	// 后台处理
+	// 从数据库取数据
+	m_operateMysql.init();
+	m_operateMysql.begin();
+	QString qstrUpdateSql = QString("UPDATE USER SET STAGE=4 WHERE NUMBER='%1'").arg(m_qstrOwnerId);
+	if (m_operateMysql.queryExe(qstrUpdateSql))
+	{
+		m_operateMysql.commit();
+	}
+	else
+	{
+		m_operateMysql.rollback();
+		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+	}
+	m_operateMysql.close();
 	// 需将html美化
 	// printFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Data\\detail.html");
 	printContent(m_qstrDetailTemplateHtml.toStdString());
-	//this->close();
 }
