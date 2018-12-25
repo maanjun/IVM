@@ -36,7 +36,6 @@ VehicleInfoDialog::~VehicleInfoDialog()
 void VehicleInfoDialog::on_pBtnHomepage_clicked()
 {
     // 回到主页
-	//this->close();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
@@ -71,7 +70,6 @@ void VehicleInfoDialog::on_pBtnNext_clicked()
 	}
 	m_operateMysql.close();
 	emit vehicleInfoDoneSingal(m_qstrOwnerId);
-	//this->close();
 }
 
 void VehicleInfoDialog::startTimer(int nMillisecond)

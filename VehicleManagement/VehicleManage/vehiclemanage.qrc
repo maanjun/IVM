@@ -7,5 +7,15 @@
         <file>Resources/Images/mortgageon.png</file>
         <file>Resources/Images/selectoff.png</file>
         <file>Resources/Images/selecton.png</file>
+        <file>Resources/Images/jianchezhan01.png</file>
+        <file>Resources/Images/jiandujianyansuooasheji-cheliangweixiushenqing.png</file>
+        <file>Resources/Images/jiandujianyansuooashejiyongcheshenqing.png</file>
+        <file>Resources/Images/jidongchejianyanyuyue.png</file>
+        <file>Resources/Images/swticonjianchezhan01.png</file>
+        <file>Resources/Images/yanche.png</file>
+        <file>Resources/Images/yancheliucheng.png</file>
+        <file>Resources/Images/yancheliucheng_1.png</file>
+        <file>Resources/Images/yancheliucheng_2.png</file>
+        <file>Resources/Images/yuyuejianche.png</file>
     </qresource>
 </RCC>

@@ -45,9 +45,6 @@
     <ClCompile Include="vehicleinfodialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="checkreceiptdialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="inputdonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,6 +63,9 @@
     <ClCompile Include="operateMysql.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="checkreceiptdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -77,9 +77,6 @@
     <QtMoc Include="vehicleinfodialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="checkreceiptdialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="inputdonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -87,6 +84,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="selectlicensedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="checkreceiptdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -100,9 +100,6 @@
     <QtUic Include="vehicleinfodialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="checkreceiptdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="inputdonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
@@ -110,6 +107,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="selectlicensedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="checkreceiptdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -123,9 +123,6 @@
     <QtRcc Include="basedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtRcc Include="checkreceiptdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
     <QtRcc Include="inputdonedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
@@ -133,6 +130,9 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="vehicleinfodialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="checkreceiptdialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

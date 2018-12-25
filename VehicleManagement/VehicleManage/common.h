@@ -20,18 +20,11 @@
 
 #include <afxcontrolbars.h>     // 功能区和控件条的 MFC 支持
 
-
-#include <QNetworkAccessManager>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#include <QUrl>
 #include <QFile>
-#include <QHttpMultiPart>
-#include <QHttpPart>
 #include <QTextStream>
-#include <QFile>
 #include <QPrinter>
 #include <QFileInfo>
+#include <QDebug>
 
 #include "CommonFunction.h"
 
@@ -95,10 +88,10 @@ typedef struct _tagTaxation
 	char szTaxcode[20];
 	int nUserid;
 	char szOwnerId[20]; //身份证号
+	char szReceiptImage[256];
+	char szTaxImage[256];
 	int nIsvalid;
 }Taxation, *PTaxation;
-
-bool uploadFile(QString qstrLocalPath);
 
 bool readFile(QString qstrFileName, QString &qstrContent);
 

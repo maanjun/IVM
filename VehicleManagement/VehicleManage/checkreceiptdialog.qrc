@@ -1,11 +1,9 @@
 <RCC>
-  <qresource prefix="/">
-    <file>Resources/Images/printguide.png</file>
-    <file>Resources/Images/background.png</file>
-    <file>Resources/Images/homepageoff.png</file>
-    <file>Resources/Images/homepageon.png</file>
-    <file>Resources/Images/loading.gif</file>
-    <file>Resources/Images/nextoff.png</file>
-    <file>Resources/Images/nexton.png</file>
-  </qresource>
+    <qresource prefix="/">
+        <file>Resources/Images/printguide.png</file>
+        <file>Resources/Images/homepageoff.png</file>
+        <file>Resources/Images/homepageon.png</file>
+        <file>Resources/Images/nextoff.png</file>
+        <file>Resources/Images/nexton.png</file>
+    </qresource>
 </RCC>
