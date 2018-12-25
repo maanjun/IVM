@@ -16,7 +16,7 @@ VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	ui->pBtnNext->setEnabled(false);
 	// 读取
 	m_qstrVehicleInfoTemplateHtml = "";
-	readFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Resources\\Html\\vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
+	readFile(".\\Resources\\Html\\vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
 
 	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif", "gif", this);
 	ui->label->setMovie(movieScanning);
@@ -66,7 +66,7 @@ void VehicleInfoDialog::on_pBtnNext_clicked()
 	else
 	{
 		m_operateMysql.rollback();
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
 	emit vehicleInfoDoneSingal(m_qstrOwnerId);

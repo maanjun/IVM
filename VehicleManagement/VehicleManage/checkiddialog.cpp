@@ -43,7 +43,7 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 
 	// 读取
 	m_qstrIDTemplateHtml = "";
-	readFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Resources\\Html\\sfztemplate.html", m_qstrIDTemplateHtml);
+	readFile(".\\Resources\\Html\\sfztemplate.html", m_qstrIDTemplateHtml);
 }
 
 CheckIDDialog::~CheckIDDialog()
@@ -151,7 +151,7 @@ void CheckIDDialog::on_pBtnNext_clicked()
 	else 
 	{
 		m_operateMysql.rollback();
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
 	emit idCheckedSignal(m_caller, m_idInfo.szNumber);
@@ -189,6 +189,6 @@ void CheckIDDialog::getUserinfo(QString qstrId)
 	}
 	else 
 	{
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("网络异常！"));
+		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("网络异常！"));
 	}
 }

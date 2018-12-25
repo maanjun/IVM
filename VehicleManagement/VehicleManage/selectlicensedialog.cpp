@@ -21,12 +21,12 @@ SelectLicenseDialog::SelectLicenseDialog(QWidget *parent) :
 		m_qstrBtnList[i] = new QPushButton("", this);
 		connect(m_qstrBtnList[i], SIGNAL(clicked()), this, SLOT(onLicenseSelectedSlot()));
 		m_qstrBtnList[i]->setStyleSheet("color:rgb(255,255,255);border:2px groove gray; border-radius:10px; padding:2px 2px;background-color: rgb(0, 0, 255); ");
-		m_qstrBtnList[i]->setFont(QFont("宋体", 36));
+		m_qstrBtnList[i]->setFont(QFont("宋体", 64));
 		m_qstrBtnList[i]->setEnabled(false);
 		// 每个按钮宽160，高70，按钮之间左右相隔30，上下间隔10，第一个按钮坐上角坐标（50,240）
-		int x = 50 + (i % 5) * (160 + 30);
-		int y = 290 + (i / 5) * (70 + 10);
-		m_qstrBtnList[i]->setGeometry(x, y, 160, 70);
+		int x = 80 + (i % 5) * (320 + 40);
+		int y = 240 + (i / 5) * (120 + 20);
+		m_qstrBtnList[i]->setGeometry(x, y, 300, 120);
 	}
 
 	connect(ui->pBtnNext, SIGNAL(clicked()), this, SLOT(onBtnNextClicked()));

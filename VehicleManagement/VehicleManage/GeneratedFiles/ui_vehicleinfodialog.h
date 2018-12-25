@@ -38,10 +38,10 @@ public:
     {
         if (VehicleInfoDialog->objectName().isEmpty())
             VehicleInfoDialog->setObjectName(QStringLiteral("VehicleInfoDialog"));
-        VehicleInfoDialog->resize(1024, 768);
+        VehicleInfoDialog->resize(1920, 1085);
         pBtnNext = new QPushButton(VehicleInfoDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
-        pBtnNext->setGeometry(QRect(590, 612, 200, 100));
+        pBtnNext->setGeometry(QRect(1290, 850, 300, 150));
         QFont font;
         font.setPointSize(22);
         pBtnNext->setFont(font);
@@ -49,7 +49,7 @@ public:
 "border-image: url(:/Resources/Images/nextoff.png);"));
         pBtnHomepage = new QPushButton(VehicleInfoDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(190, 612, 200, 100));
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
         QFont font1;
         font1.setFamily(QStringLiteral("Algerian"));
         font1.setPointSize(22);
@@ -58,19 +58,19 @@ public:
 "border-image: url(:/Resources/Images/homepageon.png);"));
         label = new QLabel(VehicleInfoDialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(50, 340, 200, 200));
+        label->setGeometry(QRect(110, 340, 400, 400));
         textBrowser = new QTextBrowser(VehicleInfoDialog);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(320, 300, 650, 290));
+        textBrowser->setGeometry(QRect(620, 260, 1200, 540));
         textBrowser->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 2px;\n"
 "background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
         labelLoading = new QLabel(VehicleInfoDialog);
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
-        labelLoading->setGeometry(QRect(600, 380, 124, 124));
+        labelLoading->setGeometry(QRect(1160, 460, 124, 124));
         labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/loading.gif);"));
         pushButton_2 = new QPushButton(VehicleInfoDialog);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(275, 230, 233, 50));
+        pushButton_2->setGeometry(QRect(510, 150, 450, 50));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(20);
@@ -80,21 +80,21 @@ public:
 "background-color: rgb(65, 147, 252);"));
         pushButton = new QPushButton(VehicleInfoDialog);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 230, 233, 50));
+        pushButton->setGeometry(QRect(60, 150, 450, 50));
         pushButton->setFont(font2);
         pushButton->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pushButton_3 = new QPushButton(VehicleInfoDialog);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(510, 230, 233, 50));
+        pushButton_3->setGeometry(QRect(960, 150, 450, 50));
         pushButton_3->setFont(font2);
         pushButton_3->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pushButton_4 = new QPushButton(VehicleInfoDialog);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(745, 230, 229, 50));
+        pushButton_4->setGeometry(QRect(1410, 150, 450, 50));
         pushButton_4->setFont(font2);
         pushButton_4->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"

@@ -10,9 +10,9 @@ InputDoneDialog::InputDoneDialog(QWidget *parent) :
 
 	// 读取模板
 	m_qstrSumaryTemplateHtml = "";
-	readFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Resources\\Html\\summarytemplate.html", m_qstrSumaryTemplateHtml);
+	readFile(".\\Resources\\Html\\summarytemplate.html", m_qstrSumaryTemplateHtml);
 	m_qstrDetailTemplateHtml = "";
-	readFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Resources\\Html\\detailtemplate.html", m_qstrDetailTemplateHtml);
+	readFile(".\\Resources\\Html\\detailtemplate.html", m_qstrDetailTemplateHtml);
 }
 
 InputDoneDialog::~InputDoneDialog()
@@ -81,10 +81,10 @@ void InputDoneDialog::on_pBtnDone_clicked()
 	else
 	{
 		m_operateMysql.rollback();
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
 	// 需将html美化
-	// printFile("D:\\Works\\Mine\\IVM\\Codes\\IVM\\VehicleManagement\\VehicleManage\\Data\\detail.html");
+	// printFile(".\\Data\\detail.html");
 	printContent(m_qstrDetailTemplateHtml.toStdString());
 }

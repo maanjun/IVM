@@ -6,24 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>768</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>VehicleManage</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#centralWidget{border-image: url(:/Resources/Images/background.png);}</string>
+   <string notr="true">#centralWidget{border-image: url(:/Resources/Images/background.jpg);}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="pBtnSelect">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>470</y>
-      <width>200</width>
-      <height>100</height>
+      <x>810</x>
+      <y>450</y>
+      <width>300</width>
+      <height>300</height>
      </rect>
     </property>
     <property name="font">
@@ -32,7 +32,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+     <string notr="true">border:2px groove gray;border-radius:14px;padding:2px 4px;
 border-image: url(:/Resources/Images/selecton.png);</string>
     </property>
     <property name="text">
@@ -42,10 +42,10 @@ border-image: url(:/Resources/Images/selecton.png);</string>
    <widget class="QPushButton" name="pBtnCheck">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>470</y>
-      <width>200</width>
-      <height>100</height>
+      <x>250</x>
+      <y>450</y>
+      <width>300</width>
+      <height>300</height>
      </rect>
     </property>
     <property name="font">
@@ -54,7 +54,7 @@ border-image: url(:/Resources/Images/selecton.png);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+     <string notr="true">border:2px groove gray;border-radius:14px;padding:2px 4px;
 border-image: url(:/Resources/Images/checkon.png);</string>
     </property>
     <property name="text">
@@ -64,10 +64,10 @@ border-image: url(:/Resources/Images/checkon.png);</string>
    <widget class="QPushButton" name="pBtnMortgage">
     <property name="geometry">
      <rect>
-      <x>740</x>
-      <y>470</y>
-      <width>200</width>
-      <height>100</height>
+      <x>1370</x>
+      <y>450</y>
+      <width>300</width>
+      <height>300</height>
      </rect>
     </property>
     <property name="font">
@@ -76,33 +76,11 @@ border-image: url(:/Resources/Images/checkon.png);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+     <string notr="true">border:2px groove gray;border-radius:14px;padding:2px 4px;
 border-image: url(:/Resources/Images/mortgageon.png);</string>
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelTitle">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>60</y>
-      <width>481</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>黑体</family>
-      <pointsize>42</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
-    </property>
-    <property name="text">
-     <string>远程智能车检系统</string>
     </property>
    </widget>
   </widget>

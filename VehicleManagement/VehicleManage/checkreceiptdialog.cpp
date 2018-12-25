@@ -64,7 +64,7 @@ void CheckReceiptDialog::on_pBtnNext_clicked()
 	else
 	{
 		m_operateMysql.rollback();
-		QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
+		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
 }

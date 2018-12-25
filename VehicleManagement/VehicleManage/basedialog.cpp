@@ -8,8 +8,8 @@ BaseDialog::BaseDialog(QWidget *parent) :
     ui->setupUi(this);
 
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
-	ui->labelTitle->setAttribute(Qt::WA_TranslucentBackground);
-	ui->labelTitle->setStyleSheet("background:transparent");
+	//ui->labelTitle->setAttribute(Qt::WA_TranslucentBackground);
+	//ui->labelTitle->setStyleSheet("background:transparent");
 
 	m_bInterrupted = false;
     m_pTimer = new QTimer(this);

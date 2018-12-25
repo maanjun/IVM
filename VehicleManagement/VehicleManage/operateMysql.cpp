@@ -38,14 +38,14 @@ bool OperateMysql::init()
 		m_db.setUserName(strUserName);
 		m_db.setPassword(strPassword);
 		if (!m_db.open()) {
-			QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
+			//QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
 		}
 		m_pQuery = new QSqlQuery(m_db);
 		return true;
 	}
 	catch (std::exception &e)
 	{
-		QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
+		//QMessageBox::critical(0, QObject::tr("无法打开数据库"), "无法创建数据库连接！", QMessageBox::Cancel);
 	}
 	return false;
 }

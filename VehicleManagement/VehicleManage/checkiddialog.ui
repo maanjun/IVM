@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>768</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>612</y>
-     <width>200</width>
-     <height>100</height>
+     <x>330</x>
+     <y>850</y>
+     <width>300</width>
+     <height>150</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -45,10 +45,10 @@ border-image: url(:/Resources/Images/homepageon.png);</string>
   <widget class="QPushButton" name="pBtnNext">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>612</y>
-     <width>200</width>
-     <height>100</height>
+     <x>1290</x>
+     <y>850</y>
+     <width>300</width>
+     <height>150</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -73,10 +73,10 @@ border-image: url(:/Resources/Images/nextoff.png);</string>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>302</y>
-     <width>420</width>
-     <height>280</height>
+     <x>1020</x>
+     <y>280</y>
+     <width>750</width>
+     <height>500</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -94,10 +94,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>150</x>
      <y>312</y>
-     <width>371</width>
-     <height>251</height>
+     <width>650</width>
+     <height>450</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -111,10 +111,10 @@ border-image: url(:/Resources/Images/scanningid.png);</string>
   <widget class="QLabel" name="labelHead">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>352</y>
-     <width>100</width>
-     <height>140</height>
+     <x>1537</x>
+     <y>359</y>
+     <width>191</width>
+     <height>261</height>
     </rect>
    </property>
    <property name="text">
@@ -124,8 +124,8 @@ border-image: url(:/Resources/Images/scanningid.png);</string>
   <widget class="QLabel" name="labelLoading">
    <property name="geometry">
     <rect>
-     <x>688</x>
-     <y>380</y>
+     <x>1340</x>
+     <y>470</y>
      <width>124</width>
      <height>124</height>
     </rect>
@@ -140,9 +140,9 @@ border-image: url(:/Resources/Images/scanningid.png);</string>
   <widget class="QPushButton" name="pBtnDone">
    <property name="geometry">
     <rect>
-     <x>745</x>
-     <y>230</y>
-     <width>229</width>
+     <x>1410</x>
+     <y>150</y>
+     <width>450</width>
      <height>50</height>
     </rect>
    </property>
@@ -164,9 +164,9 @@ background-color: rgb(166, 205, 251);</string>
   <widget class="QPushButton" name="pBtnScanIdCheck">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>230</y>
-     <width>233</width>
+     <x>60</x>
+     <y>150</y>
+     <width>450</width>
      <height>50</height>
     </rect>
    </property>
@@ -188,9 +188,9 @@ background-color: rgb(65, 147, 252);</string>
   <widget class="QPushButton" name="pBtnScanVehicle">
    <property name="geometry">
     <rect>
-     <x>275</x>
-     <y>230</y>
-     <width>233</width>
+     <x>510</x>
+     <y>150</y>
+     <width>450</width>
      <height>50</height>
     </rect>
    </property>
@@ -212,9 +212,9 @@ background-color: rgb(166, 205, 251);</string>
   <widget class="QPushButton" name="pBtnReceipt">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>230</y>
-     <width>233</width>
+     <x>960</x>
+     <y>150</y>
+     <width>450</width>
      <height>50</height>
     </rect>
    </property>
@@ -236,9 +236,9 @@ background-color: rgb(166, 205, 251);</string>
   <widget class="QPushButton" name="pBtnScanIdSelect">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>230</y>
-     <width>468</width>
+     <x>60</x>
+     <y>150</y>
+     <width>900</width>
      <height>50</height>
     </rect>
    </property>
@@ -260,9 +260,9 @@ background-color: rgb(65, 147, 252);</string>
   <widget class="QPushButton" name="pBtnSelect">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>230</y>
-     <width>468</width>
+     <x>960</x>
+     <y>150</y>
+     <width>900</width>
      <height>50</height>
     </rect>
    </property>

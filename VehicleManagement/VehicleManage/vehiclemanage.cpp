@@ -54,8 +54,8 @@ bool VehicleManage::initFrame()
 {
 	//设置系统名称
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
-	ui.labelTitle->setAttribute(Qt::WA_TranslucentBackground);
-	ui.labelTitle->setStyleSheet("background:transparent");
+	//ui.labelTitle->setAttribute(Qt::WA_TranslucentBackground);
+	//ui.labelTitle->setStyleSheet("background:transparent");
 
 	m_pCheckIDDialogCheck = new CheckIDDialog(CHECKVEHICLE);
 	m_pCheckIDDialogSelect = new CheckIDDialog(SELECTLICENSE);
@@ -160,6 +160,7 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
 		m_pSelectLicenseDialog->startTimer(20000);
+		break;
 	case SELECTED:
 		this->show();
 		break;

@@ -32,10 +32,10 @@ public:
     {
         if (SelectLicenseDialog->objectName().isEmpty())
             SelectLicenseDialog->setObjectName(QStringLiteral("SelectLicenseDialog"));
-        SelectLicenseDialog->resize(1024, 768);
+        SelectLicenseDialog->resize(1920, 1080);
         pBtnConfirm = new QPushButton(SelectLicenseDialog);
         pBtnConfirm->setObjectName(QStringLiteral("pBtnConfirm"));
-        pBtnConfirm->setGeometry(QRect(700, 612, 200, 100));
+        pBtnConfirm->setGeometry(QRect(1310, 850, 300, 150));
         QFont font;
         font.setPointSize(22);
         pBtnConfirm->setFont(font);
@@ -43,7 +43,7 @@ public:
 "border-image: url(:/Resources/Images/confirmoff.png);"));
         pBtnHomepage = new QPushButton(SelectLicenseDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(120, 612, 200, 100));
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
         QFont font1;
         font1.setFamily(QStringLiteral("Algerian"));
         font1.setPointSize(22);
@@ -52,14 +52,14 @@ public:
 "border-image: url(:/Resources/Images/homepageon.png);"));
         pBtnNext = new QPushButton(SelectLicenseDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
-        pBtnNext->setGeometry(QRect(410, 612, 200, 100));
+        pBtnNext->setGeometry(QRect(820, 850, 300, 150));
         pBtnNext->setMinimumSize(QSize(200, 100));
         pBtnNext->setFont(font);
         pBtnNext->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/anotheroff.png);"));
         pBtnSelect = new QPushButton(SelectLicenseDialog);
         pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(510, 230, 468, 50));
+        pBtnSelect->setGeometry(QRect(960, 150, 900, 50));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(20);
@@ -69,7 +69,7 @@ public:
 "background-color: rgb(65, 147, 252);"));
         pBtnScanIdSelect = new QPushButton(SelectLicenseDialog);
         pBtnScanIdSelect->setObjectName(QStringLiteral("pBtnScanIdSelect"));
-        pBtnScanIdSelect->setGeometry(QRect(40, 230, 468, 50));
+        pBtnScanIdSelect->setGeometry(QRect(60, 150, 900, 50));
         pBtnScanIdSelect->setFont(font2);
         pBtnScanIdSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"

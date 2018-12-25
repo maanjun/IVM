@@ -41,10 +41,10 @@ public:
     {
         if (CheckIDDialog->objectName().isEmpty())
             CheckIDDialog->setObjectName(QStringLiteral("CheckIDDialog"));
-        CheckIDDialog->resize(1024, 768);
+        CheckIDDialog->resize(1920, 1080);
         pBtnHomepage = new QPushButton(CheckIDDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(190, 612, 200, 100));
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
         pBtnHomepage->setMinimumSize(QSize(200, 100));
         QFont font;
         font.setFamily(QStringLiteral("Algerian"));
@@ -54,7 +54,7 @@ public:
 "border-image: url(:/Resources/Images/homepageon.png);"));
         pBtnNext = new QPushButton(CheckIDDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
-        pBtnNext->setGeometry(QRect(590, 612, 200, 100));
+        pBtnNext->setGeometry(QRect(1290, 850, 300, 150));
         pBtnNext->setMinimumSize(QSize(200, 100));
         QFont font1;
         font1.setPointSize(22);
@@ -63,24 +63,24 @@ public:
 "border-image: url(:/Resources/Images/nextoff.png);"));
         textBrowser = new QTextBrowser(CheckIDDialog);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(530, 302, 420, 280));
+        textBrowser->setGeometry(QRect(1020, 280, 750, 500));
         textBrowser->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:20px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/sfzzmdw.png);"));
         label = new QLabel(CheckIDDialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(70, 312, 371, 251));
+        label->setGeometry(QRect(150, 312, 650, 450));
         label->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/scanningid.png);"));
         labelHead = new QLabel(CheckIDDialog);
         labelHead->setObjectName(QStringLiteral("labelHead"));
-        labelHead->setGeometry(QRect(830, 352, 100, 140));
+        labelHead->setGeometry(QRect(1537, 359, 191, 261));
         labelLoading = new QLabel(CheckIDDialog);
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
-        labelLoading->setGeometry(QRect(688, 380, 124, 124));
+        labelLoading->setGeometry(QRect(1340, 470, 124, 124));
         labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/loading.gif);"));
         pBtnDone = new QPushButton(CheckIDDialog);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
-        pBtnDone->setGeometry(QRect(745, 230, 229, 50));
+        pBtnDone->setGeometry(QRect(1410, 150, 450, 50));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(20);
@@ -90,35 +90,35 @@ public:
 "background-color: rgb(166, 205, 251);"));
         pBtnScanIdCheck = new QPushButton(CheckIDDialog);
         pBtnScanIdCheck->setObjectName(QStringLiteral("pBtnScanIdCheck"));
-        pBtnScanIdCheck->setGeometry(QRect(40, 230, 233, 50));
+        pBtnScanIdCheck->setGeometry(QRect(60, 150, 450, 50));
         pBtnScanIdCheck->setFont(font2);
         pBtnScanIdCheck->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(65, 147, 252);"));
         pBtnScanVehicle = new QPushButton(CheckIDDialog);
         pBtnScanVehicle->setObjectName(QStringLiteral("pBtnScanVehicle"));
-        pBtnScanVehicle->setGeometry(QRect(275, 230, 233, 50));
+        pBtnScanVehicle->setGeometry(QRect(510, 150, 450, 50));
         pBtnScanVehicle->setFont(font2);
         pBtnScanVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pBtnReceipt = new QPushButton(CheckIDDialog);
         pBtnReceipt->setObjectName(QStringLiteral("pBtnReceipt"));
-        pBtnReceipt->setGeometry(QRect(510, 230, 233, 50));
+        pBtnReceipt->setGeometry(QRect(960, 150, 450, 50));
         pBtnReceipt->setFont(font2);
         pBtnReceipt->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pBtnScanIdSelect = new QPushButton(CheckIDDialog);
         pBtnScanIdSelect->setObjectName(QStringLiteral("pBtnScanIdSelect"));
-        pBtnScanIdSelect->setGeometry(QRect(40, 230, 468, 50));
+        pBtnScanIdSelect->setGeometry(QRect(60, 150, 900, 50));
         pBtnScanIdSelect->setFont(font2);
         pBtnScanIdSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(65, 147, 252);"));
         pBtnSelect = new QPushButton(CheckIDDialog);
         pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(510, 230, 468, 50));
+        pBtnSelect->setGeometry(QRect(960, 150, 900, 50));
         pBtnSelect->setFont(font2);
         pBtnSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"

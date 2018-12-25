@@ -41,10 +41,10 @@ public:
     {
         if (CheckReceiptDialog->objectName().isEmpty())
             CheckReceiptDialog->setObjectName(QStringLiteral("CheckReceiptDialog"));
-        CheckReceiptDialog->resize(1024, 768);
+        CheckReceiptDialog->resize(1920, 1080);
         pBtnNext = new QPushButton(CheckReceiptDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
-        pBtnNext->setGeometry(QRect(590, 612, 200, 100));
+        pBtnNext->setGeometry(QRect(1290, 850, 300, 150));
         QFont font;
         font.setPointSize(22);
         pBtnNext->setFont(font);
@@ -52,7 +52,7 @@ public:
 "border-image: url(:/Resources/Images/nextoff.png);"));
         pBtnHomepage = new QPushButton(CheckReceiptDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(190, 612, 200, 100));
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
         QFont font1;
         font1.setFamily(QStringLiteral("Algerian"));
         font1.setPointSize(22);
@@ -61,7 +61,7 @@ public:
 "border-image: url(:/Resources/Images/homepageon.png);"));
         pushButton_3 = new QPushButton(CheckReceiptDialog);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(510, 230, 233, 50));
+        pushButton_3->setGeometry(QRect(960, 150, 450, 50));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(20);
@@ -71,58 +71,55 @@ public:
 "background-color: rgb(65, 147, 252);"));
         lineEditReceipt = new QLineEdit(CheckReceiptDialog);
         lineEditReceipt->setObjectName(QStringLiteral("lineEditReceipt"));
-        lineEditReceipt->setGeometry(QRect(230, 340, 360, 60));
+        lineEditReceipt->setGeometry(QRect(440, 350, 540, 80));
         QFont font3;
         font3.setFamily(QStringLiteral("Times New Roman"));
-        font3.setPointSize(18);
+        font3.setPointSize(36);
         lineEditReceipt->setFont(font3);
         lineEditReceipt->setStyleSheet(QStringLiteral("border:2px groove gray;border-radius:10px;padding:2px 4px"));
         label = new QLabel(CheckReceiptDialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(690, 300, 251, 221));
+        label->setGeometry(QRect(1290, 260, 450, 450));
         label->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/printguide.png);"));
         label_2 = new QLabel(CheckReceiptDialog);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(690, 530, 261, 51));
+        label_2->setGeometry(QRect(1320, 740, 401, 51));
         QFont font4;
         font4.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font4.setPointSize(24);
+        font4.setPointSize(36);
         label_2->setFont(font4);
         labelReceipt = new QLabel(CheckReceiptDialog);
         labelReceipt->setObjectName(QStringLiteral("labelReceipt"));
-        labelReceipt->setGeometry(QRect(70, 340, 150, 60));
-        QFont font5;
-        font5.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font5.setPointSize(22);
-        labelReceipt->setFont(font5);
+        labelReceipt->setGeometry(QRect(190, 370, 231, 60));
+        labelReceipt->setFont(font4);
         pushButton_2 = new QPushButton(CheckReceiptDialog);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(275, 230, 233, 50));
+        pushButton_2->setGeometry(QRect(510, 150, 450, 50));
         pushButton_2->setFont(font2);
         pushButton_2->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pushButton = new QPushButton(CheckReceiptDialog);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 230, 233, 50));
+        pushButton->setGeometry(QRect(60, 150, 450, 50));
         pushButton->setFont(font2);
         pushButton->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         pushButton_4 = new QPushButton(CheckReceiptDialog);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(745, 230, 229, 50));
+        pushButton_4->setGeometry(QRect(1410, 150, 450, 50));
         pushButton_4->setFont(font2);
         pushButton_4->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(166, 205, 251);"));
         labelTax = new QLabel(CheckReceiptDialog);
         labelTax->setObjectName(QStringLiteral("labelTax"));
-        labelTax->setGeometry(QRect(70, 470, 150, 60));
-        labelTax->setFont(font5);
+        labelTax->setGeometry(QRect(190, 560, 231, 60));
+        labelTax->setFont(font4);
         lineEditTax = new QLineEdit(CheckReceiptDialog);
         lineEditTax->setObjectName(QStringLiteral("lineEditTax"));
-        lineEditTax->setGeometry(QRect(230, 470, 360, 60));
+        lineEditTax->setGeometry(QRect(440, 540, 540, 86));
         lineEditTax->setFont(font3);
         lineEditTax->setStyleSheet(QStringLiteral("border:2px groove gray;border-radius:10px;padding:2px 4px"));
 
