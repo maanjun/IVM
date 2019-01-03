@@ -41,12 +41,14 @@ void SelectLicenseDialog::on_pBtnHomepage_clicked()
 {
     // 回到主页
     //this->close();
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
 
 void SelectLicenseDialog::on_pBtnConfirm_clicked()
 {
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
     emit selectDoneSingal();
     //this->close();
@@ -54,6 +56,9 @@ void SelectLicenseDialog::on_pBtnConfirm_clicked()
 
 void SelectLicenseDialog::startTimer(int nMillisecond)
 {
+	m_nMillisecond = nMillisecond / 1000;
+	m_pCountdownTimer->start(1000);
+
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
 	ui->pBtnNext->setEnabled(false);
 	ui->pBtnConfirm->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/confirmoff.png)");

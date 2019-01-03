@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_BaseDialog_t {
-    QByteArrayData data[13];
-    char stringdata0[175];
+    QByteArrayData data[14];
+    char stringdata0[193];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,14 +41,16 @@ QT_MOC_LITERAL(8, 84, 20), // "receiptCheckedSingal"
 QT_MOC_LITERAL(9, 105, 21), // "vehicleInfoDoneSingal"
 QT_MOC_LITERAL(10, 127, 15), // "inputDoneSingal"
 QT_MOC_LITERAL(11, 143, 16), // "selectDoneSingal"
-QT_MOC_LITERAL(12, 160, 14) // "onTimecoutSlot"
+QT_MOC_LITERAL(12, 160, 14), // "onTimecoutSlot"
+QT_MOC_LITERAL(13, 175, 17) // "showCountdownTime"
 
     },
     "BaseDialog\0goHomeSignal\0\0idCheckedSignal\0"
     "nCaller\0qstrOwnerId\0idScannedSignal\0"
     "nStage\0receiptCheckedSingal\0"
     "vehicleInfoDoneSingal\0inputDoneSingal\0"
-    "selectDoneSingal\0onTimecoutSlot"
+    "selectDoneSingal\0onTimecoutSlot\0"
+    "showCountdownTime"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,7 +60,7 @@ static const uint qt_meta_data_BaseDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -66,16 +68,17 @@ static const uint qt_meta_data_BaseDialog[] = {
        7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x06 /* Public */,
-       3,    2,   55,    2, 0x06 /* Public */,
-       6,    2,   60,    2, 0x06 /* Public */,
-       8,    1,   65,    2, 0x06 /* Public */,
-       9,    1,   68,    2, 0x06 /* Public */,
-      10,    0,   71,    2, 0x06 /* Public */,
-      11,    0,   72,    2, 0x06 /* Public */,
+       1,    0,   59,    2, 0x06 /* Public */,
+       3,    2,   60,    2, 0x06 /* Public */,
+       6,    2,   65,    2, 0x06 /* Public */,
+       8,    1,   70,    2, 0x06 /* Public */,
+       9,    1,   73,    2, 0x06 /* Public */,
+      10,    0,   76,    2, 0x06 /* Public */,
+      11,    0,   77,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      12,    0,   73,    2, 0x08 /* Private */,
+      12,    0,   78,    2, 0x08 /* Private */,
+      13,    0,   79,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -87,6 +90,7 @@ static const uint qt_meta_data_BaseDialog[] = {
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -106,6 +110,7 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 5: _t->inputDoneSingal(); break;
         case 6: _t->selectDoneSingal(); break;
         case 7: _t->onTimecoutSlot(); break;
+        case 8: _t->showCountdownTime(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -188,13 +193,13 @@ int BaseDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

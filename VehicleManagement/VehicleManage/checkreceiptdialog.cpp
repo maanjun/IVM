@@ -31,6 +31,7 @@ CheckReceiptDialog::~CheckReceiptDialog()
 
 void CheckReceiptDialog::on_pBtnHomepage_clicked()
 {
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
@@ -38,6 +39,7 @@ void CheckReceiptDialog::on_pBtnHomepage_clicked()
 void CheckReceiptDialog::on_pBtnNext_clicked()
 {
 	// 后台上传，不用等上传完成后才返回主页面，
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit receiptCheckedSingal(m_qstrOwnerId);
 	// 上传至文件服务器
@@ -71,6 +73,9 @@ void CheckReceiptDialog::on_pBtnNext_clicked()
 
 void CheckReceiptDialog::startTimer(int nMillisecond)
 {
+	m_nMillisecond = nMillisecond / 1000;
+	m_pCountdownTimer->start(1000);
+
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
 	ui->pBtnNext->setEnabled(false);
 	ui->lineEditReceipt->setText("");

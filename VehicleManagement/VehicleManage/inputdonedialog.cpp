@@ -10,9 +10,9 @@ InputDoneDialog::InputDoneDialog(QWidget *parent) :
 
 	// 读取模板
 	m_qstrSumaryTemplateHtml = "";
-	readFile(".\\Resources\\Html\\summarytemplate.html", m_qstrSumaryTemplateHtml);
+	readFile("./Resources/Html/summarytemplate.html", m_qstrSumaryTemplateHtml);
 	m_qstrDetailTemplateHtml = "";
-	readFile(".\\Resources\\Html\\detailtemplate.html", m_qstrDetailTemplateHtml);
+	readFile("./Resources/Html/detailtemplate.html", m_qstrDetailTemplateHtml);
 }
 
 InputDoneDialog::~InputDoneDialog()
@@ -22,6 +22,9 @@ InputDoneDialog::~InputDoneDialog()
 
 void InputDoneDialog::startTimer(int nMillisecond)
 {
+	m_nMillisecond = nMillisecond / 1000;
+	m_pCountdownTimer->start(1000);
+
 	ui->textBrowser->setHtml("");
 	ui->pBtnDone->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/finishoff.png)");
 	ui->pBtnDone->setEnabled(false);
@@ -61,12 +64,14 @@ void InputDoneDialog::startTimer(int nMillisecond)
 
 void InputDoneDialog::on_pBtnHomepage_clicked()
 {
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
 
 void InputDoneDialog::on_pBtnDone_clicked()
 {
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit inputDoneSingal();
 	// 后台处理

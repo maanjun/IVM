@@ -16,7 +16,7 @@ VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	ui->pBtnNext->setEnabled(false);
 	// 读取
 	m_qstrVehicleInfoTemplateHtml = "";
-	readFile(".\\Resources\\Html\\vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
+	readFile("./Resources/Html/vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
 
 	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif", "gif", this);
 	ui->label->setMovie(movieScanning);
@@ -36,6 +36,7 @@ VehicleInfoDialog::~VehicleInfoDialog()
 void VehicleInfoDialog::on_pBtnHomepage_clicked()
 {
     // 回到主页
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
@@ -43,6 +44,7 @@ void VehicleInfoDialog::on_pBtnHomepage_clicked()
 void VehicleInfoDialog::on_pBtnNext_clicked()
 {
     // 下一步
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	// 将数据存入数据库
 	m_operateMysql.init();
@@ -74,6 +76,9 @@ void VehicleInfoDialog::on_pBtnNext_clicked()
 
 void VehicleInfoDialog::startTimer(int nMillisecond)
 {
+	m_nMillisecond = nMillisecond / 1000;
+	m_pCountdownTimer->start(1000); 
+
 	ui->textBrowser->setHtml("");
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
 	ui->pBtnNext->setEnabled(false);

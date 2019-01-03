@@ -43,7 +43,7 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 
 	// 读取
 	m_qstrIDTemplateHtml = "";
-	readFile(".\\Resources\\Html\\sfztemplate.html", m_qstrIDTemplateHtml);
+	readFile("./Resources/Html/sfztemplate.html", m_qstrIDTemplateHtml);
 }
 
 CheckIDDialog::~CheckIDDialog()
@@ -53,6 +53,9 @@ CheckIDDialog::~CheckIDDialog()
 
 void CheckIDDialog::startTimer(int nMillisecond)
 {
+	m_nMillisecond = nMillisecond / 1000;
+	m_pCountdownTimer->start(1000);
+
 	m_idInfo = { 0 };
 	ui->textBrowser->setHtml("");
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
@@ -120,6 +123,7 @@ void CheckIDDialog::on_pBtnHomepage_clicked()
     // 回到主页
 	//this->close();
 	m_bInterrupted = true;
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
 }
@@ -127,6 +131,7 @@ void CheckIDDialog::on_pBtnHomepage_clicked()
 void CheckIDDialog::on_pBtnNext_clicked()
 {
     // 下一步
+	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	// 存入数据库()
 	m_operateMysql.init();
@@ -178,6 +183,7 @@ void CheckIDDialog::getUserinfo(QString qstrId)
 				case CHECKIDSELECT:
 				case SELECTED:
 					m_pTimer->stop();
+					m_pCountdownTimer->stop();
 					emit idScannedSignal(nStage, qstrOwnerId);
 					break;
 				default:

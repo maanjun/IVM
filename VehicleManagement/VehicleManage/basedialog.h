@@ -19,9 +19,13 @@ public:
 public:
 	QTimer *m_pTimer;
 
+	QTimer *m_pCountdownTimer;
+
 	bool m_bInterrupted;
 	//对话框之间传递身份证号
 	QString m_qstrOwnerId;
+
+	int m_nMillisecond;
 
 	virtual void startTimer(int nMillisecond = 60000);
 
@@ -46,6 +50,8 @@ signals:
 
 private slots:
 	void onTimecoutSlot();
+
+	void showCountdownTime();
 
 private:
     Ui::BaseDialog *ui;

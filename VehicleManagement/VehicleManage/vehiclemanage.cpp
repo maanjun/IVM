@@ -99,7 +99,7 @@ void VehicleManage::on_pBtnCheck_clicked()
 	// 跳转至远程验车第一步
 	this->hide();
 	m_pCheckIDDialogCheck->show();
-	m_pCheckIDDialogCheck->startTimer(20000);
+	m_pCheckIDDialogCheck->startTimer();
 }
 
 void VehicleManage::on_pBtnSelect_clicked()
@@ -107,7 +107,7 @@ void VehicleManage::on_pBtnSelect_clicked()
 	// 跳转至自主选牌第一步
 	this->hide();
 	m_pCheckIDDialogSelect->show();
-	m_pCheckIDDialogSelect->startTimer(20000);
+	m_pCheckIDDialogSelect->startTimer();
 }
 
 void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
@@ -117,14 +117,14 @@ void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 		m_pCheckIDDialogCheck->hide();
 		m_pVehicleInfoDialog->show();
 		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
-		m_pVehicleInfoDialog->startTimer(20000);
+		m_pVehicleInfoDialog->startTimer();
 	}
 	else
 	{
 		m_pCheckIDDialogSelect->hide();
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
-		m_pSelectLicenseDialog->startTimer(20000);
+		m_pSelectLicenseDialog->startTimer();
 	}
 }
 
@@ -141,17 +141,17 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 	case CHECKID:
 		m_pVehicleInfoDialog->show();
 		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
-		m_pVehicleInfoDialog->startTimer(20000);
+		m_pVehicleInfoDialog->startTimer();
 		break;
 	case VEHICLEINCO:
 		m_pCheckReceiptDialog->show();
 		m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
-		m_pCheckReceiptDialog->startTimer(20000);
+		m_pCheckReceiptDialog->startTimer();
 		break;
 	case CHECKRECEIPT:
 		m_pInputDoneDialog->show();
 		m_pInputDoneDialog->setOwnerId(qstrOwnerId);
-		m_pInputDoneDialog->startTimer(20000);
+		m_pInputDoneDialog->startTimer();
 		break;
 	case INPUTDONE:
 		this->show();
@@ -159,7 +159,7 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 	case CHECKIDSELECT:
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
-		m_pSelectLicenseDialog->startTimer(20000);
+		m_pSelectLicenseDialog->startTimer();
 		break;
 	case SELECTED:
 		this->show();
@@ -174,7 +174,7 @@ void VehicleManage::onVehicleInfoDoneSlot(QString qstrOwnerId)
 	m_pVehicleInfoDialog->hide();
 	m_pCheckReceiptDialog->show();
 	m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
-	m_pCheckReceiptDialog->startTimer(20000);
+	m_pCheckReceiptDialog->startTimer();
 }
 
 void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
@@ -182,7 +182,7 @@ void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
 	m_pCheckReceiptDialog->hide();
 	m_pInputDoneDialog->show();
 	m_pInputDoneDialog->setOwnerId(qstrOwnerId);
-	m_pInputDoneDialog->startTimer(20000);
+	m_pInputDoneDialog->startTimer();
 }
 
 void VehicleManage::onInputDoneSlot()

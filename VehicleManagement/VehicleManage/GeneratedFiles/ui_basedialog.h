@@ -15,12 +15,14 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_BaseDialog
 {
 public:
+    QLCDNumber *lcdNumber;
 
     void setupUi(QDialog *BaseDialog)
     {
@@ -28,6 +30,18 @@ public:
             BaseDialog->setObjectName(QStringLiteral("BaseDialog"));
         BaseDialog->resize(1920, 1080);
         BaseDialog->setStyleSheet(QStringLiteral("#BaseDialog{border-image: url(:/Resources/Images/background.jpg);}"));
+        lcdNumber = new QLCDNumber(BaseDialog);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setGeometry(QRect(10, 190, 131, 131));
+        QFont font;
+        font.setFamily(QStringLiteral("Times New Roman"));
+        font.setPointSize(48);
+        lcdNumber->setFont(font);
+        lcdNumber->setStyleSheet(QStringLiteral("color: rgb(170, 255, 255);"));
+        lcdNumber->setDigitCount(2);
+        lcdNumber->setSegmentStyle(QLCDNumber::Filled);
+        lcdNumber->setProperty("value", QVariant(60));
+        lcdNumber->setProperty("intValue", QVariant(60));
 
         retranslateUi(BaseDialog);
 
