@@ -55,7 +55,7 @@ public:
         font1.setPointSize(22);
         pBtnHomepage->setFont(font1);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/homepageon.png);"));
+"border-image: url(:/Resources/Images/cancelon.png);"));
         label = new QLabel(VehicleInfoDialog);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(110, 340, 400, 400));

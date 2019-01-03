@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/insurance.png</file>
+    <file>Resources/Images/tax.png</file>
+    <file>Resources/Images/back.png</file>
+    <file>Resources/Images/return.png</file>
     <file>Resources/Images/checkoff.png</file>
     <file>Resources/Images/background.jpg</file>
     <file>Resources/Images/checkon.png</file>

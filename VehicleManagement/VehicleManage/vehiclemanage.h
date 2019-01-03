@@ -1,7 +1,8 @@
 #pragma once
 
 #include "common.h"
-#include <QtWidgets/QMainWindow>
+#include <QMainWindow>
+//#include <QDialog>
 #include "ui_vehiclemanage.h"
 #include "checkiddialog.h"
 #include "vehicleinfodialog.h"
@@ -22,12 +23,19 @@ public:
 	VehicleManage(QWidget *parent = Q_NULLPTR);
 	~VehicleManage();
 
+signals:
+	void goHomeVehicleSignal();
+
 private slots:
 	void on_pBtnCheck_clicked();
 
 	void on_pBtnSelect_clicked();
 
 	void on_pBtnMortgage_clicked();
+
+	void on_pBtnkTax_clicked();
+	
+	void on_pBtnInsurance_clicked();
 
 	void onGoHomeSlot();
 
@@ -42,6 +50,8 @@ private slots:
 	void onInputDoneSlot();
 
 	void onSelectDoneSlot();
+
+	void on_pBtnGohome_clicked();
 
 private:
 	Ui::VehicleManageClass ui;

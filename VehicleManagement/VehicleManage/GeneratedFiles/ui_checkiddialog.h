@@ -51,7 +51,7 @@ public:
         font.setPointSize(22);
         pBtnHomepage->setFont(font);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/homepageon.png);"));
+"border-image: url(:/Resources/Images/cancelon.png);"));
         pBtnNext = new QPushButton(CheckIDDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
         pBtnNext->setGeometry(QRect(1290, 850, 300, 150));

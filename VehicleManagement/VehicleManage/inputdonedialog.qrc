@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/canceloff.png</file>
+    <file>Resources/Images/cancelon.png</file>
     <file>Resources/Images/homepageoff.png</file>
     <file>Resources/Images/homepageon.png</file>
     <file>Resources/Images/loading.gif</file>

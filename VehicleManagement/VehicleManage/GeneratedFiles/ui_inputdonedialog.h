@@ -44,7 +44,7 @@ public:
         font.setPointSize(22);
         pBtnHomepage->setFont(font);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/homepageon.png);"));
+"border-image: url(:/Resources/Images/cancelon.png);"));
         pBtnDone = new QPushButton(InputDoneDialog);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
         pBtnDone->setGeometry(QRect(1290, 850, 300, 150));

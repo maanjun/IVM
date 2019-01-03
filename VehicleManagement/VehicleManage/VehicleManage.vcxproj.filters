@@ -66,6 +66,12 @@
     <ClCompile Include="checkreceiptdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drivingmanage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -87,6 +93,12 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="checkreceiptdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="drivingmanage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -112,6 +124,12 @@
     <QtUic Include="checkreceiptdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="drivingmanage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="vehiclemanage.qrc">
@@ -133,6 +151,12 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="checkreceiptdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mainwindow.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="drivingmanage.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

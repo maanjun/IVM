@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/canceloff.png</file>
+    <file>Resources/Images/cancelon.png</file>
     <file>Resources/Images/anotheroff.png</file>
     <file>Resources/Images/anotheron.png</file>
     <file>Resources/Images/confirmoff.png</file>

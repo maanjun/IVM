@@ -200,5 +200,22 @@ void VehicleManage::onSelectDoneSlot()
 void VehicleManage::on_pBtnMortgage_clicked()
 {
 	// 跳转至电子抵押第一步
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("功能正在完善中，敬请期待……"));
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子抵押功能正在完善中，敬请期待……"));
+}
+
+void VehicleManage::on_pBtnkTax_clicked()
+{
+	// 跳转至电子完税第一步
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子完税功能正在完善中，敬请期待……"));
+}
+
+void VehicleManage::on_pBtnInsurance_clicked()
+{
+	// 跳转至电子保单第一步
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
+}
+
+void VehicleManage::on_pBtnGohome_clicked()
+{
+	emit goHomeVehicleSignal();
 }

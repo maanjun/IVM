@@ -1,12 +1,14 @@
 <RCC>
-    <qresource prefix="/">
-        <file>Resources/Images/head.png</file>
-        <file>Resources/Images/homepageoff.png</file>
-        <file>Resources/Images/homepageon.png</file>
-        <file>Resources/Images/loading.gif</file>
-        <file>Resources/Images/nextoff.png</file>
-        <file>Resources/Images/nexton.png</file>
-        <file>Resources/Images/scanningid.png</file>
-        <file>Resources/Images/sfzzmdw.png</file>
-    </qresource>
+  <qresource prefix="/">
+    <file>Resources/Images/canceloff.png</file>
+    <file>Resources/Images/cancelon.png</file>
+    <file>Resources/Images/head.png</file>
+    <file>Resources/Images/homepageoff.png</file>
+    <file>Resources/Images/homepageon.png</file>
+    <file>Resources/Images/loading.gif</file>
+    <file>Resources/Images/nextoff.png</file>
+    <file>Resources/Images/nexton.png</file>
+    <file>Resources/Images/scanningid.png</file>
+    <file>Resources/Images/sfzzmdw.png</file>
+  </qresource>
 </RCC>
