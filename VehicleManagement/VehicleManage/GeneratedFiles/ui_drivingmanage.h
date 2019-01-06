@@ -13,8 +13,8 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -32,7 +32,7 @@ public:
     QPushButton *pushButton_6;
     QPushButton *pBtnGohome;
 
-    void setupUi(QMainWindow *DrivingManage)
+    void setupUi(QDialog *DrivingManage)
     {
         if (DrivingManage->objectName().isEmpty())
             DrivingManage->setObjectName(QStringLiteral("DrivingManage"));
@@ -79,14 +79,13 @@ public:
         pBtnGohome->setGeometry(QRect(20, 140, 120, 120));
         pBtnGohome->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/return.png);"));
-        DrivingManage->setCentralWidget(centralWidget);
 
         retranslateUi(DrivingManage);
 
         QMetaObject::connectSlotsByName(DrivingManage);
     } // setupUi
 
-    void retranslateUi(QMainWindow *DrivingManage)
+    void retranslateUi(QDialog *DrivingManage)
     {
         DrivingManage->setWindowTitle(QApplication::translate("DrivingManage", "DrivingManage", 0));
         pushButton->setText(QString());

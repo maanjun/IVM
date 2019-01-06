@@ -13,14 +13,14 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_VehicleManageClass
+class Ui_VehicleManage
 {
 public:
     QWidget *centralWidget;
@@ -31,13 +31,13 @@ public:
     QPushButton *pBtnkTax;
     QPushButton *pBtnInsurance;
 
-    void setupUi(QMainWindow *VehicleManageClass)
+    void setupUi(QDialog *VehicleManage)
     {
-        if (VehicleManageClass->objectName().isEmpty())
-            VehicleManageClass->setObjectName(QStringLiteral("VehicleManageClass"));
-        VehicleManageClass->resize(1920, 1080);
-        VehicleManageClass->setStyleSheet(QStringLiteral("#centralWidget{border-image: url(:/Resources/Images/background.jpg);}"));
-        centralWidget = new QWidget(VehicleManageClass);
+        if (VehicleManage->objectName().isEmpty())
+            VehicleManage->setObjectName(QStringLiteral("VehicleManage"));
+        VehicleManage->resize(1920, 1080);
+        VehicleManage->setStyleSheet(QStringLiteral("#centralWidget{border-image: url(:/Resources/Images/background.jpg);}"));
+        centralWidget = new QWidget(VehicleManage);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pBtnSelect = new QPushButton(centralWidget);
         pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
@@ -69,23 +69,22 @@ public:
         pBtnkTax->setGeometry(QRect(480, 650, 400, 200));
         pBtnkTax->setFont(font);
         pBtnkTax->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:14px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/checkon.png);"));
+"border-image: url(:/Resources/Images/tax.png);"));
         pBtnInsurance = new QPushButton(centralWidget);
         pBtnInsurance->setObjectName(QStringLiteral("pBtnInsurance"));
         pBtnInsurance->setGeometry(QRect(1040, 650, 400, 200));
         pBtnInsurance->setFont(font);
         pBtnInsurance->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:14px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/selecton.png);"));
-        VehicleManageClass->setCentralWidget(centralWidget);
+"border-image: url(:/Resources/Images/insurance.png);"));
 
-        retranslateUi(VehicleManageClass);
+        retranslateUi(VehicleManage);
 
-        QMetaObject::connectSlotsByName(VehicleManageClass);
+        QMetaObject::connectSlotsByName(VehicleManage);
     } // setupUi
 
-    void retranslateUi(QMainWindow *VehicleManageClass)
+    void retranslateUi(QDialog *VehicleManage)
     {
-        VehicleManageClass->setWindowTitle(QApplication::translate("VehicleManageClass", "VehicleManage", 0));
+        VehicleManage->setWindowTitle(QApplication::translate("VehicleManage", "VehicleManage", 0));
         pBtnSelect->setText(QString());
         pBtnCheck->setText(QString());
         pBtnMortgage->setText(QString());
@@ -97,7 +96,7 @@ public:
 };
 
 namespace Ui {
-    class VehicleManageClass: public Ui_VehicleManageClass {};
+    class VehicleManage: public Ui_VehicleManage {};
 } // namespace Ui
 
 QT_END_NAMESPACE

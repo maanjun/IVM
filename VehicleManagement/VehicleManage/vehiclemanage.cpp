@@ -1,10 +1,11 @@
 #include "vehiclemanage.h"
+#include "ui_vehiclemanage.h"
 #include "QMessageBox"
 #include <QSettings>
 #include <exception>
 
-VehicleManage::VehicleManage(QWidget *parent)
-	: QMainWindow(parent)
+VehicleManage::VehicleManage(QWidget *parent) :
+    QDialog(parent)
 {
 	ui.setupUi(this);
 

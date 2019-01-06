@@ -2,13 +2,13 @@
 #define DRIVINGMANAGE_H
 
 #include <QMainWindow>
-//#include <QDialog>
+#include <QDialog>
 
 namespace Ui {
 class DrivingManage;
 }
 
-class DrivingManage : public QMainWindow
+class DrivingManage : public QDialog
 {
     Q_OBJECT
 

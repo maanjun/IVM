@@ -3,7 +3,7 @@
 #include <QMessageBox>
 
 DrivingManage::DrivingManage(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::DrivingManage)
 {
     ui->setupUi(this);
