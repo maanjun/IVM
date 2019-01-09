@@ -1,7 +1,14 @@
 <RCC>
   <qresource prefix="/">
-    <file>Resources/Images/vehiclemanage.png</file>
-    <file>Resources/Images/drivingmanage.png</file>
-    <file>Resources/Images/background.jpg</file>
+    <file>Resources/Images/btnLogo.png</file>
+    <file>Resources/Images/Hint11.png</file>
+    <file>Resources/Images/btnLogo.png</file>
+    <file>Resources/Images/btnCar.png</file>
+    <file>Resources/Images/btnMan.png</file>
+    <file>Resources/Images/btnBackBtn.png</file>
+    <file>Resources/Images/Hint2.png</file>
+    <file>Resources/Images/btnPolice.png</file>
+    <file>Resources/Images/jinghui.png</file>
+    <file>Resources/Images/background.png</file>
   </qresource>
 </RCC>

@@ -14,53 +14,182 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image: url(:/Resources/Images/background.jpg);</string>
+   <string notr="true">background-image: url(:/Resources/Images/background.png);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pBtnVehicle">
+   <widget class="QToolButton" name="pBtnVehicle">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>400</y>
-      <width>400</width>
-      <height>300</height>
+      <x>270</x>
+      <y>360</y>
+      <width>421</width>
+      <height>331</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>微软雅黑</family>
       <pointsize>48</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
-border-image: url(:/Resources/Images/vehiclemanage.png);</string>
+     <string notr="true">border-radius:10px;padding:2px 4px;
+background-image: url(:/Resources/Images/btnBackBtn.png);text-align:button;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>车管业务</string>
+    </property>
+    <property name="icon">
+     <iconset resource="mainwindow.qrc">
+      <normaloff>:/Resources/Images/btnCar.png</normaloff>:/Resources/Images/btnCar.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>423</width>
+      <height>387</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pBtnDrive">
+   <widget class="QToolButton" name="pBtnDrive">
     <property name="geometry">
      <rect>
-      <x>1170</x>
-      <y>400</y>
-      <width>400</width>
-      <height>300</height>
+      <x>1020</x>
+      <y>360</y>
+      <width>421</width>
+      <height>331</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>微软雅黑</family>
       <pointsize>48</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
-border-image: url(:/Resources/Images/drivingmanage.png);</string>
+     <string notr="true">border-radius:10px;padding:2px 4px;
+background-image: url(:/Resources/Images/btnBackBtn.png);text-align:button;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>驾管业务</string>
+    </property>
+    <property name="icon">
+     <iconset resource="mainwindow.qrc">
+      <normaloff>:/Resources/Images/btnMan.png</normaloff>:/Resources/Images/btnMan.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>423</width>
+      <height>387</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>870</y>
+      <width>511</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resources/Images/Hint11.png);border:0px;</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resources/Images/btnPolice.png);border:0px;</string>
+    </property>
+    <property name="viewportUpdateMode">
+     <enum>QGraphicsView::FullViewportUpdate</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>1041</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resources/Images/Hint2.png);border:0px;</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>890</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resources/Images/btnLogo.png);border:0px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>870</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>0571 - 89731946 </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>930</y>
+      <width>451</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>中翔科技(杭州提供)技术服务</string>
     </property>
    </widget>
   </widget>

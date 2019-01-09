@@ -2,7 +2,7 @@
 
 #include "common.h"
 #include <QMainWindow>
-#include <QDialog>
+//#include <QDialog>
 #include "ui_vehiclemanage.h"
 #include "checkiddialog.h"
 #include "vehicleinfodialog.h"
@@ -15,24 +15,16 @@
 #include <QString>
 #include <QDebug>
 
-class VehicleManage : public QDialog
+class VehicleManage : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	explicit VehicleManage(QWidget *parent = 0);
+	VehicleManage(QWidget *parent = Q_NULLPTR);
 	~VehicleManage();
 
 signals:
 	void goHomeVehicleSignal();
-
-private:
-	CheckIDDialog *m_pCheckIDDialogCheck;
-	VehicleInfoDialog *m_pVehicleInfoDialog;
-	CheckReceiptDialog *m_pCheckReceiptDialog;
-	InputDoneDialog *m_pInputDoneDialog;
-	CheckIDDialog *m_pCheckIDDialogSelect;
-	SelectLicenseDialog *m_pSelectLicenseDialog;
 
 private slots:
 	void on_pBtnCheck_clicked();
@@ -59,10 +51,17 @@ private slots:
 
 	void onSelectDoneSlot();
 
-	void on_pBtnGohome_clicked();
+	 void on_pBtnHomepage_clicked();
 
 private:
-	Ui::VehicleManage ui;
+	Ui::VehicleManageClass ui;
+
+	CheckIDDialog *m_pCheckIDDialogCheck;
+	VehicleInfoDialog *m_pVehicleInfoDialog;
+	CheckReceiptDialog *m_pCheckReceiptDialog;
+	InputDoneDialog *m_pInputDoneDialog;
+	CheckIDDialog *m_pCheckIDDialogSelect;
+	SelectLicenseDialog *m_pSelectLicenseDialog;
 
 public:
 	void init();

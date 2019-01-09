@@ -13,8 +13,11 @@ BaseDialog::BaseDialog(QWidget *parent) :
 	m_nMillisecond = 0;
 	m_pTimer = new QTimer(this);
 	connect(m_pTimer, SIGNAL(timeout()), this, SLOT(onTimecoutSlot()));
-	m_pCountdownTimer = new QTimer();
-	connect(m_pCountdownTimer, SIGNAL(timeout()), this, SLOT(showCountdownTime()));
+	m_pCountdownTimer = new QTimer(this);
+	connect(m_pCountdownTimer, SIGNAL(timeout()), this, SLOT(showCountdownTimeSlot()));
+	ui->labelWarning->setVisible(false);
+	m_pLabelWarningTimer = new QTimer(this);
+	connect(m_pLabelWarningTimer, SIGNAL(timeout()), this, SLOT(hideLabelWarningSlot()));
 	m_bInterrupted = false;
 }
 
@@ -24,6 +27,8 @@ BaseDialog::~BaseDialog()
         m_pTimer->deleteLater();
 	if (m_pCountdownTimer != Q_NULLPTR)
 		m_pCountdownTimer->deleteLater();
+	if (m_pLabelWarningTimer != Q_NULLPTR)
+		m_pLabelWarningTimer->deleteLater();
     delete ui;
 }
 
@@ -38,7 +43,7 @@ void BaseDialog::startTimer(int nMillisecond)
     else
     {
 		// 默认60秒自动关闭
-        m_pTimer->start(60000);
+        m_pTimer->start(20000);
     }
 	m_pCountdownTimer->start(1000);
 }
@@ -61,7 +66,7 @@ void BaseDialog::setOwnerId(QString qstrOwnerId)
 }
 
 
-void BaseDialog::showCountdownTime()
+void BaseDialog::showCountdownTimeSlot()
 {
 	m_nMillisecond--;
 	QString CountdownText = "";
@@ -82,4 +87,29 @@ void BaseDialog::showCountdownTime()
 		CountdownText = QString("0%1").arg(m_nMillisecond);
 	}
 	ui->lcdNumber->display(CountdownText);
+}
+
+void BaseDialog::keyPressEvent(QKeyEvent *event)
+{
+	switch (event->key())
+	{
+		//重写esc关闭窗口
+	case Qt::Key_Escape:
+		break;
+	default:
+		QDialog::keyPressEvent(event);
+	}
+}
+
+void BaseDialog::setLabelContent(QString qstrContent)
+{
+	m_pLabelWarningTimer->start(5000);
+	ui->labelWarning->setText(qstrContent);
+	ui->labelWarning->setVisible(true);
+}
+
+void BaseDialog::hideLabelWarningSlot()
+{
+	m_pLabelWarningTimer->stop();
+	ui->labelWarning->setVisible(false);
 }

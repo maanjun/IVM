@@ -10,9 +10,12 @@ InputDoneDialog::InputDoneDialog(QWidget *parent) :
 
 	// ¶ÁÈ¡Ä£°å
 	m_qstrSumaryTemplateHtml = "";
-	readFile("./Resources/Html/summarytemplate.html", m_qstrSumaryTemplateHtml);
+	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/summarytemplate.html";
+	readFile(runPath, m_qstrSumaryTemplateHtml);
 	m_qstrDetailTemplateHtml = "";
-	readFile("./Resources/Html/detailtemplate.html", m_qstrDetailTemplateHtml);
+	runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/detailtemplate.html";
+	readFile(runPath, m_qstrDetailTemplateHtml);
+
 }
 
 InputDoneDialog::~InputDoneDialog()

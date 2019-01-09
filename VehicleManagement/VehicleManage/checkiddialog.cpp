@@ -43,7 +43,8 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 
 	// 读取
 	m_qstrIDTemplateHtml = "";
-	readFile("./Resources/Html/sfztemplate.html", m_qstrIDTemplateHtml);
+	QString runPath = QCoreApplication::applicationDirPath()+ "/Resources/Html/sfztemplate.html";
+	readFile(runPath, m_qstrIDTemplateHtml);
 }
 
 CheckIDDialog::~CheckIDDialog()

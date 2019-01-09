@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_VehicleManage_t {
     QByteArrayData data[19];
-    char stringdata0[317];
+    char stringdata0[319];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,7 +47,7 @@ QT_MOC_LITERAL(14, 219, 21), // "onVehicleInfoDoneSlot"
 QT_MOC_LITERAL(15, 241, 20), // "onReceiptCheckedSlot"
 QT_MOC_LITERAL(16, 262, 15), // "onInputDoneSlot"
 QT_MOC_LITERAL(17, 278, 16), // "onSelectDoneSlot"
-QT_MOC_LITERAL(18, 295, 21) // "on_pBtnGohome_clicked"
+QT_MOC_LITERAL(18, 295, 23) // "on_pBtnHomepage_clicked"
 
     },
     "VehicleManage\0goHomeVehicleSignal\0\0"
@@ -57,7 +57,7 @@ QT_MOC_LITERAL(18, 295, 21) // "on_pBtnGohome_clicked"
     "onIdCheckedSlot\0nCaller\0qstrOwnerId\0"
     "onIdScannedSlot\0nStage\0onVehicleInfoDoneSlot\0"
     "onReceiptCheckedSlot\0onInputDoneSlot\0"
-    "onSelectDoneSlot\0on_pBtnGohome_clicked"
+    "onSelectDoneSlot\0on_pBtnHomepage_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -132,7 +132,7 @@ void VehicleManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 10: _t->onReceiptCheckedSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 11: _t->onInputDoneSlot(); break;
         case 12: _t->onSelectDoneSlot(); break;
-        case 13: _t->on_pBtnGohome_clicked(); break;
+        case 13: _t->on_pBtnHomepage_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -149,7 +149,7 @@ void VehicleManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
 }
 
 const QMetaObject VehicleManage::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_VehicleManage.data,
+    { &QMainWindow::staticMetaObject, qt_meta_stringdata_VehicleManage.data,
       qt_meta_data_VehicleManage,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
@@ -164,12 +164,12 @@ void *VehicleManage::qt_metacast(const char *_clname)
     if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_VehicleManage.stringdata0))
         return static_cast<void*>(const_cast< VehicleManage*>(this));
-    return QDialog::qt_metacast(_clname);
+    return QMainWindow::qt_metacast(_clname);
 }
 
 int VehicleManage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QDialog::qt_metacall(_c, _id, _a);
+    _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

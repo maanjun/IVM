@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/">
-    <file>Resources/Images/background.jpg</file>
+    <file>Resources/Images/btnPolice.png</file>
+    <file>Resources/Images/Hint2.png</file>
+    <file>Resources/Images/background.png</file>
   </qresource>
 </RCC>

@@ -16,7 +16,8 @@ VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	ui->pBtnNext->setEnabled(false);
 	// 读取
 	m_qstrVehicleInfoTemplateHtml = "";
-	readFile("./Resources/Html/vehicleinfotemplate.html", m_qstrVehicleInfoTemplateHtml);
+	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/vehicleinfotemplate.html";
+	readFile(runPath, m_qstrVehicleInfoTemplateHtml);
 
 	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif", "gif", this);
 	ui->label->setMovie(movieScanning);

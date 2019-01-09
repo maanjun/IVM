@@ -17,7 +17,7 @@ bool OperateMysql::init()
 {
 	try
 	{
-		QSettings *configIniRead = new QSettings("database.ini", QSettings::IniFormat);
+		QSettings *configIniRead = new QSettings("settings.ini", QSettings::IniFormat);
 		//将读取到的ini文件保存在QString中，先取值，然后通过toString()函数转换成QString类型
 		QString strHostName = configIniRead->value("/database/host").toString();
 		QString strDbName = configIniRead->value("/database/database").toString();

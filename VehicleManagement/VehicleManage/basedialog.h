@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QTimer>
+#include <QKeyEvent>
 
 namespace Ui {
 class BaseDialog;
@@ -21,17 +22,23 @@ public:
 
 	QTimer *m_pCountdownTimer;
 
+	QTimer *m_pLabelWarningTimer;
+
 	bool m_bInterrupted;
 	//对话框之间传递身份证号
 	QString m_qstrOwnerId;
 
 	int m_nMillisecond;
 
-	virtual void startTimer(int nMillisecond = 60000);
+	virtual void startTimer(int nMillisecond = 20000);
 
 	virtual void stopTimer();
 
 	void setOwnerId(QString qstrOwnerId);
+
+	void setLabelContent(QString qstrContent);
+
+	void keyPressEvent(QKeyEvent *event);
 
 signals:
 	void goHomeSignal();
@@ -51,7 +58,9 @@ signals:
 private slots:
 	void onTimecoutSlot();
 
-	void showCountdownTime();
+	void showCountdownTimeSlot();
+
+	void hideLabelWarningSlot();
 
 private:
     Ui::BaseDialog *ui;

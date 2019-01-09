@@ -1,8 +1,20 @@
 <RCC>
   <qresource prefix="/">
-    <file>Resources/Images/back.png</file>
-    <file>Resources/Images/return.png</file>
-    <file>Resources/Images/developing.png</file>
-    <file>Resources/Images/background.jpg</file>
+    <file>Resources/Images/钱 .png</file>
+    <file>Resources/Images/注销等业务.png</file>
+    <file>Resources/Images/换证.png</file>
+    <file>Resources/Images/驾驶证年审.png</file>
+    <file>Resources/Images/驾驶人考试.png</file>
+    <file>Resources/Images/驾照资格申 请 .png</file>
+    <file>Resources/Images/主页.png</file>
+    <file>Resources/Images/Hint2.png</file>
+    <file>Resources/Images/btnPolice.png</file>
+    <file>Resources/Images/btn.png</file>
+    <file>Resources/Images/Hint11.png</file>
+    <file>Resources/Images/矩形 1 （右）.png</file>
+    <file>Resources/Images/驾管业务.png</file>
+    <file>Resources/Images/矩形 1（左）.png</file>
+    <file>Resources/Images/btnLogo.png</file>
+    <file>Resources/Images/background.png</file>
   </qresource>
 </RCC>

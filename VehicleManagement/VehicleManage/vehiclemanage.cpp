@@ -1,11 +1,10 @@
 #include "vehiclemanage.h"
-#include "ui_vehiclemanage.h"
 #include "QMessageBox"
 #include <QSettings>
 #include <exception>
 
-VehicleManage::VehicleManage(QWidget *parent) :
-    QDialog(parent)
+VehicleManage::VehicleManage(QWidget *parent)
+	: QMainWindow(parent)
 {
 	ui.setupUi(this);
 
@@ -100,7 +99,7 @@ void VehicleManage::on_pBtnCheck_clicked()
 	// 跳转至远程验车第一步
 	this->hide();
 	m_pCheckIDDialogCheck->show();
-	m_pCheckIDDialogCheck->startTimer();
+	m_pCheckIDDialogCheck->startTimer(20000);
 }
 
 void VehicleManage::on_pBtnSelect_clicked()
@@ -108,7 +107,7 @@ void VehicleManage::on_pBtnSelect_clicked()
 	// 跳转至自主选牌第一步
 	this->hide();
 	m_pCheckIDDialogSelect->show();
-	m_pCheckIDDialogSelect->startTimer();
+	m_pCheckIDDialogSelect->startTimer(20000);
 }
 
 void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
@@ -118,14 +117,14 @@ void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 		m_pCheckIDDialogCheck->hide();
 		m_pVehicleInfoDialog->show();
 		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
-		m_pVehicleInfoDialog->startTimer();
+		m_pVehicleInfoDialog->startTimer(20000);
 	}
 	else
 	{
 		m_pCheckIDDialogSelect->hide();
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
-		m_pSelectLicenseDialog->startTimer();
+		m_pSelectLicenseDialog->startTimer(20000);
 	}
 }
 
@@ -142,17 +141,17 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 	case CHECKID:
 		m_pVehicleInfoDialog->show();
 		m_pVehicleInfoDialog->setOwnerId(qstrOwnerId);
-		m_pVehicleInfoDialog->startTimer();
+		m_pVehicleInfoDialog->startTimer(20000);
 		break;
 	case VEHICLEINCO:
 		m_pCheckReceiptDialog->show();
 		m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
-		m_pCheckReceiptDialog->startTimer();
+		m_pCheckReceiptDialog->startTimer(20000);
 		break;
 	case CHECKRECEIPT:
 		m_pInputDoneDialog->show();
 		m_pInputDoneDialog->setOwnerId(qstrOwnerId);
-		m_pInputDoneDialog->startTimer();
+		m_pInputDoneDialog->startTimer(20000);
 		break;
 	case INPUTDONE:
 		this->show();
@@ -160,7 +159,7 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 	case CHECKIDSELECT:
 		m_pSelectLicenseDialog->show();
 		m_pSelectLicenseDialog->setOwnerId(qstrOwnerId);
-		m_pSelectLicenseDialog->startTimer();
+		m_pSelectLicenseDialog->startTimer(20000);
 		break;
 	case SELECTED:
 		this->show();
@@ -175,7 +174,7 @@ void VehicleManage::onVehicleInfoDoneSlot(QString qstrOwnerId)
 	m_pVehicleInfoDialog->hide();
 	m_pCheckReceiptDialog->show();
 	m_pCheckReceiptDialog->setOwnerId(qstrOwnerId);
-	m_pCheckReceiptDialog->startTimer();
+	m_pCheckReceiptDialog->startTimer(20000);
 }
 
 void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
@@ -183,7 +182,7 @@ void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
 	m_pCheckReceiptDialog->hide();
 	m_pInputDoneDialog->show();
 	m_pInputDoneDialog->setOwnerId(qstrOwnerId);
-	m_pInputDoneDialog->startTimer();
+	m_pInputDoneDialog->startTimer(20000);
 }
 
 void VehicleManage::onInputDoneSlot()
@@ -216,7 +215,7 @@ void VehicleManage::on_pBtnInsurance_clicked()
 	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
-void VehicleManage::on_pBtnGohome_clicked()
+void VehicleManage::on_pBtnHomepage_clicked()
 {
 	emit goHomeVehicleSignal();
 }

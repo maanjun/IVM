@@ -3,7 +3,7 @@
 #include <QMessageBox>
 
 DrivingManage::DrivingManage(QWidget *parent) :
-    QDialog(parent),
+    QMainWindow(parent),
     ui(new Ui::DrivingManage)
 {
     ui->setupUi(this);
@@ -18,35 +18,40 @@ DrivingManage::~DrivingManage()
 
 void DrivingManage::on_pushButton_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("接口正在审批中 敬请期待!!!"));
-
-
+	QApplication::setQuitOnLastWindowClosed(false);
+	
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 
 }
 
 void DrivingManage::on_pushButton_2_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("接口正在审批中 敬请期待!!!"));
+	QApplication::setQuitOnLastWindowClosed(false);
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
 void DrivingManage::on_pushButton_3_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("接口正在审批中 敬请期待!!!"));
+	QApplication::setQuitOnLastWindowClosed(false);
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
 void DrivingManage::on_pushButton_4_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("接口正在审批中 敬请期待!!!"));
+	QApplication::setQuitOnLastWindowClosed(false);
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
 void DrivingManage::on_pushButton_5_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("接口正在审批中 敬请期待!!!"));
+	QApplication::setQuitOnLastWindowClosed(false);
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
 void DrivingManage::on_pushButton_6_clicked()
 {
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子完税功能正在完善中，敬请期待……"));
+	QApplication::setQuitOnLastWindowClosed(false);
+	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子保单功能正在完善中，敬请期待……"));
 }
 
 void DrivingManage::on_pBtnGohome_clicked()
