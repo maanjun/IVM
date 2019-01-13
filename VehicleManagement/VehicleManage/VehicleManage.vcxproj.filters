@@ -176,6 +176,9 @@
     <ClInclude Include="operateMysql.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="idcarddata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="VehicleManage.rc" />

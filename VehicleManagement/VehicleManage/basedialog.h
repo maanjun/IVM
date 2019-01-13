@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QTimer>
 #include <QKeyEvent>
+#include "common.h"
 
 namespace Ui {
 class BaseDialog;
@@ -36,7 +37,7 @@ public:
 
 	void setOwnerId(QString qstrOwnerId);
 
-	void setLabelContent(QString qstrContent);
+	void setLabelContent(QString qstrContent, TipLevel = INFO_TIP);
 
 	void keyPressEvent(QKeyEvent *event);
 

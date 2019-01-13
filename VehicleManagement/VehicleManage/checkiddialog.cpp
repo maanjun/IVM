@@ -6,6 +6,9 @@
 #include <QPixmap>
 #include <QMovie>
 #include <QDebug>
+#include "CommonFunction.h"
+
+using namespace CommonFuncs;
 
 CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 	m_caller(caller),
@@ -15,7 +18,8 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
     ui->setupUi(this);
 
 	// 身份信息初始化
-	m_idInfo = { 0 };
+	// m_idInfo = { 0 };
+	m_idCardData.reset();
 
 	// 默认远程验车
 	if (CHECKVEHICLE == m_caller)
@@ -54,10 +58,12 @@ CheckIDDialog::~CheckIDDialog()
 
 void CheckIDDialog::startTimer(int nMillisecond)
 {
+	setLabelContent(QString::fromLocal8Bit("我是测试，五秒钟之后我会消失。"));
 	m_nMillisecond = nMillisecond / 1000;
 	m_pCountdownTimer->start(1000);
 
-	m_idInfo = { 0 };
+	// m_idInfo = { 0 };
+	m_idCardData.reset();
 	ui->textBrowser->setHtml("");
 	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nextoff.png)");
 	ui->pBtnNext->setEnabled(false);
@@ -73,44 +79,64 @@ void CheckIDDialog::startTimer(int nMillisecond)
 		do
 		{
 			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+			// 读取身份证信息
+
 			// 读取成功
-			m_idInfo.nGender = 1;
-			strcpy_s(m_idInfo.szAddress, "重庆市江北区石马河社区");
-			strcpy_s(m_idInfo.szAuthority, "重庆市江北区");
-			strcpy_s(m_idInfo.szBirthday, "2018-10-13");
-			strcpy_s(m_idInfo.szHeadimage, "");
-			strcpy_s(m_idInfo.szNation, "汉");
-			strcpy_s(m_idInfo.szNumber, "500105198811112222");
-			strcpy_s(m_idInfo.szUsername, "马军");
-			strcpy_s(m_idInfo.szValidSection, "2018-10-13~2028-10-13");
+			strcpy_s(m_idCardData.Name, "马安君");
+			strcpy_s(m_idCardData.Sex, "男");
+			strcpy_s(m_idCardData.Nation, "汉");
+			strcpy_s(m_idCardData.Born, "2018-10-13");
+			strcpy_s(m_idCardData.Address, "重庆市江北区石马河街道可乐小镇三个电饭锅水电费公司的分公司感受到");
+			strcpy_s(m_idCardData.IDCardNo, "500105198811113333");
+			strcpy_s(m_idCardData.GrantDept, "重庆江北");
+			strcpy_s(m_idCardData.UserLifeBegin, "2018-10-13");
+			strcpy_s(m_idCardData.UserLifeEnd, "2019-10-13");
+			strcpy_s(m_idCardData.reserved, "保留");
+			strcpy_s(m_idCardData.PhotoFileName, "");
+
+			// 读取成功
+			//m_idInfo.nGender = 1;
+			//strcpy_s(m_idInfo.szAddress, "重庆市江北区石马河社区");
+			//strcpy_s(m_idInfo.szAuthority, "重庆市江北区");
+			//strcpy_s(m_idInfo.szBirthday, "2018-10-13");
+			//strcpy_s(m_idInfo.szHeadimage, "");
+			//strcpy_s(m_idInfo.szNation, "汉");
+			//strcpy_s(m_idInfo.szNumber, "500105198811112222");
+			//strcpy_s(m_idInfo.szUsername, "马军");
+			//strcpy_s(m_idInfo.szValidSection, "2018-10-13~2028-10-13");
 			if (150 == nCount) {
 				ui->labelLoading->setVisible(false);
 				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
 				ui->pBtnNext->setEnabled(true);
+				QString qstrBirthday = m_idCardData.Born;
+				string strAddress = m_idCardData.Address;
+				QString qstrAddress = QString::fromLocal8Bit(strAddress.c_str());
 				//将读取的数据写成html，设置进textBrower
-				QString qstrIDInfo = m_qstrIDTemplateHtml;
-					//.arg(QString::fromLocal8Bit("头像"))
-					//.arg(QString::fromLocal8Bit("姓名"))
-					//.arg(QString::fromLocal8Bit("性别"))
-					//.arg(QString::fromLocal8Bit("民族"))
-					//.arg(QString::fromLocal8Bit("2018"))
-					//.arg(QString::fromLocal8Bit("11"))
-					//.arg(QString::fromLocal8Bit("11"))
-					//.arg(QString::fromLocal8Bit("住址第一行"))
-					//.arg(QString::fromLocal8Bit("住址第二行"))
-					//.arg(QString::fromLocal8Bit("住址第三行"))
-					//.arg(QString::fromLocal8Bit("身份证号码"));
+				QString qstrIDInfo = m_qstrIDTemplateHtml
+					.arg(QString::fromLocal8Bit(m_idCardData.Name))
+					.arg(QString::fromLocal8Bit(m_idCardData.Sex))
+					.arg(QString::fromLocal8Bit(m_idCardData.Nation))
+					.arg(qstrBirthday.mid(0, 4))
+					.arg(qstrBirthday.mid(5, 2))
+					.arg(qstrBirthday.mid(8))
+					.arg(qstrAddress.mid(0, 11))
+					.arg(qstrAddress.mid(12, 11))
+					.arg(qstrAddress.mid(24))
+					.arg(m_idCardData.IDCardNo);
 				ui->textBrowser->setHtml(qstrIDInfo);
 				ui->labelHead->setPixmap(QPixmap("./Resources/Images/head.png"));
 				ui->labelHead->setScaledContents(true);
 				ui->labelHead->setVisible(true);
 				// 查询用户当前到哪一步
-				getUserinfo(m_idInfo.szNumber);
+				//getUserinfo(m_idInfo.szNumber);
+				getUserinfo(m_idCardData.IDCardNo);
 				break;
 			}
 			// 每50ms读取一次身份证信息
 			Sleep(50);
 		} while (nCount-- && !m_bInterrupted);
+
+		setLabelContent(QString::fromLocal8Bit("我要消失了！o(╥﹏╥)o"), TipLevel::ERROR_TIP);
 	}
 	else
 	{
@@ -137,18 +163,19 @@ void CheckIDDialog::on_pBtnNext_clicked()
 	// 存入数据库()
 	m_operateMysql.init();
 	m_operateMysql.begin();
-	QString qstrSql = QString("INSERT INTO USER(USERNAME, GENDER, NATION, BIRTHDAY, ADDRESS, NUMBER, AUTHORITY, VALIDSECTION, STAGE, ISVALID, HEADIMAGE) VALUES('%1', %2, '%3', '%4', '%5', '%6', '%7', '%8', %9, %10, '%11')")
-		.arg(QString::fromLocal8Bit(m_idInfo.szUsername))
-		.arg(m_idInfo.nGender)
-		.arg(QString::fromLocal8Bit(m_idInfo.szNation))
-		.arg(m_idInfo.szBirthday)
-		.arg(QString::fromLocal8Bit(m_idInfo.szAddress))
-		.arg(m_idInfo.szNumber)
-		.arg(QString::fromLocal8Bit(m_idInfo.szAuthority))
-		.arg(QString::fromLocal8Bit(m_idInfo.szValidSection))
+	QString qstrSql = QString("INSERT INTO USER(USERNAME, GENDER, NATION, BIRTHDAY, ADDRESS, NUMBER, AUTHORITY, USERLIFEBEGIN, USERLIFEEND, STAGE, ISVALID, HEADIMAGE) VALUES('%1', '%2', '%3', '%4', '%5', '%6', '%7', '%8', '%9', %10, %11,'%12')")
+		.arg(QString::fromLocal8Bit(m_idCardData.Name))
+		.arg(QString::fromLocal8Bit(m_idCardData.Sex))
+		.arg(m_idCardData.Nation)
+		.arg(QString::fromLocal8Bit(m_idCardData.Born))
+		.arg(m_idCardData.Address)
+		.arg(QString::fromLocal8Bit(m_idCardData.IDCardNo))
+		.arg(QString::fromLocal8Bit(m_idCardData.GrantDept))
+		.arg(m_idCardData.UserLifeBegin)
+		.arg(QString::fromLocal8Bit(m_idCardData.UserLifeEnd))
 		.arg(1)
 		.arg(1)
-		.arg(QString::fromLocal8Bit(m_idInfo.szHeadimage));
+		.arg(QString::fromLocal8Bit(m_idCardData.PhotoFileName));
 	qDebug() << qstrSql << endl;
 	if (m_operateMysql.queryExe(qstrSql))
 	{
@@ -160,7 +187,7 @@ void CheckIDDialog::on_pBtnNext_clicked()
 		//QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("数据插入错误！"));
 	}
 	m_operateMysql.close();
-	emit idCheckedSignal(m_caller, m_idInfo.szNumber);
+	emit idCheckedSignal(m_caller, m_idCardData.IDCardNo);
 }
 
 void CheckIDDialog::getUserinfo(QString qstrId)

@@ -2,6 +2,7 @@
 #define CHECKIDDIALOG_H
 
 #include "common.h"
+#include "idcarddata.h"
 #include "basedialog.h"
 #include "operateMysql.h"
 
@@ -27,7 +28,9 @@ private:
 
 	OperateMysql m_operateMysql;
 
-	IdInfo m_idInfo;
+	//IdInfo m_idInfo;
+
+	IDCardData m_idCardData;
 
 private slots:
     void on_pBtnHomepage_clicked();

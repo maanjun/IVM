@@ -47,6 +47,13 @@ typedef enum _Stage
 	SELECTED
 }Stage, *PStage;
 
+typedef enum _TipLevel
+{
+	INFO_TIP = 0,
+	WARN_TIP,
+	ERROR_TIP
+}TipLevel, *PTipLevel;
+
 //身份信息结构体
 typedef struct _tagIdInfo
 {

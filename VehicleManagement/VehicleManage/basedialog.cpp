@@ -16,6 +16,7 @@ BaseDialog::BaseDialog(QWidget *parent) :
 	m_pCountdownTimer = new QTimer(this);
 	connect(m_pCountdownTimer, SIGNAL(timeout()), this, SLOT(showCountdownTimeSlot()));
 	ui->labelWarning->setVisible(false);
+	ui->labelWarning->setAlignment(Qt::AlignHCenter);
 	m_pLabelWarningTimer = new QTimer(this);
 	connect(m_pLabelWarningTimer, SIGNAL(timeout()), this, SLOT(hideLabelWarningSlot()));
 	m_bInterrupted = false;
@@ -101,9 +102,23 @@ void BaseDialog::keyPressEvent(QKeyEvent *event)
 	}
 }
 
-void BaseDialog::setLabelContent(QString qstrContent)
+void BaseDialog::setLabelContent(QString qstrContent, TipLevel tipLevel)
 {
-	m_pLabelWarningTimer->start(5000);
+	switch (tipLevel)
+	{
+	case INFO_TIP:
+		ui->labelWarning->setStyleSheet("color: rgb(255, 255, 255);background-color: rgb(143, 188, 255);");
+		break;
+	case WARN_TIP:
+		ui->labelWarning->setStyleSheet("color: rgb(255, 255, 255);background-color: rgb(236, 180, 25);");
+		break;
+	case ERROR_TIP:
+		ui->labelWarning->setStyleSheet("color: rgb(255, 255, 255);background-color: rgb(218, 17, 27);");
+		break;
+	default:
+		break;
+	}
+	m_pLabelWarningTimer->start(3000);
 	ui->labelWarning->setText(qstrContent);
 	ui->labelWarning->setVisible(true);
 }

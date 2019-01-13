@@ -58,13 +58,12 @@ public:
         graphicsView_3->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/Hint2.png);border:0px;"));
         labelWarning = new QLabel(BaseDialog);
         labelWarning->setObjectName(QStringLiteral("labelWarning"));
-        labelWarning->setGeometry(QRect(100, 130, 1721, 40));
+        labelWarning->setGeometry(QRect(160, 1030, 1600, 40));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(16);
         labelWarning->setFont(font1);
-        labelWarning->setStyleSheet(QLatin1String("color: rgb(255, 0, 0);\n"
-"background-color: rgb(143, 188, 255);"));
+        labelWarning->setStyleSheet(QStringLiteral(""));
 
         retranslateUi(BaseDialog);
 
@@ -74,7 +73,7 @@ public:
     void retranslateUi(QDialog *BaseDialog)
     {
         BaseDialog->setWindowTitle(QApplication::translate("BaseDialog", "BaseDialog", 0));
-        labelWarning->setText(QApplication::translate("BaseDialog", "\346\225\260\346\215\256\345\272\223\350\277\236\346\216\245\351\224\231\350\257\257", 0));
+        labelWarning->setText(QString());
     } // retranslateUi
 
 };
