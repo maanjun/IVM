@@ -14,7 +14,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -25,8 +27,11 @@ public:
     QPushButton *pBtnConfirm;
     QPushButton *pBtnHomepage;
     QPushButton *pBtnNext;
-    QPushButton *pBtnSelect;
-    QPushButton *pBtnScanIdSelect;
+    QLabel *labelScanningID;
+    QGraphicsView *viewScanningID;
+    QGraphicsView *viewDone;
+    QGraphicsView *viewIDSelect;
+    QLabel *labelSelect;
 
     void setupUi(QDialog *SelectLicenseDialog)
     {
@@ -57,23 +62,32 @@ public:
         pBtnNext->setFont(font);
         pBtnNext->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/anotheroff.png);"));
-        pBtnSelect = new QPushButton(SelectLicenseDialog);
-        pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(960, 150, 900, 50));
+        labelScanningID = new QLabel(SelectLicenseDialog);
+        labelScanningID->setObjectName(QStringLiteral("labelScanningID"));
+        labelScanningID->setGeometry(QRect(50, 180, 200, 50));
         QFont font2;
-        font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font2.setPointSize(20);
-        pBtnSelect->setFont(font2);
-        pBtnSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(65, 147, 252);"));
-        pBtnScanIdSelect = new QPushButton(SelectLicenseDialog);
-        pBtnScanIdSelect->setObjectName(QStringLiteral("pBtnScanIdSelect"));
-        pBtnScanIdSelect->setGeometry(QRect(60, 150, 900, 50));
-        pBtnScanIdSelect->setFont(font2);
-        pBtnScanIdSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
+        font2.setFamily(QStringLiteral("Times New Roman"));
+        font2.setPointSize(18);
+        labelScanningID->setFont(font2);
+        viewScanningID = new QGraphicsView(SelectLicenseDialog);
+        viewScanningID->setObjectName(QStringLiteral("viewScanningID"));
+        viewScanningID->setGeometry(QRect(50, 135, 50, 50));
+        viewScanningID->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/done.png);"));
+        viewDone = new QGraphicsView(SelectLicenseDialog);
+        viewDone->setObjectName(QStringLiteral("viewDone"));
+        viewDone->setGeometry(QRect(1820, 135, 50, 50));
+        viewDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/doing.png);"));
+        viewIDSelect = new QGraphicsView(SelectLicenseDialog);
+        viewIDSelect->setObjectName(QStringLiteral("viewIDSelect"));
+        viewIDSelect->setGeometry(QRect(100, 150, 1721, 20));
+        viewIDSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/doneline.png);"));
+        labelSelect = new QLabel(SelectLicenseDialog);
+        labelSelect->setObjectName(QStringLiteral("labelSelect"));
+        labelSelect->setGeometry(QRect(1770, 180, 101, 50));
+        labelSelect->setFont(font2);
 
         retranslateUi(SelectLicenseDialog);
 
@@ -86,8 +100,8 @@ public:
         pBtnConfirm->setText(QString());
         pBtnHomepage->setText(QString());
         pBtnNext->setText(QString());
-        pBtnSelect->setText(QApplication::translate("SelectLicenseDialog", "\350\207\252\344\270\273\351\200\211\347\211\214", 0));
-        pBtnScanIdSelect->setText(QApplication::translate("SelectLicenseDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
+        labelScanningID->setText(QApplication::translate("SelectLicenseDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
+        labelSelect->setText(QApplication::translate("SelectLicenseDialog", "\350\207\252\351\200\211\350\275\246\347\211\214", 0));
     } // retranslateUi
 
 };

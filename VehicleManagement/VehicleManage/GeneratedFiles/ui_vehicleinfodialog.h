@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -29,10 +30,17 @@ public:
     QLabel *label;
     QTextBrowser *textBrowser;
     QLabel *labelLoading;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QGraphicsView *viewScanningID;
+    QLabel *labelScanningID;
+    QGraphicsView *viewIDVehicle;
+    QGraphicsView *viewScanningVehicle;
+    QGraphicsView *viewVehicleFax;
+    QLabel *labelScanningVehicle;
+    QGraphicsView *viewDone_2;
+    QGraphicsView *viewFaxDone;
+    QLabel *labelInputFax;
+    QGraphicsView *viewInputFax;
+    QLabel *labelDone;
 
     void setupUi(QDialog *VehicleInfoDialog)
     {
@@ -68,37 +76,60 @@ public:
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
         labelLoading->setGeometry(QRect(1160, 460, 124, 124));
         labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/loading.gif);"));
-        pushButton_2 = new QPushButton(VehicleInfoDialog);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(510, 150, 450, 50));
+        viewScanningID = new QGraphicsView(VehicleInfoDialog);
+        viewScanningID->setObjectName(QStringLiteral("viewScanningID"));
+        viewScanningID->setGeometry(QRect(50, 135, 50, 50));
+        viewScanningID->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/done.png);"));
+        labelScanningID = new QLabel(VehicleInfoDialog);
+        labelScanningID->setObjectName(QStringLiteral("labelScanningID"));
+        labelScanningID->setGeometry(QRect(50, 180, 200, 50));
         QFont font2;
-        font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font2.setPointSize(20);
-        pushButton_2->setFont(font2);
-        pushButton_2->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(65, 147, 252);"));
-        pushButton = new QPushButton(VehicleInfoDialog);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(60, 150, 450, 50));
-        pushButton->setFont(font2);
-        pushButton->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
-        pushButton_3 = new QPushButton(VehicleInfoDialog);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(960, 150, 450, 50));
-        pushButton_3->setFont(font2);
-        pushButton_3->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
-        pushButton_4 = new QPushButton(VehicleInfoDialog);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(1410, 150, 450, 50));
-        pushButton_4->setFont(font2);
-        pushButton_4->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
+        font2.setFamily(QStringLiteral("Times New Roman"));
+        font2.setPointSize(18);
+        labelScanningID->setFont(font2);
+        viewIDVehicle = new QGraphicsView(VehicleInfoDialog);
+        viewIDVehicle->setObjectName(QStringLiteral("viewIDVehicle"));
+        viewIDVehicle->setGeometry(QRect(100, 150, 540, 20));
+        viewIDVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/doneline.png);"));
+        viewScanningVehicle = new QGraphicsView(VehicleInfoDialog);
+        viewScanningVehicle->setObjectName(QStringLiteral("viewScanningVehicle"));
+        viewScanningVehicle->setGeometry(QRect(640, 135, 50, 50));
+        viewScanningVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/doing.png);"));
+        viewVehicleFax = new QGraphicsView(VehicleInfoDialog);
+        viewVehicleFax->setObjectName(QStringLiteral("viewVehicleFax"));
+        viewVehicleFax->setGeometry(QRect(690, 150, 540, 20));
+        viewVehicleFax->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        labelScanningVehicle = new QLabel(VehicleInfoDialog);
+        labelScanningVehicle->setObjectName(QStringLiteral("labelScanningVehicle"));
+        labelScanningVehicle->setGeometry(QRect(600, 180, 200, 50));
+        labelScanningVehicle->setFont(font2);
+        viewDone_2 = new QGraphicsView(VehicleInfoDialog);
+        viewDone_2->setObjectName(QStringLiteral("viewDone_2"));
+        viewDone_2->setGeometry(QRect(1820, 135, 50, 50));
+        viewDone_2->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/prepared.png);"));
+        viewFaxDone = new QGraphicsView(VehicleInfoDialog);
+        viewFaxDone->setObjectName(QStringLiteral("viewFaxDone"));
+        viewFaxDone->setGeometry(QRect(1280, 150, 540, 20));
+        viewFaxDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        labelInputFax = new QLabel(VehicleInfoDialog);
+        labelInputFax->setObjectName(QStringLiteral("labelInputFax"));
+        labelInputFax->setGeometry(QRect(1200, 180, 200, 50));
+        labelInputFax->setFont(font2);
+        viewInputFax = new QGraphicsView(VehicleInfoDialog);
+        viewInputFax->setObjectName(QStringLiteral("viewInputFax"));
+        viewInputFax->setGeometry(QRect(1230, 135, 50, 50));
+        viewInputFax->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/prepared.png);"));
+        labelDone = new QLabel(VehicleInfoDialog);
+        labelDone->setObjectName(QStringLiteral("labelDone"));
+        labelDone->setGeometry(QRect(1820, 180, 61, 50));
+        labelDone->setFont(font2);
 
         retranslateUi(VehicleInfoDialog);
 
@@ -117,10 +148,10 @@ public:
 "</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0));
         labelLoading->setText(QString());
-        pushButton_2->setText(QApplication::translate("VehicleInfoDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));
-        pushButton->setText(QApplication::translate("VehicleInfoDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
-        pushButton_3->setText(QApplication::translate("VehicleInfoDialog", "\350\276\223\345\205\245\347\250\216\350\264\271\345\217\267", 0));
-        pushButton_4->setText(QApplication::translate("VehicleInfoDialog", "\345\256\214\346\210\220", 0));
+        labelScanningID->setText(QApplication::translate("VehicleInfoDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
+        labelScanningVehicle->setText(QApplication::translate("VehicleInfoDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));
+        labelInputFax->setText(QApplication::translate("VehicleInfoDialog", "\345\275\225\345\205\245\347\250\216\350\264\271\345\217\267", 0));
+        labelDone->setText(QApplication::translate("VehicleInfoDialog", "\345\256\214\346\210\220", 0));
     } // retranslateUi
 
 };

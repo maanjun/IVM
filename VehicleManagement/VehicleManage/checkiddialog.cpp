@@ -24,21 +24,29 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 	// 默认远程验车
 	if (CHECKVEHICLE == m_caller)
 	{
-		ui->pBtnScanIdSelect->setVisible(true);
-		ui->pBtnScanVehicle->setVisible(true);
-		ui->pBtnReceipt->setVisible(true);
-		ui->pBtnDone->setVisible(true);
-		ui->pBtnScanIdSelect->setVisible(false);
-		ui->pBtnSelect->setVisible(false);
+		ui->viewIDVehicle->setVisible(true);
+		ui->viewScanningVehicle->setVisible(true);
+		ui->labelScanningVehicle->setVisible(true);
+		ui->viewVehicleFax->setVisible(true);
+		ui->viewInputFax->setVisible(true);
+		ui->labelInputFax->setVisible(true);
+		ui->viewFaxDone->setVisible(true);
+		ui->labelDone->setVisible(true);
+		ui->viewIDSelect->setVisible(false);
+		ui->labelSelect->setVisible(false);
 	}
 	else 
 	{
-		ui->pBtnScanIdSelect->setVisible(false);
-		ui->pBtnScanVehicle->setVisible(false);
-		ui->pBtnReceipt->setVisible(false);
-		ui->pBtnDone->setVisible(false);
-		ui->pBtnScanIdSelect->setVisible(true);
-		ui->pBtnSelect->setVisible(true);
+		ui->viewIDVehicle->setVisible(false);
+		ui->viewScanningVehicle->setVisible(false);
+		ui->labelScanningVehicle->setVisible(false);
+		ui->viewVehicleFax->setVisible(false);
+		ui->viewInputFax->setVisible(false);
+		ui->labelInputFax->setVisible(false);
+		ui->viewFaxDone->setVisible(false);
+		ui->labelDone->setVisible(false);
+		ui->viewIDSelect->setVisible(true);
+		ui->labelSelect->setVisible(true);
 	}
 
 	QMovie *movie = new QMovie("./Resources/Images/loading.gif", "gif", this);

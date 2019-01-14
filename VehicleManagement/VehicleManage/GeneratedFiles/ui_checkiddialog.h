@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -30,12 +31,19 @@ public:
     QLabel *label;
     QLabel *labelHead;
     QLabel *labelLoading;
-    QPushButton *pBtnDone;
-    QPushButton *pBtnScanIdCheck;
-    QPushButton *pBtnScanVehicle;
-    QPushButton *pBtnReceipt;
-    QPushButton *pBtnScanIdSelect;
-    QPushButton *pBtnSelect;
+    QGraphicsView *viewScanningID;
+    QGraphicsView *viewScanningVehicle;
+    QGraphicsView *viewInputFax;
+    QGraphicsView *viewVehicleFax;
+    QGraphicsView *viewDone;
+    QGraphicsView *viewFaxDone;
+    QLabel *labelScanningID;
+    QLabel *labelScanningVehicle;
+    QLabel *labelInputFax;
+    QLabel *labelDone;
+    QGraphicsView *viewIDVehicle;
+    QGraphicsView *viewIDSelect;
+    QLabel *labelSelect;
 
     void setupUi(QDialog *CheckIDDialog)
     {
@@ -78,51 +86,69 @@ public:
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
         labelLoading->setGeometry(QRect(1340, 470, 124, 124));
         labelLoading->setStyleSheet(QStringLiteral("border-image: url(:/Resources/Images/loading.gif);"));
-        pBtnDone = new QPushButton(CheckIDDialog);
-        pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
-        pBtnDone->setGeometry(QRect(1410, 150, 450, 50));
+        viewScanningID = new QGraphicsView(CheckIDDialog);
+        viewScanningID->setObjectName(QStringLiteral("viewScanningID"));
+        viewScanningID->setGeometry(QRect(50, 135, 50, 50));
+        viewScanningID->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/doing.png);"));
+        viewScanningVehicle = new QGraphicsView(CheckIDDialog);
+        viewScanningVehicle->setObjectName(QStringLiteral("viewScanningVehicle"));
+        viewScanningVehicle->setGeometry(QRect(640, 135, 50, 50));
+        viewScanningVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/prepared.png);"));
+        viewInputFax = new QGraphicsView(CheckIDDialog);
+        viewInputFax->setObjectName(QStringLiteral("viewInputFax"));
+        viewInputFax->setGeometry(QRect(1230, 135, 50, 50));
+        viewInputFax->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/prepared.png);"));
+        viewVehicleFax = new QGraphicsView(CheckIDDialog);
+        viewVehicleFax->setObjectName(QStringLiteral("viewVehicleFax"));
+        viewVehicleFax->setGeometry(QRect(690, 150, 540, 20));
+        viewVehicleFax->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        viewDone = new QGraphicsView(CheckIDDialog);
+        viewDone->setObjectName(QStringLiteral("viewDone"));
+        viewDone->setGeometry(QRect(1820, 135, 50, 50));
+        viewDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/prepared.png);"));
+        viewFaxDone = new QGraphicsView(CheckIDDialog);
+        viewFaxDone->setObjectName(QStringLiteral("viewFaxDone"));
+        viewFaxDone->setGeometry(QRect(1280, 150, 540, 20));
+        viewFaxDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        labelScanningID = new QLabel(CheckIDDialog);
+        labelScanningID->setObjectName(QStringLiteral("labelScanningID"));
+        labelScanningID->setGeometry(QRect(50, 180, 200, 50));
         QFont font2;
-        font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font2.setPointSize(20);
-        pBtnDone->setFont(font2);
-        pBtnDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
-        pBtnScanIdCheck = new QPushButton(CheckIDDialog);
-        pBtnScanIdCheck->setObjectName(QStringLiteral("pBtnScanIdCheck"));
-        pBtnScanIdCheck->setGeometry(QRect(60, 150, 450, 50));
-        pBtnScanIdCheck->setFont(font2);
-        pBtnScanIdCheck->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(65, 147, 252);"));
-        pBtnScanVehicle = new QPushButton(CheckIDDialog);
-        pBtnScanVehicle->setObjectName(QStringLiteral("pBtnScanVehicle"));
-        pBtnScanVehicle->setGeometry(QRect(510, 150, 450, 50));
-        pBtnScanVehicle->setFont(font2);
-        pBtnScanVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
-        pBtnReceipt = new QPushButton(CheckIDDialog);
-        pBtnReceipt->setObjectName(QStringLiteral("pBtnReceipt"));
-        pBtnReceipt->setGeometry(QRect(960, 150, 450, 50));
-        pBtnReceipt->setFont(font2);
-        pBtnReceipt->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
-        pBtnScanIdSelect = new QPushButton(CheckIDDialog);
-        pBtnScanIdSelect->setObjectName(QStringLiteral("pBtnScanIdSelect"));
-        pBtnScanIdSelect->setGeometry(QRect(60, 150, 900, 50));
-        pBtnScanIdSelect->setFont(font2);
-        pBtnScanIdSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(65, 147, 252);"));
-        pBtnSelect = new QPushButton(CheckIDDialog);
-        pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(960, 150, 900, 50));
-        pBtnSelect->setFont(font2);
-        pBtnSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(166, 205, 251);"));
+        font2.setFamily(QStringLiteral("Times New Roman"));
+        font2.setPointSize(18);
+        labelScanningID->setFont(font2);
+        labelScanningVehicle = new QLabel(CheckIDDialog);
+        labelScanningVehicle->setObjectName(QStringLiteral("labelScanningVehicle"));
+        labelScanningVehicle->setGeometry(QRect(600, 180, 200, 50));
+        labelScanningVehicle->setFont(font2);
+        labelInputFax = new QLabel(CheckIDDialog);
+        labelInputFax->setObjectName(QStringLiteral("labelInputFax"));
+        labelInputFax->setGeometry(QRect(1200, 180, 200, 50));
+        labelInputFax->setFont(font2);
+        labelDone = new QLabel(CheckIDDialog);
+        labelDone->setObjectName(QStringLiteral("labelDone"));
+        labelDone->setGeometry(QRect(1820, 180, 61, 50));
+        labelDone->setFont(font2);
+        viewIDVehicle = new QGraphicsView(CheckIDDialog);
+        viewIDVehicle->setObjectName(QStringLiteral("viewIDVehicle"));
+        viewIDVehicle->setGeometry(QRect(100, 150, 540, 20));
+        viewIDVehicle->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        viewIDSelect = new QGraphicsView(CheckIDDialog);
+        viewIDSelect->setObjectName(QStringLiteral("viewIDSelect"));
+        viewIDSelect->setGeometry(QRect(100, 150, 1721, 20));
+        viewIDSelect->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/undoneline.png);"));
+        labelSelect = new QLabel(CheckIDDialog);
+        labelSelect->setObjectName(QStringLiteral("labelSelect"));
+        labelSelect->setGeometry(QRect(1770, 180, 101, 50));
+        labelSelect->setFont(font2);
 
         retranslateUi(CheckIDDialog);
 
@@ -142,12 +168,11 @@ public:
         label->setText(QString());
         labelHead->setText(QString());
         labelLoading->setText(QString());
-        pBtnDone->setText(QApplication::translate("CheckIDDialog", "\345\256\214\346\210\220", 0));
-        pBtnScanIdCheck->setText(QApplication::translate("CheckIDDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
-        pBtnScanVehicle->setText(QApplication::translate("CheckIDDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));
-        pBtnReceipt->setText(QApplication::translate("CheckIDDialog", "\350\276\223\345\205\245\347\250\216\350\264\271\345\217\267", 0));
-        pBtnScanIdSelect->setText(QApplication::translate("CheckIDDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
-        pBtnSelect->setText(QApplication::translate("CheckIDDialog", "\350\207\252\344\270\273\351\200\211\347\211\214", 0));
+        labelScanningID->setText(QApplication::translate("CheckIDDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
+        labelScanningVehicle->setText(QApplication::translate("CheckIDDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));
+        labelInputFax->setText(QApplication::translate("CheckIDDialog", "\345\275\225\345\205\245\347\250\216\350\264\271\345\217\267", 0));
+        labelDone->setText(QApplication::translate("CheckIDDialog", "\345\256\214\346\210\220", 0));
+        labelSelect->setText(QApplication::translate("CheckIDDialog", "\350\207\252\351\200\211\350\275\246\347\211\214", 0));
     } // retranslateUi
 
 };

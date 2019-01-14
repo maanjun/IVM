@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/doneline.png</file>
+    <file>Resources/Images/undoneline.png</file>
+    <file>Resources/Images/doing.png</file>
+    <file>Resources/Images/done.png</file>
+    <file>Resources/Images/prepared.png</file>
     <file>Resources/Images/canceloff.png</file>
     <file>Resources/Images/cancelon.png</file>
     <file>Resources/Images/head.png</file>
