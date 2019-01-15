@@ -30,7 +30,7 @@ public:
     QGraphicsView *graphicsView_3;
     QPushButton *pBtnCheck;
     QPushButton *pBtnSelect;
-    QPushButton *pBtnkTax_4;
+    QPushButton *pBtnTax;
     QPushButton *pBtnInsurance;
     QGraphicsView *graphicsView_4;
     QGraphicsView *graphicsView_5;
@@ -87,16 +87,16 @@ public:
         pBtnSelect->setIcon(icon2);
         pBtnSelect->setIconSize(QSize(85, 65));
         pBtnSelect->setFlat(true);
-        pBtnkTax_4 = new QPushButton(centralWidget);
-        pBtnkTax_4->setObjectName(QStringLiteral("pBtnkTax_4"));
-        pBtnkTax_4->setGeometry(QRect(1310, 550, 241, 81));
-        pBtnkTax_4->setFont(font);
-        pBtnkTax_4->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
+        pBtnTax = new QPushButton(centralWidget);
+        pBtnTax->setObjectName(QStringLiteral("pBtnTax"));
+        pBtnTax->setGeometry(QRect(1130, 550, 241, 81));
+        pBtnTax->setFont(font);
+        pBtnTax->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon3;
         icon3.addFile(QStringLiteral(":/Resources/Images/carMove.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pBtnkTax_4->setIcon(icon3);
-        pBtnkTax_4->setIconSize(QSize(85, 65));
-        pBtnkTax_4->setFlat(true);
+        pBtnTax->setIcon(icon3);
+        pBtnTax->setIconSize(QSize(85, 65));
+        pBtnTax->setFlat(true);
         pBtnInsurance = new QPushButton(centralWidget);
         pBtnInsurance->setObjectName(QStringLiteral("pBtnInsurance"));
         pBtnInsurance->setGeometry(QRect(840, 750, 241, 81));
@@ -150,7 +150,7 @@ public:
         pBtnMortgage->setText(QApplication::translate("VehicleManageClass", "\347\224\265\345\255\220\346\212\265\346\212\274", 0));
         pBtnCheck->setText(QApplication::translate("VehicleManageClass", "\350\277\234\347\250\213\350\275\246\346\243\200", 0));
         pBtnSelect->setText(QApplication::translate("VehicleManageClass", "\346\263\250\345\206\214\347\231\273\350\256\260", 0));
-        pBtnkTax_4->setText(QApplication::translate("VehicleManageClass", "\350\275\254\347\247\273\347\231\273\350\256\260", 0));
+        pBtnTax->setText(QApplication::translate("VehicleManageClass", "\350\275\254\347\247\273\347\231\273\350\256\260", 0));
         pBtnInsurance->setText(QApplication::translate("VehicleManageClass", "\346\263\250\351\224\200\347\231\273\350\256\260", 0));
         pBtnHomepage->setText(QApplication::translate("VehicleManageClass", "\344\270\273\351\241\265", 0));
     } // retranslateUi

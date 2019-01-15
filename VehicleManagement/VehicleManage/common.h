@@ -33,7 +33,9 @@ using namespace CommonFuncs;
 typedef enum _Caller
 {
 	CHECKVEHICLE = 0,
-	SELECTLICENSE
+	SELECTLICENSE,
+	TAXQUERY,
+	DECLARE
 }Caller, *PCaller;
 
 typedef enum _Stage

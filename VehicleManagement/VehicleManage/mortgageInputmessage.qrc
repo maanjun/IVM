@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="img">
+    <file>Resources/Images/主页.png</file>
+    <file>Resources/Images/printguide.png</file>
+    <file>Resources/Images/cancelon.png</file>
+    <file>Resources/Images/confirmon.png</file>
+  </qresource>
+</RCC>

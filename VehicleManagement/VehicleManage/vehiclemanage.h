@@ -9,6 +9,7 @@
 #include "checkreceiptdialog.h"
 #include "inputdonedialog.h"
 #include "selectlicensedialog.h"
+#include "paytaxesdialog.h"
 
 #include "operateMysql.h"
 
@@ -33,7 +34,7 @@ private slots:
 
 	void on_pBtnMortgage_clicked();
 
-	void on_pBtnkTax_clicked();
+	void on_pBtnTax_clicked();
 	
 	void on_pBtnInsurance_clicked();
 
@@ -62,6 +63,7 @@ private:
 	InputDoneDialog *m_pInputDoneDialog;
 	CheckIDDialog *m_pCheckIDDialogSelect;
 	SelectLicenseDialog *m_pSelectLicenseDialog;
+	PaytaxesDialog *m_pPaytaxesDialog;
 
 public:
 	void init();

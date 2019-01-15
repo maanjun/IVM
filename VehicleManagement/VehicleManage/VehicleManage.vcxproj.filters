@@ -72,6 +72,39 @@
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="paytaxesdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="querytaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="readcertificatedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="confirmpaydialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="declaredialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="paytaxdonedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="face_recognition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mortgageBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mortgageCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mortgageInputmessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mortgageSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -99,6 +132,39 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="paytaxesdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="querytaxdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="readcertificatedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="confirmpaydialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="declaredialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="paytaxdonedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="face_recognition.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mortgageBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mortgageCheck.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mortgageInputmessage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mortgageSelect.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -130,6 +196,39 @@
     <QtUic Include="mainwindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="paytaxesdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="querytaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="readcertificatedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpaydialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declaredialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="paytaxdonedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="face_recognition.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mortgageBase.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mortgageCheck.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mortgageInputmessage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mortgageSelect.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="vehiclemanage.qrc">
@@ -157,6 +256,30 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="drivingmanage.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="paytaxesdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querytaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="readcertificatedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpaydialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declaredialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="paytaxdonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="face_recognition.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mortgageInputmessage.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

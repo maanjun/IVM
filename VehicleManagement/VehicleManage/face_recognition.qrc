@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="1">
+    <file>Resources/Images/outline1.png</file>
+    <file>Resources/Images/outline.png</file>
+  </qresource>
+</RCC>

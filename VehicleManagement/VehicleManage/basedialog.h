@@ -55,6 +55,8 @@ signals:
 	void inputDoneSingal();
 signals:
 	void selectDoneSingal();
+signals:
+	void taxDoneSingal();
 
 private slots:
 	void onTimecoutSlot();

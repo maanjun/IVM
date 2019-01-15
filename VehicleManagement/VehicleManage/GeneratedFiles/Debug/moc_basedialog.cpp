@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_BaseDialog_t {
-    QByteArrayData data[15];
-    char stringdata0[218];
+    QByteArrayData data[16];
+    char stringdata0[232];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,17 +41,19 @@ QT_MOC_LITERAL(8, 84, 20), // "receiptCheckedSingal"
 QT_MOC_LITERAL(9, 105, 21), // "vehicleInfoDoneSingal"
 QT_MOC_LITERAL(10, 127, 15), // "inputDoneSingal"
 QT_MOC_LITERAL(11, 143, 16), // "selectDoneSingal"
-QT_MOC_LITERAL(12, 160, 14), // "onTimecoutSlot"
-QT_MOC_LITERAL(13, 175, 21), // "showCountdownTimeSlot"
-QT_MOC_LITERAL(14, 197, 20) // "hideLabelWarningSlot"
+QT_MOC_LITERAL(12, 160, 13), // "taxDoneSingal"
+QT_MOC_LITERAL(13, 174, 14), // "onTimecoutSlot"
+QT_MOC_LITERAL(14, 189, 21), // "showCountdownTimeSlot"
+QT_MOC_LITERAL(15, 211, 20) // "hideLabelWarningSlot"
 
     },
     "BaseDialog\0goHomeSignal\0\0idCheckedSignal\0"
     "nCaller\0qstrOwnerId\0idScannedSignal\0"
     "nStage\0receiptCheckedSingal\0"
     "vehicleInfoDoneSingal\0inputDoneSingal\0"
-    "selectDoneSingal\0onTimecoutSlot\0"
-    "showCountdownTimeSlot\0hideLabelWarningSlot"
+    "selectDoneSingal\0taxDoneSingal\0"
+    "onTimecoutSlot\0showCountdownTimeSlot\0"
+    "hideLabelWarningSlot"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,26 +63,27 @@ static const uint qt_meta_data_BaseDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x06 /* Public */,
-       3,    2,   65,    2, 0x06 /* Public */,
-       6,    2,   70,    2, 0x06 /* Public */,
-       8,    1,   75,    2, 0x06 /* Public */,
-       9,    1,   78,    2, 0x06 /* Public */,
-      10,    0,   81,    2, 0x06 /* Public */,
-      11,    0,   82,    2, 0x06 /* Public */,
+       1,    0,   69,    2, 0x06 /* Public */,
+       3,    2,   70,    2, 0x06 /* Public */,
+       6,    2,   75,    2, 0x06 /* Public */,
+       8,    1,   80,    2, 0x06 /* Public */,
+       9,    1,   83,    2, 0x06 /* Public */,
+      10,    0,   86,    2, 0x06 /* Public */,
+      11,    0,   87,    2, 0x06 /* Public */,
+      12,    0,   88,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      12,    0,   83,    2, 0x08 /* Private */,
-      13,    0,   84,    2, 0x08 /* Private */,
-      14,    0,   85,    2, 0x08 /* Private */,
+      13,    0,   89,    2, 0x08 /* Private */,
+      14,    0,   90,    2, 0x08 /* Private */,
+      15,    0,   91,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -88,6 +91,7 @@ static const uint qt_meta_data_BaseDialog[] = {
     QMetaType::Void, QMetaType::UInt, QMetaType::QString,    7,    5,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -112,9 +116,10 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->vehicleInfoDoneSingal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 5: _t->inputDoneSingal(); break;
         case 6: _t->selectDoneSingal(); break;
-        case 7: _t->onTimecoutSlot(); break;
-        case 8: _t->showCountdownTimeSlot(); break;
-        case 9: _t->hideLabelWarningSlot(); break;
+        case 7: _t->taxDoneSingal(); break;
+        case 8: _t->onTimecoutSlot(); break;
+        case 9: _t->showCountdownTimeSlot(); break;
+        case 10: _t->hideLabelWarningSlot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -169,6 +174,13 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 return;
             }
         }
+        {
+            typedef void (BaseDialog::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::taxDoneSingal)) {
+                *result = 7;
+                return;
+            }
+        }
     }
 }
 
@@ -197,13 +209,13 @@ int BaseDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }
@@ -252,5 +264,11 @@ void BaseDialog::inputDoneSingal()
 void BaseDialog::selectDoneSingal()
 {
     QMetaObject::activate(this, &staticMetaObject, 6, Q_NULLPTR);
+}
+
+// SIGNAL 7
+void BaseDialog::taxDoneSingal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 7, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

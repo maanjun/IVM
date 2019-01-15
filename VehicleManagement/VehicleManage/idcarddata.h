@@ -1,3 +1,6 @@
+#ifndef IDCARDDATA_H
+#define IDCARDDATA_H
+
 #pragma pack(push, 1)
 #include <windows.h>
 
@@ -31,3 +34,4 @@ typedef struct IDCardData {
 }*PIDCardData;
 
 #pragma pack(pop)
+#endif

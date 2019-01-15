@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mortgageSelect</class>
+ <widget class="BaseDialog" name="mortgageSelect">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mortgageSelect</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>320</y>
+     <width>561</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>没有找到你抵押信息，请确认后继续！</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtnGohome">
+   <property name="geometry">
+    <rect>
+     <x>1520</x>
+     <y>60</y>
+     <width>261</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px groove gray;border-radius:10px;
+background-image: url(:/Resources/Images/btn.png);
+</string>
+   </property>
+   <property name="text">
+    <string>主页</string>
+   </property>
+   <property name="icon">
+    <iconset resource="drivingmanage.qrc">
+     <normaloff>:/Resources/Images/主页.png</normaloff>:/Resources/Images/主页.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>71</width>
+     <height>92</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>BaseDialog</class>
+   <extends>QWidget</extends>
+   <header>basedialog.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="drivingmanage.qrc"/>
+ </resources>
+ <connections/>
+</ui>

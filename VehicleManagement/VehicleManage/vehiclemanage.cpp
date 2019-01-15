@@ -63,6 +63,7 @@ bool VehicleManage::initFrame()
 	m_pSelectLicenseDialog = new SelectLicenseDialog();
 	m_pCheckReceiptDialog = new CheckReceiptDialog();
 	m_pInputDoneDialog = new InputDoneDialog();
+	m_pPaytaxesDialog = new PaytaxesDialog();
 
 	connect(m_pCheckIDDialogCheck, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pCheckIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
@@ -80,6 +81,9 @@ bool VehicleManage::initFrame()
 	connect(m_pInputDoneDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pCheckIDDialogSelect, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pSelectLicenseDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+
+	connect(m_pPaytaxesDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+
 	return true;
 }
 
@@ -92,6 +96,7 @@ void VehicleManage::onGoHomeSlot()
 	m_pInputDoneDialog->hide();
 	m_pCheckIDDialogSelect->hide();
 	m_pSelectLicenseDialog->hide();
+	m_pPaytaxesDialog->hide();
 }
 
 void VehicleManage::on_pBtnCheck_clicked()
@@ -203,10 +208,12 @@ void VehicleManage::on_pBtnMortgage_clicked()
 	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子抵押功能正在完善中，敬请期待……"));
 }
 
-void VehicleManage::on_pBtnkTax_clicked()
+void VehicleManage::on_pBtnTax_clicked()
 {
 	// 跳转至电子完税第一步
-	QMessageBox::information(NULL, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("电子完税功能正在完善中，敬请期待……"));
+	this->hide();
+	m_pPaytaxesDialog->show();
+	m_pPaytaxesDialog->startTimer(20000);
 }
 
 void VehicleManage::on_pBtnInsurance_clicked()

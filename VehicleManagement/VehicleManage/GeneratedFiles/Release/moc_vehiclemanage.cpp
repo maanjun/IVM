@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_VehicleManage_t {
     QByteArrayData data[19];
-    char stringdata0[319];
+    char stringdata0[318];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,24 +35,24 @@ QT_MOC_LITERAL(2, 34, 0), // ""
 QT_MOC_LITERAL(3, 35, 20), // "on_pBtnCheck_clicked"
 QT_MOC_LITERAL(4, 56, 21), // "on_pBtnSelect_clicked"
 QT_MOC_LITERAL(5, 78, 23), // "on_pBtnMortgage_clicked"
-QT_MOC_LITERAL(6, 102, 19), // "on_pBtnkTax_clicked"
-QT_MOC_LITERAL(7, 122, 24), // "on_pBtnInsurance_clicked"
-QT_MOC_LITERAL(8, 147, 12), // "onGoHomeSlot"
-QT_MOC_LITERAL(9, 160, 15), // "onIdCheckedSlot"
-QT_MOC_LITERAL(10, 176, 7), // "nCaller"
-QT_MOC_LITERAL(11, 184, 11), // "qstrOwnerId"
-QT_MOC_LITERAL(12, 196, 15), // "onIdScannedSlot"
-QT_MOC_LITERAL(13, 212, 6), // "nStage"
-QT_MOC_LITERAL(14, 219, 21), // "onVehicleInfoDoneSlot"
-QT_MOC_LITERAL(15, 241, 20), // "onReceiptCheckedSlot"
-QT_MOC_LITERAL(16, 262, 15), // "onInputDoneSlot"
-QT_MOC_LITERAL(17, 278, 16), // "onSelectDoneSlot"
-QT_MOC_LITERAL(18, 295, 23) // "on_pBtnHomepage_clicked"
+QT_MOC_LITERAL(6, 102, 18), // "on_pBtnTax_clicked"
+QT_MOC_LITERAL(7, 121, 24), // "on_pBtnInsurance_clicked"
+QT_MOC_LITERAL(8, 146, 12), // "onGoHomeSlot"
+QT_MOC_LITERAL(9, 159, 15), // "onIdCheckedSlot"
+QT_MOC_LITERAL(10, 175, 7), // "nCaller"
+QT_MOC_LITERAL(11, 183, 11), // "qstrOwnerId"
+QT_MOC_LITERAL(12, 195, 15), // "onIdScannedSlot"
+QT_MOC_LITERAL(13, 211, 6), // "nStage"
+QT_MOC_LITERAL(14, 218, 21), // "onVehicleInfoDoneSlot"
+QT_MOC_LITERAL(15, 240, 20), // "onReceiptCheckedSlot"
+QT_MOC_LITERAL(16, 261, 15), // "onInputDoneSlot"
+QT_MOC_LITERAL(17, 277, 16), // "onSelectDoneSlot"
+QT_MOC_LITERAL(18, 294, 23) // "on_pBtnHomepage_clicked"
 
     },
     "VehicleManage\0goHomeVehicleSignal\0\0"
     "on_pBtnCheck_clicked\0on_pBtnSelect_clicked\0"
-    "on_pBtnMortgage_clicked\0on_pBtnkTax_clicked\0"
+    "on_pBtnMortgage_clicked\0on_pBtnTax_clicked\0"
     "on_pBtnInsurance_clicked\0onGoHomeSlot\0"
     "onIdCheckedSlot\0nCaller\0qstrOwnerId\0"
     "onIdScannedSlot\0nStage\0onVehicleInfoDoneSlot\0"
@@ -123,7 +123,7 @@ void VehicleManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 1: _t->on_pBtnCheck_clicked(); break;
         case 2: _t->on_pBtnSelect_clicked(); break;
         case 3: _t->on_pBtnMortgage_clicked(); break;
-        case 4: _t->on_pBtnkTax_clicked(); break;
+        case 4: _t->on_pBtnTax_clicked(); break;
         case 5: _t->on_pBtnInsurance_clicked(); break;
         case 6: _t->onGoHomeSlot(); break;
         case 7: _t->onIdCheckedSlot((*reinterpret_cast< uint(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;

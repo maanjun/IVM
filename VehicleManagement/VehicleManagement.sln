@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VehicleManage", "VehicleManage\VehicleManage.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "progress_widget", "progress_widget\progress_widget.vcxproj", "{1C66FA58-B619-44F4-A229-B40E1A181510}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzx_idcard_reader", "xzx_idcard_reader\xzx_idcard_reader.vcxproj", "{49D19322-5003-497F-A6E4-3F2D23D2E39D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,18 +19,6 @@ Global
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|Win32
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.ActiveCfg = Release|Win32
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.Build.0 = Release|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Debug|x64.ActiveCfg = Debug|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Debug|x86.ActiveCfg = Debug|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Debug|x86.Build.0 = Debug|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Release|x64.ActiveCfg = Release|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Release|x86.ActiveCfg = Release|Win32
-		{1C66FA58-B619-44F4-A229-B40E1A181510}.Release|x86.Build.0 = Release|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Debug|x64.ActiveCfg = Debug|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Debug|x86.ActiveCfg = Debug|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Debug|x86.Build.0 = Debug|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Release|x64.ActiveCfg = Release|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Release|x86.ActiveCfg = Release|Win32
-		{49D19322-5003-497F-A6E4-3F2D23D2E39D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

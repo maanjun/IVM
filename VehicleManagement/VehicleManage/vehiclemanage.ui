@@ -151,10 +151,10 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pBtnkTax_4">
+   <widget class="QPushButton" name="pBtnTax">
     <property name="geometry">
      <rect>
-      <x>1310</x>
+      <x>1130</x>
       <y>550</y>
       <width>241</width>
       <height>81</height>
