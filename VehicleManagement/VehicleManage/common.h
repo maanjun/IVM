@@ -40,13 +40,14 @@ typedef enum _Caller
 
 typedef enum _Stage
 {
-	HOMEPAGE = 0,
+	VEHICLEMANAGE = 0,
 	CHECKID,
 	VEHICLEINCO,
 	CHECKRECEIPT,
 	INPUTDONE,
 	CHECKIDSELECT,
-	SELECTED
+	SELECTED,
+	TAXQUERIED
 }Stage, *PStage;
 
 typedef enum _TipLevel

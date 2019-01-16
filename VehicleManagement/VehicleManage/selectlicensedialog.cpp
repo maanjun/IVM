@@ -50,7 +50,7 @@ void SelectLicenseDialog::on_pBtnConfirm_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
-    emit selectDoneSingal();
+    emit selectDoneSignal();
     //this->close();
 }
 

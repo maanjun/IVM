@@ -47,7 +47,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pBtnMortgage = new QPushButton(centralWidget);
         pBtnMortgage->setObjectName(QStringLiteral("pBtnMortgage"));
-        pBtnMortgage->setGeometry(QRect(430, 750, 241, 81));
+        pBtnMortgage->setGeometry(QRect(869, 749, 241, 81));
         QFont font;
         font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font.setPointSize(22);
@@ -69,7 +69,7 @@ public:
         graphicsView_3->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/Hint2.png);border:0px;"));
         pBtnCheck = new QPushButton(centralWidget);
         pBtnCheck->setObjectName(QStringLiteral("pBtnCheck"));
-        pBtnCheck->setGeometry(QRect(840, 550, 241, 81));
+        pBtnCheck->setGeometry(QRect(1230, 560, 241, 81));
         pBtnCheck->setFont(font);
         pBtnCheck->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon1;
@@ -79,7 +79,7 @@ public:
         pBtnCheck->setFlat(true);
         pBtnSelect = new QPushButton(centralWidget);
         pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(430, 550, 241, 81));
+        pBtnSelect->setGeometry(QRect(458, 749, 241, 81));
         pBtnSelect->setFont(font);
         pBtnSelect->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon2;
@@ -89,21 +89,21 @@ public:
         pBtnSelect->setFlat(true);
         pBtnTax = new QPushButton(centralWidget);
         pBtnTax->setObjectName(QStringLiteral("pBtnTax"));
-        pBtnTax->setGeometry(QRect(1130, 550, 241, 81));
+        pBtnTax->setGeometry(QRect(458, 560, 241, 81));
         pBtnTax->setFont(font);
         pBtnTax->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon3;
-        icon3.addFile(QStringLiteral(":/Resources/Images/carMove.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QStringLiteral(":/Resources/Images/carTax.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnTax->setIcon(icon3);
         pBtnTax->setIconSize(QSize(85, 65));
         pBtnTax->setFlat(true);
         pBtnInsurance = new QPushButton(centralWidget);
         pBtnInsurance->setObjectName(QStringLiteral("pBtnInsurance"));
-        pBtnInsurance->setGeometry(QRect(840, 750, 241, 81));
+        pBtnInsurance->setGeometry(QRect(869, 560, 241, 81));
         pBtnInsurance->setFont(font);
         pBtnInsurance->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon4;
-        icon4.addFile(QStringLiteral(":/Resources/Images/carZUxiao.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QStringLiteral(":/Resources/Images/carInsurance.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnInsurance->setIcon(icon4);
         pBtnInsurance->setIconSize(QSize(85, 65));
         pBtnInsurance->setFlat(true);
@@ -150,8 +150,8 @@ public:
         pBtnMortgage->setText(QApplication::translate("VehicleManageClass", "\347\224\265\345\255\220\346\212\265\346\212\274", 0));
         pBtnCheck->setText(QApplication::translate("VehicleManageClass", "\350\277\234\347\250\213\350\275\246\346\243\200", 0));
         pBtnSelect->setText(QApplication::translate("VehicleManageClass", "\346\263\250\345\206\214\347\231\273\350\256\260", 0));
-        pBtnTax->setText(QApplication::translate("VehicleManageClass", "\350\275\254\347\247\273\347\231\273\350\256\260", 0));
-        pBtnInsurance->setText(QApplication::translate("VehicleManageClass", "\346\263\250\351\224\200\347\231\273\350\256\260", 0));
+        pBtnTax->setText(QApplication::translate("VehicleManageClass", "\345\256\214\347\250\216\347\231\273\350\256\260", 0));
+        pBtnInsurance->setText(QApplication::translate("VehicleManageClass", "\344\277\235\351\231\251\347\224\263\346\212\245", 0));
         pBtnHomepage->setText(QApplication::translate("VehicleManageClass", "\344\270\273\351\241\265", 0));
     } // retranslateUi
 

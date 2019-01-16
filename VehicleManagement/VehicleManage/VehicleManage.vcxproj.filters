@@ -105,6 +105,9 @@
     <ClCompile Include="mortgageSelect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="inputtaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -165,6 +168,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="mortgageSelect.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="inputtaxdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -229,6 +235,9 @@
     <QtUic Include="mortgageSelect.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="inputtaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="vehiclemanage.qrc">
@@ -280,6 +289,9 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="mortgageInputmessage.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputtaxdialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

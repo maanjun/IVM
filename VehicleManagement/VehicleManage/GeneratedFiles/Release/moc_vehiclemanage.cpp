@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_VehicleManage_t {
-    QByteArrayData data[19];
-    char stringdata0[318];
+    QByteArrayData data[26];
+    char stringdata0[450];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,7 +47,14 @@ QT_MOC_LITERAL(14, 218, 21), // "onVehicleInfoDoneSlot"
 QT_MOC_LITERAL(15, 240, 20), // "onReceiptCheckedSlot"
 QT_MOC_LITERAL(16, 261, 15), // "onInputDoneSlot"
 QT_MOC_LITERAL(17, 277, 16), // "onSelectDoneSlot"
-QT_MOC_LITERAL(18, 294, 23) // "on_pBtnHomepage_clicked"
+QT_MOC_LITERAL(18, 294, 18), // "onQueryTaxDoneSlot"
+QT_MOC_LITERAL(19, 313, 21), // "onCertificateReadSlot"
+QT_MOC_LITERAL(20, 335, 14), // "onDeclaredSlot"
+QT_MOC_LITERAL(21, 350, 18), // "onPayConfirmedSlot"
+QT_MOC_LITERAL(22, 369, 16), // "onPaytaxDoneSlot"
+QT_MOC_LITERAL(23, 386, 20), // "onFaceRecognicedSlot"
+QT_MOC_LITERAL(24, 407, 18), // "onInputTaxDoneSlot"
+QT_MOC_LITERAL(25, 426, 23) // "on_pBtnHomepage_clicked"
 
     },
     "VehicleManage\0goHomeVehicleSignal\0\0"
@@ -57,7 +64,11 @@ QT_MOC_LITERAL(18, 294, 23) // "on_pBtnHomepage_clicked"
     "onIdCheckedSlot\0nCaller\0qstrOwnerId\0"
     "onIdScannedSlot\0nStage\0onVehicleInfoDoneSlot\0"
     "onReceiptCheckedSlot\0onInputDoneSlot\0"
-    "onSelectDoneSlot\0on_pBtnHomepage_clicked"
+    "onSelectDoneSlot\0onQueryTaxDoneSlot\0"
+    "onCertificateReadSlot\0onDeclaredSlot\0"
+    "onPayConfirmedSlot\0onPaytaxDoneSlot\0"
+    "onFaceRecognicedSlot\0onInputTaxDoneSlot\0"
+    "on_pBtnHomepage_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,7 +78,7 @@ static const uint qt_meta_data_VehicleManage[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      21,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,22 +86,29 @@ static const uint qt_meta_data_VehicleManage[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   84,    2, 0x06 /* Public */,
+       1,    0,  119,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   85,    2, 0x08 /* Private */,
-       4,    0,   86,    2, 0x08 /* Private */,
-       5,    0,   87,    2, 0x08 /* Private */,
-       6,    0,   88,    2, 0x08 /* Private */,
-       7,    0,   89,    2, 0x08 /* Private */,
-       8,    0,   90,    2, 0x08 /* Private */,
-       9,    2,   91,    2, 0x08 /* Private */,
-      12,    2,   96,    2, 0x08 /* Private */,
-      14,    1,  101,    2, 0x08 /* Private */,
-      15,    1,  104,    2, 0x08 /* Private */,
-      16,    0,  107,    2, 0x08 /* Private */,
-      17,    0,  108,    2, 0x08 /* Private */,
-      18,    0,  109,    2, 0x08 /* Private */,
+       3,    0,  120,    2, 0x08 /* Private */,
+       4,    0,  121,    2, 0x08 /* Private */,
+       5,    0,  122,    2, 0x08 /* Private */,
+       6,    0,  123,    2, 0x08 /* Private */,
+       7,    0,  124,    2, 0x08 /* Private */,
+       8,    0,  125,    2, 0x08 /* Private */,
+       9,    2,  126,    2, 0x08 /* Private */,
+      12,    2,  131,    2, 0x08 /* Private */,
+      14,    1,  136,    2, 0x08 /* Private */,
+      15,    1,  139,    2, 0x08 /* Private */,
+      16,    0,  142,    2, 0x08 /* Private */,
+      17,    0,  143,    2, 0x08 /* Private */,
+      18,    0,  144,    2, 0x08 /* Private */,
+      19,    1,  145,    2, 0x08 /* Private */,
+      20,    1,  148,    2, 0x08 /* Private */,
+      21,    1,  151,    2, 0x08 /* Private */,
+      22,    1,  154,    2, 0x08 /* Private */,
+      23,    0,  157,    2, 0x08 /* Private */,
+      24,    0,  158,    2, 0x08 /* Private */,
+      25,    0,  159,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -104,6 +122,13 @@ static const uint qt_meta_data_VehicleManage[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::UInt, QMetaType::QString,   10,   11,
     QMetaType::Void, QMetaType::UInt, QMetaType::QString,   13,   11,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void, QMetaType::QString,   11,
     QMetaType::Void, QMetaType::QString,   11,
     QMetaType::Void, QMetaType::QString,   11,
     QMetaType::Void,
@@ -132,7 +157,14 @@ void VehicleManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 10: _t->onReceiptCheckedSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 11: _t->onInputDoneSlot(); break;
         case 12: _t->onSelectDoneSlot(); break;
-        case 13: _t->on_pBtnHomepage_clicked(); break;
+        case 13: _t->onQueryTaxDoneSlot(); break;
+        case 14: _t->onCertificateReadSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 15: _t->onDeclaredSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 16: _t->onPayConfirmedSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 17: _t->onPaytaxDoneSlot((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 18: _t->onFaceRecognicedSlot(); break;
+        case 19: _t->onInputTaxDoneSlot(); break;
+        case 20: _t->on_pBtnHomepage_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -173,13 +205,13 @@ int VehicleManage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 21;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 21)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 14;
+        _id -= 21;
     }
     return _id;
 }

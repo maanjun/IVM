@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1920</width>
-    <height>1080</height>
+    <height>988</height>
    </rect>
   </property>
   <property name="font">
@@ -30,17 +30,27 @@
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
-     <pointsize>18</pointsize>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
    </property>
    <property name="text">
     <string>完税查询</string>
+   </property>
+   <property name="icon">
+    <iconset resource="vehiclemanage.qrc">
+     <normaloff>:/Resources/Images/完税查询.png</normaloff>:/Resources/Images/完税查询.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="pBtnDeclare">
@@ -54,15 +64,25 @@
    </property>
    <property name="font">
     <font>
-     <family>Algerian</family>
-     <pointsize>18</pointsize>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
    </property>
    <property name="text">
-    <string>申报</string>
+    <string>完税申报</string>
+   </property>
+   <property name="icon">
+    <iconset resource="vehiclemanage.qrc">
+     <normaloff>:/Resources/Images/完税申报.png</normaloff>:/Resources/Images/完税申报.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="pBtnPaytaxes">
@@ -76,19 +96,31 @@
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
-     <pointsize>18</pointsize>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;</string>
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
    </property>
    <property name="text">
-    <string>缴税</string>
+    <string>完税检查</string>
+   </property>
+   <property name="icon">
+    <iconset resource="vehiclemanage.qrc">
+     <normaloff>:/Resources/Images/完税检查.png</normaloff>:/Resources/Images/完税检查.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
    </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="vehiclemanage.qrc"/>
+ </resources>
  <connections/>
 </ui>

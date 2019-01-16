@@ -16,6 +16,11 @@ public:
     explicit ConfirmPayDialog(QWidget *parent = 0);
     ~ConfirmPayDialog();
 
+private slots:
+	void on_pBtnHomepage_clicked();
+
+	void on_pBtnNext_clicked();
+
 private:
     Ui::ConfirmPayDialog *ui;
 };

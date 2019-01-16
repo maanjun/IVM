@@ -31,7 +31,7 @@ public:
 
 	int m_nMillisecond;
 
-	virtual void startTimer(int nMillisecond = 20000);
+	virtual void startTimer(int nMillisecond = 60000);
 
 	virtual void stopTimer();
 
@@ -52,11 +52,23 @@ signals:
 signals:
 	void vehicleInfoDoneSingal(QString qstrOwnerId);
 signals:
-	void inputDoneSingal();
+	void inputDoneSignal();
 signals:
-	void selectDoneSingal();
+	void selectDoneSignal();
 signals:
-	void taxDoneSingal();
+	void queryTaxDoneSignal();
+signals:
+	void declaredSignal(QString qstrOwnerId);
+signals:
+	void certificateReadSignal(QString qstrOwnerId);
+signals:
+	void payConfirmedSignal(QString qstrOwnerId);
+signals:
+	void paytaxDoneSignal(QString qstrOwnerId);
+signals:
+	void faceRecognicedSignal();
+signals:
+	void inputTaxDoneSignal();
 
 private slots:
 	void onTimecoutSlot();

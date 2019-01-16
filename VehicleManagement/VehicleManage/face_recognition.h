@@ -19,7 +19,6 @@ public:
 	face_recognition(QWidget *parent = 0);
 	~face_recognition();
 
-	void startTimer(int nMillisecond = 60000);
 public:
 private:
 	OperateMysql m_operateMysql;

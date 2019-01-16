@@ -12,3 +12,17 @@ PaytaxDoneDialog::~PaytaxDoneDialog()
 {
     delete ui;
 }
+
+void PaytaxDoneDialog::on_pBtnHomepage_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit goHomeSignal();
+}
+
+void PaytaxDoneDialog::on_pBtnNext_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit paytaxDoneSignal(m_qstrOwnerId);
+}

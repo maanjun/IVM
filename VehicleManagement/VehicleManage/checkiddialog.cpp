@@ -143,8 +143,6 @@ void CheckIDDialog::startTimer(int nMillisecond)
 			// 每50ms读取一次身份证信息
 			Sleep(50);
 		} while (nCount-- && !m_bInterrupted);
-
-		setLabelContent(QString::fromLocal8Bit("我要消失了！o(╥﹏╥)o"), TipLevel::ERROR_TIP);
 	}
 	else
 	{

@@ -76,7 +76,7 @@ void InputDoneDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
-	emit inputDoneSingal();
+	emit inputDoneSignal();
 	// 后台处理
 	// 从数据库取数据
 	m_operateMysql.init();
@@ -93,6 +93,6 @@ void InputDoneDialog::on_pBtnDone_clicked()
 	}
 	m_operateMysql.close();
 	// 需将html美化
-	// printFile(".\\Data\\detail.html");
-	printContent(m_qstrDetailTemplateHtml.toStdString());
+	 printFile(".\\Data\\detail.html");
+	//printContent(m_qstrDetailTemplateHtml.toStdString());
 }

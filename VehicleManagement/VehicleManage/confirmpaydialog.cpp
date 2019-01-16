@@ -12,3 +12,17 @@ ConfirmPayDialog::~ConfirmPayDialog()
 {
     delete ui;
 }
+
+void ConfirmPayDialog::on_pBtnHomepage_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit goHomeSignal();
+}
+
+void ConfirmPayDialog::on_pBtnNext_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit payConfirmedSignal(m_qstrOwnerId);
+}

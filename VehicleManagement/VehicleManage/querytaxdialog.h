@@ -17,7 +17,9 @@ public:
     ~QueryTaxDialog();
 
 private slots:
-    void on_pushButton_clicked();
+	void on_pBtnHomepage_clicked();
+
+	void on_pBtnDone_clicked();
 
 private:
     Ui::QueryTaxDialog *ui;

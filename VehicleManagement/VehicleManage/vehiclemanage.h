@@ -10,6 +10,7 @@
 #include "inputdonedialog.h"
 #include "selectlicensedialog.h"
 #include "paytaxesdialog.h"
+#include "mortgageBase.h"
 
 #include "operateMysql.h"
 
@@ -52,7 +53,21 @@ private slots:
 
 	void onSelectDoneSlot();
 
-	 void on_pBtnHomepage_clicked();
+	void onQueryTaxDoneSlot();
+
+	void onCertificateReadSlot(QString qstrOwnerId);
+
+	void onDeclaredSlot(QString qstrOwnerId);
+
+	void onPayConfirmedSlot(QString qstrOwnerId);
+
+	void onPaytaxDoneSlot(QString qstrOwnerId);
+
+	void onFaceRecognicedSlot();
+
+	void onInputTaxDoneSlot();
+
+	void on_pBtnHomepage_clicked();
 
 private:
 	Ui::VehicleManageClass ui;
@@ -64,6 +79,7 @@ private:
 	CheckIDDialog *m_pCheckIDDialogSelect;
 	SelectLicenseDialog *m_pSelectLicenseDialog;
 	PaytaxesDialog *m_pPaytaxesDialog;
+	mortgageBase *m_pMortgageBase;
 
 public:
 	void init();

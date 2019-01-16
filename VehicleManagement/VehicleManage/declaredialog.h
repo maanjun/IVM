@@ -16,6 +16,11 @@ public:
     explicit DeclareDialog(QWidget *parent = 0);
     ~DeclareDialog();
 
+private slots:
+	void on_pBtnHomepage_clicked();
+
+	void on_pBtnNext_clicked();
+
 private:
     Ui::DeclareDialog *ui;
 };

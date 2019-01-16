@@ -13,7 +13,16 @@ QueryTaxDialog::~QueryTaxDialog()
     delete ui;
 }
 
-void QueryTaxDialog::on_pushButton_clicked()
+void QueryTaxDialog::on_pBtnHomepage_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit goHomeSignal();
+}
 
+void QueryTaxDialog::on_pBtnDone_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit queryTaxDoneSignal();
 }

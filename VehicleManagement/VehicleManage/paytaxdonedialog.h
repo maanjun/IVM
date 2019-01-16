@@ -16,6 +16,11 @@ public:
     explicit PaytaxDoneDialog(QWidget *parent = 0);
     ~PaytaxDoneDialog();
 
+private slots:
+	void on_pBtnHomepage_clicked();
+
+	void on_pBtnNext_clicked();
+
 private:
     Ui::PaytaxDoneDialog *ui;
 };

@@ -30,7 +30,7 @@ private slots:
 	void onLicenseSelectedSlot();
 
 //signals:
-//    void selectDoneSingal();
+//    void selectDoneSignal();
 
 private:
     Ui::SelectLicenseDialog *ui;

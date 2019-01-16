@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>830</y>
+     <x>330</x>
+     <y>850</y>
      <width>300</width>
      <height>150</height>
     </rect>
@@ -39,8 +39,8 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
   <widget class="QPushButton" name="pBtnNext">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>830</y>
+     <x>1290</x>
+     <y>850</y>
      <width>300</width>
      <height>150</height>
     </rect>
@@ -52,7 +52,7 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
-border-image: url(:/Resources/Images/nextoff.png);</string>
+border-image: url(:/Resources/Images/nexton.png);</string>
    </property>
    <property name="text">
     <string/>

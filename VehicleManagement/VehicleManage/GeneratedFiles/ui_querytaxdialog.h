@@ -65,7 +65,7 @@ public:
     void retranslateUi(QDialog *QueryTaxDialog)
     {
         QueryTaxDialog->setWindowTitle(QApplication::translate("QueryTaxDialog", "QueryTaxDialog", 0));
-        pushButton->setText(QApplication::translate("QueryTaxDialog", "\345\212\237\350\203\275\346\255\243\345\234\250\345\256\214\345\226\204\344\270\255...\346\225\254\350\257\267\346\234\237\345\276\205\357\274\201", 0));
+        pushButton->setText(QApplication::translate("QueryTaxDialog", "\346\262\241\346\234\211\346\211\276\345\210\260\347\250\216\345\212\241\346\225\260\346\215\256", 0));
         pBtnDone->setText(QString());
         pBtnHomepage->setText(QString());
     } // retranslateUi

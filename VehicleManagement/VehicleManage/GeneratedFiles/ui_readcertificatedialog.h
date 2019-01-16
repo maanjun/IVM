@@ -37,7 +37,7 @@ public:
         ReadCertificateDialog->resize(1920, 1080);
         pBtnHomepage = new QPushButton(ReadCertificateDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(130, 830, 300, 150));
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
         QFont font;
         font.setFamily(QStringLiteral("Algerian"));
         font.setPointSize(22);
@@ -46,12 +46,12 @@ public:
 "border-image: url(:/Resources/Images/cancelon.png);"));
         pBtnNext = new QPushButton(ReadCertificateDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
-        pBtnNext->setGeometry(QRect(900, 830, 300, 150));
+        pBtnNext->setGeometry(QRect(1290, 850, 300, 150));
         QFont font1;
         font1.setPointSize(22);
         pBtnNext->setFont(font1);
         pBtnNext->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/nextoff.png);"));
+"border-image: url(:/Resources/Images/nexton.png);"));
         labelLoading = new QLabel(ReadCertificateDialog);
         labelLoading->setObjectName(QStringLiteral("labelLoading"));
         labelLoading->setGeometry(QRect(1160, 460, 124, 124));

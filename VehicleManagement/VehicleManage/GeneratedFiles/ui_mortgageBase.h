@@ -13,9 +13,8 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QFrame>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QToolButton>
+#include <QtWidgets/QPushButton>
 #include "basedialog.h"
 
 QT_BEGIN_NAMESPACE
@@ -23,30 +22,67 @@ QT_BEGIN_NAMESPACE
 class Ui_mortgageBase
 {
 public:
-    QFrame *frame;
-    QToolButton *toolButton_2;
-    QToolButton *toolButton_3;
-    QToolButton *toolButton;
+    QPushButton *btnmortgageSelect;
+    QPushButton *btnmortgageReport;
+    QPushButton *btnmortgageCheck;
+    QPushButton *pBtnGohome;
 
     void setupUi(BaseDialog *mortgageBase)
     {
         if (mortgageBase->objectName().isEmpty())
             mortgageBase->setObjectName(QStringLiteral("mortgageBase"));
         mortgageBase->resize(1900, 1080);
-        frame = new QFrame(mortgageBase);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(630, 350, 711, 421));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        toolButton_2 = new QToolButton(frame);
-        toolButton_2->setObjectName(QStringLiteral("toolButton_2"));
-        toolButton_2->setGeometry(QRect(272, 156, 100, 100));
-        toolButton_3 = new QToolButton(frame);
-        toolButton_3->setObjectName(QStringLiteral("toolButton_3"));
-        toolButton_3->setGeometry(QRect(429, 156, 100, 100));
-        toolButton = new QToolButton(frame);
-        toolButton->setObjectName(QStringLiteral("toolButton"));
-        toolButton->setGeometry(QRect(115, 156, 100, 100));
+        btnmortgageSelect = new QPushButton(mortgageBase);
+        btnmortgageSelect->setObjectName(QStringLiteral("btnmortgageSelect"));
+        btnmortgageSelect->setGeometry(QRect(690, 687, 252, 81));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
+        font.setPointSize(20);
+        btnmortgageSelect->setFont(font);
+        btnmortgageSelect->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);\n"
+""));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Resources/Images/\346\212\265\346\212\274\346\237\245\350\257\242.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnmortgageSelect->setIcon(icon);
+        btnmortgageSelect->setIconSize(QSize(71, 92));
+        btnmortgageSelect->setFlat(true);
+        btnmortgageReport = new QPushButton(mortgageBase);
+        btnmortgageReport->setObjectName(QStringLiteral("btnmortgageReport"));
+        btnmortgageReport->setGeometry(QRect(1010, 687, 252, 81));
+        btnmortgageReport->setFont(font);
+        btnmortgageReport->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);\n"
+""));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Resources/Images/\346\212\265\346\212\274\347\224\263\346\212\245.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnmortgageReport->setIcon(icon1);
+        btnmortgageReport->setIconSize(QSize(71, 92));
+        btnmortgageReport->setFlat(true);
+        btnmortgageCheck = new QPushButton(mortgageBase);
+        btnmortgageCheck->setObjectName(QStringLiteral("btnmortgageCheck"));
+        btnmortgageCheck->setGeometry(QRect(1350, 687, 252, 81));
+        btnmortgageCheck->setFont(font);
+        btnmortgageCheck->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);\n"
+""));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/Resources/Images/\346\212\265\346\212\274\346\243\200\346\237\245.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnmortgageCheck->setIcon(icon2);
+        btnmortgageCheck->setIconSize(QSize(71, 92));
+        btnmortgageCheck->setFlat(true);
+        pBtnGohome = new QPushButton(mortgageBase);
+        pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
+        pBtnGohome->setGeometry(QRect(1600, 60, 240, 90));
+        pBtnGohome->setFont(font);
+        pBtnGohome->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);\n"
+""));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Resources/Images/\344\270\273\351\241\265.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pBtnGohome->setIcon(icon3);
+        pBtnGohome->setIconSize(QSize(71, 92));
+        pBtnGohome->setFlat(true);
 
         retranslateUi(mortgageBase);
 
@@ -56,9 +92,10 @@ public:
     void retranslateUi(BaseDialog *mortgageBase)
     {
         mortgageBase->setWindowTitle(QApplication::translate("mortgageBase", "mortgageBase", 0));
-        toolButton_2->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\347\224\263\346\212\245", 0));
-        toolButton_3->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\351\252\214\350\257\201", 0));
-        toolButton->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\346\237\245\350\257\242", 0));
+        btnmortgageSelect->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\346\237\245\350\257\242", 0));
+        btnmortgageReport->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\347\224\263\346\212\245", 0));
+        btnmortgageCheck->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\351\252\214\350\257\201", 0));
+        pBtnGohome->setText(QApplication::translate("mortgageBase", "\344\270\273\351\241\265", 0));
     } // retranslateUi
 
 };

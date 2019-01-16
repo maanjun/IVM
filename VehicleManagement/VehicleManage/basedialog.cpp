@@ -44,7 +44,7 @@ void BaseDialog::startTimer(int nMillisecond)
     else
     {
 		// 默认60秒自动关闭
-        m_pTimer->start(20000);
+        m_pTimer->start(60000);
     }
 	m_pCountdownTimer->start(1000);
 }

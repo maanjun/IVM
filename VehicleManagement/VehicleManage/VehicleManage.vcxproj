@@ -124,6 +124,7 @@
     <ClCompile Include="drivingmanage.cpp" />
     <ClCompile Include="face_recognition.cpp" />
     <ClCompile Include="inputdonedialog.cpp" />
+    <ClCompile Include="inputtaxdialog.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
     <ClCompile Include="mortgageBase.cpp" />
@@ -152,6 +153,7 @@
     <QtUic Include="drivingmanage.ui" />
     <QtUic Include="face_recognition.ui" />
     <QtUic Include="inputdonedialog.ui" />
+    <QtUic Include="inputtaxdialog.ui" />
     <QtUic Include="mainwindow.ui" />
     <QtUic Include="mortgageBase.ui" />
     <QtUic Include="mortgageCheck.ui" />
@@ -180,6 +182,7 @@
     <QtRcc Include="drivingmanage.qrc" />
     <QtRcc Include="face_recognition.qrc" />
     <QtRcc Include="inputdonedialog.qrc" />
+    <QtRcc Include="inputtaxdialog.qrc" />
     <QtRcc Include="mainwindow.qrc" />
     <QtRcc Include="mortgageInputmessage.qrc" />
     <QtRcc Include="paytaxdonedialog.qrc" />
@@ -282,6 +285,12 @@
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
     </QtMoc>
     <QtMoc Include="mortgageSelect.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
+    </QtMoc>
+    <QtMoc Include="inputtaxdialog.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
