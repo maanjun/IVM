@@ -20,10 +20,10 @@
    <widget class="QToolButton" name="pBtnVehicle">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>360</x>
       <y>360</y>
-      <width>421</width>
-      <height>331</height>
+      <width>420</width>
+      <height>380</height>
      </rect>
     </property>
     <property name="font">
@@ -58,10 +58,10 @@ background-image: url(:/Resources/Images/btnBackBtn.png);text-align:button;</str
    <widget class="QToolButton" name="pBtnDrive">
     <property name="geometry">
      <rect>
-      <x>1020</x>
+      <x>1140</x>
       <y>360</y>
-      <width>421</width>
-      <height>331</height>
+      <width>420</width>
+      <height>380</height>
      </rect>
     </property>
     <property name="font">

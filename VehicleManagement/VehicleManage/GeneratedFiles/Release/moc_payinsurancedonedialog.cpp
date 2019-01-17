@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'declaredialog.h'
+** Meta object code from reading C++ file 'payinsurancedonedialog.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../declaredialog.h"
+#include "../../payinsurancedonedialog.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'declaredialog.h' doesn't include <QObject>."
+#error "The header file 'payinsurancedonedialog.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.6.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,29 +18,29 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_DeclareDialog_t {
+struct qt_meta_stringdata_PayinsuranceDoneDialog_t {
     QByteArrayData data[4];
-    char stringdata0[59];
+    char stringdata0[68];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_DeclareDialog_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_PayinsuranceDoneDialog_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_DeclareDialog_t qt_meta_stringdata_DeclareDialog = {
+static const qt_meta_stringdata_PayinsuranceDoneDialog_t qt_meta_stringdata_PayinsuranceDoneDialog = {
     {
-QT_MOC_LITERAL(0, 0, 13), // "DeclareDialog"
-QT_MOC_LITERAL(1, 14, 23), // "on_pBtnHomepage_clicked"
-QT_MOC_LITERAL(2, 38, 0), // ""
-QT_MOC_LITERAL(3, 39, 19) // "on_pBtnNext_clicked"
+QT_MOC_LITERAL(0, 0, 22), // "PayinsuranceDoneDialog"
+QT_MOC_LITERAL(1, 23, 23), // "on_pBtnHomepage_clicked"
+QT_MOC_LITERAL(2, 47, 0), // ""
+QT_MOC_LITERAL(3, 48, 19) // "on_pBtnNext_clicked"
 
     },
-    "DeclareDialog\0on_pBtnHomepage_clicked\0"
+    "PayinsuranceDoneDialog\0on_pBtnHomepage_clicked\0"
     "\0on_pBtnNext_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_DeclareDialog[] = {
+static const uint qt_meta_data_PayinsuranceDoneDialog[] = {
 
  // content:
        7,       // revision
@@ -64,10 +64,10 @@ static const uint qt_meta_data_DeclareDialog[] = {
        0        // eod
 };
 
-void DeclareDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void PayinsuranceDoneDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        DeclareDialog *_t = static_cast<DeclareDialog *>(_o);
+        PayinsuranceDoneDialog *_t = static_cast<PayinsuranceDoneDialog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pBtnHomepage_clicked(); break;
@@ -78,26 +78,26 @@ void DeclareDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     Q_UNUSED(_a);
 }
 
-const QMetaObject DeclareDialog::staticMetaObject = {
-    { &BaseDialog::staticMetaObject, qt_meta_stringdata_DeclareDialog.data,
-      qt_meta_data_DeclareDialog,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject PayinsuranceDoneDialog::staticMetaObject = {
+    { &BaseDialog::staticMetaObject, qt_meta_stringdata_PayinsuranceDoneDialog.data,
+      qt_meta_data_PayinsuranceDoneDialog,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *DeclareDialog::metaObject() const
+const QMetaObject *PayinsuranceDoneDialog::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *DeclareDialog::qt_metacast(const char *_clname)
+void *PayinsuranceDoneDialog::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_DeclareDialog.stringdata0))
-        return static_cast<void*>(const_cast< DeclareDialog*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_PayinsuranceDoneDialog.stringdata0))
+        return static_cast<void*>(const_cast< PayinsuranceDoneDialog*>(this));
     return BaseDialog::qt_metacast(_clname);
 }
 
-int DeclareDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int PayinsuranceDoneDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = BaseDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

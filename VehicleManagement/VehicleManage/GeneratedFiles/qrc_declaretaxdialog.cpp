@@ -3589,16 +3589,16 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 }
 #endif
 
-int QT_RCC_MANGLE_NAMESPACE(qInitResources_confirmpaydialog)();
-int QT_RCC_MANGLE_NAMESPACE(qInitResources_confirmpaydialog)()
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_declaretaxdialog)();
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_declaretaxdialog)()
 {
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
         (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
-int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_confirmpaydialog)();
-int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_confirmpaydialog)()
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_declaretaxdialog)();
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_declaretaxdialog)()
 {
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
        (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
@@ -3607,7 +3607,7 @@ int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_confirmpaydialog)()
 
 namespace {
    struct initializer {
-       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_confirmpaydialog)(); }
-       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_confirmpaydialog)(); }
+       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_declaretaxdialog)(); }
+       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_declaretaxdialog)(); }
    } dummy;
 }

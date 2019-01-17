@@ -81,12 +81,6 @@
     <ClCompile Include="readcertificatedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="confirmpaydialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="declaredialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="paytaxdonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -106,6 +100,33 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="inputtaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="confirmpaytaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="declaretaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="payinsurancesdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queryinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="readdrivinglisencedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="confirmpayinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="declareinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="payinsurancedonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -146,12 +167,6 @@
     <QtMoc Include="readcertificatedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="confirmpaydialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="declaredialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="paytaxdonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -171,6 +186,33 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="inputtaxdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="confirmpaytaxdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="declaretaxdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="payinsurancesdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="queryinsurancedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="readdrivinglisencedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="confirmpayinsurancedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="declareinsurancedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="inputinsurancedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="payinsurancedonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -211,12 +253,6 @@
     <QtUic Include="readcertificatedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="confirmpaydialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="declaredialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="paytaxdonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
@@ -236,6 +272,33 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="inputtaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpaytaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declaretaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="payinsurancesdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="queryinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="readdrivinglisencedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpayinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declareinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="inputinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="payinsurancedonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -276,12 +339,6 @@
     <QtRcc Include="readcertificatedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtRcc Include="confirmpaydialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="declaredialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
     <QtRcc Include="paytaxdonedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
@@ -292,6 +349,33 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="inputtaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpaytaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declaretaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="payinsurancesdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="queryinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="readdrivinglisencedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpayinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declareinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="payinsurancedonedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

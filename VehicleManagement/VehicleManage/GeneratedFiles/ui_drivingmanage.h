@@ -48,7 +48,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(710, 530, 251, 81));
+        pushButton->setGeometry(QRect(869, 530, 251, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font.setPointSize(20);
@@ -63,16 +63,16 @@ public:
         pushButton->setFlat(true);
         graphicsView_2 = new QGraphicsView(centralWidget);
         graphicsView_2->setObjectName(QStringLiteral("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(310, 10, 111, 111));
+        graphicsView_2->setGeometry(QRect(40, 0, 111, 111));
         graphicsView_2->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btnPolice.png);border:0px;"));
         graphicsView_2->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
         graphicsView_3 = new QGraphicsView(centralWidget);
         graphicsView_3->setObjectName(QStringLiteral("graphicsView_3"));
-        graphicsView_3->setGeometry(QRect(480, 30, 1041, 81));
+        graphicsView_3->setGeometry(QRect(210, 20, 1041, 81));
         graphicsView_3->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/Hint2.png);border:0px;"));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(1130, 780, 251, 81));
+        pushButton_2->setGeometry(QRect(1270, 780, 251, 91));
         pushButton_2->setFont(font);
         pushButton_2->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -84,7 +84,7 @@ public:
         pushButton_2->setFlat(true);
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(290, 780, 251, 81));
+        pushButton_3->setGeometry(QRect(458, 780, 251, 91));
         pushButton_3->setFont(font);
         pushButton_3->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -96,7 +96,7 @@ public:
         pushButton_3->setFlat(true);
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(710, 780, 251, 81));
+        pushButton_4->setGeometry(QRect(869, 780, 251, 91));
         pushButton_4->setFont(font);
         pushButton_4->setStyleSheet(QLatin1String("border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -108,7 +108,7 @@ public:
         pushButton_4->setFlat(true);
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(1130, 529, 251, 81));
+        pushButton_5->setGeometry(QRect(1270, 529, 251, 91));
         pushButton_5->setFont(font);
         pushButton_5->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -120,7 +120,7 @@ public:
         pushButton_5->setFlat(true);
         pushButton_6 = new QPushButton(centralWidget);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setGeometry(QRect(290, 530, 251, 81));
+        pushButton_6->setGeometry(QRect(458, 530, 251, 91));
         pushButton_6->setFont(font);
         pushButton_6->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -132,7 +132,7 @@ public:
         pushButton_6->setFlat(true);
         pBtnGohome = new QPushButton(centralWidget);
         pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
-        pBtnGohome->setGeometry(QRect(1620, 20, 231, 81));
+        pBtnGohome->setGeometry(QRect(1380, 20, 241, 91));
         pBtnGohome->setFont(font);
         pBtnGohome->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"

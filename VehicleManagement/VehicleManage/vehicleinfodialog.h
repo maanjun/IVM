@@ -17,7 +17,7 @@ public:
     explicit VehicleInfoDialog(QWidget *parent = 0);
     ~VehicleInfoDialog();
 
-	void startTimer(int nMillisecond = 60000);
+	void startTimer(int nMillisecond = 30000);
 
 private:
 	QString m_qstrIdNumber;

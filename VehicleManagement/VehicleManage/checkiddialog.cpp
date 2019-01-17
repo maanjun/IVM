@@ -102,17 +102,7 @@ void CheckIDDialog::startTimer(int nMillisecond)
 			strcpy_s(m_idCardData.reserved, "保留");
 			strcpy_s(m_idCardData.PhotoFileName, "");
 
-			// 读取成功
-			//m_idInfo.nGender = 1;
-			//strcpy_s(m_idInfo.szAddress, "重庆市江北区石马河社区");
-			//strcpy_s(m_idInfo.szAuthority, "重庆市江北区");
-			//strcpy_s(m_idInfo.szBirthday, "2018-10-13");
-			//strcpy_s(m_idInfo.szHeadimage, "");
-			//strcpy_s(m_idInfo.szNation, "汉");
-			//strcpy_s(m_idInfo.szNumber, "500105198811112222");
-			//strcpy_s(m_idInfo.szUsername, "马军");
-			//strcpy_s(m_idInfo.szValidSection, "2018-10-13~2028-10-13");
-			if (150 == nCount) {
+			if (250 == nCount) {
 				ui->labelLoading->setVisible(false);
 				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
 				ui->pBtnNext->setEnabled(true);
@@ -147,7 +137,7 @@ void CheckIDDialog::startTimer(int nMillisecond)
 	else
 	{
 		// 默认60秒自动关闭
-		m_pTimer->start(60000);
+		m_pTimer->start(30000);
 	}
 }
 

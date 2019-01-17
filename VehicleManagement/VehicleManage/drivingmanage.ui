@@ -20,10 +20,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>869</x>
       <y>530</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -57,8 +57,8 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QGraphicsView" name="graphicsView_2">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>10</y>
+      <x>40</x>
+      <y>0</y>
       <width>111</width>
       <height>111</height>
      </rect>
@@ -73,8 +73,8 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QGraphicsView" name="graphicsView_3">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>30</y>
+      <x>210</x>
+      <y>20</y>
       <width>1041</width>
       <height>81</height>
      </rect>
@@ -86,10 +86,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1130</x>
+      <x>1270</x>
       <y>780</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -123,10 +123,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>458</x>
       <y>780</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -160,10 +160,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>869</x>
       <y>780</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -197,10 +197,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>1130</x>
+      <x>1270</x>
       <y>529</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -234,10 +234,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>458</x>
       <y>530</y>
       <width>251</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -271,10 +271,10 @@ background-image: url(:/Resources/Images/btn.png);
    <widget class="QPushButton" name="pBtnGohome">
     <property name="geometry">
      <rect>
-      <x>1620</x>
+      <x>1380</x>
       <y>20</y>
-      <width>231</width>
-      <height>81</height>
+      <width>241</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">

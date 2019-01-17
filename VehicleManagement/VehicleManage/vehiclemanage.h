@@ -10,6 +10,7 @@
 #include "inputdonedialog.h"
 #include "selectlicensedialog.h"
 #include "paytaxesdialog.h"
+#include "payinsurancesdialog.h"
 #include "mortgageBase.h"
 
 #include "operateMysql.h"
@@ -53,19 +54,35 @@ private slots:
 
 	void onSelectDoneSlot();
 
+
+	void onFaceRecognicedSlot();
+
+
 	void onQueryTaxDoneSlot();
 
 	void onCertificateReadSlot(QString qstrOwnerId);
 
-	void onDeclaredSlot(QString qstrOwnerId);
+	void onTaxDeclaredSlot(QString qstrOwnerId);
 
-	void onPayConfirmedSlot(QString qstrOwnerId);
+	void onPaytaxConfirmedSlot(QString qstrOwnerId);
 
 	void onPaytaxDoneSlot(QString qstrOwnerId);
 
-	void onFaceRecognicedSlot();
-
 	void onInputTaxDoneSlot();
+
+
+	void onQueryInsuranceDoneSlot();
+
+	void onDrivinglisenceReadSlot(QString qstrOwnerId);
+
+	void onInsuranceDeclaredSlot(QString qstrOwnerId);
+
+	void onPayinsuranceConfirmedSlot(QString qstrOwnerId);
+
+	void onPayinsuranceDoneSlot(QString qstrOwnerId);
+
+	void onInputInsuranceDoneSlot();
+
 
 	void on_pBtnHomepage_clicked();
 
@@ -79,6 +96,7 @@ private:
 	CheckIDDialog *m_pCheckIDDialogSelect;
 	SelectLicenseDialog *m_pSelectLicenseDialog;
 	PaytaxesDialog *m_pPaytaxesDialog;
+	PayinsurancesDialog *m_pPayinsurancesDialog;
 	mortgageBase *m_pMortgageBase;
 
 public:

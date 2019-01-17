@@ -37,7 +37,7 @@ public:
         PaytaxesDialog->setFont(font);
         pBtnPaytexesQuery = new QPushButton(PaytaxesDialog);
         pBtnPaytexesQuery->setObjectName(QStringLiteral("pBtnPaytexesQuery"));
-        pBtnPaytexesQuery->setGeometry(QRect(330, 400, 241, 81));
+        pBtnPaytexesQuery->setGeometry(QRect(330, 400, 250, 90));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font1.setPointSize(22);
@@ -51,7 +51,7 @@ public:
         pBtnPaytexesQuery->setIconSize(QSize(85, 65));
         pBtnDeclare = new QPushButton(PaytaxesDialog);
         pBtnDeclare->setObjectName(QStringLiteral("pBtnDeclare"));
-        pBtnDeclare->setGeometry(QRect(800, 400, 241, 81));
+        pBtnDeclare->setGeometry(QRect(800, 400, 250, 90));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(22);
@@ -63,7 +63,7 @@ public:
         pBtnDeclare->setIconSize(QSize(85, 65));
         pBtnPaytaxes = new QPushButton(PaytaxesDialog);
         pBtnPaytaxes->setObjectName(QStringLiteral("pBtnPaytaxes"));
-        pBtnPaytaxes->setGeometry(QRect(1280, 400, 241, 81));
+        pBtnPaytaxes->setGeometry(QRect(1280, 400, 250, 90));
         pBtnPaytaxes->setFont(font2);
         pBtnPaytaxes->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon2;

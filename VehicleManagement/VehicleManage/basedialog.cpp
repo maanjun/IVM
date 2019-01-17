@@ -7,9 +7,8 @@ BaseDialog::BaseDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
-	//ui->labelTitle->setAttribute(Qt::WA_TranslucentBackground);
-	//ui->labelTitle->setStyleSheet("background:transparent");
+	//this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+
 	m_nMillisecond = 0;
 	m_pTimer = new QTimer(this);
 	connect(m_pTimer, SIGNAL(timeout()), this, SLOT(onTimecoutSlot()));
@@ -44,7 +43,7 @@ void BaseDialog::startTimer(int nMillisecond)
     else
     {
 		// 默认60秒自动关闭
-        m_pTimer->start(60000);
+        m_pTimer->start(30000);
     }
 	m_pCountdownTimer->start(1000);
 }

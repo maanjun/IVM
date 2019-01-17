@@ -47,7 +47,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pBtnMortgage = new QPushButton(centralWidget);
         pBtnMortgage->setObjectName(QStringLiteral("pBtnMortgage"));
-        pBtnMortgage->setGeometry(QRect(869, 749, 241, 81));
+        pBtnMortgage->setGeometry(QRect(869, 749, 251, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font.setPointSize(22);
@@ -69,7 +69,7 @@ public:
         graphicsView_3->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/Hint2.png);border:0px;"));
         pBtnCheck = new QPushButton(centralWidget);
         pBtnCheck->setObjectName(QStringLiteral("pBtnCheck"));
-        pBtnCheck->setGeometry(QRect(1230, 560, 241, 81));
+        pBtnCheck->setGeometry(QRect(1270, 560, 251, 91));
         pBtnCheck->setFont(font);
         pBtnCheck->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon1;
@@ -79,7 +79,7 @@ public:
         pBtnCheck->setFlat(true);
         pBtnSelect = new QPushButton(centralWidget);
         pBtnSelect->setObjectName(QStringLiteral("pBtnSelect"));
-        pBtnSelect->setGeometry(QRect(458, 749, 241, 81));
+        pBtnSelect->setGeometry(QRect(458, 749, 251, 91));
         pBtnSelect->setFont(font);
         pBtnSelect->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon2;
@@ -89,7 +89,7 @@ public:
         pBtnSelect->setFlat(true);
         pBtnTax = new QPushButton(centralWidget);
         pBtnTax->setObjectName(QStringLiteral("pBtnTax"));
-        pBtnTax->setGeometry(QRect(458, 560, 241, 81));
+        pBtnTax->setGeometry(QRect(458, 560, 251, 91));
         pBtnTax->setFont(font);
         pBtnTax->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon3;
@@ -99,7 +99,7 @@ public:
         pBtnTax->setFlat(true);
         pBtnInsurance = new QPushButton(centralWidget);
         pBtnInsurance->setObjectName(QStringLiteral("pBtnInsurance"));
-        pBtnInsurance->setGeometry(QRect(869, 560, 241, 81));
+        pBtnInsurance->setGeometry(QRect(869, 560, 251, 91));
         pBtnInsurance->setFont(font);
         pBtnInsurance->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
         QIcon icon4;
@@ -124,7 +124,7 @@ public:
 "background-image: url(:/Resources/Images/\350\275\246\347\256\241\344\270\232\345\212\241.png);"));
         pBtnHomepage = new QPushButton(centralWidget);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(1380, 20, 241, 81));
+        pBtnHomepage->setGeometry(QRect(1380, 20, 241, 91));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font1.setPointSize(20);

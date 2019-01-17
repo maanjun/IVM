@@ -22,8 +22,8 @@
      <rect>
       <x>869</x>
       <y>749</y>
-      <width>241</width>
-      <height>81</height>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -39,7 +39,7 @@
      <string>电子抵押</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset>
       <normaloff>:/Resources/Images/CarDiya.png</normaloff>:/Resources/Images/CarDiya.png</iconset>
     </property>
     <property name="iconSize">
@@ -84,10 +84,10 @@
    <widget class="QPushButton" name="pBtnCheck">
     <property name="geometry">
      <rect>
-      <x>1230</x>
+      <x>1270</x>
       <y>560</y>
-      <width>241</width>
-      <height>81</height>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -103,7 +103,7 @@
      <string>远程车检</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset>
       <normaloff>:/Resources/Images/Ccheck.png</normaloff>:/Resources/Images/Ccheck.png</iconset>
     </property>
     <property name="iconSize">
@@ -121,8 +121,8 @@
      <rect>
       <x>458</x>
       <y>749</y>
-      <width>241</width>
-      <height>81</height>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -138,7 +138,7 @@
      <string>注册登记</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset>
       <normaloff>:/Resources/Images/carDenji.png</normaloff>:/Resources/Images/carDenji.png</iconset>
     </property>
     <property name="iconSize">
@@ -156,8 +156,8 @@
      <rect>
       <x>458</x>
       <y>560</y>
-      <width>241</width>
-      <height>81</height>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -173,7 +173,7 @@
      <string>完税登记</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset>
       <normaloff>:/Resources/Images/carTax.png</normaloff>:/Resources/Images/carTax.png</iconset>
     </property>
     <property name="iconSize">
@@ -191,8 +191,8 @@
      <rect>
       <x>869</x>
       <y>560</y>
-      <width>241</width>
-      <height>81</height>
+      <width>251</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -208,7 +208,7 @@
      <string>保险申报</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset>
       <normaloff>:/Resources/Images/carInsurance.png</normaloff>:/Resources/Images/carInsurance.png</iconset>
     </property>
     <property name="iconSize">
@@ -269,7 +269,7 @@ background-image: url(:/Resources/Images/车管业务.png);</string>
       <x>1380</x>
       <y>20</y>
       <width>241</width>
-      <height>81</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -287,7 +287,7 @@ background-image: url(:/Resources/Images/btn.png);
      <string>主页</string>
     </property>
     <property name="icon">
-     <iconset resource="vehiclemanage.qrc">
+     <iconset resource="drivingmanage.qrc">
       <normaloff>:/Resources/Images/主页.png</normaloff>:/Resources/Images/主页.png</iconset>
     </property>
     <property name="iconSize">

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PayinsurancesDialog</class>
+ <widget class="QDialog" name="PayinsurancesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>988</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>18</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>PayinsurancesDialog</string>
+  </property>
+  <widget class="QPushButton" name="pBtnPaytexesQuery">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>保险查询</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Resources/Images/完税查询.png</normaloff>:/Resources/Images/完税查询.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtnDeclare">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>保险申报</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Resources/Images/完税申报.png</normaloff>:/Resources/Images/完税申报.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtnPayinsurances">
+   <property name="geometry">
+    <rect>
+     <x>1280</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>保险检查</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Resources/Images/完税检查.png</normaloff>:/Resources/Images/完税检查.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>85</width>
+     <height>65</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="vehiclemanage.qrc"/>
+ </resources>
+ <connections/>
+</ui>

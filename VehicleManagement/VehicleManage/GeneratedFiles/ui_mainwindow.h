@@ -45,7 +45,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pBtnVehicle = new QToolButton(centralWidget);
         pBtnVehicle->setObjectName(QStringLiteral("pBtnVehicle"));
-        pBtnVehicle->setGeometry(QRect(270, 360, 421, 331));
+        pBtnVehicle->setGeometry(QRect(360, 360, 420, 380));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(48);
@@ -61,7 +61,7 @@ public:
         pBtnVehicle->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
         pBtnDrive = new QToolButton(centralWidget);
         pBtnDrive->setObjectName(QStringLiteral("pBtnDrive"));
-        pBtnDrive->setGeometry(QRect(1020, 360, 421, 331));
+        pBtnDrive->setGeometry(QRect(1140, 360, 420, 380));
         pBtnDrive->setFont(font);
         pBtnDrive->setStyleSheet(QLatin1String("border-radius:10px;padding:2px 4px;\n"
 "background-image: url(:/Resources/Images/btnBackBtn.png);text-align:button;"));

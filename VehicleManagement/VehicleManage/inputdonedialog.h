@@ -17,7 +17,7 @@ public:
     explicit InputDoneDialog(QWidget *parent = 0);
     ~InputDoneDialog();
 
-	void startTimer(int nMillisecond = 60000);
+	void startTimer(int nMillisecond = 30000);
 
 private:
 	OperateMysql m_operateMysql;

@@ -18,7 +18,7 @@ public:
     explicit SelectLicenseDialog(QWidget *parent = 0);
     ~SelectLicenseDialog();
 
-	void startTimer(int nMillisecond = 60000);
+	void startTimer(int nMillisecond = 30000);
 
 private slots:
     void on_pBtnHomepage_clicked();

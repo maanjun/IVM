@@ -6,8 +6,8 @@
 #include "checkiddialog.h"
 #include "querytaxdialog.h"
 #include "readcertificatedialog.h"
-#include "declaredialog.h"
-#include "confirmpaydialog.h"
+#include "declaretaxdialog.h"
+#include "confirmpaytaxdialog.h"
 #include "paytaxdonedialog.h"
 #include "face_recognition.h"
 #include "inputtaxdialog.h"
@@ -27,8 +27,8 @@ public:
 	// 申报
 	CheckIDDialog *m_pCheckIDDialogDeclare;
 	ReadCertificateDialog *m_pReadCertificateDialog;
-	DeclareDialog *m_pDeclareDialog;
-	ConfirmPayDialog *m_pConfirmPayDialog;
+	DeclareTaxDialog *m_pDeclareTaxDialog;
+	ConfirmPaytaxDialog *m_pConfirmPaytaxDialog;
 	PaytaxDoneDialog *m_pPaytaxDoneDialog;
 	// 缴税
 	face_recognition *m_pface_recognition;
