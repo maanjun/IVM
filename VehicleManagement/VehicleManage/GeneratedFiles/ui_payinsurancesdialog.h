@@ -25,6 +25,7 @@ public:
     QPushButton *pBtnPaytexesQuery;
     QPushButton *pBtnDeclare;
     QPushButton *pBtnPayinsurances;
+    QPushButton *pBtnGohome;
 
     void setupUi(QDialog *PayinsurancesDialog)
     {
@@ -70,6 +71,21 @@ public:
         icon2.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\346\243\200\346\237\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnPayinsurances->setIcon(icon2);
         pBtnPayinsurances->setIconSize(QSize(85, 65));
+        pBtnGohome = new QPushButton(PayinsurancesDialog);
+        pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
+        pBtnGohome->setGeometry(QRect(1600, 60, 240, 90));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
+        font3.setPointSize(20);
+        pBtnGohome->setFont(font3);
+        pBtnGohome->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);\n"
+""));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Resources/Images/\344\270\273\351\241\265.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pBtnGohome->setIcon(icon3);
+        pBtnGohome->setIconSize(QSize(71, 92));
+        pBtnGohome->setFlat(true);
 
         retranslateUi(PayinsurancesDialog);
 
@@ -82,6 +98,7 @@ public:
         pBtnPaytexesQuery->setText(QApplication::translate("PayinsurancesDialog", "\344\277\235\351\231\251\346\237\245\350\257\242", 0));
         pBtnDeclare->setText(QApplication::translate("PayinsurancesDialog", "\344\277\235\351\231\251\347\224\263\346\212\245", 0));
         pBtnPayinsurances->setText(QApplication::translate("PayinsurancesDialog", "\344\277\235\351\231\251\346\243\200\346\237\245", 0));
+        pBtnGohome->setText(QApplication::translate("PayinsurancesDialog", "\350\277\224\345\233\236", 0));
     } // retranslateUi
 
 };

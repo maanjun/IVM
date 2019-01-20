@@ -24,5 +24,5 @@ void InputTaxDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
-	emit inputTaxDoneSignal();
+	emit inputTaxDoneSignal(m_qstrOwnerId);
 }

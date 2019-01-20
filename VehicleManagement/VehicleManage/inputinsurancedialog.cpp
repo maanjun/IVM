@@ -24,5 +24,5 @@ void InputInsuranceDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
-	emit inputInsuranceDoneSignal();
+	emit inputInsuranceDoneSignal(m_qstrOwnerId);
 }

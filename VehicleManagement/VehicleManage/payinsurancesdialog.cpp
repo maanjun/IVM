@@ -17,6 +17,13 @@ PayinsurancesDialog::~PayinsurancesDialog()
     delete ui;
 }
 
+void PayinsurancesDialog::on_pBtnGohome_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit goHomeSignal();
+}
+
 void PayinsurancesDialog::on_pBtnPaytexesQuery_clicked()
 {
 	this->hide();
@@ -34,8 +41,8 @@ void PayinsurancesDialog::on_pBtnDeclare_clicked()
 void PayinsurancesDialog::on_pBtnPayinsurances_clicked()
 {
 	this->hide();
-	m_pface_recognition->show();
-	m_pface_recognition->startTimer(30000);
+	m_pFaceRecogniceDialog->show();
+	m_pFaceRecogniceDialog->startTimer(30000);
 }
 
 void PayinsurancesDialog::init()
@@ -49,11 +56,12 @@ void PayinsurancesDialog::initFrame()
 	m_pQueryInsuranceDialog = new QueryInsuranceDialog();
 
 	m_pCheckIDDialogDeclare = new CheckIDDialog(INSURANCEDECLARE);
-	m_pReadCertificateDialog = new ReadCertificateDialog();
+	m_pReadDrivinglisenceDialog = new ReadDrivinglisenceDialog();
 	m_pDeclareInsuranceDialog = new DeclareInsuranceDialog();
 	m_pConfirmPayinsuranceDialog = new ConfirmPayinsuranceDialog();
 	m_pPayinsuranceDoneDialog = new PayinsuranceDoneDialog();
 
-	m_pface_recognition = new face_recognition();
+	m_pFaceRecogniceDialog = new FaceRecogniceDialog(PAYINSURANCES);
 	m_pInputInsuranceDialog = new InputInsuranceDialog();
+	m_pQueryDeclareInsuranceResultDialog = new QueryDeclareInsuranceResultDialog();
 }

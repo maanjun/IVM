@@ -9,8 +9,9 @@
 #include "declaretaxdialog.h"
 #include "confirmpaytaxdialog.h"
 #include "paytaxdonedialog.h"
-#include "face_recognition.h"
+#include "facerecognicedialog.h"
 #include "inputtaxdialog.h"
+#include "querydeclaretaxresultdialog.h"
 
 
 namespace Ui {
@@ -31,8 +32,9 @@ public:
 	ConfirmPaytaxDialog *m_pConfirmPaytaxDialog;
 	PaytaxDoneDialog *m_pPaytaxDoneDialog;
 	// 缴税
-	face_recognition *m_pface_recognition;
+	FaceRecogniceDialog *m_pFaceRecogniceDialog;
 	InputTaxDialog *m_pInputTaxDialog;
+	QueryDeclareTaxResultDialog *m_pQueryDeclareTaxResultDialog;
 
 public:
     explicit PaytaxesDialog(QWidget *parent = 0);
@@ -43,6 +45,8 @@ public:
 	void initFrame();
 
 private slots:
+	void on_pBtnGohome_clicked();
+
     void on_pBtnPaytexesQuery_clicked();
 
     void on_pBtnDeclare_clicked();

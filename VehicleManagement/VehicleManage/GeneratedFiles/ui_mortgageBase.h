@@ -34,7 +34,7 @@ public:
         mortgageBase->resize(1900, 1080);
         btnmortgageSelect = new QPushButton(mortgageBase);
         btnmortgageSelect->setObjectName(QStringLiteral("btnmortgageSelect"));
-        btnmortgageSelect->setGeometry(QRect(690, 687, 252, 81));
+        btnmortgageSelect->setGeometry(QRect(330, 400, 250, 90));
         QFont font;
         font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font.setPointSize(20);
@@ -49,7 +49,7 @@ public:
         btnmortgageSelect->setFlat(true);
         btnmortgageReport = new QPushButton(mortgageBase);
         btnmortgageReport->setObjectName(QStringLiteral("btnmortgageReport"));
-        btnmortgageReport->setGeometry(QRect(1010, 687, 252, 81));
+        btnmortgageReport->setGeometry(QRect(800, 400, 250, 90));
         btnmortgageReport->setFont(font);
         btnmortgageReport->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -61,7 +61,7 @@ public:
         btnmortgageReport->setFlat(true);
         btnmortgageCheck = new QPushButton(mortgageBase);
         btnmortgageCheck->setObjectName(QStringLiteral("btnmortgageCheck"));
-        btnmortgageCheck->setGeometry(QRect(1350, 687, 252, 81));
+        btnmortgageCheck->setGeometry(QRect(1280, 400, 250, 90));
         btnmortgageCheck->setFont(font);
         btnmortgageCheck->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
 "background-image: url(:/Resources/Images/btn.png);\n"
@@ -95,7 +95,7 @@ public:
         btnmortgageSelect->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\346\237\245\350\257\242", 0));
         btnmortgageReport->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\347\224\263\346\212\245", 0));
         btnmortgageCheck->setText(QApplication::translate("mortgageBase", "\346\212\265\346\212\274\351\252\214\350\257\201", 0));
-        pBtnGohome->setText(QApplication::translate("mortgageBase", "\344\270\273\351\241\265", 0));
+        pBtnGohome->setText(QApplication::translate("mortgageBase", "\350\277\224\345\233\236", 0));
     } // retranslateUi
 
 };

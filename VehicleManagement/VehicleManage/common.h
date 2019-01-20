@@ -30,7 +30,7 @@
 
 using namespace CommonFuncs;
 
-typedef enum _Caller
+typedef enum _CheckIDCaller
 {
 	CHECKVEHICLE = 0,
 	SELECTLICENSE,
@@ -39,8 +39,17 @@ typedef enum _Caller
 	TAXCHECK,
 	INSURANCEQUERY,
 	INSURANCEDECLARE,
-	INSURANCECHECK
-}Caller, *PCaller;
+	INSURANCECHECK,
+	MORTGAGE_SELECT,
+	MORTGAGE_INPUT
+}CheckIDCaller, *PCheckIDCaller;
+
+typedef enum _FaceRecognitionCaller
+{
+	PAYTAXES = 0,
+	PAYINSURANCES,
+	MORTGAGE
+}FaceRecognitionCaller, *PFaceRecognitionCaller;
 
 typedef enum _Stage
 {

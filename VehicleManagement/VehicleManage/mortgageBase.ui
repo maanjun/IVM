@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="btnmortgageSelect">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>687</y>
-     <width>252</width>
-     <height>81</height>
+     <x>330</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
     </rect>
    </property>
    <property name="font">
@@ -53,10 +53,10 @@ background-image: url(:/Resources/Images/btn.png);
   <widget class="QPushButton" name="btnmortgageReport">
    <property name="geometry">
     <rect>
-     <x>1010</x>
-     <y>687</y>
-     <width>252</width>
-     <height>81</height>
+     <x>800</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
     </rect>
    </property>
    <property name="font">
@@ -90,10 +90,10 @@ background-image: url(:/Resources/Images/btn.png);
   <widget class="QPushButton" name="btnmortgageCheck">
    <property name="geometry">
     <rect>
-     <x>1350</x>
-     <y>687</y>
-     <width>252</width>
-     <height>81</height>
+     <x>1280</x>
+     <y>400</y>
+     <width>250</width>
+     <height>90</height>
     </rect>
    </property>
    <property name="font">
@@ -145,7 +145,7 @@ background-image: url(:/Resources/Images/btn.png);
 </string>
    </property>
    <property name="text">
-    <string>主页</string>
+    <string>返回</string>
    </property>
    <property name="icon">
     <iconset resource="drivingmanage.qrc">

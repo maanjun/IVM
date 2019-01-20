@@ -17,6 +17,13 @@ PaytaxesDialog::~PaytaxesDialog()
     delete ui;
 }
 
+void PaytaxesDialog::on_pBtnGohome_clicked()
+{
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	emit goHomeSignal();
+}
+
 void PaytaxesDialog::on_pBtnPaytexesQuery_clicked()
 {
 	this->hide();
@@ -34,8 +41,8 @@ void PaytaxesDialog::on_pBtnDeclare_clicked()
 void PaytaxesDialog::on_pBtnPaytaxes_clicked()
 {
 	this->hide();
-	m_pface_recognition->show();
-	m_pface_recognition->startTimer(30000);
+	m_pFaceRecogniceDialog->show();
+	m_pFaceRecogniceDialog->startTimer(30000);
 }
 
 void PaytaxesDialog::init()
@@ -54,6 +61,7 @@ void PaytaxesDialog::initFrame()
 	m_pConfirmPaytaxDialog = new ConfirmPaytaxDialog();
 	m_pPaytaxDoneDialog = new PaytaxDoneDialog();
 
-	m_pface_recognition = new face_recognition();
+	m_pFaceRecogniceDialog = new FaceRecogniceDialog(PAYTAXES);
 	m_pInputTaxDialog = new InputTaxDialog();
+	m_pQueryDeclareTaxResultDialog = new QueryDeclareTaxResultDialog();
 }

@@ -5,12 +5,13 @@
 #include "basedialog.h"
 #include "checkiddialog.h"
 #include "queryinsurancedialog.h"
-#include "readcertificatedialog.h"
+#include "readdrivinglisencedialog.h"
 #include "declareinsurancedialog.h"
 #include "confirmpayinsurancedialog.h"
 #include "payinsurancedonedialog.h"
-#include "face_recognition.h"
+#include "facerecognicedialog.h"
 #include "inputinsurancedialog.h"
+#include "querydeclareinsuranceresultdialog.h"
 
 
 namespace Ui {
@@ -26,13 +27,14 @@ public:
 	QueryInsuranceDialog *m_pQueryInsuranceDialog;
 	// 申报
 	CheckIDDialog *m_pCheckIDDialogDeclare;
-	ReadCertificateDialog *m_pReadCertificateDialog;
+	ReadDrivinglisenceDialog *m_pReadDrivinglisenceDialog;
 	DeclareInsuranceDialog *m_pDeclareInsuranceDialog;
 	ConfirmPayinsuranceDialog *m_pConfirmPayinsuranceDialog;
 	PayinsuranceDoneDialog *m_pPayinsuranceDoneDialog;
 	// 缴税
-	face_recognition *m_pface_recognition;
+	FaceRecogniceDialog *m_pFaceRecogniceDialog;
 	InputInsuranceDialog *m_pInputInsuranceDialog;
+	QueryDeclareInsuranceResultDialog *m_pQueryDeclareInsuranceResultDialog;
 
 public:
     explicit PayinsurancesDialog(QWidget *parent = 0);
@@ -43,6 +45,8 @@ public:
 	void initFrame();
 
 private slots:
+	void on_pBtnGohome_clicked();
+
     void on_pBtnPaytexesQuery_clicked();
 
     void on_pBtnDeclare_clicked();

@@ -7,7 +7,7 @@
 #include "operateMysql.h"
 
 namespace Ui {
-class CheckIDDialog;
+	class CheckIDDialog;
 }
 
 class CheckIDDialog : public BaseDialog

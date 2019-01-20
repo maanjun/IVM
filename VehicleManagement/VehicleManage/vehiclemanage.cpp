@@ -65,7 +65,7 @@ void VehicleManage::finit()
 bool VehicleManage::initFrame()
 {
 	//设置系统名称
-	//this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 
 	m_pCheckIDDialogCheck = new CheckIDDialog(CHECKVEHICLE);
 	m_pCheckIDDialogSelect = new CheckIDDialog(SELECTLICENSE);
@@ -88,22 +88,24 @@ bool VehicleManage::initFrame()
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogQueryTax, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogDeclare, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pPaytaxesDialog->m_pQueryTaxDialog, SIGNAL(queryTaxDoneSignal()), this, SLOT(onQueryTaxDoneSlot()));
-	connect(m_pPaytaxesDialog->m_pReadCertificateDialog, SIGNAL(drivinglisenceReadSignal(QString)), this, SLOT(onCertificateReadSlot(QString)));
+	connect(m_pPaytaxesDialog->m_pReadCertificateDialog, SIGNAL(certificateReadSignal(QString)), this, SLOT(onCertificateReadSlot(QString)));
 	connect(m_pPaytaxesDialog->m_pDeclareTaxDialog, SIGNAL(taxDeclaredSignal(QString)), this, SLOT(onTaxDeclaredSlot(QString)));
 	connect(m_pPaytaxesDialog->m_pConfirmPaytaxDialog, SIGNAL(payTaxConfirmedSignal(QString)), this, SLOT(onPaytaxConfirmedSlot(QString)));
 	connect(m_pPaytaxesDialog->m_pPaytaxDoneDialog, SIGNAL(paytaxDoneSignal(QString)), this, SLOT(onPaytaxDoneSlot(QString)));
-	connect(m_pPaytaxesDialog->m_pface_recognition, SIGNAL(faceRecognicedSignal()), this, SLOT(onFaceRecognicedSlot()));
-	connect(m_pPaytaxesDialog->m_pInputTaxDialog, SIGNAL(inputTaxDoneSignal()), this, SLOT(onInputTaxDoneSlot()));
+	connect(m_pPaytaxesDialog->m_pFaceRecogniceDialog, SIGNAL(faceRecognicedSignal(unsigned int)), this, SLOT(onFaceRecognicedSlot(unsigned int)));
+	connect(m_pPaytaxesDialog->m_pInputTaxDialog, SIGNAL(inputTaxDoneSignal(QString)), this, SLOT(onInputTaxDoneSlot(QString)));
+	connect(m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog, SIGNAL(queryDeclareTaxResultDoneSignal()), this, SLOT(onQueryDeclareTaxResultDoneSlot()));
 
 	connect(m_pPayinsurancesDialog->m_pCheckIDDialogQueryInsurance, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pPayinsurancesDialog->m_pCheckIDDialogDeclare, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pPayinsurancesDialog->m_pQueryInsuranceDialog, SIGNAL(queryInsuranceDoneSignal()), this, SLOT(onQueryInsuranceDoneSlot()));
-	connect(m_pPayinsurancesDialog->m_pReadCertificateDialog, SIGNAL(drivinglisenceReadSignal(QString)), this, SLOT(onDrivinglisenceReadSlot(QString)));
+	connect(m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog, SIGNAL(drivinglisenceReadSignal(QString)), this, SLOT(onDrivinglisenceReadSlot(QString)));
 	connect(m_pPayinsurancesDialog->m_pDeclareInsuranceDialog, SIGNAL(insuranceDeclaredSignal(QString)), this, SLOT(onInsuranceDeclaredSlot(QString)));
 	connect(m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog, SIGNAL(payInsuranceConfirmedSignal(QString)), this, SLOT(onPayinsuranceConfirmedSlot(QString)));
 	connect(m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog, SIGNAL(payinsuranceDoneSignal(QString)), this, SLOT(onPayinsuranceDoneSlot(QString)));
-	connect(m_pPayinsurancesDialog->m_pface_recognition, SIGNAL(faceRecognicedSignal()), this, SLOT(onFaceRecognicedSlot()));
-	connect(m_pPayinsurancesDialog->m_pInputInsuranceDialog, SIGNAL(inputInsuranceDoneSignal()), this, SLOT(onInputInsuranceDoneSlot()));
+	connect(m_pPayinsurancesDialog->m_pFaceRecogniceDialog, SIGNAL(faceRecognicedSignal(unsigned int)), this, SLOT(onFaceRecognicedSlot(unsigned int)));
+	connect(m_pPayinsurancesDialog->m_pInputInsuranceDialog, SIGNAL(inputInsuranceDoneSignal(QString)), this, SLOT(onInputInsuranceDoneSlot(QString)));
+	connect(m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog, SIGNAL(queryDeclareInsuranceResultDoneSignal()), this, SLOT(onQueryDeclareInsuranceResultDoneSlot()));
 
 	// 回到车管业务
 	connect(m_pCheckIDDialogCheck, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
@@ -113,6 +115,7 @@ bool VehicleManage::initFrame()
 	connect(m_pCheckIDDialogSelect, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pSelectLicenseDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 
+	connect(m_pPaytaxesDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogQueryTax, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pQueryTaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogDeclare, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
@@ -120,20 +123,32 @@ bool VehicleManage::initFrame()
 	connect(m_pPaytaxesDialog->m_pDeclareTaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pConfirmPaytaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pPaytaxDoneDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
-	connect(m_pPaytaxesDialog->m_pface_recognition, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPaytaxesDialog->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pInputTaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 
+	connect(m_pPayinsurancesDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pCheckIDDialogQueryInsurance, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pQueryInsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pCheckIDDialogDeclare, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
-	connect(m_pPayinsurancesDialog->m_pReadCertificateDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pDeclareInsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
-	connect(m_pPayinsurancesDialog->m_pface_recognition, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPayinsurancesDialog->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pInputInsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 
 	connect(m_pMortgageBase, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pMortgageBase->pcheckid_input_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pMortgageBase->pcheckid_input_, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
+	connect(m_pMortgageBase->pcheckid_input_, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
+	connect(m_pMortgageBase->pcheckid_select_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pMortgageBase->pcheckid_select_, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
+	connect(m_pMortgageBase->pcheckid_select_, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
+	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(faceRecognicedSignal(unsigned int)), this, SLOT(onMortgageCheckFaceRecognicedSlot()));
 
 	//Todo 身份证扫描完成信号
 	connect(m_pCheckIDDialogCheck, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
@@ -161,7 +176,7 @@ void VehicleManage::onGoHomeSlot()
 	m_pPaytaxesDialog->m_pConfirmPaytaxDialog->hide();
 	m_pPaytaxesDialog->m_pCheckIDDialogQueryTax->hide();
 	m_pPaytaxesDialog->m_pPaytaxDoneDialog->hide();
-	m_pPaytaxesDialog->m_pface_recognition->hide();
+	m_pPaytaxesDialog->m_pFaceRecogniceDialog->hide();
 	m_pPaytaxesDialog->m_pInputTaxDialog->hide();
 	m_pMortgageBase->hide();
 }
@@ -209,6 +224,31 @@ void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 		m_pPaytaxesDialog->m_pReadCertificateDialog->show();
 		m_pPaytaxesDialog->m_pReadCertificateDialog->setOwnerId(qstrOwnerId);
 		m_pPaytaxesDialog->m_pReadCertificateDialog->startTimer(30000);
+		break;
+	case INSURANCEQUERY:
+		m_pPayinsurancesDialog->m_pCheckIDDialogQueryInsurance->hide();
+		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->show();
+		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->setOwnerId(qstrOwnerId);
+		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->startTimer(30000);
+		break;
+	case INSURANCEDECLARE:
+		m_pPayinsurancesDialog->m_pCheckIDDialogDeclare->hide();
+		m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog->show();
+		m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog->setOwnerId(qstrOwnerId);
+		m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog->startTimer(30000);
+		break;
+	case MORTGAGE_SELECT:
+		m_pMortgageBase->pcheckid_select_->hide();
+		m_pMortgageBase->pmortage_select_->show();
+		m_pMortgageBase->pmortage_select_->setOwnerId(qstrOwnerId);
+		m_pMortgageBase->pmortage_select_->startTimer(30000);
+		break;
+	case MORTGAGE_INPUT:
+		m_pMortgageBase->pcheckid_input_->hide();
+		m_pMortgageBase->pmortgage_input_message_->show();
+		m_pMortgageBase->pmortgage_input_message_->setOwnerId(qstrOwnerId);
+		m_pMortgageBase->pmortgage_input_message_->startTimer(30000);
+		break;
 	default:
 		break;
 	}
@@ -253,6 +293,7 @@ void VehicleManage::onIdScannedSlot(unsigned int nStage, QString qstrOwnerId)
 		break;
 	case TAXQUERIED:
 		this->show();
+
 	default:
 		break;
 	}
@@ -272,6 +313,13 @@ void VehicleManage::onReceiptCheckedSlot(QString qstrOwnerId)
 	m_pInputDoneDialog->show();
 	m_pInputDoneDialog->setOwnerId(qstrOwnerId);
 	m_pInputDoneDialog->startTimer(30000);
+}
+//电子抵押人脸检测
+void  VehicleManage::onMortgageCheckFaceRecognicedSlot()
+{
+	m_pMortgageBase->pmortgage_check_->show();
+	m_pMortgageBase->m_pFaceRecogniceDialog->hide();
+	//m_pMortgageBase->hide();
 }
 
 void VehicleManage::onInputDoneSlot()
@@ -298,7 +346,6 @@ void VehicleManage::onCertificateReadSlot(QString qstrOwnerId)
 	m_pPaytaxesDialog->m_pDeclareTaxDialog->show();
 	m_pPaytaxesDialog->m_pDeclareTaxDialog->setOwnerId(qstrOwnerId);
 	m_pPaytaxesDialog->m_pDeclareTaxDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onTaxDeclaredSlot(QString qstrOwnerId)
@@ -307,7 +354,6 @@ void VehicleManage::onTaxDeclaredSlot(QString qstrOwnerId)
 	m_pPaytaxesDialog->m_pConfirmPaytaxDialog->show();
 	m_pPaytaxesDialog->m_pConfirmPaytaxDialog->setOwnerId(qstrOwnerId);
 	m_pPaytaxesDialog->m_pConfirmPaytaxDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onPaytaxConfirmedSlot(QString qstrOwnerId)
@@ -316,25 +362,49 @@ void VehicleManage::onPaytaxConfirmedSlot(QString qstrOwnerId)
 	m_pPaytaxesDialog->m_pPaytaxDoneDialog->show();
 	m_pPaytaxesDialog->m_pPaytaxDoneDialog->setOwnerId(qstrOwnerId);
 	m_pPaytaxesDialog->m_pPaytaxDoneDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onPaytaxDoneSlot(QString qstrOwnerId)
 {
-	m_pPaytaxesDialog->m_pConfirmPaytaxDialog->hide();
+	m_pPaytaxesDialog->m_pPaytaxDoneDialog->hide();
 	this->show();
 }
 
-void VehicleManage::onFaceRecognicedSlot()
+void VehicleManage::onFaceRecognicedSlot(unsigned int nCaller)
 {
-	m_pPaytaxesDialog->m_pface_recognition->hide();
-	m_pPaytaxesDialog->m_pInputTaxDialog->show();
-	m_pPaytaxesDialog->m_pInputTaxDialog->startTimer(30000);
+	switch (nCaller)
+	{
+	case PAYTAXES:
+		m_pPaytaxesDialog->m_pFaceRecogniceDialog->hide();
+		m_pPaytaxesDialog->m_pInputTaxDialog->show();
+		m_pPaytaxesDialog->m_pInputTaxDialog->startTimer(30000);
+		break;
+	case PAYINSURANCES:
+		m_pPayinsurancesDialog->m_pFaceRecogniceDialog->hide();
+		m_pPayinsurancesDialog->m_pInputInsuranceDialog->show();
+		m_pPayinsurancesDialog->m_pInputInsuranceDialog->startTimer(30000);
+		break;
+	case MORTGAGE:
+		m_pMortgageBase->m_pFaceRecogniceDialog->hide();
+		m_pMortgageBase->pmortgage_input_message_->show();
+		m_pMortgageBase->pmortgage_input_message_->startTimer(30000);
+		break;
+	default:
+		break;
+	}
 }
 
-void VehicleManage::onInputTaxDoneSlot()
+void VehicleManage::onInputTaxDoneSlot(QString qstrOwnerId)
 {
 	m_pPaytaxesDialog->m_pInputTaxDialog->hide();
+	m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog->show();
+	m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog->setOwnerId(qstrOwnerId);
+	m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog->startTimer(30000);
+}
+
+void VehicleManage::onQueryDeclareTaxResultDoneSlot()
+{
+	m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog->hide();
 	this->show();
 }
 
@@ -346,11 +416,10 @@ void VehicleManage::onQueryInsuranceDoneSlot()
 
 void VehicleManage::onDrivinglisenceReadSlot(QString qstrOwnerId)
 {
-	m_pPayinsurancesDialog->m_pReadCertificateDialog->hide();
+	m_pPayinsurancesDialog->m_pReadDrivinglisenceDialog->hide();
 	m_pPayinsurancesDialog->m_pDeclareInsuranceDialog->show();
 	m_pPayinsurancesDialog->m_pDeclareInsuranceDialog->setOwnerId(qstrOwnerId);
 	m_pPayinsurancesDialog->m_pDeclareInsuranceDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onInsuranceDeclaredSlot(QString qstrOwnerId)
@@ -359,7 +428,6 @@ void VehicleManage::onInsuranceDeclaredSlot(QString qstrOwnerId)
 	m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog->show();
 	m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog->setOwnerId(qstrOwnerId);
 	m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onPayinsuranceConfirmedSlot(QString qstrOwnerId)
@@ -368,18 +436,25 @@ void VehicleManage::onPayinsuranceConfirmedSlot(QString qstrOwnerId)
 	m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog->show();
 	m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog->setOwnerId(qstrOwnerId);
 	m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog->startTimer(30000);
-	this->show();
 }
 
 void VehicleManage::onPayinsuranceDoneSlot(QString qstrOwnerId)
 {
-	m_pPayinsurancesDialog->m_pConfirmPayinsuranceDialog->hide();
+	m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog->hide();
 	this->show();
 }
 
-void VehicleManage::onInputInsuranceDoneSlot()
+void VehicleManage::onInputInsuranceDoneSlot(QString qstrOwnerId)
 {
 	m_pPayinsurancesDialog->m_pInputInsuranceDialog->hide();
+	m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog->show();
+	m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog->setOwnerId(qstrOwnerId);
+	m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog->startTimer(30000);
+}
+
+void VehicleManage::onQueryDeclareInsuranceResultDoneSlot()
+{
+	m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog->hide();
 	this->show();
 }
 

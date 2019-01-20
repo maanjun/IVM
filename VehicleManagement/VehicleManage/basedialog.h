@@ -57,7 +57,7 @@ signals:
 	void selectDoneSignal();
 
 signals:
-	void faceRecognicedSignal();
+	void faceRecognicedSignal(unsigned int nCaller);
 
 signals:
 	void queryTaxDoneSignal();
@@ -70,7 +70,9 @@ signals:
 signals:
 	void paytaxDoneSignal(QString qstrOwnerId);
 signals:
-	void inputTaxDoneSignal();
+	void inputTaxDoneSignal(QString qstrOwnerId);
+signals:
+	void queryDeclareTaxResultDoneSignal();
 
 signals:
 	void queryInsuranceDoneSignal();
@@ -83,7 +85,9 @@ signals:
 signals:
 	void payinsuranceDoneSignal(QString qstrOwnerId);
 signals:
-	void inputInsuranceDoneSignal();
+	void inputInsuranceDoneSignal(QString qstrOwnerId);
+signals:
+	void queryDeclareInsuranceResultDoneSignal();
 
 private slots:
 	void onTimecoutSlot();

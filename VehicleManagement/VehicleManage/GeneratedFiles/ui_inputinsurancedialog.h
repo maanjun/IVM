@@ -41,7 +41,7 @@ public:
         font.setPointSize(22);
         pBtnDone->setFont(font);
         pBtnDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/nextoff.png);"));
+"border-image: url(:/Resources/Images/nexton.png);"));
         lineEditInsurance = new QLineEdit(InputInsuranceDialog);
         lineEditInsurance->setObjectName(QStringLiteral("lineEditInsurance"));
         lineEditInsurance->setGeometry(QRect(690, 460, 540, 86));
@@ -52,7 +52,7 @@ public:
         lineEditInsurance->setStyleSheet(QStringLiteral("border:2px groove gray;border-radius:10px;padding:2px 4px"));
         labelInsurance = new QLabel(InputInsuranceDialog);
         labelInsurance->setObjectName(QStringLiteral("labelInsurance"));
-        labelInsurance->setGeometry(QRect(490, 480, 141, 60));
+        labelInsurance->setGeometry(QRect(410, 480, 221, 60));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(36);
@@ -76,7 +76,7 @@ public:
     {
         InputInsuranceDialog->setWindowTitle(QApplication::translate("InputInsuranceDialog", "InputInsuranceDialog", 0));
         pBtnDone->setText(QString());
-        labelInsurance->setText(QApplication::translate("InputInsuranceDialog", "\347\250\216\345\217\267\357\274\232", 0));
+        labelInsurance->setText(QApplication::translate("InputInsuranceDialog", "\344\277\235\351\231\251\345\215\225\345\217\267\357\274\232", 0));
         pBtnHomepage->setText(QString());
     } // retranslateUi
 

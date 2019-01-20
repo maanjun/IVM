@@ -41,7 +41,7 @@ public:
         font.setPointSize(22);
         pBtnDone->setFont(font);
         pBtnDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/nextoff.png);"));
+"border-image: url(:/Resources/Images/nexton.png);"));
         lineEditTax = new QLineEdit(InputTaxDialog);
         lineEditTax->setObjectName(QStringLiteral("lineEditTax"));
         lineEditTax->setGeometry(QRect(690, 460, 540, 86));

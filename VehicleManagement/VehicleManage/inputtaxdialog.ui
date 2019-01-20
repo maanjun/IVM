@@ -29,7 +29,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
-border-image: url(:/Resources/Images/nextoff.png);</string>
+border-image: url(:/Resources/Images/nexton.png);</string>
    </property>
    <property name="text">
     <string/>

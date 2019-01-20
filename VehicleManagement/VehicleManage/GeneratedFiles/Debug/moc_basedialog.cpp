@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_BaseDialog_t {
-    QByteArrayData data[28];
-    char stringdata0[506];
+    QByteArrayData data[30];
+    char stringdata0[576];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,15 +48,17 @@ QT_MOC_LITERAL(15, 218, 21), // "certificateReadSignal"
 QT_MOC_LITERAL(16, 240, 21), // "payTaxConfirmedSignal"
 QT_MOC_LITERAL(17, 262, 16), // "paytaxDoneSignal"
 QT_MOC_LITERAL(18, 279, 18), // "inputTaxDoneSignal"
-QT_MOC_LITERAL(19, 298, 24), // "queryInsuranceDoneSignal"
-QT_MOC_LITERAL(20, 323, 23), // "insuranceDeclaredSignal"
-QT_MOC_LITERAL(21, 347, 24), // "drivinglisenceReadSignal"
-QT_MOC_LITERAL(22, 372, 27), // "payInsuranceConfirmedSignal"
-QT_MOC_LITERAL(23, 400, 22), // "payinsuranceDoneSignal"
-QT_MOC_LITERAL(24, 423, 24), // "inputInsuranceDoneSignal"
-QT_MOC_LITERAL(25, 448, 14), // "onTimecoutSlot"
-QT_MOC_LITERAL(26, 463, 21), // "showCountdownTimeSlot"
-QT_MOC_LITERAL(27, 485, 20) // "hideLabelWarningSlot"
+QT_MOC_LITERAL(19, 298, 31), // "queryDeclareTaxResultDoneSignal"
+QT_MOC_LITERAL(20, 330, 24), // "queryInsuranceDoneSignal"
+QT_MOC_LITERAL(21, 355, 23), // "insuranceDeclaredSignal"
+QT_MOC_LITERAL(22, 379, 24), // "drivinglisenceReadSignal"
+QT_MOC_LITERAL(23, 404, 27), // "payInsuranceConfirmedSignal"
+QT_MOC_LITERAL(24, 432, 22), // "payinsuranceDoneSignal"
+QT_MOC_LITERAL(25, 455, 24), // "inputInsuranceDoneSignal"
+QT_MOC_LITERAL(26, 480, 37), // "queryDeclareInsuranceResultDo..."
+QT_MOC_LITERAL(27, 518, 14), // "onTimecoutSlot"
+QT_MOC_LITERAL(28, 533, 21), // "showCountdownTimeSlot"
+QT_MOC_LITERAL(29, 555, 20) // "hideLabelWarningSlot"
 
     },
     "BaseDialog\0goHomeSignal\0\0idCheckedSignal\0"
@@ -67,11 +69,13 @@ QT_MOC_LITERAL(27, 485, 20) // "hideLabelWarningSlot"
     "queryTaxDoneSignal\0taxDeclaredSignal\0"
     "certificateReadSignal\0payTaxConfirmedSignal\0"
     "paytaxDoneSignal\0inputTaxDoneSignal\0"
+    "queryDeclareTaxResultDoneSignal\0"
     "queryInsuranceDoneSignal\0"
     "insuranceDeclaredSignal\0"
     "drivinglisenceReadSignal\0"
     "payInsuranceConfirmedSignal\0"
     "payinsuranceDoneSignal\0inputInsuranceDoneSignal\0"
+    "queryDeclareInsuranceResultDoneSignal\0"
     "onTimecoutSlot\0showCountdownTimeSlot\0"
     "hideLabelWarningSlot"
 };
@@ -83,39 +87,41 @@ static const uint qt_meta_data_BaseDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      23,   14, // methods
+      25,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      20,       // signalCount
+      22,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  129,    2, 0x06 /* Public */,
-       3,    2,  130,    2, 0x06 /* Public */,
-       6,    2,  135,    2, 0x06 /* Public */,
-       8,    1,  140,    2, 0x06 /* Public */,
-       9,    1,  143,    2, 0x06 /* Public */,
-      10,    0,  146,    2, 0x06 /* Public */,
-      11,    0,  147,    2, 0x06 /* Public */,
-      12,    0,  148,    2, 0x06 /* Public */,
-      13,    0,  149,    2, 0x06 /* Public */,
-      14,    1,  150,    2, 0x06 /* Public */,
-      15,    1,  153,    2, 0x06 /* Public */,
-      16,    1,  156,    2, 0x06 /* Public */,
-      17,    1,  159,    2, 0x06 /* Public */,
-      18,    0,  162,    2, 0x06 /* Public */,
-      19,    0,  163,    2, 0x06 /* Public */,
-      20,    1,  164,    2, 0x06 /* Public */,
-      21,    1,  167,    2, 0x06 /* Public */,
-      22,    1,  170,    2, 0x06 /* Public */,
-      23,    1,  173,    2, 0x06 /* Public */,
-      24,    0,  176,    2, 0x06 /* Public */,
+       1,    0,  139,    2, 0x06 /* Public */,
+       3,    2,  140,    2, 0x06 /* Public */,
+       6,    2,  145,    2, 0x06 /* Public */,
+       8,    1,  150,    2, 0x06 /* Public */,
+       9,    1,  153,    2, 0x06 /* Public */,
+      10,    0,  156,    2, 0x06 /* Public */,
+      11,    0,  157,    2, 0x06 /* Public */,
+      12,    1,  158,    2, 0x06 /* Public */,
+      13,    0,  161,    2, 0x06 /* Public */,
+      14,    1,  162,    2, 0x06 /* Public */,
+      15,    1,  165,    2, 0x06 /* Public */,
+      16,    1,  168,    2, 0x06 /* Public */,
+      17,    1,  171,    2, 0x06 /* Public */,
+      18,    1,  174,    2, 0x06 /* Public */,
+      19,    0,  177,    2, 0x06 /* Public */,
+      20,    0,  178,    2, 0x06 /* Public */,
+      21,    1,  179,    2, 0x06 /* Public */,
+      22,    1,  182,    2, 0x06 /* Public */,
+      23,    1,  185,    2, 0x06 /* Public */,
+      24,    1,  188,    2, 0x06 /* Public */,
+      25,    1,  191,    2, 0x06 /* Public */,
+      26,    0,  194,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      25,    0,  177,    2, 0x08 /* Private */,
-      26,    0,  178,    2, 0x08 /* Private */,
-      27,    0,  179,    2, 0x08 /* Private */,
+      27,    0,  195,    2, 0x08 /* Private */,
+      28,    0,  196,    2, 0x08 /* Private */,
+      29,    0,  197,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -125,14 +131,16 @@ static const uint qt_meta_data_BaseDialog[] = {
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::UInt,    4,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::QString,    5,
@@ -160,22 +168,24 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->vehicleInfoDoneSingal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 5: _t->inputDoneSignal(); break;
         case 6: _t->selectDoneSignal(); break;
-        case 7: _t->faceRecognicedSignal(); break;
+        case 7: _t->faceRecognicedSignal((*reinterpret_cast< uint(*)>(_a[1]))); break;
         case 8: _t->queryTaxDoneSignal(); break;
         case 9: _t->taxDeclaredSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 10: _t->certificateReadSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 11: _t->payTaxConfirmedSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 12: _t->paytaxDoneSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 13: _t->inputTaxDoneSignal(); break;
-        case 14: _t->queryInsuranceDoneSignal(); break;
-        case 15: _t->insuranceDeclaredSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 16: _t->drivinglisenceReadSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 17: _t->payInsuranceConfirmedSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 18: _t->payinsuranceDoneSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 19: _t->inputInsuranceDoneSignal(); break;
-        case 20: _t->onTimecoutSlot(); break;
-        case 21: _t->showCountdownTimeSlot(); break;
-        case 22: _t->hideLabelWarningSlot(); break;
+        case 13: _t->inputTaxDoneSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 14: _t->queryDeclareTaxResultDoneSignal(); break;
+        case 15: _t->queryInsuranceDoneSignal(); break;
+        case 16: _t->insuranceDeclaredSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 17: _t->drivinglisenceReadSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 18: _t->payInsuranceConfirmedSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 19: _t->payinsuranceDoneSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 20: _t->inputInsuranceDoneSignal((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 21: _t->queryDeclareInsuranceResultDoneSignal(); break;
+        case 22: _t->onTimecoutSlot(); break;
+        case 23: _t->showCountdownTimeSlot(); break;
+        case 24: _t->hideLabelWarningSlot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -231,7 +241,7 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
+            typedef void (BaseDialog::*_t)(unsigned int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::faceRecognicedSignal)) {
                 *result = 7;
                 return;
@@ -273,7 +283,7 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
+            typedef void (BaseDialog::*_t)(QString );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::inputTaxDoneSignal)) {
                 *result = 13;
                 return;
@@ -281,43 +291,57 @@ void BaseDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         }
         {
             typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::queryInsuranceDoneSignal)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::queryDeclareTaxResultDoneSignal)) {
                 *result = 14;
                 return;
             }
         }
         {
-            typedef void (BaseDialog::*_t)(QString );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::insuranceDeclaredSignal)) {
+            typedef void (BaseDialog::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::queryInsuranceDoneSignal)) {
                 *result = 15;
                 return;
             }
         }
         {
             typedef void (BaseDialog::*_t)(QString );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::drivinglisenceReadSignal)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::insuranceDeclaredSignal)) {
                 *result = 16;
                 return;
             }
         }
         {
             typedef void (BaseDialog::*_t)(QString );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::payInsuranceConfirmedSignal)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::drivinglisenceReadSignal)) {
                 *result = 17;
                 return;
             }
         }
         {
             typedef void (BaseDialog::*_t)(QString );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::payinsuranceDoneSignal)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::payInsuranceConfirmedSignal)) {
                 *result = 18;
                 return;
             }
         }
         {
-            typedef void (BaseDialog::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::inputInsuranceDoneSignal)) {
+            typedef void (BaseDialog::*_t)(QString );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::payinsuranceDoneSignal)) {
                 *result = 19;
+                return;
+            }
+        }
+        {
+            typedef void (BaseDialog::*_t)(QString );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::inputInsuranceDoneSignal)) {
+                *result = 20;
+                return;
+            }
+        }
+        {
+            typedef void (BaseDialog::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BaseDialog::queryDeclareInsuranceResultDoneSignal)) {
+                *result = 21;
                 return;
             }
         }
@@ -349,13 +373,13 @@ int BaseDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 23)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 23;
+        _id -= 25;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 23)
+        if (_id < 25)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 23;
+        _id -= 25;
     }
     return _id;
 }
@@ -407,9 +431,10 @@ void BaseDialog::selectDoneSignal()
 }
 
 // SIGNAL 7
-void BaseDialog::faceRecognicedSignal()
+void BaseDialog::faceRecognicedSignal(unsigned int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 7, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 
 // SIGNAL 8
@@ -447,48 +472,62 @@ void BaseDialog::paytaxDoneSignal(QString _t1)
 }
 
 // SIGNAL 13
-void BaseDialog::inputTaxDoneSignal()
+void BaseDialog::inputTaxDoneSignal(QString _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 13, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 13, _a);
 }
 
 // SIGNAL 14
-void BaseDialog::queryInsuranceDoneSignal()
+void BaseDialog::queryDeclareTaxResultDoneSignal()
 {
     QMetaObject::activate(this, &staticMetaObject, 14, Q_NULLPTR);
 }
 
 // SIGNAL 15
-void BaseDialog::insuranceDeclaredSignal(QString _t1)
+void BaseDialog::queryInsuranceDoneSignal()
 {
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 15, _a);
+    QMetaObject::activate(this, &staticMetaObject, 15, Q_NULLPTR);
 }
 
 // SIGNAL 16
-void BaseDialog::drivinglisenceReadSignal(QString _t1)
+void BaseDialog::insuranceDeclaredSignal(QString _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 16, _a);
 }
 
 // SIGNAL 17
-void BaseDialog::payInsuranceConfirmedSignal(QString _t1)
+void BaseDialog::drivinglisenceReadSignal(QString _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 17, _a);
 }
 
 // SIGNAL 18
-void BaseDialog::payinsuranceDoneSignal(QString _t1)
+void BaseDialog::payInsuranceConfirmedSignal(QString _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 18, _a);
 }
 
 // SIGNAL 19
-void BaseDialog::inputInsuranceDoneSignal()
+void BaseDialog::payinsuranceDoneSignal(QString _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 19, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 19, _a);
+}
+
+// SIGNAL 20
+void BaseDialog::inputInsuranceDoneSignal(QString _t1)
+{
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 20, _a);
+}
+
+// SIGNAL 21
+void BaseDialog::queryDeclareInsuranceResultDoneSignal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 21, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

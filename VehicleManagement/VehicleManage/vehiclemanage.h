@@ -55,7 +55,7 @@ private slots:
 	void onSelectDoneSlot();
 
 
-	void onFaceRecognicedSlot();
+	void onFaceRecognicedSlot(unsigned int nCaller);
 
 
 	void onQueryTaxDoneSlot();
@@ -68,7 +68,9 @@ private slots:
 
 	void onPaytaxDoneSlot(QString qstrOwnerId);
 
-	void onInputTaxDoneSlot();
+	void onInputTaxDoneSlot(QString qstrOwnerId);
+
+	void onQueryDeclareTaxResultDoneSlot();
 
 
 	void onQueryInsuranceDoneSlot();
@@ -81,10 +83,15 @@ private slots:
 
 	void onPayinsuranceDoneSlot(QString qstrOwnerId);
 
-	void onInputInsuranceDoneSlot();
+	void onInputInsuranceDoneSlot(QString qstrOwnerId);
+
+	void onQueryDeclareInsuranceResultDoneSlot();
 
 
 	void on_pBtnHomepage_clicked();
+	
+	//µç×ÓµÖÑºÈËÁ³¼ì²â
+	void onMortgageCheckFaceRecognicedSlot();
 
 private:
 	Ui::VehicleManageClass ui;

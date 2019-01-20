@@ -84,9 +84,6 @@
     <ClCompile Include="paytaxdonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="face_recognition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mortgageBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -129,6 +126,15 @@
     <ClCompile Include="payinsurancedonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="querydeclareinsuranceresultdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="querydeclaretaxresultdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="facerecognicedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -168,9 +174,6 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="paytaxdonedialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="face_recognition.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="mortgageBase.h">
@@ -215,6 +218,15 @@
     <QtMoc Include="payinsurancedonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="querydeclareinsuranceresultdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="querydeclaretaxresultdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="facerecognicedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="vehiclemanage.ui">
@@ -254,9 +266,6 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="paytaxdonedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="face_recognition.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="mortgageBase.ui">
@@ -301,6 +310,15 @@
     <QtUic Include="payinsurancedonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="querydeclareinsuranceresultdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="querydeclaretaxresultdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="facerecognicedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="vehiclemanage.qrc">
@@ -342,9 +360,6 @@
     <QtRcc Include="paytaxdonedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtRcc Include="face_recognition.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
     <QtRcc Include="mortgageInputmessage.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
@@ -376,6 +391,15 @@
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtRcc Include="payinsurancedonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querydeclareinsuranceresultdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querydeclaretaxresultdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="facerecognicedialog.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
   </ItemGroup>

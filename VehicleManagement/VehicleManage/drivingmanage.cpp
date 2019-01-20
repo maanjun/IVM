@@ -8,7 +8,7 @@ DrivingManage::DrivingManage(QWidget *parent) :
 {
     ui->setupUi(this);
 
-	//this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 }
 
 DrivingManage::~DrivingManage()
