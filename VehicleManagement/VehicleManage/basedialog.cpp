@@ -7,7 +7,9 @@ BaseDialog::BaseDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
+#ifndef _DEBUG
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+#endif
 
 	m_nMillisecond = 0;
 	m_pTimer = new QTimer(this);

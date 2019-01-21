@@ -52,7 +52,7 @@ public:
 "border-image: url(:/Resources/Images/cancelon.png);"));
         label = new QLabel(PayinsuranceDoneDialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(360, 490, 1241, 171));
+        label->setGeometry(QRect(450, 400, 1241, 171));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
         font2.setPointSize(24);

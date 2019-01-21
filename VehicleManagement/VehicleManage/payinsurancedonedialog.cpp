@@ -20,7 +20,7 @@ void PayinsuranceDoneDialog::on_pBtnHomepage_clicked()
 	emit goHomeSignal();
 }
 
-void PayinsuranceDoneDialog::on_pBtnNext_clicked()
+void PayinsuranceDoneDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();

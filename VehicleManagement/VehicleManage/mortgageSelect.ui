@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>320</y>
+     <x>690</x>
+     <y>470</y>
      <width>561</width>
      <height>101</height>
     </rect>
@@ -35,9 +35,9 @@
   <widget class="QPushButton" name="pBtnGohome">
    <property name="geometry">
     <rect>
-     <x>1520</x>
+     <x>1600</x>
      <y>60</y>
-     <width>261</width>
+     <width>251</width>
      <height>91</height>
     </rect>
    </property>
@@ -67,6 +67,51 @@ background-image: url(:/Resources/Images/btn.png);
    </property>
    <property name="flat">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtnHomepage">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>850</y>
+     <width>300</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Algerian</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/cancelon.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtnDone">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>850</y>
+     <width>300</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+border-image: url(:/Resources/Images/finishon.png);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

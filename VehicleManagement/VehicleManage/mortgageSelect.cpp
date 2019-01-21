@@ -8,4 +8,5 @@ mortgageSelect::mortgageSelect(QWidget *parent)
 
 mortgageSelect::~mortgageSelect()
 {
+
 }

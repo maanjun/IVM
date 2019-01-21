@@ -20,7 +20,7 @@ void PaytaxDoneDialog::on_pBtnHomepage_clicked()
 	emit goHomeSignal();
 }
 
-void PaytaxDoneDialog::on_pBtnNext_clicked()
+void PaytaxDoneDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();

@@ -35,7 +35,7 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 		ui->viewIDSelect->setVisible(false);
 		ui->labelSelect->setVisible(false);
 	}
-	else 
+	else if (SELECTLICENSE == m_caller)
 	{
 		ui->viewIDVehicle->setVisible(false);
 		ui->viewScanningVehicle->setVisible(false);
@@ -48,7 +48,21 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 		ui->viewIDSelect->setVisible(true);
 		ui->labelSelect->setVisible(true);
 	}
-
+	else
+	{
+		ui->viewScanningID->setVisible(false);
+		ui->labelScanningID->setVisible(false);
+		ui->viewIDVehicle->setVisible(false);
+		ui->viewScanningVehicle->setVisible(false);
+		ui->labelScanningVehicle->setVisible(false);
+		ui->viewVehicleFax->setVisible(false);
+		ui->viewInputFax->setVisible(false);
+		ui->labelInputFax->setVisible(false);
+		ui->viewFaxDone->setVisible(false);
+		ui->labelDone->setVisible(false);
+		ui->viewIDSelect->setVisible(false);
+		ui->labelSelect->setVisible(false);
+	}
 	QMovie *movie = new QMovie("./Resources/Images/loading.gif", "gif", this);
 	ui->labelLoading->setMovie(movie);
 	movie->start();

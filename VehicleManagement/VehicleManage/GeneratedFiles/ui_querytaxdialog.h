@@ -33,7 +33,7 @@ public:
         QueryTaxDialog->resize(1920, 1080);
         pushButton = new QPushButton(QueryTaxDialog);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(720, 220, 471, 150));
+        pushButton->setGeometry(QRect(740, 320, 471, 150));
         QFont font;
         font.setFamily(QStringLiteral("Times New Roman"));
         font.setPointSize(18);

@@ -19,7 +19,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::init()
 {
+#ifndef _DEBUG
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
+#endif
 
 	m_pVehicleManage = new VehicleManage(this);
 	connect(m_pVehicleManage, SIGNAL(goHomeVehicleSignal()), this, SLOT(onGohomeVehicleSlot()));

@@ -1,8 +1,9 @@
 <RCC>
-    <qresource prefix="/">
-        <file>Resources/Images/canceloff.png</file>
-        <file>Resources/Images/cancelon.png</file>
-        <file>Resources/Images/nextoff.png</file>
-        <file>Resources/Images/nexton.png</file>
-    </qresource>
+  <qresource prefix="/">
+    <file>Resources/Images/InsuranceQRcode.png</file>
+    <file>Resources/Images/canceloff.png</file>
+    <file>Resources/Images/cancelon.png</file>
+    <file>Resources/Images/nextoff.png</file>
+    <file>Resources/Images/nexton.png</file>
+  </qresource>
 </RCC>

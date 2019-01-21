@@ -20,7 +20,6 @@ void mortgageBase::fini()
 	if (0 != pmortage_select_) { delete pmortage_select_; pmortage_select_ = 0; }
 	if (0 != pmortgage_input_message_) { delete pmortgage_input_message_;pmortgage_input_message_ = 0; }
 	if (0 != pmortgage_check_) { delete pmortgage_check_;	pmortgage_check_ = 0; }
-
 }
 
 void mortgageBase::on_pBtnGohome_clicked()

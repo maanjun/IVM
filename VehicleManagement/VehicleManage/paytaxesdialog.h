@@ -26,7 +26,7 @@ public:
 	CheckIDDialog *m_pCheckIDDialogQueryTax;
 	QueryTaxDialog *m_pQueryTaxDialog;
 	// 申报
-	CheckIDDialog *m_pCheckIDDialogDeclare;
+	CheckIDDialog *m_pCheckIDDialogDeclareTax;
 	ReadCertificateDialog *m_pReadCertificateDialog;
 	DeclareTaxDialog *m_pDeclareTaxDialog;
 	ConfirmPaytaxDialog *m_pConfirmPaytaxDialog;
@@ -43,6 +43,8 @@ public:
 	void init();
 
 	void initFrame();
+
+	void finit();
 
 private slots:
 	void on_pBtnGohome_clicked();

@@ -8,4 +8,5 @@ mortgageInputmessage::mortgageInputmessage(QWidget *parent)
 
 mortgageInputmessage::~mortgageInputmessage()
 {
+
 }

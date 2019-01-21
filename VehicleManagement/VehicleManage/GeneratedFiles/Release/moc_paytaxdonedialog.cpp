@@ -32,11 +32,11 @@ static const qt_meta_stringdata_PaytaxDoneDialog_t qt_meta_stringdata_PaytaxDone
 QT_MOC_LITERAL(0, 0, 16), // "PaytaxDoneDialog"
 QT_MOC_LITERAL(1, 17, 23), // "on_pBtnHomepage_clicked"
 QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 19) // "on_pBtnNext_clicked"
+QT_MOC_LITERAL(3, 42, 19) // "on_pBtnDone_clicked"
 
     },
     "PaytaxDoneDialog\0on_pBtnHomepage_clicked\0"
-    "\0on_pBtnNext_clicked"
+    "\0on_pBtnDone_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +71,7 @@ void PaytaxDoneDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pBtnHomepage_clicked(); break;
-        case 1: _t->on_pBtnNext_clicked(); break;
+        case 1: _t->on_pBtnDone_clicked(); break;
         default: ;
         }
     }

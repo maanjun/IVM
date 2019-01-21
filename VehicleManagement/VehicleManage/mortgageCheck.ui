@@ -53,7 +53,7 @@ background-image: url(:/Resources/Images/btn.png);
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>830</x>
+     <x>1020</x>
      <y>450</y>
      <width>431</width>
      <height>71</height>
@@ -117,7 +117,7 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>570</x>
+     <x>850</x>
      <y>430</y>
      <width>201</width>
      <height>101</height>
@@ -136,7 +136,7 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>570</x>
+     <x>890</x>
      <y>620</y>
      <width>601</width>
      <height>101</height>
@@ -152,7 +152,7 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
     <string notr="true">color: rgb(255, 0, 0);</string>
    </property>
    <property name="text">
-    <string>没有找到抵押单号，请确认后继续</string>
+    <string>* 没有找到抵押单号，请确认后继续</string>
    </property>
   </widget>
  </widget>

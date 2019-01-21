@@ -26,7 +26,7 @@ public:
 	CheckIDDialog *m_pCheckIDDialogQueryInsurance;
 	QueryInsuranceDialog *m_pQueryInsuranceDialog;
 	// 申报
-	CheckIDDialog *m_pCheckIDDialogDeclare;
+	CheckIDDialog *m_pCheckIDDialogDeclareInsurance;
 	ReadDrivinglisenceDialog *m_pReadDrivinglisenceDialog;
 	DeclareInsuranceDialog *m_pDeclareInsuranceDialog;
 	ConfirmPayinsuranceDialog *m_pConfirmPayinsuranceDialog;
@@ -43,6 +43,8 @@ public:
 	void init();
 
 	void initFrame();
+
+	void finit();
 
 private slots:
 	void on_pBtnGohome_clicked();

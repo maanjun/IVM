@@ -55,7 +55,7 @@ border-image: url(:/Resources/Images/cancelon.png);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
-border-image: url(:/Resources/Images/nextoff.png);</string>
+border-image: url(:/Resources/Images/nexton.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -64,10 +64,10 @@ border-image: url(:/Resources/Images/nextoff.png);</string>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>240</y>
-     <width>1801</width>
-     <height>591</height>
+     <x>630</x>
+     <y>340</y>
+     <width>661</width>
+     <height>371</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -79,7 +79,15 @@ background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, s
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;您需要缴纳&lt;/span&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;XXX税 &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#ff0000;&quot;&gt;1000.67 &lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;元,&lt;/span&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;YYY税 &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#ff0000;&quot;&gt;6868.79 &lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;元，&lt;/span&gt; &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;共计 &lt;/span&gt;&lt;span style=&quot; font-size:48pt; color:#ff0000;&quot;&gt;7869.46 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

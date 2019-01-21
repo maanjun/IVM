@@ -14,6 +14,7 @@ PaytaxesDialog::PaytaxesDialog(QWidget *parent) :
 
 PaytaxesDialog::~PaytaxesDialog()
 {
+	finit();
     delete ui;
 }
 
@@ -34,8 +35,8 @@ void PaytaxesDialog::on_pBtnPaytexesQuery_clicked()
 void PaytaxesDialog::on_pBtnDeclare_clicked()
 {
 	this->hide();
-	m_pCheckIDDialogDeclare->show();
-	m_pCheckIDDialogDeclare->startTimer(30000);
+	m_pCheckIDDialogDeclareTax->show();
+	m_pCheckIDDialogDeclareTax->startTimer(30000);
 }
 
 void PaytaxesDialog::on_pBtnPaytaxes_clicked()
@@ -55,7 +56,7 @@ void PaytaxesDialog::initFrame()
 	m_pCheckIDDialogQueryTax = new CheckIDDialog(TAXQUERY);
 	m_pQueryTaxDialog = new QueryTaxDialog();
 
-	m_pCheckIDDialogDeclare = new CheckIDDialog(TAXDECLARE);
+	m_pCheckIDDialogDeclareTax = new CheckIDDialog(TAXDECLARE);
 	m_pReadCertificateDialog = new ReadCertificateDialog();
 	m_pDeclareTaxDialog = new DeclareTaxDialog();
 	m_pConfirmPaytaxDialog = new ConfirmPaytaxDialog();
@@ -64,4 +65,52 @@ void PaytaxesDialog::initFrame()
 	m_pFaceRecogniceDialog = new FaceRecogniceDialog(PAYTAXES);
 	m_pInputTaxDialog = new InputTaxDialog();
 	m_pQueryDeclareTaxResultDialog = new QueryDeclareTaxResultDialog();
+}
+
+void PaytaxesDialog::finit()
+{
+	if (nullptr != m_pCheckIDDialogQueryTax)
+	{
+		delete m_pCheckIDDialogQueryTax;
+	}
+	if (nullptr != m_pQueryTaxDialog)
+	{
+		delete m_pQueryTaxDialog;
+	}
+	if (nullptr != m_pCheckIDDialogDeclareTax)
+	{
+		delete m_pCheckIDDialogDeclareTax;
+	}
+	if (nullptr != m_pReadCertificateDialog)
+	{
+		delete m_pReadCertificateDialog;
+	}
+	if (nullptr != m_pDeclareTaxDialog)
+	{
+		delete m_pDeclareTaxDialog;
+	}
+	if (nullptr != m_pDeclareTaxDialog)
+	{
+		delete m_pDeclareTaxDialog;
+	}
+	if (nullptr != m_pConfirmPaytaxDialog)
+	{
+		delete m_pConfirmPaytaxDialog;
+	}
+	if (nullptr != m_pPaytaxDoneDialog)
+	{
+		delete m_pPaytaxDoneDialog;
+	}
+	if (nullptr != m_pFaceRecogniceDialog)
+	{
+		delete m_pFaceRecogniceDialog;
+	}
+	if (nullptr != m_pInputTaxDialog)
+	{
+		delete m_pInputTaxDialog;
+	}
+	if (nullptr != m_pQueryDeclareTaxResultDialog)
+	{
+		delete m_pQueryDeclareTaxResultDialog;
+	}
 }

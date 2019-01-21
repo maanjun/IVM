@@ -14,9 +14,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTextBrowser>
 
 QT_BEGIN_NAMESPACE
 
@@ -25,7 +26,8 @@ class Ui_ConfirmPaytaxDialog
 public:
     QPushButton *pBtnNext;
     QPushButton *pBtnHomepage;
-    QTextBrowser *textBrowser;
+    QGraphicsView *graphicsView;
+    QLabel *label;
 
     void setupUi(QDialog *ConfirmPaytaxDialog)
     {
@@ -40,7 +42,7 @@ public:
         font.setPointSize(22);
         pBtnNext->setFont(font);
         pBtnNext->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
-"border-image: url(:/Resources/Images/nextoff.png);"));
+"border-image: url(:/Resources/Images/nexton.png);"));
         pBtnHomepage = new QPushButton(ConfirmPaytaxDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
@@ -50,11 +52,19 @@ public:
         pBtnHomepage->setFont(font1);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/cancelon.png);"));
-        textBrowser = new QTextBrowser(ConfirmPaytaxDialog);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(60, 140, 1801, 591));
-        textBrowser->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 2px;\n"
-"background-color: qlineargradient(spread:pad, x1:0.3125, y1:0, x2:0.784, y2:1, stop:0 rgba(211, 217, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
+        graphicsView = new QGraphicsView(ConfirmPaytaxDialog);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(810, 290, 260, 260));
+        graphicsView->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
+"border-image: url(:/Resources/Images/TaxQRcode.png);"));
+        label = new QLabel(ConfirmPaytaxDialog);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(590, 590, 741, 121));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(24);
+        label->setFont(font2);
+        label->setStyleSheet(QStringLiteral("color: rgb(255, 0, 0);"));
 
         retranslateUi(ConfirmPaytaxDialog);
 
@@ -66,11 +76,7 @@ public:
         ConfirmPaytaxDialog->setWindowTitle(QApplication::translate("ConfirmPaytaxDialog", "ConfirmPaytaxDialog", 0));
         pBtnNext->setText(QString());
         pBtnHomepage->setText(QString());
-        textBrowser->setHtml(QApplication::translate("ConfirmPaytaxDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0));
+        label->setText(QApplication::translate("ConfirmPaytaxDialog", "* \350\257\267\346\211\253\347\240\201\346\224\257\344\273\230\357\274\214\345\276\205\346\224\257\344\273\230\345\256\214\346\210\220\345\220\216\357\274\214\350\257\267\347\202\271\345\207\273\342\200\234\344\270\213\344\270\200\346\255\245\342\200\235\343\200\202", 0));
     } // retranslateUi
 
 };
