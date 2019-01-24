@@ -16,10 +16,16 @@ InputDoneDialog::InputDoneDialog(QWidget *parent) :
 	runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/detailtemplate.html";
 	readFile(runPath, m_qstrDetailTemplateHtml);
 
+	m_pUSBPrinter = new USBPrinter();
 }
 
 InputDoneDialog::~InputDoneDialog()
 {
+	if (nullptr != m_pUSBPrinter)
+	{
+		delete m_pUSBPrinter;
+		m_pUSBPrinter = nullptr;
+	}
     delete ui;
 }
 
@@ -44,7 +50,8 @@ void InputDoneDialog::startTimer(int nMillisecond)
 	// 从数据库读取
 	m_operateMysql.init();
 	QString qstrSelect = QString("SELECT * FROM USER U LEFT JOIN VEHICLE V ON V.OWNERNO = U.NUMBER LEFT JOIN TAXATION T ON T.OWNERNO = U.NUMBER WHERE U.NUMBER = '1%'").arg(m_qstrOwnerId);
-	if (m_operateMysql.queryExe(qstrSelect))
+	m_operateMysql.queryExe(qstrSelect);
+	if (1)
 	{
 		m_qstrDetailTemplateHtml.arg("").arg("");
 		//读取的数据保存至本地以备打印 (如果打印文件而不是直接打印内容）
@@ -93,6 +100,13 @@ void InputDoneDialog::on_pBtnDone_clicked()
 	}
 	m_operateMysql.close();
 	// 需将html美化
-	 printFile(".\\Data\\detail.html");
+	//printFile(".\\Data\\detail.html");
 	//printContent(m_qstrDetailTemplateHtml.toStdString());
+	/************************************************************************/
+	/* 貌似没有打印哎                                                       */
+	/************************************************************************/
+	m_pUSBPrinter->InitDefualtPrinter();
+	m_pUSBPrinter->PrinterDoc(".\\Data\\detail.html");
+	m_pUSBPrinter->PrinterCut();
+	m_pUSBPrinter->ClosePrinter();
 }

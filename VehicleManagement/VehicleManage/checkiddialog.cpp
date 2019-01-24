@@ -20,6 +20,8 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 	// 身份信息初始化
 	// m_idInfo = { 0 };
 	m_idCardData.reset();
+	m_pIDCardReader = new IDCardReader();
+	m_pIDCardReader->init();
 
 	// 默认远程验车
 	if (CHECKVEHICLE == m_caller)
@@ -75,6 +77,11 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 
 CheckIDDialog::~CheckIDDialog()
 {
+	if (nullptr != m_pIDCardReader)
+	{
+		m_pIDCardReader->fini();
+		delete m_pIDCardReader;
+	}
     delete ui;
 }
 
@@ -101,9 +108,157 @@ void CheckIDDialog::startTimer(int nMillisecond)
 		do
 		{
 			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+			bool bFailed = false;
 			// 读取身份证信息
+			BYTE * bufferName = new BYTE(64);
+			BYTE * bufferSex = new BYTE(12);
+			BYTE * bufferNation = new BYTE(40);
+			BYTE * bufferBirth = new BYTE(36);
+			BYTE * bufferAddress = new BYTE(144);
+			BYTE * bufferIDCardNo = new BYTE(76);
+			BYTE * bufferGrantDept = new BYTE(64);
+			BYTE * bufferUserLifeBegin = new BYTE(36);
+			BYTE * bufferUserLifeEnd = new BYTE(36);
+			BYTE * bufferReserved = new BYTE(76);
+			BYTE * bufferPhotoFileName = new BYTE(510);
+			if (!m_pIDCardReader->GetName(bufferName))
+			{
+				strcpy_s(m_idCardData.Name, (char*)bufferName);
+			}
+			else 
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetSex(bufferSex))
+			{
+				strcpy_s(m_idCardData.Sex, (char*)bufferSex);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetFolk(bufferNation))
+			{
+				strcpy_s(m_idCardData.Nation, (char*)bufferNation);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetBirth(bufferBirth))
+			{
+				strcpy_s(m_idCardData.Born, (char*)bufferBirth);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetAddr(bufferAddress))
+			{
+				strcpy_s(m_idCardData.Address, (char*)bufferAddress);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetIDNum(bufferIDCardNo))
+			{
+				strcpy_s(m_idCardData.IDCardNo, (char*)bufferIDCardNo);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetDep(bufferGrantDept))
+			{
+				strcpy_s(m_idCardData.GrantDept, (char*)bufferGrantDept);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetBegin(bufferUserLifeBegin))
+			{
+				strcpy_s(m_idCardData.UserLifeBegin, (char*)bufferUserLifeBegin);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetEnd(bufferUserLifeEnd))
+			{
+				strcpy_s(m_idCardData.UserLifeEnd, (char*)bufferUserLifeEnd);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetNewAddr(bufferReserved))
+			{
+				strcpy_s(m_idCardData.reserved, (char*)bufferReserved);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			if (!m_pIDCardReader->GetPicPath(bufferPhotoFileName))
+			{
+				strcpy_s(m_idCardData.PhotoFileName, (char*)bufferPhotoFileName);
+			}
+			else
+			{
+				setLabelContent(QString::fromLocal8Bit("读取身份证信息失败！"), WARN_TIP);
+				bFailed = true;
+				goto FAILED;
+			}
+			FAILED:
+			delete bufferName;
+			bufferName = NULL;
+			delete bufferSex;
+			bufferSex = NULL;
+			delete bufferNation;
+			bufferNation = NULL;
+			delete bufferBirth;
+			bufferBirth = NULL;
+			delete bufferAddress;
+			bufferAddress = NULL;
+			delete bufferIDCardNo;
+			bufferIDCardNo = NULL;
+			delete bufferGrantDept;
+			bufferGrantDept = NULL;
+			delete bufferUserLifeBegin;
+			bufferUserLifeBegin = NULL;
+			delete bufferUserLifeEnd;
+			bufferUserLifeEnd = NULL;
+			delete bufferReserved;
+			bufferReserved = NULL;
+			delete bufferPhotoFileName;
+			bufferPhotoFileName = NULL;
+			if (bFailed == true) {
+				// 读取失败则返回，测试环境不用返回，否则无法展示
+				// continue;
+			}
 
-			// 读取成功
 			strcpy_s(m_idCardData.Name, "马安君");
 			strcpy_s(m_idCardData.Sex, "男");
 			strcpy_s(m_idCardData.Nation, "汉");

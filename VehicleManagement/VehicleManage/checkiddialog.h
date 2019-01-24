@@ -5,6 +5,7 @@
 #include "idcarddata.h"
 #include "basedialog.h"
 #include "operateMysql.h"
+#include "IDCardReader.h"
 
 namespace Ui {
 	class CheckIDDialog;
@@ -31,6 +32,8 @@ private:
 	//IdInfo m_idInfo;
 
 	IDCardData m_idCardData;
+
+	IDCardReader *m_pIDCardReader;
 
 private slots:
     void on_pBtnHomepage_clicked();

@@ -3,6 +3,11 @@
 #include <QMessageBox>
 #include <QMovie>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonValue>
+#include <QJsonParseError>
 
 VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	BaseDialog(parent),
@@ -94,6 +99,8 @@ void VehicleInfoDialog::startTimer(int nMillisecond)
 		do
 		{
 			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+			// 读取的Json是在内存中还是以文件的方式存储在本地？
+
 			// 读取成功
 			strcpy_s(m_vehicleInfo.szBrand, "雪佛兰");
 			strcpy_s(m_vehicleInfo.szColor, "红色");

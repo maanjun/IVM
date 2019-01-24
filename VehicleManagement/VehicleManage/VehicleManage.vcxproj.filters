@@ -135,6 +135,12 @@
     <ClCompile Include="facerecognicedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IDCardReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="USBPrinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -420,6 +426,12 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="idcarddata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDCardReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="USBPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

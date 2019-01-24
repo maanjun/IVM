@@ -125,6 +125,7 @@
     <ClCompile Include="declaretaxdialog.cpp" />
     <ClCompile Include="drivingmanage.cpp" />
     <ClCompile Include="facerecognicedialog.cpp" />
+    <ClCompile Include="IDCardReader.cpp" />
     <ClCompile Include="inputdonedialog.cpp" />
     <ClCompile Include="inputinsurancedialog.cpp" />
     <ClCompile Include="inputtaxdialog.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="readcertificatedialog.cpp" />
     <ClCompile Include="readdrivinglisencedialog.cpp" />
     <ClCompile Include="selectlicensedialog.cpp" />
+    <ClCompile Include="USBPrinter.cpp" />
     <ClCompile Include="vehicleinfodialog.cpp" />
     <ClCompile Include="vehiclemanage.cpp" />
     <ClCompile Include="common.cpp" />
@@ -253,6 +255,7 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="USBPrinter.h" />
     <QtMoc Include="checkreceiptdialog.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
@@ -341,6 +344,7 @@
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_PRINTSUPPORT_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;QT_XML_LIB;_AFXDLL</Define>
     </QtMoc>
+    <ClInclude Include="IDCardReader.h" />
     <ClInclude Include="operateMysql.h" />
     <QtMoc Include="paytaxesdialog.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>

@@ -4,6 +4,7 @@
 #include "common.h"
 #include "basedialog.h"
 #include "operateMysql.h"
+#include "USBPrinter.h"
 
 namespace Ui {
 class InputDoneDialog;
@@ -25,6 +26,8 @@ private:
 	QString m_qstrSumaryTemplateHtml;
 
 	QString m_qstrDetailTemplateHtml;
+
+	USBPrinter *m_pUSBPrinter;
 
 private slots:
     void on_pBtnHomepage_clicked();
