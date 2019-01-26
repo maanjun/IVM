@@ -15,7 +15,7 @@ typedef struct IDCardData {
 	char UserLifeBegin[18]; // 有效开始日期
 	char UserLifeEnd[18];   // 有效截止日期
 	char reserved[38];      // 保留
-	char PhotoFileName[255];// 照片路径
+	char PhotoFileName[256];// 照片路径
 
 	IDCardData() { reset(); }
 

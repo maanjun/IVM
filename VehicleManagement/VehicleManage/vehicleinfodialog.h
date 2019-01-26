@@ -19,6 +19,8 @@ public:
 
 	void startTimer(int nMillisecond = 30000);
 
+	bool getVehicleData(QString qstrName, Vehicle &vehicle);
+
 private:
 	QString m_qstrIdNumber;
 
@@ -27,6 +29,8 @@ private:
 	OperateMysql m_operateMysql;
 
 	VehicleInfo m_vehicleInfo;
+
+	Vehicle m_vehicle;
 
 private slots:
     void on_pBtnHomepage_clicked();

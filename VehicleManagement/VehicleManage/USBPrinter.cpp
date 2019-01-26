@@ -1,5 +1,10 @@
-//#include "stdafx.h"
+#include <windows.h>
+#include <iostream>
+#include <string>
 #include "USBPrinter.h"
+#include <stdio.h>
+#include <fcntl.h>
+#include <io.h>
 
 using namespace std;
 
@@ -12,28 +17,14 @@ USBPrinter::USBPrinter()
 USBPrinter::~USBPrinter()
 {
 }
-void GetCurrPrinter()
-{
 
-		HANDLE hPrinter = NULL;
-		DWORD dwSize = 0;
-		if ((!::GetDefaultPrinter(NULL, &dwSize)) &&
-			GetLastError() == ERROR_INSUFFICIENT_BUFFER)
-		{
-			TCHAR *szPrinter = new TCHAR[dwSize + 1];
-			if (::GetDefaultPrinter(szPrinter, &dwSize))
-			{
-			//	csPrinter = szPrinter;
-			}
-			delete[]szPrinter;
-		}
-}
 void USBPrinter::ClosePrinter()
 {
 	if (printer_handle_ != 0)
 	{
 		::ClosePrinter(printer_handle_);
 		printer_handle_ = 0;
+		printf("ClosePrinter\n");
 	}
 	
 
@@ -43,16 +34,20 @@ void USBPrinter::InitDefualtPrinter()
 	DWORD dwSize = 0;
 	string csPrinter;
 	printer_handle_ = 0;
+	//printf("InitDefualtPrinter 11\n");
 	if ((!::GetDefaultPrinter(NULL, &dwSize)) &&
 		GetLastError() == ERROR_INSUFFICIENT_BUFFER)
 	{
 		TCHAR *szPrinter = new TCHAR[dwSize + 1];
 		if (::GetDefaultPrinter(szPrinter, &dwSize))
 		{			 
+			//printf("InitDefualtPrinter 22\n");
+
 			if (!::OpenPrinter(szPrinter, &printer_handle_, NULL))
 			{
 				printer_handle_ = 0;
-			}
+				//printf("DefualtPrinter %s\n", szPrinter);
+			} else printf("open Printer succ \n");
 		}
 		 
 	}
@@ -85,16 +80,18 @@ void printDOC(char *filename)
 BOOL USBPrinter::PrinterDoc(char *filename)
 {
 	string  ext = fileType(filename);
-	if (ext != ".txt")
+	printf("Print ext==%s\n", ext.c_str());
+	/*if (ext != ".txt")
 	{
+		printf("Print DOC\n");
 		printDOC(filename);
 		return TRUE;
-	}
-
+	}*/
+	printf("Print Txt\n");
 	DOC_INFO_1 DocInfo;
 	DWORD      dwJob;
 	DWORD      dwBytesWritten;
-	DocInfo.pDocName = LPWSTR(filename);
+	DocInfo.pDocName = TEXT("My Document");// LPWSTR(filename);
 	DocInfo.pOutputFile = NULL;
 	DocInfo.pDatatype = TEXT("RAW");
 	//DocInfo.pDatatype = TEXT("PMJOURNAL");  
@@ -107,8 +104,10 @@ BOOL USBPrinter::PrinterDoc(char *filename)
 	}
 	char lpData[10240];
 	int  dwCount = 0;
-	FILE *fp = fopen(filename, "rb");
-	dwCount = fseek(fp, 0, SEEK_END);
+	FILE *fp = fopen(filename, "r");
+	struct _stat info;
+	_stat(filename, &info);
+	dwCount = info.st_size;
 	fseek(fp, 0, SEEK_SET);
 	dwCount = dwCount > 10240 ? 10240 : dwCount;
 	fread(lpData, dwCount, 1, fp);
@@ -133,7 +132,8 @@ BOOL USBPrinter::PrinterDoc(char *filename)
 		return FALSE;
 
 	}
-
+	PrinterCut();
+	WaitForSingleObject(printer_handle_, 10000);
 	// End the page.   
 
 	if (!EndPagePrinter(printer_handle_))
@@ -177,17 +177,24 @@ BOOL USBPrinter::PrinterDoc(char *filename)
 //ÇÐÖ½
 void USBPrinter::PrinterCut()
 {
-	char lpData[4] = {0x1d, 0x56, 0x41, 0x1};
+	BYTE lpData[4] = {0x1d, 86, 66, 0};
 	int  dwCount = 4;
 	DWORD      dwBytesWritten;
 	if (!WritePrinter(printer_handle_, lpData, dwCount, &dwBytesWritten))
 	{
-
+		printf("write Print cut\n");
 	}
 }
 //×ßÖ½
 void USBPrinter::PrinterWalk()
 {
+	BYTE lpData[4] = { 27, 74, 150};
+	int  dwCount = 3;
+	DWORD      dwBytesWritten;
+	if (!WritePrinter(printer_handle_, lpData, dwCount, &dwBytesWritten))
+	{
+		printf("write Print walk\n");
+	}
 }
 
 void USBPrinter::tesetPrinter()

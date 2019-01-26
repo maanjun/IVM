@@ -18,13 +18,18 @@ bool IDCardReader::init(int comPort)
 	{
 		int para1, para2;
 		BYTE cmd = CMD_IDCARD_INIT;
-		para1 = 0;
-		para2 = 0;
+		para1 = 8811;
+		para2 = 9986;
 		int nRet;
 		port_ = comPort;
-		mycmd(&cmd, &comPort, &para1, &para2);
-		cmd = CMD_IDCARD_RBASE;
-		mycmd(&cmd, &comPort, &para1, &para2);
+		nRet = mycmd(&cmd, &comPort, &para1, &para2);
+		printf(" ret = %d \n", nRet);
+		cmd = CMD_IDCARD_RBASE;	
+		para1 = 8811;
+		para2 = 9986;
+		nRet = mycmd(&cmd, &port_, &para1, &para2);
+		printf(" ret2 = %d \n", nRet);
+
 	}
 	return b;
 }
@@ -34,8 +39,8 @@ bool IDCardReader::fini(){
 		int para, para1, para2;
 		BYTE cmd = CMD_IDCARD_FINI;
 		para = port_;
-		para1 = 0;
-		para2 = 0;
+		para1 = 8811;
+		para2 = 9986;
 		int nRet;
 		mycmd(&cmd, &para, &para1, &para2);
 		FreeDll();

@@ -106,7 +106,7 @@ void InputDoneDialog::on_pBtnDone_clicked()
 	/* Ã²ËÆÃ»ÓÐ´òÓ¡°¥                                                       */
 	/************************************************************************/
 	m_pUSBPrinter->InitDefualtPrinter();
-	m_pUSBPrinter->PrinterDoc(".\\Data\\detail.html");
+	m_pUSBPrinter->PrinterDoc(".\\Data\\htmls\\detail.html");
 	m_pUSBPrinter->PrinterCut();
 	m_pUSBPrinter->ClosePrinter();
 }

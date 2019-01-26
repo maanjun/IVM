@@ -8,7 +8,7 @@ CheckReceiptDialog::CheckReceiptDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-	m_taxaction = { 0 };
+	m_taxaction.reset();
 
 	ui->pBtnNext->setEnabled(false);
 
