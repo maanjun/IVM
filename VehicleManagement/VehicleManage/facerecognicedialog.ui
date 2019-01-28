@@ -14,7 +14,7 @@
    <string>FaceRecogniceDialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#FaceRecogniceDialog{border-image: url(:/Resources/Images/background.png);}</string>
   </property>
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">

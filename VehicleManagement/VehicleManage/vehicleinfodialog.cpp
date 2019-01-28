@@ -22,7 +22,7 @@ VehicleInfoDialog::VehicleInfoDialog(QWidget *parent) :
 	ui->pBtnNext->setEnabled(false);
 	// 读取
 	m_qstrVehicleInfoTemplateHtml = "";
-	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/vehicleinfotemplate.html";
+	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Htmls/vehicleinfotemplate.html";
 	readFile(runPath, m_qstrVehicleInfoTemplateHtml);
 
 	QMovie *movieScanning = new QMovie("./Resources/Images/scanning.gif", "gif", this);

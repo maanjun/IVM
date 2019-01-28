@@ -31,7 +31,7 @@ public:
     {
         if (PayinsurancesDialog->objectName().isEmpty())
             PayinsurancesDialog->setObjectName(QStringLiteral("PayinsurancesDialog"));
-        PayinsurancesDialog->resize(1920, 988);
+        PayinsurancesDialog->resize(1920, 926);
         QFont font;
         font.setFamily(QStringLiteral("Times New Roman"));
         font.setPointSize(18);
@@ -45,11 +45,12 @@ public:
         font1.setBold(false);
         font1.setWeight(50);
         pBtnPaytexesQuery->setFont(font1);
-        pBtnPaytexesQuery->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
+        pBtnPaytexesQuery->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);"));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\346\237\245\350\257\242.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnPaytexesQuery->setIcon(icon);
-        pBtnPaytexesQuery->setIconSize(QSize(85, 65));
+        pBtnPaytexesQuery->setIconSize(QSize(71, 92));
         pBtnDeclare = new QPushButton(PayinsurancesDialog);
         pBtnDeclare->setObjectName(QStringLiteral("pBtnDeclare"));
         pBtnDeclare->setGeometry(QRect(800, 400, 250, 90));
@@ -57,7 +58,8 @@ public:
         font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
         font2.setPointSize(22);
         pBtnDeclare->setFont(font2);
-        pBtnDeclare->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
+        pBtnDeclare->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);"));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\347\224\263\346\212\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnDeclare->setIcon(icon1);
@@ -66,7 +68,8 @@ public:
         pBtnPayinsurances->setObjectName(QStringLiteral("pBtnPayinsurances"));
         pBtnPayinsurances->setGeometry(QRect(1280, 400, 250, 90));
         pBtnPayinsurances->setFont(font2);
-        pBtnPayinsurances->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/btn.png);broder-radius:10px;"));
+        pBtnPayinsurances->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
+"background-image: url(:/Resources/Images/btn.png);"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\346\243\200\346\237\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnPayinsurances->setIcon(icon2);

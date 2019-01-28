@@ -37,19 +37,20 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+    <string notr="true">border:0px groove gray;border-radius:10px;
+background-image: url(:/Resources/Images/btn.png);</string>
    </property>
    <property name="text">
     <string>完税查询</string>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/Resources/Images/完税查询.png</normaloff>:/Resources/Images/完税查询.png</iconset>
+    <iconset resource="drivingmanage.qrc">
+     <normaloff>:/Resources/Images/抵押查询.png</normaloff>:/Resources/Images/抵押查询.png</iconset>
    </property>
    <property name="iconSize">
     <size>
-     <width>85</width>
-     <height>65</height>
+     <width>71</width>
+     <height>92</height>
     </size>
    </property>
   </widget>
@@ -69,19 +70,20 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+    <string notr="true">border:0px groove gray;border-radius:10px;
+background-image: url(:/Resources/Images/btn.png);</string>
    </property>
    <property name="text">
     <string>完税申报</string>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/Resources/Images/完税申报.png</normaloff>:/Resources/Images/完税申报.png</iconset>
+    <iconset resource="drivingmanage.qrc">
+     <normaloff>:/Resources/Images/抵押申报.png</normaloff>:/Resources/Images/抵押申报.png</iconset>
    </property>
    <property name="iconSize">
     <size>
-     <width>85</width>
-     <height>65</height>
+     <width>71</width>
+     <height>92</height>
     </size>
    </property>
   </widget>
@@ -101,14 +103,15 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/Resources/Images/btn.png);broder-radius:10px;</string>
+    <string notr="true">border:0px groove gray;border-radius:10px;
+background-image: url(:/Resources/Images/btn.png);</string>
    </property>
    <property name="text">
     <string>完税检查</string>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/Resources/Images/完税检查.png</normaloff>:/Resources/Images/完税检查.png</iconset>
+    <iconset resource="drivingmanage.qrc">
+     <normaloff>:/Resources/Images/抵押检查.png</normaloff>:/Resources/Images/抵押检查.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -141,7 +144,7 @@ background-image: url(:/Resources/Images/btn.png);
     <string>返回</string>
    </property>
    <property name="icon">
-    <iconset resource="drivingmanage.qrc">
+    <iconset resource="vehiclemanage.qrc">
      <normaloff>:/Resources/Images/主页.png</normaloff>:/Resources/Images/主页.png</iconset>
    </property>
    <property name="iconSize">

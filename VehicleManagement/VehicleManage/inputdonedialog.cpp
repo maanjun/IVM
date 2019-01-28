@@ -10,10 +10,10 @@ InputDoneDialog::InputDoneDialog(QWidget *parent) :
 
 	// ¶ÁÈ¡Ä£°å
 	m_qstrSumaryTemplateHtml = "";
-	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/summarytemplate.html";
+	QString runPath = QCoreApplication::applicationDirPath() + "/Resources/Htmls/summarytemplate.html";
 	readFile(runPath, m_qstrSumaryTemplateHtml);
 	m_qstrDetailTemplateHtml = "";
-	runPath = QCoreApplication::applicationDirPath() + "/Resources/Html/detailtemplate.html";
+	runPath = QCoreApplication::applicationDirPath() + "/Resources/Htmls/detailtemplate.html";
 	readFile(runPath, m_qstrDetailTemplateHtml);
 
 	m_pUSBPrinter = new USBPrinter();

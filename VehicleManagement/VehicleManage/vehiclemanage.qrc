@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/完税查询.png</file>
+    <file>Resources/Images/完税检查.png</file>
+    <file>Resources/Images/完税申报.png</file>
     <file>Resources/Images/checkoff.png</file>
     <file>Resources/Images/background.png</file>
     <file>Resources/Images/carDenji.png</file>
