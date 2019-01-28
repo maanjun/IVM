@@ -4,25 +4,33 @@
     <meta name=Generator content="Microsoft Word 14 (filtered)">
     <script type="text/javascript" src="./jquery.min.js"></script>
     <script type="text/javascript" src="./JsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="../../Data/jsons/insurancedeclare.json"></script>
     <script>
         $(document).ready(function () {
-            JsBarcode("#paytax", "3245234579877987", {
-                format: "CODE128",//选择要使用的条形码类型
-                width:1.5,//设置条之间的宽度
-                height:40,//高度
-                displayValue:false,//是否在条形码下方显示文字
-                fontOptions:"time new roman",//使文字加粗体或变斜体
-                font:"宋体",//设置文本的字体
-                textAlign:"center",//设置文本的水平对齐方式
-                textPosition:"bottom",//设置文本的垂直位置
-                textMargin:2,//设置条形码和文本之间的间距
-                fontSize:10,//设置文本的大小
-                margin:15//设置条形码周围的空白边距
-            });       
+            var mydata = JSON.parse(data);
+            $("#declarer").html(mydata.declarer);
+            $("#declaretime").html(mydata.declaretime);
+            $("#amount").html(mydata.amount);
+            $("#devicenumber").html(mydata.devicenumber);
+            $("#declareaddress").html(mydata.declareaddress);
+            JsBarcode("#paytax", mydata.serialnumber, {
+                format: "CODE128", //选择要使用的条形码类型
+                width: 1.5, //设置条之间的宽度
+                height: 40, //高度
+                displayValue: false, //是否在条形码下方显示文字
+                fontOptions: "time new roman", //使文字加粗体或变斜体
+                font: "宋体", //设置文本的字体
+                textAlign: "center", //设置文本的水平对齐方式
+                textPosition: "bottom", //设置文本的垂直位置
+                textMargin: 2, //设置条形码和文本之间的间距
+                fontSize: 10, //设置文本的大小
+                margin: 15 //设置条形码周围的空白边距
+            });
         });
     </script>
     <style></style>
 </head>
+
 <body lang=ZH-CN style='text-justify-trim:punctuation'>
     <div style='layout-grid:16pt'>
         <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 align=left width=340 style='border-collapse:collapse;border:none;margin-left:0pt;
@@ -34,14 +42,14 @@
                 </td>
             </tr>
             <tr>
-                <td  valign=top style='width:80pt;border:solid windowtext 1.0pt;
+                <td valign=top style='width:80pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 1pt 0cm 1pt'>
                     <p class=MsoNormal><span style='font-family:宋体'>申报流水号[条形码]</span></p>
                 </td>
-                <td  colspan=3 valign=top style='width:260pt;border-top:none;
+                <td colspan=3 valign=top style='width:260pt;border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt; text-align:center;vertical-align:middle;'>
-                    <img id="paytax"/>
+                    <img id="paytax" />
                 </td>
             </tr>
             <tr>
@@ -52,7 +60,7 @@
                 <td valign=top style='width:100pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal><span lang=EN-US>马安君</span></p>
+                    <p class=MsoNormal><span id="declarer" lang=EN-US></span></p>
                 </td>
                 <td valign=top style='width:80pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -62,7 +70,7 @@
                 <td valign=top style='width:80pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal><span lang=EN-US>2018-12-24</span></p>
+                    <p class=MsoNormal><span id="declaretime" lang=EN-US></span></p>
                 </td>
             </tr>
             <tr>
@@ -73,7 +81,7 @@
                 <td valign=top style='width:100pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal><span lang=EN-US>1234567</span></p>
+                    <p class=MsoNormal><span id="amount" lang=EN-US></span></p>
                 </td>
                 <td valign=top style='width:80pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -83,7 +91,7 @@
                 <td valign=top style='width:100pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal><span lang=EN-US>HKHKJHK876686</span></p>
+                    <p class=MsoNormal><span id="devicenumber" lang=EN-US></span></p>
                 </td>
             </tr>
             <tr>
@@ -94,7 +102,7 @@
                 <td colspan=3 valign=top style='width:260pt;border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal><span lang=EN-US>重庆江北区xxxxxx路yyyyyy号zzzzzz栋</span></p>
+                    <p class=MsoNormal><span id="declareaddress" lang=EN-US></span></p>
                 </td>
             </tr>
         </table>

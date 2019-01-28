@@ -3,8 +3,21 @@
 <head>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     <meta name=Generator content="Microsoft Word 14 (filtered)">
-    <style>
-    </style>
+    <style></style>  
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="../../Data/jsons/taxdeclarequery.json"></script>
+    <script>
+        $(document).ready(function () {
+            var mydata = JSON.parse(data);
+            $("#checkor").html(mydata.checkor);
+            $("#checktime").html(mydata.checktime);
+            $("#declarer").html(mydata.declarer);
+            $("#declaretime").html(mydata.declaretime);
+            $("#declareresult").html(mydata.declareresult);
+            $("#devicenumber").html(mydata.devicenumber);
+            $("#declareaddress").html(mydata.declareaddress);
+        });
+    </script>
 </head>
 
 <body lang=ZH-CN style='text-justify-trim:punctuation'>
@@ -25,7 +38,7 @@
                 <td width=134 valign=top style='width:100.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>司马平</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="checkor" lang=EN-US></span></p>
                 </td>
                 <td width=88 valign=top style='width:66.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -36,7 +49,7 @@
                 <td width=145 valign=top style='width:109.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>2018-12-29</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="checktime" lang=EN-US></span></p>
                 </td>
             </tr>
             <tr>
@@ -48,7 +61,7 @@
                 <td width=134 valign=top style='width:100.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>欧阳锋</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="declarer" lang=EN-US></span></p>
                 </td>
                 <td width=88 valign=top style='width:66.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -59,7 +72,7 @@
                 <td width=145 valign=top style='width:109.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>2019-12-23</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="declaretime" lang=EN-US></span></p>
                 </td>
             </tr>
             <tr>
@@ -71,7 +84,7 @@
                 <td width=134 valign=top style='width:100.25pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>无异议</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="declareresult" lang=EN-US></span></p>
                 </td>
                 <td width=88 valign=top style='width:66.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -82,7 +95,7 @@
                 <td width=145 valign=top style='width:109.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JLK987979756</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="devicenumber" lang=EN-US></span></p>
                 </td>
             </tr>
             <tr>
@@ -94,7 +107,7 @@
                 <td width=367 colspan=3 valign=top style='width:275.5pt;border-top:none;
   border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 1pt 0cm 1pt'>
-                    <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>重庆市渝北区aaaaaa街道bbbbbb幢cccccc号</span></p>
+                    <p class=MsoNormal align=left style='text-align:left'><span id="declareaddress" lang=EN-US></span></p>
                 </td>
             </tr>
         </table>
