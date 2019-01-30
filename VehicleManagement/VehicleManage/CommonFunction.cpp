@@ -694,6 +694,20 @@ namespace CommonFuncs
 		return true;
 	}
 
+	// 将指定内容写入指定文件
+	bool CommonFunction::WriteFile(string strContent, string strFilepath)
+	{
+		if (!strContent.size() || !strFilepath.size())
+		{
+			return false;
+		}
+		string strFullContent = strContent + "\n";
+		ofstream fstrWrite(strFilepath.c_str(), ios::out);
+		fstrWrite << strFullContent.c_str();
+		fstrWrite.close();
+		return true;
+	}
+
 	string CommonFunction::SizeToHumanFormat(INT64 nBytes)
 	{
 		//人性化描述之后不会超过32个字符

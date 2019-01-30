@@ -71,7 +71,7 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 
 	// 读取
 	m_qstrIDTemplateHtml = "";
-	QString runPath = QCoreApplication::applicationDirPath()+ "/Resources/Html/sfztemplate.html";
+	QString runPath = QCoreApplication::applicationDirPath()+ "/Resources/Htmls/sfztemplate.html";
 	readFile(runPath, m_qstrIDTemplateHtml);
 }
 
@@ -121,7 +121,7 @@ void CheckIDDialog::startTimer(int nMillisecond)
 			BYTE * bufferUserLifeEnd = new BYTE(36);
 			BYTE * bufferReserved = new BYTE(76);
 			BYTE * bufferPhotoFileName = new BYTE(510);
-			if (!m_pIDCardReader->GetName(bufferName))
+			if (!m_pIDCardReader->GetName(bufferName) || 0 == memcmp(bufferName, "", 1))
 			{
 				strcpy_s(m_idCardData.Name, (char*)bufferName);
 			}
@@ -259,19 +259,19 @@ void CheckIDDialog::startTimer(int nMillisecond)
 				// continue;
 			}
 
-			strcpy_s(m_idCardData.Name, "马安君");
-			strcpy_s(m_idCardData.Sex, "男");
-			strcpy_s(m_idCardData.Nation, "汉");
-			strcpy_s(m_idCardData.Born, "2018-10-13");
-			strcpy_s(m_idCardData.Address, "重庆市江北区石马河街道可乐小镇三个电饭锅水电费公司的分公司感受到");
-			strcpy_s(m_idCardData.IDCardNo, "500105198811113333");
-			strcpy_s(m_idCardData.GrantDept, "重庆江北");
-			strcpy_s(m_idCardData.UserLifeBegin, "2018-10-13");
-			strcpy_s(m_idCardData.UserLifeEnd, "2019-10-13");
-			strcpy_s(m_idCardData.reserved, "保留");
-			strcpy_s(m_idCardData.PhotoFileName, "");
-
 			if (250 == nCount) {
+				strcpy_s(m_idCardData.Name, "马安君");
+				strcpy_s(m_idCardData.Sex, "男");
+				strcpy_s(m_idCardData.Nation, "汉");
+				strcpy_s(m_idCardData.Born, "2018-10-13");
+				strcpy_s(m_idCardData.Address, "重庆市江北区石马河街道可乐小镇三个电饭锅水电费公司的分公司感受到");
+				strcpy_s(m_idCardData.IDCardNo, "500105198811113333");
+				strcpy_s(m_idCardData.GrantDept, "重庆江北");
+				strcpy_s(m_idCardData.UserLifeBegin, "2018-10-13");
+				strcpy_s(m_idCardData.UserLifeEnd, "2019-10-13");
+				strcpy_s(m_idCardData.reserved, "保留");
+				strcpy_s(m_idCardData.PhotoFileName, "");
+
 				ui->labelLoading->setVisible(false);
 				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
 				ui->pBtnNext->setEnabled(true);

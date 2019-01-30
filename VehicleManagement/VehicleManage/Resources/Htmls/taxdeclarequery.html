@@ -4,19 +4,23 @@
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     <meta name=Generator content="Microsoft Word 14 (filtered)">
     <style></style>  
-    <script type="text/javascript" src="./jquery.min.js"></script>
     <script type="text/javascript" src="../../Data/jsons/taxdeclarequery.json"></script>
     <script>
-        $(document).ready(function () {
-            var mydata = JSON.parse(data);
-            $("#checkor").html(mydata.checkor);
-            $("#checktime").html(mydata.checktime);
-            $("#declarer").html(mydata.declarer);
-            $("#declaretime").html(mydata.declaretime);
-            $("#declareresult").html(mydata.declareresult);
-            $("#devicenumber").html(mydata.devicenumber);
-            $("#declareaddress").html(mydata.declareaddress);
-        });
+        window.onload = function () {
+			var mydata;
+            if (typeof(JSON) == 'undefined'){  
+				 mydata = eval("("+data+")");  
+			}else{  
+				 mydata = JSON.parse(data);  
+			} 
+			document.getElementById("checkor").innerHTML = mydata.checkor;
+            document.getElementById("checktime").innerHTML = mydata.checktime;
+            document.getElementById("declarer").innerHTML = mydata.declarer;
+            document.getElementById("declaretime").innerHTML = mydata.declaretime;
+            document.getElementById("declareresult").innerHTML = mydata.declareresult;
+            document.getElementById("devicenumber").innerHTML = mydata.devicenumber;
+            document.getElementById("declareaddress").innerHTML = mydata.declareaddress;
+        };
     </script>
 </head>
 

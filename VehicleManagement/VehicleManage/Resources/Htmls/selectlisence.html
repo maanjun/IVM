@@ -7,14 +7,19 @@
     <script type="text/javascript" src="./jquery.min.js"></script>
     <script type="text/javascript" src="../../Data/jsons/selectlisence.json"></script>
     <script>
-        $(document).ready(function () {
-            var mydata = JSON.parse(data);
-            $("#declarer").html(mydata.declarer);
-            $("#declaretime").html(mydata.declaretime);
-            $("#lisence").html(mydata.lisence);
-            $("#devicenumber").html(mydata.devicenumber);
-            $("#declareaddress").html(mydata.declareaddress);
-        });
+		window.onload = function () {
+			var mydata;
+            if (typeof(JSON) == 'undefined'){  
+				 mydata = eval("("+data+")");  
+			}else{  
+				 mydata = JSON.parse(data);  
+			} 
+            document.getElementById("declarer").innerHTML = mydata.declarer;
+            document.getElementById("declaretime").innerHTML = mydata.declaretime;
+            document.getElementById("lisence").innerHTML = mydata.lisence;
+            document.getElementById("devicenumber").innerHTML = mydata.devicenumber;
+            document.getElementById("declareaddress").innerHTML = mydata.declareaddress;
+        };
     </script>
 </head>
 

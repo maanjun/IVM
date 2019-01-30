@@ -25,4 +25,6 @@ void QueryTaxDialog::on_pBtnDone_clicked()
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit queryTaxDoneSignal();
+	// 打印
+
 }

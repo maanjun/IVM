@@ -59,6 +59,7 @@ namespace CommonFuncs
 		int SplitStr(const char* pStrSrc, const char chSeparator, char **pDestStr);	//解析字符串，以字符为分隔符，返回解析个数
 		int SplitStr(const char* pStrSrc, const char *pSeparator, char **pDestStr);	//解析字符串，以字符串为分隔符，返回解析个数
 		bool WriteLog(string strContent, LogLevel iLevel);						//记录日志
+		bool WriteFile(string strContent, string strFilepath);					//写文件
 		string SizeToHumanFormat(INT64 nBytes);									//人性化描述大小
 		const char* ULongToIp(const unsigned long ulValue);						//数字IP转换为字符串IP
 		string IntToString(INT64 n, UINT64 nLen = 0);							//Int转String

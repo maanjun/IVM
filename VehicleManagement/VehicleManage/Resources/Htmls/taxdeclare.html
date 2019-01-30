@@ -2,18 +2,22 @@
 <head>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     <meta name=Generator content="Microsoft Word 14 (filtered)">
-    <script type="text/javascript" src="./jquery.min.js"></script>
     <script type="text/javascript" src="./JsBarcode.all.min.js"></script>
     <script type="text/javascript" src="../../Data/jsons/taxdeclare.json"></script>
     <script>
-        $(document).ready(function () {
-            var mydata = JSON.parse(data);
-            $("#declarer").html(mydata.declarer);
-            $("#declaretime").html(mydata.declaretime);
-            $("#amount").html(mydata.amount);
-            $("#devicenumber").html(mydata.devicenumber);
-            $("#declareaddress").html(mydata.declareaddress);
-            JsBarcode("#paytax", mydata.serialnumber, {
+        window.onload = function () {
+			var mydata;
+			if (typeof(JSON) == 'undefined'){  
+				 mydata = eval("("+data+")");  
+			}else{  
+				 mydata = JSON.parse(data);  
+			} 
+            document.getElementById("declarer").innerHTML = mydata.declarer;
+            document.getElementById("declaretime").innerHTML = mydata.declaretime;
+            document.getElementById("amount").innerHTML = mydata.amount;
+            document.getElementById("devicenumber").innerHTML = mydata.devicenumber;
+            document.getElementById("declareaddress").innerHTML = mydata.declareaddress;
+			JsBarcode("#paytax", mydata.serialnumber, {
                 format: "CODE128", //选择要使用的条形码类型
                 width: 1.5, //设置条之间的宽度
                 height: 40, //高度
@@ -26,7 +30,7 @@
                 fontSize: 10, //设置文本的大小
                 margin: 15 //设置条形码周围的空白边距
             });
-        });
+        };
     </script>
     <style></style>
 </head>
