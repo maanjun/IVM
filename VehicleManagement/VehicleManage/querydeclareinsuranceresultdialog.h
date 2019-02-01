@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "basedialog.h"
+#include "USBPrinter.h"
 
 namespace Ui {
 class QueryDeclareInsuranceResultDialog;
@@ -15,6 +16,9 @@ class QueryDeclareInsuranceResultDialog : public BaseDialog
 public:
     explicit QueryDeclareInsuranceResultDialog(QWidget *parent = 0);
     ~QueryDeclareInsuranceResultDialog();
+
+private:
+	USBPrinter *m_pUSBPrinter;
 
 private slots:
 	void on_pBtnHomepage_clicked();

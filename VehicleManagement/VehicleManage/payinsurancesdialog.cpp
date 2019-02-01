@@ -20,6 +20,7 @@ PayinsurancesDialog::~PayinsurancesDialog()
 
 void PayinsurancesDialog::on_pBtnGohome_clicked()
 {
+	this->hide();
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
@@ -27,6 +28,8 @@ void PayinsurancesDialog::on_pBtnGohome_clicked()
 
 void PayinsurancesDialog::on_pBtnPaytexesQuery_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pCheckIDDialogQueryInsurance->show();
 	m_pCheckIDDialogQueryInsurance->startTimer(30000);
@@ -34,6 +37,8 @@ void PayinsurancesDialog::on_pBtnPaytexesQuery_clicked()
 
 void PayinsurancesDialog::on_pBtnDeclare_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pCheckIDDialogDeclareInsurance->show();
 	m_pCheckIDDialogDeclareInsurance->startTimer(30000);
@@ -41,6 +46,8 @@ void PayinsurancesDialog::on_pBtnDeclare_clicked()
 
 void PayinsurancesDialog::on_pBtnPayinsurances_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pFaceRecogniceDialog->show();
 	m_pFaceRecogniceDialog->startTimer(30000);

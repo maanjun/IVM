@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/background.png</file>
     <file>Resources/Images/loading.gif</file>
     <file>Resources/Images/scanning.gif</file>
     <file>Resources/Images/canceloff.png</file>

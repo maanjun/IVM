@@ -35,6 +35,7 @@ public:
         if (ReadDrivinglisenceDialog->objectName().isEmpty())
             ReadDrivinglisenceDialog->setObjectName(QStringLiteral("ReadDrivinglisenceDialog"));
         ReadDrivinglisenceDialog->resize(1920, 1080);
+        ReadDrivinglisenceDialog->setStyleSheet(QStringLiteral("#ReadDrivinglisenceDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnHomepage = new QPushButton(ReadDrivinglisenceDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

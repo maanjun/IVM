@@ -28,7 +28,6 @@ class Ui_mortgageInputmessage
 public:
     QPushButton *pBtnDone;
     QPushButton *pBtnHomepage;
-    QPushButton *pBtnGohome;
     QLabel *label;
     QLabel *label_4;
     QWidget *layoutWidget;
@@ -62,21 +61,6 @@ public:
         pBtnHomepage->setFont(font1);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/img/Resources/Images/cancelon.png);"));
-        pBtnGohome = new QPushButton(mortgageInputmessage);
-        pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
-        pBtnGohome->setGeometry(QRect(1510, 100, 251, 91));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font2.setPointSize(20);
-        pBtnGohome->setFont(font2);
-        pBtnGohome->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
-"background-image: url(:/Resources/Images/btn.png);\n"
-""));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Resources/Images/\344\270\273\351\241\265.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pBtnGohome->setIcon(icon);
-        pBtnGohome->setIconSize(QSize(71, 92));
-        pBtnGohome->setFlat(true);
         label = new QLabel(mortgageInputmessage);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(1210, 250, 451, 411));
@@ -84,10 +68,10 @@ public:
         label_4 = new QLabel(mortgageInputmessage);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(380, 680, 1111, 81));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font3.setPointSize(36);
-        label_4->setFont(font3);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(36);
+        label_4->setFont(font2);
         label_4->setStyleSheet(QStringLiteral("color: rgb(255, 85, 0);"));
         layoutWidget = new QWidget(mortgageInputmessage);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
@@ -101,45 +85,45 @@ public:
         lineEdit_3 = new QLineEdit(layoutWidget);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setMinimumSize(QSize(320, 71));
-        QFont font4;
-        font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font4.setPointSize(28);
-        lineEdit_3->setFont(font4);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font3.setPointSize(28);
+        lineEdit_3->setFont(font3);
 
         gridLayout->addWidget(lineEdit_3, 2, 1, 1, 1);
 
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        QFont font5;
-        font5.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font5.setPointSize(24);
-        label_2->setFont(font5);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font4.setPointSize(24);
+        label_2->setFont(font4);
 
         gridLayout->addWidget(label_2, 0, 0, 1, 1);
 
         label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setFont(font5);
+        label_5->setFont(font4);
 
         gridLayout->addWidget(label_5, 2, 0, 1, 1);
 
         lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setMinimumSize(QSize(320, 71));
-        lineEdit->setFont(font4);
+        lineEdit->setFont(font3);
 
         gridLayout->addWidget(lineEdit, 0, 1, 1, 1);
 
         label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setFont(font5);
+        label_3->setFont(font4);
 
         gridLayout->addWidget(label_3, 1, 0, 1, 1);
 
         lineEdit_2 = new QLineEdit(layoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setMinimumSize(QSize(320, 71));
-        lineEdit_2->setFont(font4);
+        lineEdit_2->setFont(font3);
 
         gridLayout->addWidget(lineEdit_2, 1, 1, 1, 1);
 
@@ -154,7 +138,6 @@ public:
         mortgageInputmessage->setWindowTitle(QApplication::translate("mortgageInputmessage", "mortgageInputmessage", 0));
         pBtnDone->setText(QString());
         pBtnHomepage->setText(QString());
-        pBtnGohome->setText(QApplication::translate("mortgageInputmessage", "\344\270\273\351\241\265", 0));
         label->setText(QString());
         label_4->setText(QApplication::translate("mortgageInputmessage", "* \350\257\267\350\276\223\345\205\245\345\217\221\347\245\250\345\217\267\343\200\201\344\277\235\351\231\251\345\217\267\343\200\201\345\271\266\345\260\206\344\277\241\346\201\257\346\214\211\346\217\220\347\244\272\346\213\215\347\205\247\347\225\231\345\272\225", 0));
         lineEdit_3->setText(QString());

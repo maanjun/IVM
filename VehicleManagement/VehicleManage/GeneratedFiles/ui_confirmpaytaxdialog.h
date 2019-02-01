@@ -34,7 +34,7 @@ public:
         if (ConfirmPaytaxDialog->objectName().isEmpty())
             ConfirmPaytaxDialog->setObjectName(QStringLiteral("ConfirmPaytaxDialog"));
         ConfirmPaytaxDialog->resize(1920, 1080);
-        ConfirmPaytaxDialog->setStyleSheet(QStringLiteral(""));
+        ConfirmPaytaxDialog->setStyleSheet(QStringLiteral("#ConfirmPaytaxDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnNext = new QPushButton(ConfirmPaytaxDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
         pBtnNext->setGeometry(QRect(1290, 850, 300, 150));

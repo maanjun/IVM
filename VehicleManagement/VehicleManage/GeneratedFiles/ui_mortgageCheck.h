@@ -24,7 +24,6 @@ QT_BEGIN_NAMESPACE
 class Ui_mortgageCheck
 {
 public:
-    QPushButton *pBtnGohome;
     QLineEdit *lineEdit;
     QPushButton *pBtnDone;
     QPushButton *pBtnHomepage;
@@ -36,56 +35,41 @@ public:
         if (mortgageCheck->objectName().isEmpty())
             mortgageCheck->setObjectName(QStringLiteral("mortgageCheck"));
         mortgageCheck->resize(1900, 1080);
-        pBtnGohome = new QPushButton(mortgageCheck);
-        pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
-        pBtnGohome->setGeometry(QRect(1600, 90, 231, 91));
-        QFont font;
-        font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font.setPointSize(20);
-        pBtnGohome->setFont(font);
-        pBtnGohome->setStyleSheet(QLatin1String("border:0px groove gray;border-radius:10px;\n"
-"background-image: url(:/Resources/Images/btn.png);\n"
-""));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Resources/Images/\344\270\273\351\241\265.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pBtnGohome->setIcon(icon);
-        pBtnGohome->setIconSize(QSize(71, 92));
-        pBtnGohome->setFlat(true);
         lineEdit = new QLineEdit(mortgageCheck);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(1020, 450, 431, 71));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font1.setPointSize(28);
-        lineEdit->setFont(font1);
+        lineEdit->setGeometry(QRect(830, 420, 431, 71));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(28);
+        lineEdit->setFont(font);
         pBtnDone = new QPushButton(mortgageCheck);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
-        pBtnDone->setGeometry(QRect(1520, 830, 300, 150));
-        QFont font2;
-        font2.setPointSize(22);
-        pBtnDone->setFont(font2);
+        pBtnDone->setGeometry(QRect(1290, 850, 300, 150));
+        QFont font1;
+        font1.setPointSize(22);
+        pBtnDone->setFont(font1);
         pBtnDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/confirmon.png);"));
         pBtnHomepage = new QPushButton(mortgageCheck);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(560, 830, 300, 150));
-        QFont font3;
-        font3.setFamily(QStringLiteral("Algerian"));
-        font3.setPointSize(22);
-        pBtnHomepage->setFont(font3);
+        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Algerian"));
+        font2.setPointSize(22);
+        pBtnHomepage->setFont(font2);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/cancelon.png);"));
         label = new QLabel(mortgageCheck);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(850, 430, 201, 101));
-        QFont font4;
-        font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font4.setPointSize(24);
-        label->setFont(font4);
+        label->setGeometry(QRect(660, 400, 201, 101));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font3.setPointSize(24);
+        label->setFont(font3);
         label_2 = new QLabel(mortgageCheck);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(890, 620, 601, 101));
-        label_2->setFont(font4);
+        label_2->setGeometry(QRect(700, 590, 601, 71));
+        label_2->setFont(font3);
         label_2->setStyleSheet(QStringLiteral("color: rgb(255, 0, 0);"));
 
         retranslateUi(mortgageCheck);
@@ -96,7 +80,6 @@ public:
     void retranslateUi(BaseDialog *mortgageCheck)
     {
         mortgageCheck->setWindowTitle(QApplication::translate("mortgageCheck", "mortgageCheck", 0));
-        pBtnGohome->setText(QApplication::translate("mortgageCheck", "\344\270\273\351\241\265", 0));
         lineEdit->setText(QString());
         pBtnDone->setText(QString());
         pBtnHomepage->setText(QString());

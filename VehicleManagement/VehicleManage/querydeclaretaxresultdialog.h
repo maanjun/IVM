@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "basedialog.h"
+#include "USBPrinter.h"
 
 namespace Ui {
 class QueryDeclareTaxResultDialog;
@@ -15,6 +16,9 @@ class QueryDeclareTaxResultDialog : public BaseDialog
 public:
     explicit QueryDeclareTaxResultDialog(QWidget *parent = 0);
     ~QueryDeclareTaxResultDialog();
+
+private:
+	USBPrinter *m_pUSBPrinter;
 
 private slots:
 	void on_pBtnHomepage_clicked();

@@ -32,7 +32,7 @@ public:
         if (DeclareTaxDialog->objectName().isEmpty())
             DeclareTaxDialog->setObjectName(QStringLiteral("DeclareTaxDialog"));
         DeclareTaxDialog->resize(1920, 1080);
-        DeclareTaxDialog->setStyleSheet(QStringLiteral(""));
+        DeclareTaxDialog->setStyleSheet(QStringLiteral("#DeclareTaxDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnHomepage = new QPushButton(DeclareTaxDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

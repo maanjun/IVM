@@ -32,7 +32,7 @@ public:
         if (PaytaxDoneDialog->objectName().isEmpty())
             PaytaxDoneDialog->setObjectName(QStringLiteral("PaytaxDoneDialog"));
         PaytaxDoneDialog->resize(1920, 1080);
-        PaytaxDoneDialog->setStyleSheet(QStringLiteral(""));
+        PaytaxDoneDialog->setStyleSheet(QStringLiteral("#PaytaxDoneDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnDone = new QPushButton(PaytaxDoneDialog);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
         pBtnDone->setGeometry(QRect(1290, 850, 300, 150));

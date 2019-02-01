@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Images/background.png</file>
     <file>Resources/Images/finishoff.png</file>
     <file>Resources/Images/finishon.png</file>
     <file>Resources/Images/canceloff.png</file>

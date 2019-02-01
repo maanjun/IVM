@@ -20,6 +20,7 @@ PaytaxesDialog::~PaytaxesDialog()
 
 void PaytaxesDialog::on_pBtnGohome_clicked()
 {
+	this->hide();
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
@@ -27,6 +28,8 @@ void PaytaxesDialog::on_pBtnGohome_clicked()
 
 void PaytaxesDialog::on_pBtnPaytexesQuery_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pCheckIDDialogQueryTax->show();
 	m_pCheckIDDialogQueryTax->startTimer(30000);
@@ -34,6 +37,8 @@ void PaytaxesDialog::on_pBtnPaytexesQuery_clicked()
 
 void PaytaxesDialog::on_pBtnDeclare_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pCheckIDDialogDeclareTax->show();
 	m_pCheckIDDialogDeclareTax->startTimer(30000);
@@ -41,6 +46,8 @@ void PaytaxesDialog::on_pBtnDeclare_clicked()
 
 void PaytaxesDialog::on_pBtnPaytaxes_clicked()
 {
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
 	this->hide();
 	m_pFaceRecogniceDialog->show();
 	m_pFaceRecogniceDialog->startTimer(30000);

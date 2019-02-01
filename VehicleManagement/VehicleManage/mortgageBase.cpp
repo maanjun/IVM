@@ -24,6 +24,7 @@ void mortgageBase::fini()
 
 void mortgageBase::on_pBtnGohome_clicked()
 {
+	this->hide();
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
 	emit goHomeSignal();
@@ -32,22 +33,28 @@ void mortgageBase::on_pBtnGohome_clicked()
 void mortgageBase::on_btnmortgageSelect_clicked()
 {
 	//查询是否已经申请电子抵押
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	this->hide();
 	pcheckid_select_->show();
 	pcheckid_select_->startTimer(30000);
-	this->hide();
 }
 void mortgageBase::on_btnmortgageReport_clicked()
 {
 	//申请电子抵押
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	this->hide();
 	pcheckid_input_->show();
 	pcheckid_input_->startTimer(30000);
-	this->hide();
 }
 void mortgageBase::on_btnmortgageCheck_clicked()
 {	//检测申报
+	m_pCountdownTimer->stop();
+	m_pTimer->stop();
+	this->hide();
 	m_pFaceRecogniceDialog->show();
 	m_pFaceRecogniceDialog->startTimer(30000);
-	this->hide();
 }
 
 void mortgageBase::initFrame()

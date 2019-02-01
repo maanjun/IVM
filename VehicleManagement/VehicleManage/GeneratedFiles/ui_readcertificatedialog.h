@@ -35,6 +35,7 @@ public:
         if (ReadCertificateDialog->objectName().isEmpty())
             ReadCertificateDialog->setObjectName(QStringLiteral("ReadCertificateDialog"));
         ReadCertificateDialog->resize(1920, 1080);
+        ReadCertificateDialog->setStyleSheet(QStringLiteral("#ReadCertificateDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnHomepage = new QPushButton(ReadCertificateDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

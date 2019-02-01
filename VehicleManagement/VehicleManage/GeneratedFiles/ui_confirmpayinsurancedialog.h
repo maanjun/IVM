@@ -34,7 +34,7 @@ public:
         if (ConfirmPayinsuranceDialog->objectName().isEmpty())
             ConfirmPayinsuranceDialog->setObjectName(QStringLiteral("ConfirmPayinsuranceDialog"));
         ConfirmPayinsuranceDialog->resize(1920, 1080);
-        ConfirmPayinsuranceDialog->setStyleSheet(QStringLiteral(""));
+        ConfirmPayinsuranceDialog->setStyleSheet(QStringLiteral("#ConfirmPayinsuranceDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnNext = new QPushButton(ConfirmPayinsuranceDialog);
         pBtnNext->setObjectName(QStringLiteral("pBtnNext"));
         pBtnNext->setGeometry(QRect(1290, 850, 300, 150));

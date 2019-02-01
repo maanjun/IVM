@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>ReadDrivinglisenceDialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#ReadDrivinglisenceDialog{border-image: url(:/Resources/Images/background.png);}</string>
+  </property>
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">
     <rect>

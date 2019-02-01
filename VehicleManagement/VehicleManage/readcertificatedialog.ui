@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>ReadCertificateDialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#ReadCertificateDialog{border-image: url(:/Resources/Images/background.png);}</string>
+  </property>
   <widget class="QPushButton" name="pBtnHomepage">
    <property name="geometry">
     <rect>

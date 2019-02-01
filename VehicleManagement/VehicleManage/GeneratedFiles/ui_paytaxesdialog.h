@@ -73,7 +73,7 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Resources/Images/\346\212\265\346\212\274\346\243\200\346\237\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnPaytaxes->setIcon(icon2);
-        pBtnPaytaxes->setIconSize(QSize(85, 65));
+        pBtnPaytaxes->setIconSize(QSize(71, 92));
         pBtnGohome = new QPushButton(PaytaxesDialog);
         pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
         pBtnGohome->setGeometry(QRect(1600, 60, 240, 90));

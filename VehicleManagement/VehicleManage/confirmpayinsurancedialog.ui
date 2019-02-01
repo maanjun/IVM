@@ -14,7 +14,7 @@
    <string>ConfirmPayinsuranceDialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#ConfirmPayinsuranceDialog{border-image: url(:/Resources/Images/background.png);}</string>
   </property>
   <widget class="QPushButton" name="pBtnNext">
    <property name="geometry">

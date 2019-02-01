@@ -63,7 +63,7 @@ public:
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\347\224\263\346\212\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnDeclare->setIcon(icon1);
-        pBtnDeclare->setIconSize(QSize(85, 65));
+        pBtnDeclare->setIconSize(QSize(71, 92));
         pBtnPayinsurances = new QPushButton(PayinsurancesDialog);
         pBtnPayinsurances->setObjectName(QStringLiteral("pBtnPayinsurances"));
         pBtnPayinsurances->setGeometry(QRect(1280, 400, 250, 90));
@@ -73,7 +73,7 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Resources/Images/\345\256\214\347\250\216\346\243\200\346\237\245.png"), QSize(), QIcon::Normal, QIcon::Off);
         pBtnPayinsurances->setIcon(icon2);
-        pBtnPayinsurances->setIconSize(QSize(85, 65));
+        pBtnPayinsurances->setIconSize(QSize(71, 92));
         pBtnGohome = new QPushButton(PayinsurancesDialog);
         pBtnGohome->setObjectName(QStringLiteral("pBtnGohome"));
         pBtnGohome->setGeometry(QRect(1600, 60, 240, 90));

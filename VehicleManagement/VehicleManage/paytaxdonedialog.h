@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "basedialog.h"
+#include "USBPrinter.h"
 
 namespace Ui {
 class PaytaxDoneDialog;
@@ -15,6 +16,9 @@ class PaytaxDoneDialog : public BaseDialog
 public:
     explicit PaytaxDoneDialog(QWidget *parent = 0);
     ~PaytaxDoneDialog();
+
+private:
+	USBPrinter *m_pUSBPrinter;
 
 private slots:
 	void on_pBtnHomepage_clicked();

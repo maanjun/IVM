@@ -32,7 +32,7 @@ public:
         if (PayinsuranceDoneDialog->objectName().isEmpty())
             PayinsuranceDoneDialog->setObjectName(QStringLiteral("PayinsuranceDoneDialog"));
         PayinsuranceDoneDialog->resize(1920, 1080);
-        PayinsuranceDoneDialog->setStyleSheet(QStringLiteral(""));
+        PayinsuranceDoneDialog->setStyleSheet(QStringLiteral("#PayinsuranceDoneDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnDone = new QPushButton(PayinsuranceDoneDialog);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
         pBtnDone->setGeometry(QRect(1290, 850, 300, 150));

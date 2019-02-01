@@ -64,6 +64,7 @@ CheckIDDialog::CheckIDDialog(unsigned int caller, QWidget *parent) :
 		ui->labelDone->setVisible(false);
 		ui->viewIDSelect->setVisible(false);
 		ui->labelSelect->setVisible(false);
+		ui->viewDone->setVisible(false);
 	}
 	QMovie *movie = new QMovie("./Resources/Images/loading.gif", "gif", this);
 	ui->labelLoading->setMovie(movie);

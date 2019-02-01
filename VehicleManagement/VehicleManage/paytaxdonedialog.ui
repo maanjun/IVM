@@ -14,7 +14,7 @@
    <string>PaytaxDoneDialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#PaytaxDoneDialog{border-image: url(:/Resources/Images/background.png);}</string>
   </property>
   <widget class="QPushButton" name="pBtnDone">
    <property name="geometry">

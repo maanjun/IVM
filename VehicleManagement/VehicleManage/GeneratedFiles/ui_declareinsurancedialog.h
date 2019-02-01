@@ -32,7 +32,7 @@ public:
         if (DeclareInsuranceDialog->objectName().isEmpty())
             DeclareInsuranceDialog->setObjectName(QStringLiteral("DeclareInsuranceDialog"));
         DeclareInsuranceDialog->resize(1920, 1080);
-        DeclareInsuranceDialog->setStyleSheet(QStringLiteral(""));
+        DeclareInsuranceDialog->setStyleSheet(QStringLiteral("#DeclareInsuranceDialog{border-image: url(:/Resources/Images/background.png);}"));
         pBtnHomepage = new QPushButton(DeclareInsuranceDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
