@@ -34,7 +34,15 @@ public:
         if (BaseDialog->objectName().isEmpty())
             BaseDialog->setObjectName(QStringLiteral("BaseDialog"));
         BaseDialog->resize(1920, 1080);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(BaseDialog->sizePolicy().hasHeightForWidth());
+        BaseDialog->setSizePolicy(sizePolicy);
+        BaseDialog->setMinimumSize(QSize(1920, 1080));
+        BaseDialog->setAcceptDrops(true);
         BaseDialog->setStyleSheet(QStringLiteral("#BaseDialog{border-image: url(:/Resources/Images/background.png);}"));
+        BaseDialog->setModal(false);
         lcdNumber = new QLCDNumber(BaseDialog);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
         lcdNumber->setGeometry(QRect(10, 940, 131, 131));

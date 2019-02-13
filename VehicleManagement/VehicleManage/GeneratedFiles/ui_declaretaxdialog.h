@@ -75,12 +75,7 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\346\202\250\351\234\200\350\246\201\347\274\264\347\272\263</span> </p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px;"
                         " margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">XXX\347\250\216 </span><span style=\" font-size:48pt; color:#ff0000;\">1000.67 </span><span style=\" font-size:36pt;\">\345\205\203,</span> </p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">YYY\347\250\216 </span><span style=\" font-size:48pt; color:#ff0000;\">6868.79 </span><span style=\" font-size:36pt;\">\345\205\203\357\274\214</span> </p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; "
-                        "margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\345\205\261\350\256\241 </span><span style=\" font-size:48pt; color:#ff0000;\">7869.46 </span></p></body></html>", 0));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\350\275\246\350\210\271\347\250\216 </span><span style=\" font-size:48pt; color:#ff0000;\">12041.67 </span><span style=\" font-size:36pt;\">\345\205\203</span></p></body></html>", 0));
     } // retranslateUi
 
 };

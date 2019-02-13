@@ -61,10 +61,13 @@ void PayinsurancesDialog::init()
 void PayinsurancesDialog::initFrame()
 {
 	m_pCheckIDDialogQueryInsurance = new CheckIDDialog(INSURANCEQUERY);
+	m_pCheckIDDialogQueryInsurance->hide();
 	m_pQueryInsuranceDialog = new QueryInsuranceDialog();
-
+	m_pQueryInsuranceDialog->hide();
 	m_pCheckIDDialogDeclareInsurance = new CheckIDDialog(INSURANCEDECLARE);
+	m_pCheckIDDialogDeclareInsurance->hide();
 	m_pReadDrivinglisenceDialog = new ReadDrivinglisenceDialog();
+	m_pReadDrivinglisenceDialog->hide();
 	m_pDeclareInsuranceDialog = new DeclareInsuranceDialog();
 	m_pConfirmPayinsuranceDialog = new ConfirmPayinsuranceDialog();
 	m_pPayinsuranceDoneDialog = new PayinsuranceDoneDialog();
@@ -72,6 +75,9 @@ void PayinsurancesDialog::initFrame()
 	m_pFaceRecogniceDialog = new FaceRecogniceDialog(PAYINSURANCES);
 	m_pInputInsuranceDialog = new InputInsuranceDialog();
 	m_pQueryDeclareInsuranceResultDialog = new QueryDeclareInsuranceResultDialog();
+	m_pInputVin = new InputVIN();//没有正确的车驾号时 用户手动输入
+	m_pInputVin->setOwnerGUIID(INSURANCEDECLARE);
+	m_pInputVin->hide();
 }
 
 void PayinsurancesDialog::finit()
@@ -95,6 +101,7 @@ void PayinsurancesDialog::finit()
 	if (nullptr != m_pDeclareInsuranceDialog)
 	{
 		delete m_pDeclareInsuranceDialog;
+		m_pDeclareInsuranceDialog = NULL;
 	}
 	if (nullptr != m_pDeclareInsuranceDialog)
 	{
@@ -119,5 +126,12 @@ void PayinsurancesDialog::finit()
 	if (nullptr != m_pQueryDeclareInsuranceResultDialog)
 	{
 		delete m_pQueryDeclareInsuranceResultDialog;
+		m_pQueryDeclareInsuranceResultDialog = nullptr;
+	}
+
+	if (nullptr != m_pInputVin)
+	{
+		delete m_pInputVin;
+		m_pInputVin = nullptr;
 	}
 }

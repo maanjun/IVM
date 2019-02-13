@@ -119,8 +119,10 @@
     <ClCompile Include="checkiddialog.cpp" />
     <ClCompile Include="checkreceiptdialog.cpp" />
     <ClCompile Include="CommonFunction.cpp" />
+    <ClCompile Include="confirmpaydialog.cpp" />
     <ClCompile Include="confirmpayinsurancedialog.cpp" />
     <ClCompile Include="confirmpaytaxdialog.cpp" />
+    <ClCompile Include="declaredialog.cpp" />
     <ClCompile Include="declareinsurancedialog.cpp" />
     <ClCompile Include="declaretaxdialog.cpp" />
     <ClCompile Include="drivingmanage.cpp" />
@@ -129,6 +131,7 @@
     <ClCompile Include="inputdonedialog.cpp" />
     <ClCompile Include="inputinsurancedialog.cpp" />
     <ClCompile Include="inputtaxdialog.cpp" />
+    <ClCompile Include="InputVIN.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
     <ClCompile Include="mortgageBase.cpp" />
@@ -159,8 +162,10 @@
     <QtUic Include="basedialog.ui" />
     <QtUic Include="checkiddialog.ui" />
     <QtUic Include="checkreceiptdialog.ui" />
+    <QtUic Include="confirmpaydialog.ui" />
     <QtUic Include="confirmpayinsurancedialog.ui" />
     <QtUic Include="confirmpaytaxdialog.ui" />
+    <QtUic Include="declaredialog.ui" />
     <QtUic Include="declareinsurancedialog.ui" />
     <QtUic Include="declaretaxdialog.ui" />
     <QtUic Include="drivingmanage.ui" />
@@ -168,6 +173,7 @@
     <QtUic Include="inputdonedialog.ui" />
     <QtUic Include="inputinsurancedialog.ui" />
     <QtUic Include="inputtaxdialog.ui" />
+    <QtUic Include="InputVIN.ui" />
     <QtUic Include="mainwindow.ui" />
     <QtUic Include="mortgageBase.ui" />
     <QtUic Include="mortgageCheck.ui" />
@@ -197,8 +203,10 @@
       <SubType>Designer</SubType>
     </QtRcc>
     <QtRcc Include="checkreceiptdialog.qrc" />
+    <QtRcc Include="confirmpaydialog.qrc" />
     <QtRcc Include="confirmpayinsurancedialog.qrc" />
     <QtRcc Include="confirmpaytaxdialog.qrc" />
+    <QtRcc Include="declaredialog.qrc" />
     <QtRcc Include="declareinsurancedialog.qrc" />
     <QtRcc Include="declaretaxdialog.qrc" />
     <QtRcc Include="drivingmanage.qrc" />
@@ -206,6 +214,7 @@
     <QtRcc Include="inputdonedialog.qrc" />
     <QtRcc Include="inputinsurancedialog.qrc" />
     <QtRcc Include="inputtaxdialog.qrc" />
+    <QtRcc Include="InputVIN.qrc" />
     <QtRcc Include="mainwindow.qrc" />
     <QtRcc Include="mortgageInputmessage.qrc" />
     <QtRcc Include="payinsurancedonedialog.qrc" />
@@ -255,6 +264,18 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="InputVIN.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+    </QtMoc>
+    <QtMoc Include="confirmpaydialog.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+    </QtMoc>
+    <QtMoc Include="declaredialog.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>
+    </QtMoc>
     <ClInclude Include="USBPrinter.h" />
     <QtMoc Include="checkreceiptdialog.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml</IncludePath>

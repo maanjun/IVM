@@ -7,7 +7,11 @@ VehicleManage::VehicleManage(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-
+#ifdef _DEBUG
+	//QDesktopWidget *desktop = QApplication::desktop();
+	setFixedSize(1920, 1080);
+	move(-400, -300);
+#endif
 	init();
 }
 
@@ -84,8 +88,8 @@ bool VehicleManage::initFrame()
 	connect(m_pCheckIDDialogSelect, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pVehicleInfoDialog, SIGNAL(vehicleInfoDoneSingal(QString)), this, SLOT(onVehicleInfoDoneSlot(QString)));
 	connect(m_pSelectLicenseDialog, SIGNAL(selectDoneSignal()), this, SLOT(onSelectDoneSlot()));
-	connect(m_pCheckReceiptDialog, SIGNAL(receiptCheckedSingal(QString)), this, SLOT(onReceiptCheckedSlot(QString)));
-	connect(m_pInputDoneDialog, SIGNAL(inputDoneSignal()), this, SLOT(onInputDoneSlot()));
+	connect(m_pCheckReceiptDialog, SIGNAL(receiptCheckedSingal(QString)), this, SLOT(onReceiptCheckedSlot(QString)));//验车信息输入确认
+	connect(m_pInputDoneDialog, SIGNAL(inputDoneSignal()), this, SLOT(onInputDoneSlot()));//验车信息输入完成
 
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogQueryTax, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogDeclareTax, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
@@ -116,7 +120,7 @@ bool VehicleManage::initFrame()
 	connect(m_pInputDoneDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pCheckIDDialogSelect, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pSelectLicenseDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
-
+	//税
 	connect(m_pPaytaxesDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogQueryTax, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pQueryTaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
@@ -128,7 +132,10 @@ bool VehicleManage::initFrame()
 	connect(m_pPaytaxesDialog->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pInputTaxDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPaytaxesDialog->m_pQueryDeclareTaxResultDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPaytaxesDialog->m_pInputVin, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPaytaxesDialog->m_pInputVin, SIGNAL(InputVINDone(int)), this, SLOT(onPaytaxesVINDone(int)));//完成VIN码输入
 
+	//保险
 	connect(m_pPayinsurancesDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pCheckIDDialogQueryInsurance, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pQueryInsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
@@ -140,7 +147,10 @@ bool VehicleManage::initFrame()
 	connect(m_pPayinsurancesDialog->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pInputInsuranceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pPayinsurancesDialog->m_pQueryDeclareInsuranceResultDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPayinsurancesDialog->m_pInputVin, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
+	connect(m_pPayinsurancesDialog->m_pInputVin, SIGNAL(InputVINDone(int)), this, SLOT(onPayInsurancesInputVINDone(int)));
 
+	//电子抵押
 	connect(m_pMortgageBase, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pMortgageBase->pcheckid_input_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pMortgageBase->pcheckid_input_, SIGNAL(idCheckedSignal(unsigned int, QString)), this, SLOT(onIdCheckedSlot(unsigned int, QString)));
@@ -151,8 +161,15 @@ bool VehicleManage::initFrame()
 	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));
 	connect(m_pMortgageBase->m_pFaceRecogniceDialog, SIGNAL(faceRecognicedSignal(unsigned int)), this, SLOT(onMortgageCheckFaceRecognicedSlot()));
+	//电子抵押完成
+	connect(m_pMortgageBase->pmortage_select_, SIGNAL(mortgageSelectSignal(int )), this, SLOT(onmortgageSelectSlot(int)));
+	connect(m_pMortgageBase->pmortgage_input_message_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));//输入取消
+	connect(m_pMortgageBase->pmortgage_input_message_, SIGNAL(mortgageInputDown()), this, SLOT(OnmortgageInputDown()));//输入确认 
+	connect(m_pMortgageBase->ppayinsurance_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));//确认申请电子抵押流水单号
+	connect(m_pMortgageBase->ppayinsurance_, SIGNAL(payinsuranceDoneSignal(QString)), this, SLOT(onPayinsuranceDoneSlot(QString)));//确认申请电子抵押流水单号
+	connect(m_pMortgageBase->pmortgage_check_, SIGNAL(goHomeSignal()), this, SLOT(onGoHomeSlot()));//确认申请电子抵押流水单号
 
-	//Todo 身份证扫描完成信号
+//Todo 身份证扫描完成信号
 	connect(m_pCheckIDDialogCheck, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
 	connect(m_pCheckIDDialogSelect, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
 	connect(m_pPaytaxesDialog->m_pCheckIDDialogQueryTax, SIGNAL(idScannedSignal(unsigned int, QString)), this, SLOT(onIdScannedSlot(unsigned int, QString)));
@@ -181,6 +198,7 @@ void VehicleManage::onGoHomeSlot()
 	m_pPaytaxesDialog->m_pFaceRecogniceDialog->hide();
 	m_pPaytaxesDialog->m_pInputTaxDialog->hide();
 	m_pMortgageBase->hide();
+	m_pMortgageBase->pmortgage_check_->hide();
 }
 
 void VehicleManage::on_pBtnCheck_clicked()
@@ -217,9 +235,9 @@ void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 		break;
 	case TAXQUERY:
 		m_pPaytaxesDialog->m_pCheckIDDialogQueryTax->hide();
-		m_pPaytaxesDialog->m_pQueryTaxDialog->show();
-		m_pPaytaxesDialog->m_pQueryTaxDialog->setOwnerId(qstrOwnerId);
-		m_pPaytaxesDialog->m_pQueryTaxDialog->startTimer(30000);
+		m_pPaytaxesDialog->m_pInputVin->show();
+		m_pPaytaxesDialog->m_pInputVin->setOwnerId(qstrOwnerId);
+		m_pPaytaxesDialog->m_pInputVin->startTimer(30000);
 		break;
 	case TAXDECLARE:
 		m_pPaytaxesDialog->m_pCheckIDDialogDeclareTax->hide();
@@ -229,9 +247,9 @@ void VehicleManage::onIdCheckedSlot(unsigned int nCaller, QString qstrOwnerId)
 		break;
 	case INSURANCEQUERY:
 		m_pPayinsurancesDialog->m_pCheckIDDialogQueryInsurance->hide();
-		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->show();
-		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->setOwnerId(qstrOwnerId);
-		m_pPayinsurancesDialog->m_pQueryInsuranceDialog->startTimer(30000);
+		m_pPayinsurancesDialog->m_pInputVin->show();
+		m_pPayinsurancesDialog->m_pInputVin->setOwnerId(qstrOwnerId);
+		m_pPayinsurancesDialog->m_pInputVin->startTimer(30000);
 		break;
 	case INSURANCEDECLARE:
 		m_pPayinsurancesDialog->m_pCheckIDDialogDeclareInsurance->hide();
@@ -442,6 +460,7 @@ void VehicleManage::onPayinsuranceConfirmedSlot(QString qstrOwnerId)
 void VehicleManage::onPayinsuranceDoneSlot(QString qstrOwnerId)
 {
 	m_pPayinsurancesDialog->m_pPayinsuranceDoneDialog->hide();
+	m_pMortgageBase->ppayinsurance_->hide();
 	this->show();
 }
 
@@ -483,7 +502,41 @@ void VehicleManage::on_pBtnInsurance_clicked()
 	m_pPayinsurancesDialog->startTimer(30000);
 }
 
+//电子抵押查询完成
+void  VehicleManage::onmortgageSelectSlot(int single)
+{
+	//QApplication::
+	//m_pMortgageBase->pmortage_select_->
+	m_pMortgageBase->pmortage_select_->hide();
+	m_pMortgageBase->show();
+	//this->show();
+	//m_pMortgageBase->pmortage_select_->hide();
+}
+//电子抵押完成输入
+void VehicleManage::OnmortgageInputDown()
+{
+	m_pMortgageBase->pmortgage_input_message_->hide();
+	m_pMortgageBase->ppayinsurance_->show();
+}
+
 void VehicleManage::on_pBtnHomepage_clicked()
 {
 	emit goHomeVehicleSignal();
+}
+
+//税VIN码输入确认
+void VehicleManage::onPaytaxesVINDone(int state)
+{
+	m_pPaytaxesDialog->m_pInputVin->hide();
+	m_pPaytaxesDialog->m_pQueryTaxDialog->show();
+	//m_pPaytaxesDialog->m_pQueryTaxDialog->setOwnerId(qstrOwnerId);
+	m_pPaytaxesDialog->m_pQueryTaxDialog->startTimer(30000);
+}
+//保险VIN码输入确认
+void VehicleManage::onPayInsurancesInputVINDone(int state)
+{
+	m_pPayinsurancesDialog->m_pInputVin->hide();
+	m_pPayinsurancesDialog->m_pQueryInsuranceDialog->show();
+	//m_pPayinsurancesDialog->m_pQueryInsuranceDialog->setOwnerId("");
+	m_pPayinsurancesDialog->m_pQueryInsuranceDialog->startTimer(30000);
 }

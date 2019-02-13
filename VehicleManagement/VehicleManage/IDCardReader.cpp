@@ -1,3 +1,4 @@
+//#include "stdafx.h"
 #include "IDCardReader.h"
 
 
@@ -23,12 +24,12 @@ bool IDCardReader::init(int comPort)
 		int nRet;
 		port_ = comPort;
 		nRet = mycmd(&cmd, &comPort, &para1, &para2);
-		printf(" ret = %d \n", nRet);
+		//printf(" ret = %d \n", nRet);
 		cmd = CMD_IDCARD_RBASE;	
 		para1 = 8811;
 		para2 = 9986;
 		nRet = mycmd(&cmd, &port_, &para1, &para2);
-		printf(" ret2 = %d \n", nRet);
+		//printf(" ret2 = %d \n", nRet);
 
 	}
 	return b;
@@ -85,7 +86,7 @@ int IDCardReader::GetPicPath(BYTE *buff){
 }
 
 BOOL IDCardReader::LoadDll() {
-	hModule = LoadLibrary(_T("RdCard.dll"));
+	hModule = LoadLibraryA("RdCard.dll");
 	if (hModule == NULL)
 	{
 		//AfxMessageBox(_T("º”‘ÿ∂ØÃ¨ø‚ ß∞‹"));

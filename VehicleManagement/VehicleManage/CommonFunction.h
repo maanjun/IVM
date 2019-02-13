@@ -51,6 +51,11 @@ namespace CommonFuncs
 		//启动进程，不用等待，启动成功返回进程句柄，否则进程句柄，默认隐藏窗口
 		//创建新窗口，所执行的程序单独执行；
 		HANDLE ExcuteProcessNoWait2(const char *pCmdParam, const char *pExePath, int iWindowStatus);
+		
+		//启动进程，不用等待，启动成功返回进程句柄，否则进程句柄，在其它桌面执行
+		//创建新窗口，所执行的程序单独执行；
+		HANDLE ExcuteProcessNoWaitInNewDesktop(const char *pCmdParam, const char *pExePath, int iWindowStatus);
+
 		string TrimHeadTail(const string strSrc);								//去掉头和尾的空格
 		string TrimBetween(const string strSrc);								//去掉多个空格只留一个空格
 		string StringSimplify(const string strSrc);								//去掉多个空格只留一个空格；换行、回车、制表符替换成一个空格等
@@ -64,6 +69,7 @@ namespace CommonFuncs
 		const char* ULongToIp(const unsigned long ulValue);						//数字IP转换为字符串IP
 		string IntToString(INT64 n, UINT64 nLen = 0);							//Int转String
 		UINT64 StringToInt(const string &str);									//String转Int
+		string getCurrExePath();//获取当前执行程序路径
 	public:
 		char m_szModuleFileName[MAX_PATH_LEN];
 		char m_szExeFilePath[MAX_PATH_LEN];

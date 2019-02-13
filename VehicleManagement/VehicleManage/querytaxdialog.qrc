@@ -1,8 +1,9 @@
 <RCC>
-    <qresource prefix="/">
-        <file>Resources/Images/canceloff.png</file>
-        <file>Resources/Images/cancelon.png</file>
-        <file>Resources/Images/finishoff.png</file>
-        <file>Resources/Images/finishon.png</file>
-    </qresource>
+  <qresource prefix="/">
+    <file>Resources/Images/loading.gif</file>
+    <file>Resources/Images/canceloff.png</file>
+    <file>Resources/Images/cancelon.png</file>
+    <file>Resources/Images/finishoff.png</file>
+    <file>Resources/Images/finishon.png</file>
+  </qresource>
 </RCC>

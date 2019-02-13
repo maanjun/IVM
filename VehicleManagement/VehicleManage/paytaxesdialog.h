@@ -12,7 +12,7 @@
 #include "facerecognicedialog.h"
 #include "inputtaxdialog.h"
 #include "querydeclaretaxresultdialog.h"
-
+#include "InputVIN.h"
 
 namespace Ui {
 class PaytaxesDialog;
@@ -25,6 +25,7 @@ public:
 	// 完税查询
 	CheckIDDialog *m_pCheckIDDialogQueryTax;
 	QueryTaxDialog *m_pQueryTaxDialog;
+	InputVIN *m_pInputVin;//没有正确的车驾号时 用户手动输入
 	// 申报
 	CheckIDDialog *m_pCheckIDDialogDeclareTax;
 	ReadCertificateDialog *m_pReadCertificateDialog;

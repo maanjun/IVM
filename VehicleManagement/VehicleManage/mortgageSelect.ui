@@ -13,69 +13,171 @@
   <property name="windowTitle">
    <string>mortgageSelect</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelLoading">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>470</y>
-     <width>561</width>
-     <height>101</height>
+     <x>830</x>
+     <y>400</y>
+     <width>151</width>
+     <height>141</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>微软雅黑</family>
-     <pointsize>24</pointsize>
-    </font>
    </property>
    <property name="text">
-    <string>没有找到你抵押信息，请确认后继续！</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pBtnHomepage">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>850</y>
-     <width>300</width>
-     <height>150</height>
+     <x>122</x>
+     <y>250</y>
+     <width>1652</width>
+     <height>766</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Algerian</family>
-     <pointsize>22</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="taxInfo">
+        <property name="minimumSize">
+         <size>
+          <width>700</width>
+          <height>410</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>128</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>188</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>208</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pBtnHomepage">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Algerian</family>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
 border-image: url(:/Resources/Images/cancelon.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pBtnDone">
-   <property name="geometry">
-    <rect>
-     <x>1290</x>
-     <y>850</y>
-     <width>300</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>22</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>648</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pBtnDone">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:2px groove gray;border-radius:10px;padding:2px 4px;
 border-image: url(:/Resources/Images/finishon.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>168</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

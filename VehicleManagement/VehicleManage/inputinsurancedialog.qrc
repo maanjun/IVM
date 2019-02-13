@@ -1,12 +1,6 @@
 <RCC>
-  <qresource prefix="/">
-    <file>Resources/Images/finishoff.png</file>
-    <file>Resources/Images/finishon.png</file>
-    <file>Resources/Images/canceloff.png</file>
+  <qresource prefix="\">
     <file>Resources/Images/cancelon.png</file>
-    <file>Resources/Images/confirmoff.png</file>
-    <file>Resources/Images/confirmon.png</file>
-    <file>Resources/Images/nextoff.png</file>
-    <file>Resources/Images/nexton.png</file>
+    <file>Resources/Images/finishon.png</file>
   </qresource>
 </RCC>

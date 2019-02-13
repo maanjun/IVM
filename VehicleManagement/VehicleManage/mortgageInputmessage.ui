@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1900</width>
-    <height>1080</height>
+    <height>1072</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -127,7 +127,7 @@ border-image: url(:/img/Resources/Images/cancelon.png);</string>
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>210000</string>
       </property>
      </widget>
     </item>
@@ -172,7 +172,7 @@ border-image: url(:/img/Resources/Images/cancelon.png);</string>
        </font>
       </property>
       <property name="text">
-       <string>自动读出来</string>
+       <string>P201901001023002</string>
       </property>
      </widget>
     </item>
@@ -204,7 +204,7 @@ border-image: url(:/img/Resources/Images/cancelon.png);</string>
        </font>
       </property>
       <property name="text">
-       <string>自动读出来</string>
+       <string>BX2009001200A</string>
       </property>
      </widget>
     </item>

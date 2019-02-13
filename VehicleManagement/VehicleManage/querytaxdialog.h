@@ -15,7 +15,7 @@ class QueryTaxDialog : public BaseDialog
 public:
     explicit QueryTaxDialog(QWidget *parent = 0);
     ~QueryTaxDialog();
-
+	void startTimer(int nMillisecond = 30000);
 private slots:
 	void on_pBtnHomepage_clicked();
 
@@ -23,6 +23,8 @@ private slots:
 
 private:
     Ui::QueryTaxDialog *ui;
+	QString m_qstrIDTemplateHtml;
+	void ShowTaxInfo();
 };
 
 #endif // QUERYTAXDIALOG_H

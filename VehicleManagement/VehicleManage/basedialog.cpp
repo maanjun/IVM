@@ -1,5 +1,6 @@
 #include "basedialog.h"
 #include "ui_basedialog.h"
+#include "qdesktopwidget.h"
 
 BaseDialog::BaseDialog(QWidget *parent) :
     QDialog(parent),
@@ -10,7 +11,6 @@ BaseDialog::BaseDialog(QWidget *parent) :
 #ifndef _DEBUG
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 #endif
-
 	m_nMillisecond = 0;
 	m_pTimer = new QTimer(this);
 	connect(m_pTimer, SIGNAL(timeout()), this, SLOT(onTimecoutSlot()));
@@ -21,6 +21,13 @@ BaseDialog::BaseDialog(QWidget *parent) :
 	m_pLabelWarningTimer = new QTimer(this);
 	connect(m_pLabelWarningTimer, SIGNAL(timeout()), this, SLOT(hideLabelWarningSlot()));
 	m_bInterrupted = false;
+#ifdef _DEBUG
+	//QDesktopWidget *desktop = QApplication::desktop();
+	setFixedSize(1920, 1080);
+	//move(-400, -300);
+#endif
+	//setba
+	//setBackgroundMode(NoBackground);
 }
 
 BaseDialog::~BaseDialog()

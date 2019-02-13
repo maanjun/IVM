@@ -75,13 +75,11 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\346\202\250\351\234\200\350\246\201\347\274\264\347\272\263</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
                         "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">XXX\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">1856.67 </span><span style=\" font-size:36pt;\">\345\205\203,</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">YYY\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">312.79 </span><span style=\" font-size:36pt;\">\345\205\203\357\274\214</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">ZZZ\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">234.79 </span><span style=\" font-size:36pt;\""
-                        ">\345\205\203\357\274\214</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">YYY\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">456.79 </span><span style=\" font-size:36pt;\">\345\205\203\357\274\214</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\344\272\244\345\274\272\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">856 </span><span style=\" font-size:36pt;\">\345\205\203,</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\345\225\206\344\270\232\351\231\251 </span><span style=\" font-size:48pt; color:#ff0000;\">3120 </span><span style=\" font-size:36pt;\">\345\205\203</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\345\205\261\350\256\241 </span><span style=\" font-size:48pt; color:#ff0000;\">2861.04 </span></p></body></html>", 0));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margi"
+                        "n-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt;\">\345\205\261\350\256\241 </span><span style=\" font-size:48pt; color:#ff0000;\">3976\345\205\203 </span></p></body></html>", 0));
     } // retranslateUi
 
 };

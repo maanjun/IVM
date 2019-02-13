@@ -61,7 +61,7 @@ void PaytaxesDialog::init()
 void PaytaxesDialog::initFrame()
 {
 	m_pCheckIDDialogQueryTax = new CheckIDDialog(TAXQUERY);
-	m_pQueryTaxDialog = new QueryTaxDialog();
+	m_pQueryTaxDialog = new QueryTaxDialog();//查询税
 
 	m_pCheckIDDialogDeclareTax = new CheckIDDialog(TAXDECLARE);
 	m_pReadCertificateDialog = new ReadCertificateDialog();
@@ -72,6 +72,9 @@ void PaytaxesDialog::initFrame()
 	m_pFaceRecogniceDialog = new FaceRecogniceDialog(PAYTAXES);
 	m_pInputTaxDialog = new InputTaxDialog();
 	m_pQueryDeclareTaxResultDialog = new QueryDeclareTaxResultDialog();
+	m_pInputVin = new InputVIN();//没有正确的车驾号时 用户手动输入
+	m_pInputVin->setOwnerGUIID(TAXDECLARE);
+	m_pInputVin->hide();
 }
 
 void PaytaxesDialog::finit()
@@ -95,10 +98,12 @@ void PaytaxesDialog::finit()
 	if (nullptr != m_pDeclareTaxDialog)
 	{
 		delete m_pDeclareTaxDialog;
+		m_pDeclareTaxDialog = 0;
 	}
 	if (nullptr != m_pDeclareTaxDialog)
 	{
 		delete m_pDeclareTaxDialog;
+		m_pDeclareTaxDialog = 0;
 	}
 	if (nullptr != m_pConfirmPaytaxDialog)
 	{
@@ -120,4 +125,10 @@ void PaytaxesDialog::finit()
 	{
 		delete m_pQueryDeclareTaxResultDialog;
 	}
+
+	if (nullptr != m_pInputVin)
+	{
+		delete m_pInputVin;
+		m_pInputVin = nullptr;
+	}	
 }

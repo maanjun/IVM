@@ -30,7 +30,7 @@ public:
     {
         if (QueryDeclareInsuranceResultDialog->objectName().isEmpty())
             QueryDeclareInsuranceResultDialog->setObjectName(QStringLiteral("QueryDeclareInsuranceResultDialog"));
-        QueryDeclareInsuranceResultDialog->resize(1920, 1080);
+        QueryDeclareInsuranceResultDialog->resize(1920, 1101);
         pBtnHomepage = new QPushButton(QueryDeclareInsuranceResultDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

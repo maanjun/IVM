@@ -12,7 +12,7 @@
 #include "facerecognicedialog.h"
 #include "inputinsurancedialog.h"
 #include "querydeclareinsuranceresultdialog.h"
-
+#include "InputVIN.h"
 
 namespace Ui {
 class PayinsurancesDialog;
@@ -25,6 +25,8 @@ public:
 	// 完税查询
 	CheckIDDialog *m_pCheckIDDialogQueryInsurance;
 	QueryInsuranceDialog *m_pQueryInsuranceDialog;
+	InputVIN *m_pInputVin;//没有正确的车驾号时 用户手动输入
+
 	// 申报
 	CheckIDDialog *m_pCheckIDDialogDeclareInsurance;
 	ReadDrivinglisenceDialog *m_pReadDrivinglisenceDialog;

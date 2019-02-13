@@ -66,10 +66,13 @@
     <ClCompile Include="checkreceiptdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="drivingmanage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainwindow.cpp">
+    <ClCompile Include="paytaxdonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="paytaxesdialog.cpp">
@@ -81,7 +84,7 @@
     <ClCompile Include="readcertificatedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="paytaxdonedialog.cpp">
+    <ClCompile Include="inputtaxdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mortgageBase.cpp">
@@ -96,13 +99,22 @@
     <ClCompile Include="mortgageSelect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inputtaxdialog.cpp">
+    <ClCompile Include="confirmpayinsurancedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="confirmpaytaxdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="declareinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="declaretaxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputinsurancedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="payinsurancedonedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="payinsurancesdialog.cpp">
@@ -114,16 +126,13 @@
     <ClCompile Include="readdrivinglisencedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="confirmpayinsurancedialog.cpp">
+    <ClCompile Include="facerecognicedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="declareinsurancedialog.cpp">
+    <ClCompile Include="USBPrinter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inputinsurancedialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="payinsurancedonedialog.cpp">
+    <ClCompile Include="IDCardReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="querydeclareinsuranceresultdialog.cpp">
@@ -132,15 +141,44 @@
     <ClCompile Include="querydeclaretaxresultdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="facerecognicedialog.cpp">
+    <ClCompile Include="InputVIN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IDCardReader.cpp">
+    <ClCompile Include="confirmpaydialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="USBPrinter.cpp">
+    <ClCompile Include="declaredialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommonDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunction.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="operateMysql.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="USBPrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDCardReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idcarddata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VehicleManage.rc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="vehiclemanage.h">
@@ -158,9 +196,6 @@
     <QtMoc Include="basedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="selectlicensedialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="checkreceiptdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -170,16 +205,19 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="paytaxesdialog.h">
+    <QtMoc Include="confirmpaytaxdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="querytaxdialog.h">
+    <QtMoc Include="declaretaxdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="readcertificatedialog.h">
+    <QtMoc Include="confirmpayinsurancedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="paytaxdonedialog.h">
+    <QtMoc Include="declareinsurancedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="facerecognicedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="mortgageBase.h">
@@ -197,10 +235,19 @@
     <QtMoc Include="inputtaxdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="confirmpaytaxdialog.h">
+    <QtMoc Include="inputinsurancedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="declaretaxdialog.h">
+    <QtMoc Include="paytaxesdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="querytaxdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="readcertificatedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="paytaxdonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="payinsurancesdialog.h">
@@ -212,15 +259,6 @@
     <QtMoc Include="readdrivinglisencedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="confirmpayinsurancedialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="declareinsurancedialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="inputinsurancedialog.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="payinsurancedonedialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -230,48 +268,149 @@
     <QtMoc Include="querydeclaretaxresultdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="facerecognicedialog.h">
+    <QtMoc Include="selectlicensedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="InputVIN.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="confirmpaydialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="declaredialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="vehiclemanage.ui">
+    <QtRcc Include="basedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="checkiddialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="checkreceiptdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpayinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpaytaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declareinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declaretaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="drivingmanage.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="facerecognicedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputdonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="inputtaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mainwindow.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mortgageInputmessage.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="payinsurancedonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="payinsurancesdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="paytaxdonedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="paytaxesdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querydeclareinsuranceresultdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querydeclaretaxresultdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="queryinsurancedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="querytaxdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="readcertificatedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="readdrivinglisencedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="selectlicensedialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="vehicleinfodialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="vehiclemanage.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="InputVIN.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="confirmpaydialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="declaredialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="basedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="checkiddialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="vehicleinfodialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="inputdonedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="basedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="selectlicensedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="checkreceiptdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpayinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpaytaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declareinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declaretaxdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="drivingmanage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="facerecognicedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="inputdonedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="inputinsurancedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="inputtaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
     <QtUic Include="mainwindow.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="paytaxesdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="querytaxdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="readcertificatedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="paytaxdonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="mortgageBase.ui">
@@ -286,34 +425,16 @@
     <QtUic Include="mortgageSelect.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="inputtaxdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="confirmpaytaxdialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="declaretaxdialog.ui">
+    <QtUic Include="payinsurancedonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="payinsurancesdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="queryinsurancedialog.ui">
+    <QtUic Include="paytaxdonedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="readdrivinglisencedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="confirmpayinsurancedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="declareinsurancedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="inputinsurancedialog.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="payinsurancedonedialog.ui">
+    <QtUic Include="paytaxesdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="querydeclareinsuranceresultdialog.ui">
@@ -322,120 +443,35 @@
     <QtUic Include="querydeclaretaxresultdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="facerecognicedialog.ui">
+    <QtUic Include="queryinsurancedialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <QtRcc Include="vehiclemanage.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="checkiddialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="basedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="inputdonedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="selectlicensedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="vehicleinfodialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="checkreceiptdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="mainwindow.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="drivingmanage.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="paytaxesdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="querytaxdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="readcertificatedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="paytaxdonedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="mortgageInputmessage.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="inputtaxdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="confirmpaytaxdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="declaretaxdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="payinsurancesdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="queryinsurancedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="readdrivinglisencedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="confirmpayinsurancedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="declareinsurancedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="inputinsurancedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="payinsurancedonedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="querydeclareinsuranceresultdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="querydeclaretaxresultdialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtRcc Include="facerecognicedialog.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CommonDefine.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="CommonFunction.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="common.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="operateMysql.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="idcarddata.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IDCardReader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="USBPrinter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="VehicleManage.rc" />
+    <QtUic Include="querytaxdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="readcertificatedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="readdrivinglisencedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="selectlicensedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="vehicleinfodialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="vehiclemanage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="InputVIN.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="confirmpaydialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="declaredialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

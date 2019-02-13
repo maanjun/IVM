@@ -164,10 +164,12 @@ public:
         CheckReceiptDialog->setWindowTitle(QApplication::translate("CheckReceiptDialog", "CheckReceiptDialog", 0));
         pBtnNext->setText(QString());
         pBtnHomepage->setText(QString());
+        lineEditReceipt->setText(QApplication::translate("CheckReceiptDialog", "P234233000103", 0));
         label->setText(QString());
         label_2->setText(QApplication::translate("CheckReceiptDialog", "\350\257\267\346\214\211\346\217\220\347\244\272\345\244\215\345\215\260\347\225\231\345\272\225", 0));
         labelReceipt->setText(QApplication::translate("CheckReceiptDialog", "\345\217\221\347\245\250\345\217\267\357\274\232", 0));
         labelTax->setText(QApplication::translate("CheckReceiptDialog", "\350\275\246\350\210\271\347\250\216\345\217\267\357\274\232", 0));
+        lineEditTax->setText(QApplication::translate("CheckReceiptDialog", "SS00434TQWQEQ", 0));
         labelInputFax->setText(QApplication::translate("CheckReceiptDialog", "\345\275\225\345\205\245\347\250\216\350\264\271\345\217\267", 0));
         labelScanningID->setText(QApplication::translate("CheckReceiptDialog", "\346\211\253\346\217\217\350\272\253\344\273\275\350\257\201", 0));
         labelScanningVehicle->setText(QApplication::translate("CheckReceiptDialog", "\346\211\253\346\217\217\350\275\246\350\276\206\344\277\241\346\201\257", 0));

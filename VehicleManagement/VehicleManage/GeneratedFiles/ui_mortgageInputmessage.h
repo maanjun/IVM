@@ -43,7 +43,7 @@ public:
     {
         if (mortgageInputmessage->objectName().isEmpty())
             mortgageInputmessage->setObjectName(QStringLiteral("mortgageInputmessage"));
-        mortgageInputmessage->resize(1900, 1080);
+        mortgageInputmessage->resize(1900, 1072);
         pBtnDone = new QPushButton(mortgageInputmessage);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
         pBtnDone->setGeometry(QRect(1290, 850, 300, 150));
@@ -140,12 +140,12 @@ public:
         pBtnHomepage->setText(QString());
         label->setText(QString());
         label_4->setText(QApplication::translate("mortgageInputmessage", "* \350\257\267\350\276\223\345\205\245\345\217\221\347\245\250\345\217\267\343\200\201\344\277\235\351\231\251\345\217\267\343\200\201\345\271\266\345\260\206\344\277\241\346\201\257\346\214\211\346\217\220\347\244\272\346\213\215\347\205\247\347\225\231\345\272\225", 0));
-        lineEdit_3->setText(QString());
+        lineEdit_3->setText(QApplication::translate("mortgageInputmessage", "210000", 0));
         label_2->setText(QApplication::translate("mortgageInputmessage", "\345\217\221\347\245\250\345\217\267", 0));
         label_5->setText(QApplication::translate("mortgageInputmessage", "\351\207\221\351\242\235", 0));
-        lineEdit->setText(QApplication::translate("mortgageInputmessage", "\350\207\252\345\212\250\350\257\273\345\207\272\346\235\245", 0));
+        lineEdit->setText(QApplication::translate("mortgageInputmessage", "P201901001023002", 0));
         label_3->setText(QApplication::translate("mortgageInputmessage", "\344\277\235\351\231\251\345\217\267", 0));
-        lineEdit_2->setText(QApplication::translate("mortgageInputmessage", "\350\207\252\345\212\250\350\257\273\345\207\272\346\235\245", 0));
+        lineEdit_2->setText(QApplication::translate("mortgageInputmessage", "BX2009001200A", 0));
     } // retranslateUi
 
 };

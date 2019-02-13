@@ -15,7 +15,7 @@ class QueryInsuranceDialog : public BaseDialog
 public:
     explicit QueryInsuranceDialog(QWidget *parent = 0);
     ~QueryInsuranceDialog();
-
+	void startTimer(int nMillisecond = 30000);
 private slots:
 	void on_pBtnHomepage_clicked();
 
@@ -23,6 +23,8 @@ private slots:
 
 private:
     Ui::QueryInsuranceDialog *ui;
+	QString m_qstrIDTemplateHtml;
+	void ShowInsuranceInfo();
 };
 
 #endif // QUERYINSURANCEDIALOG_H

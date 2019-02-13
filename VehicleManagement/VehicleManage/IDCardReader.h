@@ -1,7 +1,5 @@
 #ifndef IDCARDREADER_H
 #define IDCARDREADER_H
-
-#include "common.h"
 #include <windows.h>
 
 //int IDCardReader::UCommand1(BYTE *pCmd, int IDCardReader::* parg0, int IDCardReader::* parg1,  int IDCardReader::* parg2)

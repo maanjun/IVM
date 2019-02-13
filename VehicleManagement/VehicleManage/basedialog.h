@@ -88,6 +88,12 @@ signals:
 	void inputInsuranceDoneSignal(QString qstrOwnerId);
 signals:
 	void queryDeclareInsuranceResultDoneSignal();
+signals:
+	void mortgageSelectSignal(int single);//查询电子抵押完成按钮
+signals:
+	void mortgageInputDown( );//查询电子抵押输入确认按钮
+signals:
+	void InputVINDone(int ownerGUI);//查询电子抵押输入确认按钮
 
 private slots:
 	void onTimecoutSlot();

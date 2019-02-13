@@ -8,6 +8,7 @@
 #include "mortgageInputmessage.h"
 #include "mortgageSelect.h"
 #include "mortgageCheck.h"
+#include "payinsurancedonedialog.h"
 
 class mortgageBase : public BaseDialog
 {
@@ -24,7 +25,7 @@ public:
 	mortgageSelect *pmortage_select_;//完税查询
 	mortgageInputmessage *pmortgage_input_message_;//完税输入
 	mortgageCheck *pmortgage_check_;//完税检查
-
+	PayinsuranceDoneDialog *ppayinsurance_;//确认付款请求
 private slots:
 	void on_pBtnGohome_clicked();
 	void on_btnmortgageSelect_clicked();

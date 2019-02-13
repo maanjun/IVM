@@ -531,6 +531,47 @@ namespace CommonFuncs
 		}
 		return hThread;
 	}
+	//启动进程，不用等待，启动成功返回进程句柄，否则进程句柄，在其它桌面执行
+	//创建新窗口，所执行的程序单独执行；
+	HANDLE CommonFunction::ExcuteProcessNoWaitInNewDesktop(const char *pCmdParam, const char *pExePath, int iWindowStatus)
+	{
+		HANDLE hThread = INVALID_HANDLE_VALUE;
+		if (pCmdParam)
+		{
+			do
+			{
+				//HDESK hDesk = CreateDesktop("NewScreen", NULL, NULL, 0, GENERIC_ALL, NULL);
+				STARTUPINFOA startupinfo;
+				PROCESS_INFORMATION processinfo;
+				ZeroMemory(&startupinfo, sizeof(startupinfo));
+				startupinfo.cb = sizeof(startupinfo);
+				//startupinfo.lpDesktop = "NewScreen";
+				///startupinfo.dwFlags = STARTF_USESHOWWINDOW;
+				//startupinfo.wShowWindow = SW_SHOW;
+				ZeroMemory(&processinfo, sizeof(processinfo));
+				char* pParams = new char[strlen(pCmdParam) + 10];
+				memset(pParams, 0, strlen(pCmdParam) + 10);
+		 		strcpy(pParams, pCmdParam);
+
+				if (!CreateProcessA(pExePath, pParams, NULL, NULL, FALSE, 
+					0, NULL, NULL, &startupinfo, &processinfo))
+				{
+					
+					break;
+				}
+				else
+				{
+					hThread = processinfo.hProcess;
+				}
+				WaitForSingleObject(processinfo.hProcess, INFINITE);
+				delete[] pParams;
+
+				//CloseDesktop(hDesk);
+			} while (0);
+		}
+		return hThread;
+	}
+
 
 	string CommonFunction::TrimHeadTail(const string strSrc)
 	{
@@ -791,6 +832,33 @@ END:
 
 		return nReturn;
 	}
+
+	string CommonFunction::getCurrExePath()//获取当前执行程序路径
+	{
+		char path[MAX_PATH_LEN];
+		char shortpath[MAX_PATH_LEN];
+		string filepath = "";
+		GetModuleFileNameA(NULL, path, MAX_PATH_LEN);
+		
+		GetShortPathNameA(path, shortpath, MAX_PATH_LEN);
+		size_t length = strlen(path);
+		char *diver = (char*)malloc(length);
+		char *dir = (char*)malloc(length);
+		char *files = (char*)malloc(length);
+		char *extname = (char*)malloc(length);
+		_splitpath(path, diver, dir, files, extname);
+		
+		filepath = diver;
+		filepath += dir;
+		free(diver);
+		free(dir);
+		free(files);
+		free(extname);
+		
+		return filepath;
+	}
+	
+
 
 	//重置工作路径到指定目录，若pRelateDir为NULL，则重置为EXE目录。
 	void CommonFunction::SetWorkDir(const char *pRelateDir)

@@ -86,9 +86,41 @@ CheckIDDialog::~CheckIDDialog()
     delete ui;
 }
 
+void  CheckIDDialog::ShowIDInfo()
+{
+	ui->labelLoading->setVisible(false);
+	ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
+	ui->pBtnNext->setEnabled(true);
+	QString qstrBirthday = m_idCardData.Born;
+	string strAddress = m_idCardData.Address;
+	QString qstrAddress = QString::fromLocal8Bit(strAddress.c_str());
+	//将读取的数据写成html，设置进textBrower
+	QString qstrIDInfo = m_qstrIDTemplateHtml
+		.arg(QString::fromLocal8Bit(m_idCardData.Name))
+		.arg(QString::fromLocal8Bit(m_idCardData.Sex))
+		.arg(QString::fromLocal8Bit(m_idCardData.Nation))
+		.arg(qstrBirthday.mid(0, 4))
+		.arg(qstrBirthday.mid(5, 2))
+		.arg(qstrBirthday.mid(8))
+		.arg(qstrAddress.mid(0, 11))
+		.arg(qstrAddress.mid(12, 11))
+		.arg(qstrAddress.mid(24))
+		.arg(m_idCardData.IDCardNo);
+	ui->textBrowser->setHtml(qstrIDInfo);
+	if (m_idCardData.PhotoFileName[0] != 0)
+	{
+		ui->labelHead->setPixmap(QPixmap(m_idCardData.PhotoFileName));
+	} else 
+	ui->labelHead->setPixmap(QPixmap("./Resources/Images/head.png"));
+	ui->labelHead->setScaledContents(true);
+	ui->labelHead->setVisible(true);
+	// 查询用户当前到哪一步
+	//getUserinfo(m_idInfo.szNumber);
+	getUserinfo(m_idCardData.IDCardNo);
+}
 void CheckIDDialog::startTimer(int nMillisecond)
 {
-	setLabelContent(QString::fromLocal8Bit("我是测试，五秒钟之后我会消失。"));
+	setLabelContent(QString::fromLocal8Bit("请放入二代身份证"));
 	m_nMillisecond = nMillisecond / 1000;
 	m_pCountdownTimer->start(1000);
 
@@ -260,44 +292,26 @@ void CheckIDDialog::startTimer(int nMillisecond)
 				// continue;
 			}
 
-			if (250 == nCount) {
-				strcpy_s(m_idCardData.Name, "马安君");
-				strcpy_s(m_idCardData.Sex, "男");
-				strcpy_s(m_idCardData.Nation, "汉");
-				strcpy_s(m_idCardData.Born, "2018-10-13");
-				strcpy_s(m_idCardData.Address, "重庆市江北区石马河街道可乐小镇三个电饭锅水电费公司的分公司感受到");
-				strcpy_s(m_idCardData.IDCardNo, "500105198811113333");
-				strcpy_s(m_idCardData.GrantDept, "重庆江北");
-				strcpy_s(m_idCardData.UserLifeBegin, "2018-10-13");
-				strcpy_s(m_idCardData.UserLifeEnd, "2019-10-13");
-				strcpy_s(m_idCardData.reserved, "保留");
-				strcpy_s(m_idCardData.PhotoFileName, "");
-
-				ui->labelLoading->setVisible(false);
-				ui->pBtnNext->setStyleSheet("border:2px groove gray;border-radius:10px;padding:2px 4px;border-image:url(./Resources/Images/nexton.png)");
-				ui->pBtnNext->setEnabled(true);
-				QString qstrBirthday = m_idCardData.Born;
-				string strAddress = m_idCardData.Address;
-				QString qstrAddress = QString::fromLocal8Bit(strAddress.c_str());
-				//将读取的数据写成html，设置进textBrower
-				QString qstrIDInfo = m_qstrIDTemplateHtml
-					.arg(QString::fromLocal8Bit(m_idCardData.Name))
-					.arg(QString::fromLocal8Bit(m_idCardData.Sex))
-					.arg(QString::fromLocal8Bit(m_idCardData.Nation))
-					.arg(qstrBirthday.mid(0, 4))
-					.arg(qstrBirthday.mid(5, 2))
-					.arg(qstrBirthday.mid(8))
-					.arg(qstrAddress.mid(0, 11))
-					.arg(qstrAddress.mid(12, 11))
-					.arg(qstrAddress.mid(24))
-					.arg(m_idCardData.IDCardNo);
-				ui->textBrowser->setHtml(qstrIDInfo);
-				ui->labelHead->setPixmap(QPixmap("./Resources/Images/head.png"));
-				ui->labelHead->setScaledContents(true);
-				ui->labelHead->setVisible(true);
-				// 查询用户当前到哪一步
-				//getUserinfo(m_idInfo.szNumber);
-				getUserinfo(m_idCardData.IDCardNo);
+			if (250 >= nCount ) {
+				if (m_idCardData.Name[0] == 0)
+				{
+					strcpy_s(m_idCardData.Name, "马安君");
+					strcpy_s(m_idCardData.Sex, "男");
+					strcpy_s(m_idCardData.Nation, "汉");
+					strcpy_s(m_idCardData.Born, "2018-10-13");
+					strcpy_s(m_idCardData.Address, "重庆市江北区石马河街道可乐小镇三个电饭锅水电费公司的分公司感受到");
+					strcpy_s(m_idCardData.IDCardNo, "500105198811113333");
+					strcpy_s(m_idCardData.GrantDept, "重庆江北");
+					strcpy_s(m_idCardData.UserLifeBegin, "2018-10-13");
+					strcpy_s(m_idCardData.UserLifeEnd, "2019-10-13");
+					strcpy_s(m_idCardData.reserved, "保留");
+					strcpy_s(m_idCardData.PhotoFileName, "");
+				}
+				ShowIDInfo();
+				break;
+			}
+			else if ((m_idCardData.Name[0] != 0)){
+				ShowIDInfo();
 				break;
 			}
 			// 每50ms读取一次身份证信息

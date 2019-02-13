@@ -44,6 +44,7 @@ private slots:
 
 private:
     Ui::CheckIDDialog *ui;
+	void ShowIDInfo();
 };
 
 #endif // CHECKIDDIALOG_H

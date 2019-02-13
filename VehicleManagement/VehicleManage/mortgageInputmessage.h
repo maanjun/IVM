@@ -13,4 +13,8 @@ public:
 
 private:
 	Ui::mortgageInputmessage ui;
+
+private slots:
+	void on_pBtnHomepage_clicked();
+	void on_pBtnDone_clicked();
 };

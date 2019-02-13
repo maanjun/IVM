@@ -45,7 +45,7 @@ public:
         if (FaceRecogniceDialog->objectName().isEmpty())
             FaceRecogniceDialog->setObjectName(QStringLiteral("FaceRecogniceDialog"));
         FaceRecogniceDialog->resize(1920, 1080);
-        FaceRecogniceDialog->setStyleSheet(QStringLiteral("#FaceRecogniceDialog{border-image: url(:/Resources/Images/background.png);}"));
+        FaceRecogniceDialog->setStyleSheet(QStringLiteral("background-image: url(:/Resources/Images/background.png);"));
         pBtnHomepage = new QPushButton(FaceRecogniceDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

@@ -83,7 +83,6 @@ void InputDoneDialog::on_pBtnDone_clicked()
 {
 	m_pCountdownTimer->stop();
 	m_pTimer->stop();
-	emit inputDoneSignal();
 	// 后台处理
 	// 从数据库取数据
 	m_operateMysql.init();
@@ -109,4 +108,6 @@ void InputDoneDialog::on_pBtnDone_clicked()
 	m_pUSBPrinter->PrinterDoc(".\\Data\\htmls\\detail.html");
 	m_pUSBPrinter->PrinterCut();
 	m_pUSBPrinter->ClosePrinter();
+	emit inputDoneSignal();
+
 }

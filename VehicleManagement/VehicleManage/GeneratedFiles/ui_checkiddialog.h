@@ -49,7 +49,13 @@ public:
     {
         if (CheckIDDialog->objectName().isEmpty())
             CheckIDDialog->setObjectName(QStringLiteral("CheckIDDialog"));
+        CheckIDDialog->setWindowModality(Qt::NonModal);
         CheckIDDialog->resize(1920, 1080);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(CheckIDDialog->sizePolicy().hasHeightForWidth());
+        CheckIDDialog->setSizePolicy(sizePolicy);
         pBtnHomepage = new QPushButton(CheckIDDialog);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
         pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));

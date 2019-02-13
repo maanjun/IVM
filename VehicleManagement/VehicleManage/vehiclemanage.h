@@ -92,7 +92,14 @@ private slots:
 	
 	//电子抵押人脸检测
 	void onMortgageCheckFaceRecognicedSlot();
-
+	//电子抵押查询完成
+	void onmortgageSelectSlot(int single);
+	//电子抵押完成输入
+	void OnmortgageInputDown();
+	//税VIN码输入确认
+	void onPaytaxesVINDone(int state);
+	//保险VIN码输入确认
+	void onPayInsurancesInputVINDone(int state);
 private:
 	Ui::VehicleManageClass ui;
 

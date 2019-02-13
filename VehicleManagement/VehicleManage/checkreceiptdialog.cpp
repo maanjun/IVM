@@ -10,8 +10,8 @@ CheckReceiptDialog::CheckReceiptDialog(QWidget *parent) :
 
 	m_taxaction.reset();
 
-	ui->pBtnNext->setEnabled(false);
-
+	//ui->pBtnNext->setEnabled(false);
+	/*
 	QRegExp regReceipt("^[0-9]{8}$");
 	QRegExpValidator *validatorReceipt = new QRegExpValidator(regReceipt, this);
 	ui->lineEditReceipt->setValidator(validatorReceipt);
@@ -19,6 +19,8 @@ CheckReceiptDialog::CheckReceiptDialog(QWidget *parent) :
 	QRegExp regTax("^[0-9]{8}$");
 	QRegExpValidator *validatorTax = new QRegExpValidator(regTax, this);
 	ui->lineEditTax->setValidator(validatorTax);
+	*/
+	ui->pBtnNext->setEnabled(true);
 
 	connect(ui->lineEditReceipt, SIGNAL(textEdited(const QString &)), this, SLOT(onReceiptEdited(const QString &)));
 	connect(ui->lineEditTax, SIGNAL(textEdited(const QString &)), this, SLOT(onTaxEdited(const QString &)));

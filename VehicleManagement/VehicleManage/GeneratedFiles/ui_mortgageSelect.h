@@ -13,9 +13,14 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 #include "basedialog.h"
 
 QT_BEGIN_NAMESPACE
@@ -23,39 +28,101 @@ QT_BEGIN_NAMESPACE
 class Ui_mortgageSelect
 {
 public:
-    QLabel *label;
+    QLabel *labelLoading;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_4;
+    QTextBrowser *taxInfo;
+    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_2;
     QPushButton *pBtnHomepage;
+    QSpacerItem *horizontalSpacer;
     QPushButton *pBtnDone;
+    QSpacerItem *horizontalSpacer_3;
 
     void setupUi(BaseDialog *mortgageSelect)
     {
         if (mortgageSelect->objectName().isEmpty())
             mortgageSelect->setObjectName(QStringLiteral("mortgageSelect"));
         mortgageSelect->resize(1900, 1080);
-        label = new QLabel(mortgageSelect);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(690, 470, 561, 101));
-        QFont font;
-        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font.setPointSize(24);
-        label->setFont(font);
-        pBtnHomepage = new QPushButton(mortgageSelect);
+        labelLoading = new QLabel(mortgageSelect);
+        labelLoading->setObjectName(QStringLiteral("labelLoading"));
+        labelLoading->setGeometry(QRect(830, 400, 151, 141));
+        widget = new QWidget(mortgageSelect);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(122, 250, 1652, 766));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
+        taxInfo = new QTextBrowser(widget);
+        taxInfo->setObjectName(QStringLiteral("taxInfo"));
+        taxInfo->setMinimumSize(QSize(700, 410));
+
+        horizontalLayout_2->addWidget(taxInfo);
+
+        horizontalSpacer_5 = new QSpacerItem(128, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_5);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        verticalSpacer = new QSpacerItem(20, 188, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_2 = new QSpacerItem(208, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+        pBtnHomepage = new QPushButton(widget);
         pBtnHomepage->setObjectName(QStringLiteral("pBtnHomepage"));
-        pBtnHomepage->setGeometry(QRect(330, 850, 300, 150));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Algerian"));
-        font1.setPointSize(22);
-        pBtnHomepage->setFont(font1);
+        pBtnHomepage->setMinimumSize(QSize(300, 150));
+        QFont font;
+        font.setFamily(QStringLiteral("Algerian"));
+        font.setPointSize(22);
+        pBtnHomepage->setFont(font);
         pBtnHomepage->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/cancelon.png);"));
-        pBtnDone = new QPushButton(mortgageSelect);
+
+        horizontalLayout->addWidget(pBtnHomepage);
+
+        horizontalSpacer = new QSpacerItem(648, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        pBtnDone = new QPushButton(widget);
         pBtnDone->setObjectName(QStringLiteral("pBtnDone"));
-        pBtnDone->setGeometry(QRect(1290, 850, 300, 150));
-        QFont font2;
-        font2.setPointSize(22);
-        pBtnDone->setFont(font2);
+        pBtnDone->setMinimumSize(QSize(300, 150));
+        QFont font1;
+        font1.setPointSize(22);
+        pBtnDone->setFont(font1);
         pBtnDone->setStyleSheet(QLatin1String("border:2px groove gray;border-radius:10px;padding:2px 4px;\n"
 "border-image: url(:/Resources/Images/finishon.png);"));
+
+        horizontalLayout->addWidget(pBtnDone);
+
+        horizontalSpacer_3 = new QSpacerItem(168, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
 
         retranslateUi(mortgageSelect);
 
@@ -65,7 +132,7 @@ public:
     void retranslateUi(BaseDialog *mortgageSelect)
     {
         mortgageSelect->setWindowTitle(QApplication::translate("mortgageSelect", "mortgageSelect", 0));
-        label->setText(QApplication::translate("mortgageSelect", "\346\262\241\346\234\211\346\211\276\345\210\260\344\275\240\346\212\265\346\212\274\344\277\241\346\201\257\357\274\214\350\257\267\347\241\256\350\256\244\345\220\216\347\273\247\347\273\255\357\274\201", 0));
+        labelLoading->setText(QString());
         pBtnHomepage->setText(QString());
         pBtnDone->setText(QString());
     } // retranslateUi

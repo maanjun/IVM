@@ -6,7 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+#ifdef _DEBUG
+	//QDesktopWidget *desktop = QApplication::desktop();
+	setFixedSize(1920, 1080);
+	move(-400, -300);
+#endif
 	init();
 }
 
@@ -23,7 +27,7 @@ void MainWindow::init()
 	this->setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
 #endif
 
-	m_pVehicleManage = new VehicleManage(this);
+	m_pVehicleManage = new VehicleManage(this);//车管业务
 	connect(m_pVehicleManage, SIGNAL(goHomeVehicleSignal()), this, SLOT(onGohomeVehicleSlot()));
 
 	m_pDrivingManage = new DrivingManage(this);
